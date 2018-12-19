@@ -4,7 +4,7 @@
     nsPrefix="query_metamodel">
   <eClassifiers xsi:type="ecore:EClass" name="Attribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sex" eType="#//Sex" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="qualify" eType="#//Qualify"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="order" eType="#//Order"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="age" upperBound="-1" eType="#//Age"
         containment="true"/>
@@ -24,18 +24,20 @@
     <eLiterals name="prescribedMedication" value="3"/>
     <eLiterals name="averageTime" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Qualify">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualifier" eType="#//Qualifier"
+  <eClassifiers xsi:type="ecore:EClass" name="Order">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//Qualifier"
         defaultValueLiteral="random"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Field"/>
   <eClassifiers xsi:type="ecore:EClass" name="Range">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExecutedStep" eSuperTypes="#//Field">
+  <eClassifiers xsi:type="ecore:EClass" name="EStep" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="#//Element"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Qualifier">
@@ -69,7 +71,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Element">
     <eLiterals name="none"/>
-    <eLiterals name="discharge"/>
+    <eLiterals name="discharge" value="1"/>
     <eLiterals name="referral" value="2"/>
     <eLiterals name="procedure" value="3"/>
     <eLiterals name="action" value="4"/>
@@ -88,13 +90,15 @@
     <eLiterals name="all" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Age">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Sex">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sex" eType="#//Sex.1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sex" eType="#//Gender"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Sex">
+  <eClassifiers xsi:type="ecore:EEnum" name="Gender">
     <eLiterals name="all"/>
     <eLiterals name="male" value="1"/>
     <eLiterals name="female" value="2"/>
