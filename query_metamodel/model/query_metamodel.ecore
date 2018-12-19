@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="query_metamodel" nsURI="http://www.example.org/query_metamodel"
-    nsPrefix="query_metamodel">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="QueryMetamodel" nsURI="http://www.example.org/QueryMetamodel"
+    nsPrefix="QueryMetamodel">
   <eClassifiers xsi:type="ecore:EClass" name="Attribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sex" eType="#//Sex" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="order" eType="#//Order"
@@ -28,7 +28,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//Qualifier"
         defaultValueLiteral="random"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Field"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Field" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Range">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
@@ -38,21 +38,21 @@
         defaultValueLiteral="0"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EStep" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="#//Element"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="#//EElement"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Qualifier">
     <eLiterals name="random"/>
     <eLiterals name="bottom" value="1"/>
     <eLiterals name="top" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Query">
+  <eClassifiers xsi:type="ecore:EClass" name="EQuery">
     <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1"
         eType="#//Method" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Method">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//Function"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" upperBound="-1"
-        eType="#//Attribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="#//Attribute"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComplementaryConducts" eSuperTypes="#//Field">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct" eType="#//Conduct"/>
@@ -69,7 +69,7 @@
     <eLiterals name="completed" value="1"/>
     <eLiterals name="aborted" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Element">
+  <eClassifiers xsi:type="ecore:EEnum" name="EElement">
     <eLiterals name="none"/>
     <eLiterals name="discharge" value="1"/>
     <eLiterals name="referral" value="2"/>
@@ -80,7 +80,7 @@
     <eLiterals name="prescription" value="7"/>
     <eLiterals name="pause" value="8"/>
     <eLiterals name="auxiliaryconduct" value="9"/>
-    <eLiterals name="alll" value="10"/>
+    <eLiterals name="all" value="10"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Conduct">
     <eLiterals name="none"/>

@@ -7,9 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: query_metamodel,
- query_metamodel.impl,
- query_metamodel.util
+Export-Package: QueryMetamodel,
+ QueryMetamodel.impl,
+ QueryMetamodel.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy

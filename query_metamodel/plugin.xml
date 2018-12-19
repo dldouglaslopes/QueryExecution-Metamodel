@@ -9,8 +9,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated query_metamodel -->
       <package
-            uri="http://www.example.org/query_metamodel"
-            class="query_metamodel.Query_metamodelPackage"
+            uri="http://www.example.org/QueryMetamodel"
+            class="QueryMetamodel.Query_metamodelPackage"
             genModel="model/query_metamodel.genmodel"/>
    </extension>
 

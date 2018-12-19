@@ -1,11 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/query_metamodel/src-gen" creationIcons="false"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/query_metamodel/src-gen" creationIcons="false"
     editDirectory="/query_metamodel.edit/src-gen" editorDirectory="/query_metamodel.editor/src-gen"
     modelPluginID="query_metamodel" modelName="Query_metamodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
     copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>query_metamodel.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
-  <genPackages prefix="Query_metamodel" disposableProviderFactory="true" ecorePackage="query_metamodel.ecore#/"/>
+  <genPackages prefix="Query_metamodel" disposableProviderFactory="true" ecorePackage="query_metamodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Function">
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Function/none"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Function/ocurrencyFlow"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Function/occurrenceExecution"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Function/prescribedMedication"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Function/averageTime"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Qualifier">
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Qualifier/random"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Qualifier/bottom"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Qualifier/top"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Message">
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Message/all"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Message/completed"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Message/aborted"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//EElement">
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EElement/none"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EElement/discharge"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EElement/referral"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EElement/procedure"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EElement/action"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EElement/information"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EElement/treatment"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EElement/prescription"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EElement/pause"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EElement/auxiliaryconduct"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EElement/all"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Conduct">
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Conduct/none"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Conduct/prescription"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Conduct/procedure"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Conduct/medication"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Conduct/all"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Gender">
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Gender/all"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Gender/male"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Gender/female"/>
+    </genEnums>
+    <genClasses ecoreClass="query_metamodel.ecore#//Attribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/sex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/order"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/age"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/range"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/field"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/date"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/status"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Order">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Order/order"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Field"/>
+    <genClasses ecoreClass="query_metamodel.ecore#//Range">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Range/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Range/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Range/to"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//EStep">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EStep/step"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//EQuery">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EQuery/method"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Method">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Method/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Method/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//ComplementaryConducts">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ComplementaryConducts/conduct"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Date">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Date/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Date/to"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Status">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Status/message"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Age">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Age/from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Age/to"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Sex">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Sex/sex"/>
+    </genClasses>
+  </genPackages>
 </genmodel:GenModel>
