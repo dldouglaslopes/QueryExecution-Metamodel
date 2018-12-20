@@ -13,5 +13,4 @@
             class="QueryMetamodel.Query_metamodelPackage"
             genModel="model/query_metamodel.genmodel"/>
    </extension>
-
 </plugin>

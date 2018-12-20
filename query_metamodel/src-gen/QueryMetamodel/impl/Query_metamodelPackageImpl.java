@@ -3,15 +3,14 @@
 package QueryMetamodel.impl;
 
 import QueryMetamodel.Age;
-import QueryMetamodel.Attribute;
 import QueryMetamodel.ComplementaryConducts;
 import QueryMetamodel.Conduct;
 import QueryMetamodel.Date;
 import QueryMetamodel.EElement;
+import QueryMetamodel.EMethod;
 import QueryMetamodel.EQuery;
 import QueryMetamodel.EStep;
 import QueryMetamodel.Field;
-import QueryMetamodel.Function;
 import QueryMetamodel.Gender;
 import QueryMetamodel.Message;
 import QueryMetamodel.Method;
@@ -43,7 +42,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass attributeEClass = null;
+	private EClass eAttributeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -51,13 +50,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	private EClass orderEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass fieldEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,13 +71,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	private EClass eQueryEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass methodEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -127,7 +112,14 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum functionEEnum = null;
+	private EClass eMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fieldEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -163,6 +155,13 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	private EEnum genderEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum methodEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -232,8 +231,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAttribute() {
-		return attributeEClass;
+	public EClass getEAttribute() {
+		return eAttributeEClass;
 	}
 
 	/**
@@ -241,8 +240,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttribute_Sex() {
-		return (EReference) attributeEClass.getEStructuralFeatures().get(0);
+	public EReference getEAttribute_Sex() {
+		return (EReference) eAttributeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -250,8 +249,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttribute_Order() {
-		return (EReference) attributeEClass.getEStructuralFeatures().get(1);
+	public EReference getEAttribute_Order() {
+		return (EReference) eAttributeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -259,8 +258,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttribute_Age() {
-		return (EReference) attributeEClass.getEStructuralFeatures().get(2);
+	public EReference getEAttribute_Age() {
+		return (EReference) eAttributeEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -268,8 +267,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttribute_Range() {
-		return (EReference) attributeEClass.getEStructuralFeatures().get(3);
+	public EReference getEAttribute_Range() {
+		return (EReference) eAttributeEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -277,8 +276,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttribute_Field() {
-		return (EReference) attributeEClass.getEStructuralFeatures().get(4);
+	public EReference getEAttribute_Date() {
+		return (EReference) eAttributeEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -286,8 +285,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttribute_Date() {
-		return (EReference) attributeEClass.getEStructuralFeatures().get(5);
+	public EReference getEAttribute_Status() {
+		return (EReference) eAttributeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -295,8 +294,17 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAttribute_Status() {
-		return (EReference) attributeEClass.getEStructuralFeatures().get(6);
+	public EReference getEAttribute_Estep() {
+		return (EReference) eAttributeEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEAttribute_Complementaryconducts() {
+		return (EReference) eAttributeEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -315,15 +323,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EAttribute getOrder_Order() {
 		return (EAttribute) orderEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getField() {
-		return fieldEClass;
 	}
 
 	/**
@@ -396,33 +395,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EReference getEQuery_Method() {
 		return (EReference) eQueryEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getMethod() {
-		return methodEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMethod_Name() {
-		return (EAttribute) methodEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMethod_Attribute() {
-		return (EReference) methodEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -538,8 +510,35 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getFunction() {
-		return functionEEnum;
+	public EClass getEMethod() {
+		return eMethodEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEMethod_Name() {
+		return (EAttribute) eMethodEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEMethod_Attribute() {
+		return (EReference) eMethodEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getField() {
+		return fieldEClass;
 	}
 
 	/**
@@ -592,6 +591,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getMethod() {
+		return methodEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Query_metamodelFactory getQuery_metamodelFactory() {
 		return (Query_metamodelFactory) getEFactoryInstance();
 	}
@@ -616,19 +624,18 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		isCreated = true;
 
 		// Create classes and their features
-		attributeEClass = createEClass(ATTRIBUTE);
-		createEReference(attributeEClass, ATTRIBUTE__SEX);
-		createEReference(attributeEClass, ATTRIBUTE__ORDER);
-		createEReference(attributeEClass, ATTRIBUTE__AGE);
-		createEReference(attributeEClass, ATTRIBUTE__RANGE);
-		createEReference(attributeEClass, ATTRIBUTE__FIELD);
-		createEReference(attributeEClass, ATTRIBUTE__DATE);
-		createEReference(attributeEClass, ATTRIBUTE__STATUS);
+		eAttributeEClass = createEClass(EATTRIBUTE);
+		createEReference(eAttributeEClass, EATTRIBUTE__SEX);
+		createEReference(eAttributeEClass, EATTRIBUTE__ORDER);
+		createEReference(eAttributeEClass, EATTRIBUTE__AGE);
+		createEReference(eAttributeEClass, EATTRIBUTE__RANGE);
+		createEReference(eAttributeEClass, EATTRIBUTE__DATE);
+		createEReference(eAttributeEClass, EATTRIBUTE__STATUS);
+		createEReference(eAttributeEClass, EATTRIBUTE__ESTEP);
+		createEReference(eAttributeEClass, EATTRIBUTE__COMPLEMENTARYCONDUCTS);
 
 		orderEClass = createEClass(ORDER);
 		createEAttribute(orderEClass, ORDER__ORDER);
-
-		fieldEClass = createEClass(FIELD);
 
 		rangeEClass = createEClass(RANGE);
 		createEAttribute(rangeEClass, RANGE__FROM);
@@ -640,10 +647,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		eQueryEClass = createEClass(EQUERY);
 		createEReference(eQueryEClass, EQUERY__METHOD);
-
-		methodEClass = createEClass(METHOD);
-		createEAttribute(methodEClass, METHOD__NAME);
-		createEReference(methodEClass, METHOD__ATTRIBUTE);
 
 		complementaryConductsEClass = createEClass(COMPLEMENTARY_CONDUCTS);
 		createEAttribute(complementaryConductsEClass, COMPLEMENTARY_CONDUCTS__CONDUCT);
@@ -662,13 +665,19 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		sexEClass = createEClass(SEX);
 		createEAttribute(sexEClass, SEX__SEX);
 
+		eMethodEClass = createEClass(EMETHOD);
+		createEAttribute(eMethodEClass, EMETHOD__NAME);
+		createEReference(eMethodEClass, EMETHOD__ATTRIBUTE);
+
+		fieldEClass = createEClass(FIELD);
+
 		// Create enums
-		functionEEnum = createEEnum(FUNCTION);
 		qualifierEEnum = createEEnum(QUALIFIER);
 		messageEEnum = createEEnum(MESSAGE);
 		eElementEEnum = createEEnum(EELEMENT);
 		conductEEnum = createEEnum(CONDUCT);
 		genderEEnum = createEEnum(GENDER);
+		methodEEnum = createEEnum(METHOD);
 	}
 
 	/**
@@ -704,35 +713,36 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		complementaryConductsEClass.getESuperTypes().add(this.getField());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(eAttributeEClass, QueryMetamodel.EAttribute.class, "EAttribute", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAttribute_Sex(), this.getSex(), null, "sex", null, 0, 1, Attribute.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getAttribute_Order(), this.getOrder(), null, "order", null, 0, 1, Attribute.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getAttribute_Age(), this.getAge(), null, "age", null, 0, -1, Attribute.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getAttribute_Range(), this.getRange(), null, "range", null, 0, 1, Attribute.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getAttribute_Field(), this.getField(), null, "field", null, 0, -1, Attribute.class,
+		initEReference(getEAttribute_Sex(), this.getSex(), null, "sex", null, 1, 1, QueryMetamodel.EAttribute.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAttribute_Date(), this.getDate(), null, "date", null, 0, -1, Attribute.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getAttribute_Status(), this.getStatus(), null, "status", null, 0, 1, Attribute.class,
+		initEReference(getEAttribute_Order(), this.getOrder(), null, "order", null, 1, 1,
+				QueryMetamodel.EAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEAttribute_Age(), this.getAge(), null, "age", null, 0, -1, QueryMetamodel.EAttribute.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEAttribute_Range(), this.getRange(), null, "range", null, 0, 1,
+				QueryMetamodel.EAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEAttribute_Date(), this.getDate(), null, "date", null, 1, -1, QueryMetamodel.EAttribute.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEAttribute_Status(), this.getStatus(), null, "status", null, 1, 1,
+				QueryMetamodel.EAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEAttribute_Estep(), this.getEStep(), null, "estep", null, 1, -1,
+				QueryMetamodel.EAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEAttribute_Complementaryconducts(), this.getComplementaryConducts(), null,
+				"complementaryconducts", null, 1, -1, QueryMetamodel.EAttribute.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(orderEClass, Order.class, "Order", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getOrder_Order(), this.getQualifier(), "order", "random", 0, 1, Order.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(fieldEClass, Field.class, "Field", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(rangeEClass, Range.class, "Range", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRange_From(), ecorePackage.getEInt(), "from", "0", 0, 1, Range.class, !IS_TRANSIENT,
@@ -747,16 +757,9 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eQueryEClass, EQuery.class, "EQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEQuery_Method(), this.getMethod(), null, "method", null, 1, 1, EQuery.class, !IS_TRANSIENT,
+		initEReference(getEQuery_Method(), this.getEMethod(), null, "method", null, 0, 1, EQuery.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-
-		initEClass(methodEClass, Method.class, "Method", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMethod_Name(), this.getFunction(), "name", null, 0, 1, Method.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMethod_Attribute(), this.getAttribute(), null, "attribute", null, 0, 1, Method.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(complementaryConductsEClass, ComplementaryConducts.class, "ComplementaryConducts", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -784,14 +787,16 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		initEAttribute(getSex_Sex(), this.getGender(), "sex", null, 0, 1, Sex.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		// Initialize enums and add enum literals
-		initEEnum(functionEEnum, Function.class, "Function");
-		addEEnumLiteral(functionEEnum, Function.NONE);
-		addEEnumLiteral(functionEEnum, Function.OCURRENCY_FLOW);
-		addEEnumLiteral(functionEEnum, Function.OCCURRENCE_EXECUTION);
-		addEEnumLiteral(functionEEnum, Function.PRESCRIBED_MEDICATION);
-		addEEnumLiteral(functionEEnum, Function.AVERAGE_TIME);
+		initEClass(eMethodEClass, EMethod.class, "EMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEMethod_Name(), this.getMethod(), "name", null, 0, 1, EMethod.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEMethod_Attribute(), this.getEAttribute(), null, "attribute", null, 0, 1, EMethod.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(fieldEClass, Field.class, "Field", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize enums and add enum literals
 		initEEnum(qualifierEEnum, Qualifier.class, "Qualifier");
 		addEEnumLiteral(qualifierEEnum, Qualifier.RANDOM);
 		addEEnumLiteral(qualifierEEnum, Qualifier.BOTTOM);
@@ -826,6 +831,13 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		addEEnumLiteral(genderEEnum, Gender.ALL);
 		addEEnumLiteral(genderEEnum, Gender.MALE);
 		addEEnumLiteral(genderEEnum, Gender.FEMALE);
+
+		initEEnum(methodEEnum, Method.class, "Method");
+		addEEnumLiteral(methodEEnum, Method.NONE);
+		addEEnumLiteral(methodEEnum, Method.AVERAGE_BY_TIME);
+		addEEnumLiteral(methodEEnum, Method.OCCURRENCY_FLOW);
+		addEEnumLiteral(methodEEnum, Method.PRESCRIBED_MEDICATION);
+		addEEnumLiteral(methodEEnum, Method.COUNT);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -2,33 +2,28 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="QueryMetamodel" nsURI="http://www.example.org/QueryMetamodel"
     nsPrefix="QueryMetamodel">
-  <eClassifiers xsi:type="ecore:EClass" name="Attribute">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sex" eType="#//Sex" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="order" eType="#//Order"
+  <eClassifiers xsi:type="ecore:EClass" name="EAttribute">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sex" lowerBound="1" eType="#//Sex"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="order" lowerBound="1" eType="#//Order"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="age" upperBound="-1" eType="#//Age"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="range" eType="#//Range"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="field" upperBound="-1"
-        eType="#//Field" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="date" upperBound="-1" eType="#//Date"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="status" eType="#//Status"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Function">
-    <eLiterals name="none"/>
-    <eLiterals name="ocurrencyFlow" value="1"/>
-    <eLiterals name="occurrenceExecution" value="2"/>
-    <eLiterals name="prescribedMedication" value="3"/>
-    <eLiterals name="averageTime" value="4"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="date" lowerBound="1" upperBound="-1"
+        eType="#//Date" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="status" lowerBound="1"
+        eType="#//Status" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="estep" lowerBound="1" upperBound="-1"
+        eType="#//EStep" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="complementaryconducts"
+        lowerBound="1" upperBound="-1" eType="#//ComplementaryConducts" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Order">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//Qualifier"
         defaultValueLiteral="random"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Field" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Range">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
@@ -46,12 +41,7 @@
     <eLiterals name="top" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EQuery">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1"
-        eType="#//Method" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Method">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//Function"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="#//Attribute"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//EMethod"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComplementaryConducts" eSuperTypes="#//Field">
@@ -103,4 +93,17 @@
     <eLiterals name="male" value="1"/>
     <eLiterals name="female" value="2"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EMethod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//Method"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="#//EAttribute"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Method">
+    <eLiterals name="none"/>
+    <eLiterals name="averageByTime" value="1"/>
+    <eLiterals name="occurrencyFlow" value="2"/>
+    <eLiterals name="prescribedMedication" value="3"/>
+    <eLiterals name="count" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Field" abstract="true"/>
 </ecore:EPackage>

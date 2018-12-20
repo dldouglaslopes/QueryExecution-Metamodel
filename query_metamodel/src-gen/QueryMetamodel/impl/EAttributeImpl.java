@@ -3,9 +3,10 @@
 package QueryMetamodel.impl;
 
 import QueryMetamodel.Age;
-import QueryMetamodel.Attribute;
+import QueryMetamodel.ComplementaryConducts;
 import QueryMetamodel.Date;
-import QueryMetamodel.Field;
+import QueryMetamodel.EAttribute;
+import QueryMetamodel.EStep;
 import QueryMetamodel.Order;
 import QueryMetamodel.Query_metamodelPackage;
 import QueryMetamodel.Range;
@@ -30,24 +31,25 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Attribute</b></em>'.
+ * An implementation of the model object '<em><b>EAttribute</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.AttributeImpl#getSex <em>Sex</em>}</li>
- *   <li>{@link QueryMetamodel.impl.AttributeImpl#getOrder <em>Order</em>}</li>
- *   <li>{@link QueryMetamodel.impl.AttributeImpl#getAge <em>Age</em>}</li>
- *   <li>{@link QueryMetamodel.impl.AttributeImpl#getRange <em>Range</em>}</li>
- *   <li>{@link QueryMetamodel.impl.AttributeImpl#getField <em>Field</em>}</li>
- *   <li>{@link QueryMetamodel.impl.AttributeImpl#getDate <em>Date</em>}</li>
- *   <li>{@link QueryMetamodel.impl.AttributeImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getSex <em>Sex</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getOrder <em>Order</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getAge <em>Age</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getRange <em>Range</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getEstep <em>Estep</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getComplementaryconducts <em>Complementaryconducts</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AttributeImpl extends MinimalEObjectImpl.Container implements Attribute {
+public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAttribute {
 	/**
 	 * The cached value of the '{@link #getSex() <em>Sex</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -89,16 +91,6 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	protected Range range;
 
 	/**
-	 * The cached value of the '{@link #getField() <em>Field</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getField()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Field> field;
-
-	/**
 	 * The cached value of the '{@link #getDate() <em>Date</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,11 +111,31 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	protected Status status;
 
 	/**
+	 * The cached value of the '{@link #getEstep() <em>Estep</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEstep()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<EStep> estep;
+
+	/**
+	 * The cached value of the '{@link #getComplementaryconducts() <em>Complementaryconducts</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getComplementaryconducts()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ComplementaryConducts> complementaryconducts;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AttributeImpl() {
+	protected EAttributeImpl() {
 		super();
 	}
 
@@ -134,7 +146,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.ATTRIBUTE;
+		return Query_metamodelPackage.Literals.EATTRIBUTE;
 	}
 
 	/**
@@ -156,7 +168,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 		sex = newSex;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Query_metamodelPackage.ATTRIBUTE__SEX, oldSex, newSex);
+					Query_metamodelPackage.EATTRIBUTE__SEX, oldSex, newSex);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -175,15 +187,15 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 			NotificationChain msgs = null;
 			if (sex != null)
 				msgs = ((InternalEObject) sex).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.ATTRIBUTE__SEX, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__SEX, null, msgs);
 			if (newSex != null)
 				msgs = ((InternalEObject) newSex).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.ATTRIBUTE__SEX, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__SEX, null, msgs);
 			msgs = basicSetSex(newSex, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ATTRIBUTE__SEX, newSex,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EATTRIBUTE__SEX, newSex,
 					newSex));
 	}
 
@@ -206,7 +218,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 		order = newOrder;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Query_metamodelPackage.ATTRIBUTE__ORDER, oldOrder, newOrder);
+					Query_metamodelPackage.EATTRIBUTE__ORDER, oldOrder, newOrder);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -225,15 +237,15 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 			NotificationChain msgs = null;
 			if (order != null)
 				msgs = ((InternalEObject) order).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.ATTRIBUTE__ORDER, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__ORDER, null, msgs);
 			if (newOrder != null)
 				msgs = ((InternalEObject) newOrder).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.ATTRIBUTE__ORDER, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__ORDER, null, msgs);
 			msgs = basicSetOrder(newOrder, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ATTRIBUTE__ORDER, newOrder,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EATTRIBUTE__ORDER, newOrder,
 					newOrder));
 	}
 
@@ -244,7 +256,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 */
 	public EList<Age> getAge() {
 		if (age == null) {
-			age = new EObjectContainmentEList<Age>(Age.class, this, Query_metamodelPackage.ATTRIBUTE__AGE);
+			age = new EObjectContainmentEList<Age>(Age.class, this, Query_metamodelPackage.EATTRIBUTE__AGE);
 		}
 		return age;
 	}
@@ -268,7 +280,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 		range = newRange;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Query_metamodelPackage.ATTRIBUTE__RANGE, oldRange, newRange);
+					Query_metamodelPackage.EATTRIBUTE__RANGE, oldRange, newRange);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -287,28 +299,16 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 			NotificationChain msgs = null;
 			if (range != null)
 				msgs = ((InternalEObject) range).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.ATTRIBUTE__RANGE, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__RANGE, null, msgs);
 			if (newRange != null)
 				msgs = ((InternalEObject) newRange).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.ATTRIBUTE__RANGE, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__RANGE, null, msgs);
 			msgs = basicSetRange(newRange, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ATTRIBUTE__RANGE, newRange,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EATTRIBUTE__RANGE, newRange,
 					newRange));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Field> getField() {
-		if (field == null) {
-			field = new EObjectContainmentEList<Field>(Field.class, this, Query_metamodelPackage.ATTRIBUTE__FIELD);
-		}
-		return field;
 	}
 
 	/**
@@ -318,7 +318,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	 */
 	public EList<Date> getDate() {
 		if (date == null) {
-			date = new EObjectContainmentEList<Date>(Date.class, this, Query_metamodelPackage.ATTRIBUTE__DATE);
+			date = new EObjectContainmentEList<Date>(Date.class, this, Query_metamodelPackage.EATTRIBUTE__DATE);
 		}
 		return date;
 	}
@@ -342,7 +342,7 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 		status = newStatus;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Query_metamodelPackage.ATTRIBUTE__STATUS, oldStatus, newStatus);
+					Query_metamodelPackage.EATTRIBUTE__STATUS, oldStatus, newStatus);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -361,16 +361,41 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 			NotificationChain msgs = null;
 			if (status != null)
 				msgs = ((InternalEObject) status).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.ATTRIBUTE__STATUS, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__STATUS, null, msgs);
 			if (newStatus != null)
 				msgs = ((InternalEObject) newStatus).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.ATTRIBUTE__STATUS, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__STATUS, null, msgs);
 			msgs = basicSetStatus(newStatus, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ATTRIBUTE__STATUS, newStatus,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EATTRIBUTE__STATUS, newStatus,
 					newStatus));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<EStep> getEstep() {
+		if (estep == null) {
+			estep = new EObjectContainmentEList<EStep>(EStep.class, this, Query_metamodelPackage.EATTRIBUTE__ESTEP);
+		}
+		return estep;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ComplementaryConducts> getComplementaryconducts() {
+		if (complementaryconducts == null) {
+			complementaryconducts = new EObjectContainmentEList<ComplementaryConducts>(ComplementaryConducts.class,
+					this, Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS);
+		}
+		return complementaryconducts;
 	}
 
 	/**
@@ -381,20 +406,22 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.ATTRIBUTE__SEX:
+		case Query_metamodelPackage.EATTRIBUTE__SEX:
 			return basicSetSex(null, msgs);
-		case Query_metamodelPackage.ATTRIBUTE__ORDER:
+		case Query_metamodelPackage.EATTRIBUTE__ORDER:
 			return basicSetOrder(null, msgs);
-		case Query_metamodelPackage.ATTRIBUTE__AGE:
+		case Query_metamodelPackage.EATTRIBUTE__AGE:
 			return ((InternalEList<?>) getAge()).basicRemove(otherEnd, msgs);
-		case Query_metamodelPackage.ATTRIBUTE__RANGE:
+		case Query_metamodelPackage.EATTRIBUTE__RANGE:
 			return basicSetRange(null, msgs);
-		case Query_metamodelPackage.ATTRIBUTE__FIELD:
-			return ((InternalEList<?>) getField()).basicRemove(otherEnd, msgs);
-		case Query_metamodelPackage.ATTRIBUTE__DATE:
+		case Query_metamodelPackage.EATTRIBUTE__DATE:
 			return ((InternalEList<?>) getDate()).basicRemove(otherEnd, msgs);
-		case Query_metamodelPackage.ATTRIBUTE__STATUS:
+		case Query_metamodelPackage.EATTRIBUTE__STATUS:
 			return basicSetStatus(null, msgs);
+		case Query_metamodelPackage.EATTRIBUTE__ESTEP:
+			return ((InternalEList<?>) getEstep()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS:
+			return ((InternalEList<?>) getComplementaryconducts()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -407,20 +434,22 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.ATTRIBUTE__SEX:
+		case Query_metamodelPackage.EATTRIBUTE__SEX:
 			return getSex();
-		case Query_metamodelPackage.ATTRIBUTE__ORDER:
+		case Query_metamodelPackage.EATTRIBUTE__ORDER:
 			return getOrder();
-		case Query_metamodelPackage.ATTRIBUTE__AGE:
+		case Query_metamodelPackage.EATTRIBUTE__AGE:
 			return getAge();
-		case Query_metamodelPackage.ATTRIBUTE__RANGE:
+		case Query_metamodelPackage.EATTRIBUTE__RANGE:
 			return getRange();
-		case Query_metamodelPackage.ATTRIBUTE__FIELD:
-			return getField();
-		case Query_metamodelPackage.ATTRIBUTE__DATE:
+		case Query_metamodelPackage.EATTRIBUTE__DATE:
 			return getDate();
-		case Query_metamodelPackage.ATTRIBUTE__STATUS:
+		case Query_metamodelPackage.EATTRIBUTE__STATUS:
 			return getStatus();
+		case Query_metamodelPackage.EATTRIBUTE__ESTEP:
+			return getEstep();
+		case Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS:
+			return getComplementaryconducts();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -434,29 +463,33 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.ATTRIBUTE__SEX:
+		case Query_metamodelPackage.EATTRIBUTE__SEX:
 			setSex((Sex) newValue);
 			return;
-		case Query_metamodelPackage.ATTRIBUTE__ORDER:
+		case Query_metamodelPackage.EATTRIBUTE__ORDER:
 			setOrder((Order) newValue);
 			return;
-		case Query_metamodelPackage.ATTRIBUTE__AGE:
+		case Query_metamodelPackage.EATTRIBUTE__AGE:
 			getAge().clear();
 			getAge().addAll((Collection<? extends Age>) newValue);
 			return;
-		case Query_metamodelPackage.ATTRIBUTE__RANGE:
+		case Query_metamodelPackage.EATTRIBUTE__RANGE:
 			setRange((Range) newValue);
 			return;
-		case Query_metamodelPackage.ATTRIBUTE__FIELD:
-			getField().clear();
-			getField().addAll((Collection<? extends Field>) newValue);
-			return;
-		case Query_metamodelPackage.ATTRIBUTE__DATE:
+		case Query_metamodelPackage.EATTRIBUTE__DATE:
 			getDate().clear();
 			getDate().addAll((Collection<? extends Date>) newValue);
 			return;
-		case Query_metamodelPackage.ATTRIBUTE__STATUS:
+		case Query_metamodelPackage.EATTRIBUTE__STATUS:
 			setStatus((Status) newValue);
+			return;
+		case Query_metamodelPackage.EATTRIBUTE__ESTEP:
+			getEstep().clear();
+			getEstep().addAll((Collection<? extends EStep>) newValue);
+			return;
+		case Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS:
+			getComplementaryconducts().clear();
+			getComplementaryconducts().addAll((Collection<? extends ComplementaryConducts>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -470,26 +503,29 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.ATTRIBUTE__SEX:
+		case Query_metamodelPackage.EATTRIBUTE__SEX:
 			setSex((Sex) null);
 			return;
-		case Query_metamodelPackage.ATTRIBUTE__ORDER:
+		case Query_metamodelPackage.EATTRIBUTE__ORDER:
 			setOrder((Order) null);
 			return;
-		case Query_metamodelPackage.ATTRIBUTE__AGE:
+		case Query_metamodelPackage.EATTRIBUTE__AGE:
 			getAge().clear();
 			return;
-		case Query_metamodelPackage.ATTRIBUTE__RANGE:
+		case Query_metamodelPackage.EATTRIBUTE__RANGE:
 			setRange((Range) null);
 			return;
-		case Query_metamodelPackage.ATTRIBUTE__FIELD:
-			getField().clear();
-			return;
-		case Query_metamodelPackage.ATTRIBUTE__DATE:
+		case Query_metamodelPackage.EATTRIBUTE__DATE:
 			getDate().clear();
 			return;
-		case Query_metamodelPackage.ATTRIBUTE__STATUS:
+		case Query_metamodelPackage.EATTRIBUTE__STATUS:
 			setStatus((Status) null);
+			return;
+		case Query_metamodelPackage.EATTRIBUTE__ESTEP:
+			getEstep().clear();
+			return;
+		case Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS:
+			getComplementaryconducts().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -503,22 +539,24 @@ public class AttributeImpl extends MinimalEObjectImpl.Container implements Attri
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.ATTRIBUTE__SEX:
+		case Query_metamodelPackage.EATTRIBUTE__SEX:
 			return sex != null;
-		case Query_metamodelPackage.ATTRIBUTE__ORDER:
+		case Query_metamodelPackage.EATTRIBUTE__ORDER:
 			return order != null;
-		case Query_metamodelPackage.ATTRIBUTE__AGE:
+		case Query_metamodelPackage.EATTRIBUTE__AGE:
 			return age != null && !age.isEmpty();
-		case Query_metamodelPackage.ATTRIBUTE__RANGE:
+		case Query_metamodelPackage.EATTRIBUTE__RANGE:
 			return range != null;
-		case Query_metamodelPackage.ATTRIBUTE__FIELD:
-			return field != null && !field.isEmpty();
-		case Query_metamodelPackage.ATTRIBUTE__DATE:
+		case Query_metamodelPackage.EATTRIBUTE__DATE:
 			return date != null && !date.isEmpty();
-		case Query_metamodelPackage.ATTRIBUTE__STATUS:
+		case Query_metamodelPackage.EATTRIBUTE__STATUS:
 			return status != null;
+		case Query_metamodelPackage.EATTRIBUTE__ESTEP:
+			return estep != null && !estep.isEmpty();
+		case Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS:
+			return complementaryconducts != null && !complementaryconducts.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //AttributeImpl
+} //EAttributeImpl

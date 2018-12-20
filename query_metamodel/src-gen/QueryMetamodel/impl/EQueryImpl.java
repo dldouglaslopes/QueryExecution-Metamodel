@@ -2,8 +2,8 @@
  */
 package QueryMetamodel.impl;
 
+import QueryMetamodel.EMethod;
 import QueryMetamodel.EQuery;
-import QueryMetamodel.Method;
 import QueryMetamodel.Query_metamodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -37,7 +37,7 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	 * @generated
 	 * @ordered
 	 */
-	protected Method method;
+	protected EMethod method;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Method getMethod() {
+	public EMethod getMethod() {
 		return method;
 	}
 
@@ -72,8 +72,8 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMethod(Method newMethod, NotificationChain msgs) {
-		Method oldMethod = method;
+	public NotificationChain basicSetMethod(EMethod newMethod, NotificationChain msgs) {
+		EMethod oldMethod = method;
 		method = newMethod;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -91,7 +91,7 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMethod(Method newMethod) {
+	public void setMethod(EMethod newMethod) {
 		if (newMethod != method) {
 			NotificationChain msgs = null;
 			if (method != null)
@@ -145,7 +145,7 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Query_metamodelPackage.EQUERY__METHOD:
-			setMethod((Method) newValue);
+			setMethod((EMethod) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -160,7 +160,7 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case Query_metamodelPackage.EQUERY__METHOD:
-			setMethod((Method) null);
+			setMethod((EMethod) null);
 			return;
 		}
 		super.eUnset(featureID);

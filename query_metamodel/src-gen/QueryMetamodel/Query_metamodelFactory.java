@@ -22,13 +22,13 @@ public interface Query_metamodelFactory extends EFactory {
 	Query_metamodelFactory eINSTANCE = QueryMetamodel.impl.Query_metamodelFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Attribute</em>'.
+	 * Returns a new object of class '<em>EAttribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Attribute</em>'.
+	 * @return a new object of class '<em>EAttribute</em>'.
 	 * @generated
 	 */
-	Attribute createAttribute();
+	EAttribute createEAttribute();
 
 	/**
 	 * Returns a new object of class '<em>Order</em>'.
@@ -65,15 +65,6 @@ public interface Query_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	EQuery createEQuery();
-
-	/**
-	 * Returns a new object of class '<em>Method</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Method</em>'.
-	 * @generated
-	 */
-	Method createMethod();
 
 	/**
 	 * Returns a new object of class '<em>Complementary Conducts</em>'.
@@ -119,6 +110,15 @@ public interface Query_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Sex createSex();
+
+	/**
+	 * Returns a new object of class '<em>EMethod</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EMethod</em>'.
+	 * @generated
+	 */
+	EMethod createEMethod();
 
 	/**
 	 * Returns the package supported by this factory.

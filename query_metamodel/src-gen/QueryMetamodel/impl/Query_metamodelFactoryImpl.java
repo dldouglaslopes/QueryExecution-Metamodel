@@ -57,8 +57,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case Query_metamodelPackage.ATTRIBUTE:
-			return createAttribute();
+		case Query_metamodelPackage.EATTRIBUTE:
+			return createEAttribute();
 		case Query_metamodelPackage.ORDER:
 			return createOrder();
 		case Query_metamodelPackage.RANGE:
@@ -67,8 +67,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createEStep();
 		case Query_metamodelPackage.EQUERY:
 			return createEQuery();
-		case Query_metamodelPackage.METHOD:
-			return createMethod();
 		case Query_metamodelPackage.COMPLEMENTARY_CONDUCTS:
 			return createComplementaryConducts();
 		case Query_metamodelPackage.DATE:
@@ -79,6 +77,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createAge();
 		case Query_metamodelPackage.SEX:
 			return createSex();
+		case Query_metamodelPackage.EMETHOD:
+			return createEMethod();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,8 +92,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case Query_metamodelPackage.FUNCTION:
-			return createFunctionFromString(eDataType, initialValue);
 		case Query_metamodelPackage.QUALIFIER:
 			return createQualifierFromString(eDataType, initialValue);
 		case Query_metamodelPackage.MESSAGE:
@@ -104,6 +102,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createConductFromString(eDataType, initialValue);
 		case Query_metamodelPackage.GENDER:
 			return createGenderFromString(eDataType, initialValue);
+		case Query_metamodelPackage.METHOD:
+			return createMethodFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -117,8 +117,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case Query_metamodelPackage.FUNCTION:
-			return convertFunctionToString(eDataType, instanceValue);
 		case Query_metamodelPackage.QUALIFIER:
 			return convertQualifierToString(eDataType, instanceValue);
 		case Query_metamodelPackage.MESSAGE:
@@ -129,6 +127,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return convertConductToString(eDataType, instanceValue);
 		case Query_metamodelPackage.GENDER:
 			return convertGenderToString(eDataType, instanceValue);
+		case Query_metamodelPackage.METHOD:
+			return convertMethodToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -139,9 +139,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attribute createAttribute() {
-		AttributeImpl attribute = new AttributeImpl();
-		return attribute;
+	public EAttribute createEAttribute() {
+		EAttributeImpl eAttribute = new EAttributeImpl();
+		return eAttribute;
 	}
 
 	/**
@@ -182,16 +182,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public EQuery createEQuery() {
 		EQueryImpl eQuery = new EQueryImpl();
 		return eQuery;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Method createMethod() {
-		MethodImpl method = new MethodImpl();
-		return method;
 	}
 
 	/**
@@ -249,21 +239,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Function createFunctionFromString(EDataType eDataType, String initialValue) {
-		Function result = Function.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertFunctionToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
+	public EMethod createEMethod() {
+		EMethodImpl eMethod = new EMethodImpl();
+		return eMethod;
 	}
 
 	/**
@@ -373,6 +351,28 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * @generated
 	 */
 	public String convertGenderToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Method createMethodFromString(EDataType eDataType, String initialValue) {
+		Method result = Method.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMethodToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

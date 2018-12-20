@@ -67,18 +67,13 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected Query_metamodelSwitch<Adapter> modelSwitch = new Query_metamodelSwitch<Adapter>() {
 		@Override
-		public Adapter caseAttribute(Attribute object) {
-			return createAttributeAdapter();
+		public Adapter caseEAttribute(EAttribute object) {
+			return createEAttributeAdapter();
 		}
 
 		@Override
 		public Adapter caseOrder(Order object) {
 			return createOrderAdapter();
-		}
-
-		@Override
-		public Adapter caseField(Field object) {
-			return createFieldAdapter();
 		}
 
 		@Override
@@ -94,11 +89,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseEQuery(EQuery object) {
 			return createEQueryAdapter();
-		}
-
-		@Override
-		public Adapter caseMethod(Method object) {
-			return createMethodAdapter();
 		}
 
 		@Override
@@ -127,6 +117,16 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseEMethod(EMethod object) {
+			return createEMethodAdapter();
+		}
+
+		@Override
+		public Adapter caseField(Field object) {
+			return createFieldAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -146,16 +146,16 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Attribute <em>Attribute</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EAttribute <em>EAttribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.Attribute
+	 * @see QueryMetamodel.EAttribute
 	 * @generated
 	 */
-	public Adapter createAttributeAdapter() {
+	public Adapter createEAttributeAdapter() {
 		return null;
 	}
 
@@ -170,20 +170,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createOrderAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Field <em>Field</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.Field
-	 * @generated
-	 */
-	public Adapter createFieldAdapter() {
 		return null;
 	}
 
@@ -226,20 +212,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEQueryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Method <em>Method</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.Method
-	 * @generated
-	 */
-	public Adapter createMethodAdapter() {
 		return null;
 	}
 
@@ -310,6 +282,34 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSexAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EMethod <em>EMethod</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.EMethod
+	 * @generated
+	 */
+	public Adapter createEMethodAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Field <em>Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.Field
+	 * @generated
+	 */
+	public Adapter createFieldAdapter() {
 		return null;
 	}
 

@@ -66,9 +66,9 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case Query_metamodelPackage.ATTRIBUTE: {
-			Attribute attribute = (Attribute) theEObject;
-			T result = caseAttribute(attribute);
+		case Query_metamodelPackage.EATTRIBUTE: {
+			EAttribute eAttribute = (EAttribute) theEObject;
+			T result = caseEAttribute(eAttribute);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -76,13 +76,6 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 		case Query_metamodelPackage.ORDER: {
 			Order order = (Order) theEObject;
 			T result = caseOrder(order);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Query_metamodelPackage.FIELD: {
-			Field field = (Field) theEObject;
-			T result = caseField(field);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -106,13 +99,6 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 		case Query_metamodelPackage.EQUERY: {
 			EQuery eQuery = (EQuery) theEObject;
 			T result = caseEQuery(eQuery);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Query_metamodelPackage.METHOD: {
-			Method method = (Method) theEObject;
-			T result = caseMethod(method);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -154,23 +140,37 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case Query_metamodelPackage.EMETHOD: {
+			EMethod eMethod = (EMethod) theEObject;
+			T result = caseEMethod(eMethod);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.FIELD: {
+			Field field = (Field) theEObject;
+			T result = caseField(field);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Attribute</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>EAttribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Attribute</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>EAttribute</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAttribute(Attribute object) {
+	public T caseEAttribute(EAttribute object) {
 		return null;
 	}
 
@@ -186,21 +186,6 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOrder(Order object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseField(Field object) {
 		return null;
 	}
 
@@ -246,21 +231,6 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEQuery(EQuery object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Method</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Method</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMethod(Method object) {
 		return null;
 	}
 
@@ -336,6 +306,36 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSex(Sex object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EMethod</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EMethod</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEMethod(EMethod object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseField(Field object) {
 		return null;
 	}
 

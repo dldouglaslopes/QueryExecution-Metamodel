@@ -9,13 +9,6 @@
   <foreignModel>query_metamodel.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Query_metamodel" disposableProviderFactory="true" ecorePackage="query_metamodel.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Function">
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Function/none"/>
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Function/ocurrencyFlow"/>
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Function/occurrenceExecution"/>
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Function/prescribedMedication"/>
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Function/averageTime"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Qualifier">
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Qualifier/random"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Qualifier/bottom"/>
@@ -51,19 +44,26 @@
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Gender/male"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Gender/female"/>
     </genEnums>
-    <genClasses ecoreClass="query_metamodel.ecore#//Attribute">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/sex"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/order"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/age"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/range"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/field"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/date"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Attribute/status"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Method">
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Method/none"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Method/averageByTime"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Method/occurrencyFlow"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Method/prescribedMedication"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Method/count"/>
+    </genEnums>
+    <genClasses ecoreClass="query_metamodel.ecore#//EAttribute">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EAttribute/sex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EAttribute/order"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EAttribute/age"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EAttribute/range"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EAttribute/date"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EAttribute/status"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EAttribute/estep"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EAttribute/complementaryconducts"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//Order">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Order/order"/>
     </genClasses>
-    <genClasses ecoreClass="query_metamodel.ecore#//Field"/>
     <genClasses ecoreClass="query_metamodel.ecore#//Range">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Range/from"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Range/quantity"/>
@@ -74,10 +74,6 @@
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//EQuery">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EQuery/method"/>
-    </genClasses>
-    <genClasses ecoreClass="query_metamodel.ecore#//Method">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Method/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Method/attribute"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//ComplementaryConducts">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ComplementaryConducts/conduct"/>
@@ -96,5 +92,10 @@
     <genClasses ecoreClass="query_metamodel.ecore#//Sex">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Sex/sex"/>
     </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//EMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EMethod/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EMethod/attribute"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Field"/>
   </genPackages>
 </genmodel:GenModel>

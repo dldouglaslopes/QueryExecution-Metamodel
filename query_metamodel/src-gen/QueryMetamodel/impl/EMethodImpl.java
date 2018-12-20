@@ -2,12 +2,14 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.Attribute;
-import QueryMetamodel.Function;
+import QueryMetamodel.EAttribute;
+import QueryMetamodel.EMethod;
 import QueryMetamodel.Method;
 import QueryMetamodel.Query_metamodelPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -16,19 +18,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Method</b></em>'.
+ * An implementation of the model object '<em><b>EMethod</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.MethodImpl#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.impl.MethodImpl#getAttribute <em>Attribute</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EMethodImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EMethodImpl#getAttribute <em>Attribute</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
+public class EMethodImpl extends MinimalEObjectImpl.Container implements EMethod {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -37,7 +39,7 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Function NAME_EDEFAULT = Function.NONE;
+	protected static final Method NAME_EDEFAULT = Method.NONE;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -47,7 +49,7 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * @generated
 	 * @ordered
 	 */
-	protected Function name = NAME_EDEFAULT;
+	protected Method name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' containment reference.
@@ -57,14 +59,14 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * @generated
 	 * @ordered
 	 */
-	protected Attribute attribute;
+	protected EAttribute attribute;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MethodImpl() {
+	protected EMethodImpl() {
 		super();
 	}
 
@@ -75,7 +77,7 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.METHOD;
+		return Query_metamodelPackage.Literals.EMETHOD;
 	}
 
 	/**
@@ -83,7 +85,7 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Function getName() {
+	public Method getName() {
 		return name;
 	}
 
@@ -92,11 +94,11 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(Function newName) {
-		Function oldName = name;
+	public void setName(Method newName) {
+		Method oldName = name;
 		name = newName == null ? NAME_EDEFAULT : newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.METHOD__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EMETHOD__NAME, oldName, name));
 	}
 
 	/**
@@ -104,7 +106,7 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Attribute getAttribute() {
+	public EAttribute getAttribute() {
 		return attribute;
 	}
 
@@ -113,12 +115,12 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAttribute(Attribute newAttribute, NotificationChain msgs) {
-		Attribute oldAttribute = attribute;
+	public NotificationChain basicSetAttribute(EAttribute newAttribute, NotificationChain msgs) {
+		EAttribute oldAttribute = attribute;
 		attribute = newAttribute;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Query_metamodelPackage.METHOD__ATTRIBUTE, oldAttribute, newAttribute);
+					Query_metamodelPackage.EMETHOD__ATTRIBUTE, oldAttribute, newAttribute);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -132,20 +134,20 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAttribute(Attribute newAttribute) {
+	public void setAttribute(EAttribute newAttribute) {
 		if (newAttribute != attribute) {
 			NotificationChain msgs = null;
 			if (attribute != null)
 				msgs = ((InternalEObject) attribute).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.METHOD__ATTRIBUTE, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EMETHOD__ATTRIBUTE, null, msgs);
 			if (newAttribute != null)
 				msgs = ((InternalEObject) newAttribute).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.METHOD__ATTRIBUTE, null, msgs);
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EMETHOD__ATTRIBUTE, null, msgs);
 			msgs = basicSetAttribute(newAttribute, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.METHOD__ATTRIBUTE,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EMETHOD__ATTRIBUTE,
 					newAttribute, newAttribute));
 	}
 
@@ -157,7 +159,7 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.METHOD__ATTRIBUTE:
+		case Query_metamodelPackage.EMETHOD__ATTRIBUTE:
 			return basicSetAttribute(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -171,9 +173,9 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.METHOD__NAME:
+		case Query_metamodelPackage.EMETHOD__NAME:
 			return getName();
-		case Query_metamodelPackage.METHOD__ATTRIBUTE:
+		case Query_metamodelPackage.EMETHOD__ATTRIBUTE:
 			return getAttribute();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -184,15 +186,14 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.METHOD__NAME:
-			setName((Function) newValue);
+		case Query_metamodelPackage.EMETHOD__NAME:
+			setName((Method) newValue);
 			return;
-		case Query_metamodelPackage.METHOD__ATTRIBUTE:
-			setAttribute((Attribute) newValue);
+		case Query_metamodelPackage.EMETHOD__ATTRIBUTE:
+			setAttribute((EAttribute) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -206,11 +207,11 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.METHOD__NAME:
+		case Query_metamodelPackage.EMETHOD__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Query_metamodelPackage.METHOD__ATTRIBUTE:
-			setAttribute((Attribute) null);
+		case Query_metamodelPackage.EMETHOD__ATTRIBUTE:
+			setAttribute((EAttribute) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -224,9 +225,9 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.METHOD__NAME:
+		case Query_metamodelPackage.EMETHOD__NAME:
 			return name != NAME_EDEFAULT;
-		case Query_metamodelPackage.METHOD__ATTRIBUTE:
+		case Query_metamodelPackage.EMETHOD__ATTRIBUTE:
 			return attribute != null;
 		}
 		return super.eIsSet(featureID);
@@ -249,4 +250,4 @@ public class MethodImpl extends MinimalEObjectImpl.Container implements Method {
 		return result.toString();
 	}
 
-} //MethodImpl
+} //EMethodImpl

@@ -2,79 +2,293 @@
  */
 package QueryMetamodel;
 
-import org.eclipse.emf.ecore.EObject;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Method</b></em>'.
+ * A representation of the literals of the enumeration '<em><b>Method</b></em>',
+ * and utility methods for working with them.
  * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link QueryMetamodel.Method#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.Method#getAttribute <em>Attribute</em>}</li>
- * </ul>
- *
  * @see QueryMetamodel.Query_metamodelPackage#getMethod()
  * @model
  * @generated
  */
-public interface Method extends EObject {
+public enum Method implements Enumerator {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The literals are from the enumeration {@link QueryMetamodel.Function}.
+	 * The '<em><b>None</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NONE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	NONE(0, "none", "none"),
+
+	/**
+	 * The '<em><b>Average By Time</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #AVERAGE_BY_TIME_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	AVERAGE_BY_TIME(1, "averageByTime", "averageByTime"),
+
+	/**
+	 * The '<em><b>Occurrency Flow</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #OCCURRENCY_FLOW_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	OCCURRENCY_FLOW(2, "occurrencyFlow", "occurrencyFlow"),
+
+	/**
+	 * The '<em><b>Prescribed Medication</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #PRESCRIBED_MEDICATION_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	PRESCRIBED_MEDICATION(3, "prescribedMedication", "prescribedMedication"),
+
+	/**
+	 * The '<em><b>Count</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #COUNT_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	COUNT(4, "count", "count");
+
+	/**
+	 * The '<em><b>None</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of '<em><b>None</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see QueryMetamodel.Function
-	 * @see #setName(Function)
-	 * @see QueryMetamodel.Query_metamodelPackage#getMethod_Name()
-	 * @model
+	 * @see #NONE
+	 * @model name="none"
 	 * @generated
+	 * @ordered
 	 */
-	Function getName();
+	public static final int NONE_VALUE = 0;
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.Method#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see QueryMetamodel.Function
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(Function value);
-
-	/**
-	 * Returns the value of the '<em><b>Attribute</b></em>' containment reference.
+	 * The '<em><b>Average By Time</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Attribute</em>' containment reference isn't clear,
+	 * If the meaning of '<em><b>Average By Time</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attribute</em>' containment reference.
-	 * @see #setAttribute(Attribute)
-	 * @see QueryMetamodel.Query_metamodelPackage#getMethod_Attribute()
-	 * @model containment="true"
+	 * @see #AVERAGE_BY_TIME
+	 * @model name="averageByTime"
 	 * @generated
+	 * @ordered
 	 */
-	Attribute getAttribute();
+	public static final int AVERAGE_BY_TIME_VALUE = 1;
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.Method#getAttribute <em>Attribute</em>}' containment reference.
+	 * The '<em><b>Occurrency Flow</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Occurrency Flow</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #OCCURRENCY_FLOW
+	 * @model name="occurrencyFlow"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OCCURRENCY_FLOW_VALUE = 2;
+
+	/**
+	 * The '<em><b>Prescribed Medication</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Prescribed Medication</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #PRESCRIBED_MEDICATION
+	 * @model name="prescribedMedication"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PRESCRIBED_MEDICATION_VALUE = 3;
+
+	/**
+	 * The '<em><b>Count</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Count</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #COUNT
+	 * @model name="count"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int COUNT_VALUE = 4;
+
+	/**
+	 * An array of all the '<em><b>Method</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Attribute</em>' containment reference.
-	 * @see #getAttribute()
 	 * @generated
 	 */
-	void setAttribute(Attribute value);
+	private static final Method[] VALUES_ARRAY = new Method[] { NONE, AVERAGE_BY_TIME, OCCURRENCY_FLOW,
+			PRESCRIBED_MEDICATION, COUNT, };
 
-} // Method
+	/**
+	 * A public read-only list of all the '<em><b>Method</b></em>' enumerators.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static final List<Method> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+
+	/**
+	 * Returns the '<em><b>Method</b></em>' literal with the specified literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static Method get(String literal) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			Method result = VALUES_ARRAY[i];
+			if (result.toString().equals(literal)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Method</b></em>' literal with the specified name.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static Method getByName(String name) {
+		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
+			Method result = VALUES_ARRAY[i];
+			if (result.getName().equals(name)) {
+				return result;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the '<em><b>Method</b></em>' literal with the specified integer value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
+	 * @generated
+	 */
+	public static Method get(int value) {
+		switch (value) {
+		case NONE_VALUE:
+			return NONE;
+		case AVERAGE_BY_TIME_VALUE:
+			return AVERAGE_BY_TIME;
+		case OCCURRENCY_FLOW_VALUE:
+			return OCCURRENCY_FLOW;
+		case PRESCRIBED_MEDICATION_VALUE:
+			return PRESCRIBED_MEDICATION;
+		case COUNT_VALUE:
+			return COUNT;
+		}
+		return null;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final int value;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String name;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private final String literal;
+
+	/**
+	 * Only this class can construct instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private Method(int value, String name, String literal) {
+		this.value = value;
+		this.name = name;
+		this.literal = literal;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLiteral() {
+		return literal;
+	}
+
+	/**
+	 * Returns the literal value of the enumerator, which is its string representation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		return literal;
+	}
+
+} //Method

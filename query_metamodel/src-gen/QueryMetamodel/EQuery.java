@@ -30,12 +30,12 @@ public interface EQuery extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Method</em>' containment reference.
-	 * @see #setMethod(Method)
+	 * @see #setMethod(EMethod)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEQuery_Method()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
-	Method getMethod();
+	EMethod getMethod();
 
 	/**
 	 * Sets the value of the '{@link QueryMetamodel.EQuery#getMethod <em>Method</em>}' containment reference.
@@ -45,6 +45,6 @@ public interface EQuery extends EObject {
 	 * @see #getMethod()
 	 * @generated
 	 */
-	void setMethod(Method value);
+	void setMethod(EMethod value);
 
 } // EQuery
