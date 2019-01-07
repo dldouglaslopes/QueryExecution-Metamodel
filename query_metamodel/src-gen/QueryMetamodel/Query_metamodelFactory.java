@@ -31,15 +31,6 @@ public interface Query_metamodelFactory extends EFactory {
 	EAttribute createEAttribute();
 
 	/**
-	 * Returns a new object of class '<em>Order</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Order</em>'.
-	 * @generated
-	 */
-	Order createOrder();
-
-	/**
 	 * Returns a new object of class '<em>Range</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,15 +40,6 @@ public interface Query_metamodelFactory extends EFactory {
 	Range createRange();
 
 	/**
-	 * Returns a new object of class '<em>EStep</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EStep</em>'.
-	 * @generated
-	 */
-	EStep createEStep();
-
-	/**
 	 * Returns a new object of class '<em>EQuery</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,15 +47,6 @@ public interface Query_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	EQuery createEQuery();
-
-	/**
-	 * Returns a new object of class '<em>Complementary Conducts</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Complementary Conducts</em>'.
-	 * @generated
-	 */
-	ComplementaryConducts createComplementaryConducts();
 
 	/**
 	 * Returns a new object of class '<em>Date</em>'.
@@ -119,6 +92,15 @@ public interface Query_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	EMethod createEMethod();
+
+	/**
+	 * Returns a new object of class '<em>ECare Pathway</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ECare Pathway</em>'.
+	 * @generated
+	 */
+	ECarePathway createECarePathway();
 
 	/**
 	 * Returns the package supported by this factory.

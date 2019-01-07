@@ -2,6 +2,7 @@
  */
 package QueryMetamodel.impl;
 
+import QueryMetamodel.Order;
 import QueryMetamodel.Query_metamodelPackage;
 import QueryMetamodel.Range;
 
@@ -20,34 +21,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.RangeImpl#getFrom <em>From</em>}</li>
  *   <li>{@link QueryMetamodel.impl.RangeImpl#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.impl.RangeImpl#getTo <em>To</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.RangeImpl#getOrder <em>Order</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
-	/**
-	 * The default value of the '{@link #getFrom() <em>From</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFrom()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int FROM_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getFrom() <em>From</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFrom()
-	 * @generated
-	 * @ordered
-	 */
-	protected int from = FROM_EDEFAULT;
-
 	/**
 	 * The default value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -69,24 +49,24 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	protected int quantity = QUANTITY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTo() <em>To</em>}' attribute.
+	 * The default value of the '{@link #getOrder() <em>Order</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTo()
+	 * @see #getOrder()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int TO_EDEFAULT = 0;
+	protected static final Order ORDER_EDEFAULT = Order.RANDOM;
 
 	/**
-	 * The cached value of the '{@link #getTo() <em>To</em>}' attribute.
+	 * The cached value of the '{@link #getOrder() <em>Order</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTo()
+	 * @see #getOrder()
 	 * @generated
 	 * @ordered
 	 */
-	protected int to = TO_EDEFAULT;
+	protected Order order = ORDER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -105,27 +85,6 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	@Override
 	protected EClass eStaticClass() {
 		return Query_metamodelPackage.Literals.RANGE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getFrom() {
-		return from;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFrom(int newFrom) {
-		int oldFrom = from;
-		from = newFrom;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.RANGE__FROM, oldFrom, from));
 	}
 
 	/**
@@ -155,8 +114,8 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getTo() {
-		return to;
+	public Order getOrder() {
+		return order;
 	}
 
 	/**
@@ -164,11 +123,12 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTo(int newTo) {
-		int oldTo = to;
-		to = newTo;
+	public void setOrder(Order newOrder) {
+		Order oldOrder = order;
+		order = newOrder == null ? ORDER_EDEFAULT : newOrder;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.RANGE__TO, oldTo, to));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.RANGE__ORDER, oldOrder,
+					order));
 	}
 
 	/**
@@ -179,12 +139,10 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.RANGE__FROM:
-			return getFrom();
 		case Query_metamodelPackage.RANGE__QUANTITY:
 			return getQuantity();
-		case Query_metamodelPackage.RANGE__TO:
-			return getTo();
+		case Query_metamodelPackage.RANGE__ORDER:
+			return getOrder();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -197,14 +155,11 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.RANGE__FROM:
-			setFrom((Integer) newValue);
-			return;
 		case Query_metamodelPackage.RANGE__QUANTITY:
 			setQuantity((Integer) newValue);
 			return;
-		case Query_metamodelPackage.RANGE__TO:
-			setTo((Integer) newValue);
+		case Query_metamodelPackage.RANGE__ORDER:
+			setOrder((Order) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -218,14 +173,11 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.RANGE__FROM:
-			setFrom(FROM_EDEFAULT);
-			return;
 		case Query_metamodelPackage.RANGE__QUANTITY:
 			setQuantity(QUANTITY_EDEFAULT);
 			return;
-		case Query_metamodelPackage.RANGE__TO:
-			setTo(TO_EDEFAULT);
+		case Query_metamodelPackage.RANGE__ORDER:
+			setOrder(ORDER_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -239,12 +191,10 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.RANGE__FROM:
-			return from != FROM_EDEFAULT;
 		case Query_metamodelPackage.RANGE__QUANTITY:
 			return quantity != QUANTITY_EDEFAULT;
-		case Query_metamodelPackage.RANGE__TO:
-			return to != TO_EDEFAULT;
+		case Query_metamodelPackage.RANGE__ORDER:
+			return order != ORDER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -260,12 +210,10 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (from: ");
-		result.append(from);
-		result.append(", quantity: ");
+		result.append(" (quantity: ");
 		result.append(quantity);
-		result.append(", to: ");
-		result.append(to);
+		result.append(", order: ");
+		result.append(order);
 		result.append(')');
 		return result.toString();
 	}

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.EMethod#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.EMethod#getAttribute <em>Attribute</em>}</li>
+ *   <li>{@link QueryMetamodel.EMethod#getEAttribute <em>EAttribute</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getEMethod()
@@ -52,29 +52,29 @@ public interface EMethod extends EObject {
 	void setName(Method value);
 
 	/**
-	 * Returns the value of the '<em><b>Attribute</b></em>' containment reference.
+	 * Returns the value of the '<em><b>EAttribute</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Attribute</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>EAttribute</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Attribute</em>' containment reference.
-	 * @see #setAttribute(EAttribute)
-	 * @see QueryMetamodel.Query_metamodelPackage#getEMethod_Attribute()
+	 * @return the value of the '<em>EAttribute</em>' containment reference.
+	 * @see #setEAttribute(EAttribute)
+	 * @see QueryMetamodel.Query_metamodelPackage#getEMethod_EAttribute()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EAttribute getAttribute();
+	EAttribute getEAttribute();
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.EMethod#getAttribute <em>Attribute</em>}' containment reference.
+	 * Sets the value of the '{@link QueryMetamodel.EMethod#getEAttribute <em>EAttribute</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Attribute</em>' containment reference.
-	 * @see #getAttribute()
+	 * @param value the new value of the '<em>EAttribute</em>' containment reference.
+	 * @see #getEAttribute()
 	 * @generated
 	 */
-	void setAttribute(EAttribute value);
+	void setEAttribute(EAttribute value);
 
 } // EMethod

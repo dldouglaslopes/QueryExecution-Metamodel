@@ -39,19 +39,18 @@ public enum Method implements Enumerator {
 	AVERAGE_BY_TIME(1, "averageByTime", "averageByTime"),
 
 	/**
-	 * The '<em><b>Occurrency Flow</b></em>' literal object.
+	 * The '<em><b>Recurrency Flow</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #OCCURRENCY_FLOW_VALUE
+	 * @see #RECURRENCY_FLOW_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	OCCURRENCY_FLOW(2, "occurrencyFlow", "occurrencyFlow"),
-
+	RECURRENCY_FLOW(2, "recurrencyFlow", "recurrencyFlow"),
 	/**
 	 * The '<em><b>Prescribed Medication</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #PRESCRIBED_MEDICATION_VALUE
 	 * @generated
 	 * @ordered
@@ -59,14 +58,23 @@ public enum Method implements Enumerator {
 	PRESCRIBED_MEDICATION(3, "prescribedMedication", "prescribedMedication"),
 
 	/**
-	 * The '<em><b>Count</b></em>' literal object.
+	 * The '<em><b>Occurrency Execution</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #COUNT_VALUE
+	 * @see #OCCURRENCY_EXECUTION_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	COUNT(4, "count", "count");
+	OCCURRENCY_EXECUTION(4, "occurrencyExecution", "occurrencyExecution"),
+	/**
+	* The '<em><b>Status</b></em>' literal object.
+	* <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	* @see #STATUS_VALUE
+	* @generated
+	* @ordered
+	*/
+	STATUS(5, "status", "status");
 
 	/**
 	 * The '<em><b>None</b></em>' literal value.
@@ -99,19 +107,19 @@ public enum Method implements Enumerator {
 	public static final int AVERAGE_BY_TIME_VALUE = 1;
 
 	/**
-	 * The '<em><b>Occurrency Flow</b></em>' literal value.
+	 * The '<em><b>Recurrency Flow</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Occurrency Flow</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Recurrency Flow</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #OCCURRENCY_FLOW
-	 * @model name="occurrencyFlow"
+	 * @see #RECURRENCY_FLOW
+	 * @model name="recurrencyFlow"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int OCCURRENCY_FLOW_VALUE = 2;
+	public static final int RECURRENCY_FLOW_VALUE = 2;
 
 	/**
 	 * The '<em><b>Prescribed Medication</b></em>' literal value.
@@ -129,19 +137,34 @@ public enum Method implements Enumerator {
 	public static final int PRESCRIBED_MEDICATION_VALUE = 3;
 
 	/**
-	 * The '<em><b>Count</b></em>' literal value.
+	 * The '<em><b>Occurrency Execution</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Count</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Occurrency Execution</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #COUNT
-	 * @model name="count"
+	 * @see #OCCURRENCY_EXECUTION
+	 * @model name="occurrencyExecution"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int COUNT_VALUE = 4;
+	public static final int OCCURRENCY_EXECUTION_VALUE = 4;
+
+	/**
+	 * The '<em><b>Status</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Status</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #STATUS
+	 * @model name="status"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int STATUS_VALUE = 5;
 
 	/**
 	 * An array of all the '<em><b>Method</b></em>' enumerators.
@@ -149,8 +172,8 @@ public enum Method implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Method[] VALUES_ARRAY = new Method[] { NONE, AVERAGE_BY_TIME, OCCURRENCY_FLOW,
-			PRESCRIBED_MEDICATION, COUNT, };
+	private static final Method[] VALUES_ARRAY = new Method[] { NONE, AVERAGE_BY_TIME, RECURRENCY_FLOW,
+			PRESCRIBED_MEDICATION, OCCURRENCY_EXECUTION, STATUS, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Method</b></em>' enumerators.
@@ -210,12 +233,14 @@ public enum Method implements Enumerator {
 			return NONE;
 		case AVERAGE_BY_TIME_VALUE:
 			return AVERAGE_BY_TIME;
-		case OCCURRENCY_FLOW_VALUE:
-			return OCCURRENCY_FLOW;
+		case RECURRENCY_FLOW_VALUE:
+			return RECURRENCY_FLOW;
 		case PRESCRIBED_MEDICATION_VALUE:
 			return PRESCRIBED_MEDICATION;
-		case COUNT_VALUE:
-			return COUNT;
+		case OCCURRENCY_EXECUTION_VALUE:
+			return OCCURRENCY_EXECUTION;
+		case STATUS_VALUE:
+			return STATUS;
 		}
 		return null;
 	}

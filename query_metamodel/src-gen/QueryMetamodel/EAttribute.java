@@ -2,8 +2,6 @@
  */
 package QueryMetamodel;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,13 +14,11 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.EAttribute#getSex <em>Sex</em>}</li>
- *   <li>{@link QueryMetamodel.EAttribute#getOrder <em>Order</em>}</li>
  *   <li>{@link QueryMetamodel.EAttribute#getAge <em>Age</em>}</li>
  *   <li>{@link QueryMetamodel.EAttribute#getRange <em>Range</em>}</li>
  *   <li>{@link QueryMetamodel.EAttribute#getDate <em>Date</em>}</li>
  *   <li>{@link QueryMetamodel.EAttribute#getStatus <em>Status</em>}</li>
- *   <li>{@link QueryMetamodel.EAttribute#getEstep <em>Estep</em>}</li>
- *   <li>{@link QueryMetamodel.EAttribute#getComplementaryconducts <em>Complementaryconducts</em>}</li>
+ *   <li>{@link QueryMetamodel.EAttribute#getCarePathway <em>Care Pathway</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getEAttribute()
@@ -57,46 +53,30 @@ public interface EAttribute extends EObject {
 	void setSex(Sex value);
 
 	/**
-	 * Returns the value of the '<em><b>Order</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Age</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Order</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Age</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Order</em>' containment reference.
-	 * @see #setOrder(Order)
-	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_Order()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	Order getOrder();
-
-	/**
-	 * Sets the value of the '{@link QueryMetamodel.EAttribute#getOrder <em>Order</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Order</em>' containment reference.
-	 * @see #getOrder()
-	 * @generated
-	 */
-	void setOrder(Order value);
-
-	/**
-	 * Returns the value of the '<em><b>Age</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.Age}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Age</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Age</em>' containment reference list.
+	 * @return the value of the '<em>Age</em>' containment reference.
+	 * @see #setAge(Age)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_Age()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Age> getAge();
+	Age getAge();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.EAttribute#getAge <em>Age</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Age</em>' containment reference.
+	 * @see #getAge()
+	 * @generated
+	 */
+	void setAge(Age value);
 
 	/**
 	 * Returns the value of the '<em><b>Range</b></em>' containment reference.
@@ -109,7 +89,7 @@ public interface EAttribute extends EObject {
 	 * @return the value of the '<em>Range</em>' containment reference.
 	 * @see #setRange(Range)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_Range()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Range getRange();
@@ -125,20 +105,30 @@ public interface EAttribute extends EObject {
 	void setRange(Range value);
 
 	/**
-	 * Returns the value of the '<em><b>Date</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.Date}.
+	 * Returns the value of the '<em><b>Date</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Date</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Date</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Date</em>' containment reference list.
+	 * @return the value of the '<em>Date</em>' containment reference.
+	 * @see #setDate(Date)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_Date()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Date> getDate();
+	Date getDate();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.EAttribute#getDate <em>Date</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Date</em>' containment reference.
+	 * @see #getDate()
+	 * @generated
+	 */
+	void setDate(Date value);
 
 	/**
 	 * Returns the value of the '<em><b>Status</b></em>' containment reference.
@@ -167,35 +157,29 @@ public interface EAttribute extends EObject {
 	void setStatus(Status value);
 
 	/**
-	 * Returns the value of the '<em><b>Estep</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.EStep}.
+	 * Returns the value of the '<em><b>Care Pathway</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Estep</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Care Pathway</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Estep</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_Estep()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Care Pathway</em>' containment reference.
+	 * @see #setCarePathway(ECarePathway)
+	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_CarePathway()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<EStep> getEstep();
+	ECarePathway getCarePathway();
 
 	/**
-	 * Returns the value of the '<em><b>Complementaryconducts</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.ComplementaryConducts}.
+	 * Sets the value of the '{@link QueryMetamodel.EAttribute#getCarePathway <em>Care Pathway</em>}' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Complementaryconducts</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Complementaryconducts</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_Complementaryconducts()
-	 * @model containment="true" required="true"
+	 * @param value the new value of the '<em>Care Pathway</em>' containment reference.
+	 * @see #getCarePathway()
 	 * @generated
 	 */
-	EList<ComplementaryConducts> getComplementaryconducts();
+	void setCarePathway(ECarePathway value);
 
 } // EAttribute

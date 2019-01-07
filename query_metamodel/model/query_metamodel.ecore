@@ -5,47 +5,29 @@
   <eClassifiers xsi:type="ecore:EClass" name="EAttribute">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sex" lowerBound="1" eType="#//Sex"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="order" lowerBound="1" eType="#//Order"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="age" eType="#//Age" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="range" lowerBound="1" eType="#//Range"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="age" upperBound="-1" eType="#//Age"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="range" eType="#//Range"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="date" lowerBound="1" upperBound="-1"
-        eType="#//Date" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="date" eType="#//Date" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="status" lowerBound="1"
         eType="#//Status" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="estep" lowerBound="1" upperBound="-1"
-        eType="#//EStep" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="complementaryconducts"
-        lowerBound="1" upperBound="-1" eType="#//ComplementaryConducts" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Order">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//Qualifier"
-        defaultValueLiteral="random"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="carePathway" eType="#//ECarePathway"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Range">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
         defaultValueLiteral="0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
-        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" eType="#//Order"
+        defaultValueLiteral="random"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EStep" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" eType="#//EElement"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Qualifier">
+  <eClassifiers xsi:type="ecore:EEnum" name="Order">
     <eLiterals name="random"/>
     <eLiterals name="bottom" value="1"/>
     <eLiterals name="top" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EQuery">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="method" eType="#//EMethod"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eMethod" eType="#//EMethod"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ComplementaryConducts" eSuperTypes="#//Field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct" eType="#//Conduct"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Date">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
@@ -53,14 +35,14 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Status">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="message" eType="#//Message"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Message">
     <eLiterals name="all"/>
     <eLiterals name="completed" value="1"/>
     <eLiterals name="aborted" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EElement">
-    <eLiterals name="none"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="EStep">
     <eLiterals name="discharge" value="1"/>
     <eLiterals name="referral" value="2"/>
     <eLiterals name="procedure" value="3"/>
@@ -70,14 +52,13 @@
     <eLiterals name="prescription" value="7"/>
     <eLiterals name="pause" value="8"/>
     <eLiterals name="auxiliaryconduct" value="9"/>
-    <eLiterals name="all" value="10"/>
+    <eLiterals name="all" value="9"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Conduct">
-    <eLiterals name="none"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="EConduct">
     <eLiterals name="prescription" value="1"/>
     <eLiterals name="procedure" value="2"/>
     <eLiterals name="medication" value="3"/>
-    <eLiterals name="all" value="4"/>
+    <eLiterals name="all" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Age">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -95,15 +76,21 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//Method"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="#//EAttribute"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eAttribute" eType="#//EAttribute"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Method">
     <eLiterals name="none"/>
     <eLiterals name="averageByTime" value="1"/>
-    <eLiterals name="occurrencyFlow" value="2"/>
+    <eLiterals name="recurrencyFlow" value="2"/>
     <eLiterals name="prescribedMedication" value="3"/>
-    <eLiterals name="count" value="4"/>
+    <eLiterals name="occurrencyExecution" value="4"/>
+    <eLiterals name="status" value="5"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Field" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ECarePathway">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct" upperBound="-1"
+        eType="#//EConduct"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" upperBound="-1" eType="#//EStep"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

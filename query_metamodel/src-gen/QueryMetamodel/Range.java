@@ -13,9 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.Range#getFrom <em>From</em>}</li>
  *   <li>{@link QueryMetamodel.Range#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.Range#getTo <em>To</em>}</li>
+ *   <li>{@link QueryMetamodel.Range#getOrder <em>Order</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getRange()
@@ -23,33 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Range extends EObject {
-	/**
-	 * Returns the value of the '<em><b>From</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>From</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>From</em>' attribute.
-	 * @see #setFrom(int)
-	 * @see QueryMetamodel.Query_metamodelPackage#getRange_From()
-	 * @model default="0"
-	 * @generated
-	 */
-	int getFrom();
-
-	/**
-	 * Sets the value of the '{@link QueryMetamodel.Range#getFrom <em>From</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>From</em>' attribute.
-	 * @see #getFrom()
-	 * @generated
-	 */
-	void setFrom(int value);
-
 	/**
 	 * Returns the value of the '<em><b>Quantity</b></em>' attribute.
 	 * The default value is <code>"0"</code>.
@@ -78,30 +50,33 @@ public interface Range extends EObject {
 	void setQuantity(int value);
 
 	/**
-	 * Returns the value of the '<em><b>To</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
+	 * Returns the value of the '<em><b>Order</b></em>' attribute.
+	 * The default value is <code>"random"</code>.
+	 * The literals are from the enumeration {@link QueryMetamodel.Order}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>To</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Order</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>To</em>' attribute.
-	 * @see #setTo(int)
-	 * @see QueryMetamodel.Query_metamodelPackage#getRange_To()
-	 * @model default="0"
+	 * @return the value of the '<em>Order</em>' attribute.
+	 * @see QueryMetamodel.Order
+	 * @see #setOrder(Order)
+	 * @see QueryMetamodel.Query_metamodelPackage#getRange_Order()
+	 * @model default="random"
 	 * @generated
 	 */
-	int getTo();
+	Order getOrder();
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.Range#getTo <em>To</em>}' attribute.
+	 * Sets the value of the '{@link QueryMetamodel.Range#getOrder <em>Order</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>To</em>' attribute.
-	 * @see #getTo()
+	 * @param value the new value of the '<em>Order</em>' attribute.
+	 * @see QueryMetamodel.Order
+	 * @see #getOrder()
 	 * @generated
 	 */
-	void setTo(int value);
+	void setOrder(Order value);
 
 } // Range

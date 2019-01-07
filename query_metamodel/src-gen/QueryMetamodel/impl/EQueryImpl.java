@@ -23,21 +23,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.EQueryImpl#getMethod <em>Method</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EQueryImpl#getEMethod <em>EMethod</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	/**
-	 * The cached value of the '{@link #getMethod() <em>Method</em>}' containment reference.
+	 * The cached value of the '{@link #getEMethod() <em>EMethod</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMethod()
+	 * @see #getEMethod()
 	 * @generated
 	 * @ordered
 	 */
-	protected EMethod method;
+	protected EMethod eMethod;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -63,8 +63,8 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EMethod getMethod() {
-		return method;
+	public EMethod getEMethod() {
+		return eMethod;
 	}
 
 	/**
@@ -72,12 +72,12 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMethod(EMethod newMethod, NotificationChain msgs) {
-		EMethod oldMethod = method;
-		method = newMethod;
+	public NotificationChain basicSetEMethod(EMethod newEMethod, NotificationChain msgs) {
+		EMethod oldEMethod = eMethod;
+		eMethod = newEMethod;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Query_metamodelPackage.EQUERY__METHOD, oldMethod, newMethod);
+					Query_metamodelPackage.EQUERY__EMETHOD, oldEMethod, newEMethod);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -91,21 +91,21 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMethod(EMethod newMethod) {
-		if (newMethod != method) {
+	public void setEMethod(EMethod newEMethod) {
+		if (newEMethod != eMethod) {
 			NotificationChain msgs = null;
-			if (method != null)
-				msgs = ((InternalEObject) method).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EQUERY__METHOD, null, msgs);
-			if (newMethod != null)
-				msgs = ((InternalEObject) newMethod).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EQUERY__METHOD, null, msgs);
-			msgs = basicSetMethod(newMethod, msgs);
+			if (eMethod != null)
+				msgs = ((InternalEObject) eMethod).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EQUERY__EMETHOD, null, msgs);
+			if (newEMethod != null)
+				msgs = ((InternalEObject) newEMethod).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EQUERY__EMETHOD, null, msgs);
+			msgs = basicSetEMethod(newEMethod, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EQUERY__METHOD, newMethod,
-					newMethod));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EQUERY__EMETHOD, newEMethod,
+					newEMethod));
 	}
 
 	/**
@@ -116,8 +116,8 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.EQUERY__METHOD:
-			return basicSetMethod(null, msgs);
+		case Query_metamodelPackage.EQUERY__EMETHOD:
+			return basicSetEMethod(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -130,8 +130,8 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.EQUERY__METHOD:
-			return getMethod();
+		case Query_metamodelPackage.EQUERY__EMETHOD:
+			return getEMethod();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -144,8 +144,8 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.EQUERY__METHOD:
-			setMethod((EMethod) newValue);
+		case Query_metamodelPackage.EQUERY__EMETHOD:
+			setEMethod((EMethod) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -159,8 +159,8 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.EQUERY__METHOD:
-			setMethod((EMethod) null);
+		case Query_metamodelPackage.EQUERY__EMETHOD:
+			setEMethod((EMethod) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -174,8 +174,8 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.EQUERY__METHOD:
-			return method != null;
+		case Query_metamodelPackage.EQUERY__EMETHOD:
+			return eMethod != null;
 		}
 		return super.eIsSet(featureID);
 	}

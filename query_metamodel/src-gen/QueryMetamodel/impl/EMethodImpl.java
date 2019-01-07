@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.impl.EMethodImpl#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.impl.EMethodImpl#getAttribute <em>Attribute</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EMethodImpl#getEAttribute <em>EAttribute</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,14 +52,14 @@ public class EMethodImpl extends MinimalEObjectImpl.Container implements EMethod
 	protected Method name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAttribute() <em>Attribute</em>}' containment reference.
+	 * The cached value of the '{@link #getEAttribute() <em>EAttribute</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAttribute()
+	 * @see #getEAttribute()
 	 * @generated
 	 * @ordered
 	 */
-	protected EAttribute attribute;
+	protected EAttribute eAttribute;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -106,8 +106,8 @@ public class EMethodImpl extends MinimalEObjectImpl.Container implements EMethod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAttribute() {
-		return attribute;
+	public EAttribute getEAttribute() {
+		return eAttribute;
 	}
 
 	/**
@@ -115,12 +115,12 @@ public class EMethodImpl extends MinimalEObjectImpl.Container implements EMethod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAttribute(EAttribute newAttribute, NotificationChain msgs) {
-		EAttribute oldAttribute = attribute;
-		attribute = newAttribute;
+	public NotificationChain basicSetEAttribute(EAttribute newEAttribute, NotificationChain msgs) {
+		EAttribute oldEAttribute = eAttribute;
+		eAttribute = newEAttribute;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Query_metamodelPackage.EMETHOD__ATTRIBUTE, oldAttribute, newAttribute);
+					Query_metamodelPackage.EMETHOD__EATTRIBUTE, oldEAttribute, newEAttribute);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -134,21 +134,21 @@ public class EMethodImpl extends MinimalEObjectImpl.Container implements EMethod
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAttribute(EAttribute newAttribute) {
-		if (newAttribute != attribute) {
+	public void setEAttribute(EAttribute newEAttribute) {
+		if (newEAttribute != eAttribute) {
 			NotificationChain msgs = null;
-			if (attribute != null)
-				msgs = ((InternalEObject) attribute).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EMETHOD__ATTRIBUTE, null, msgs);
-			if (newAttribute != null)
-				msgs = ((InternalEObject) newAttribute).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EMETHOD__ATTRIBUTE, null, msgs);
-			msgs = basicSetAttribute(newAttribute, msgs);
+			if (eAttribute != null)
+				msgs = ((InternalEObject) eAttribute).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EMETHOD__EATTRIBUTE, null, msgs);
+			if (newEAttribute != null)
+				msgs = ((InternalEObject) newEAttribute).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EMETHOD__EATTRIBUTE, null, msgs);
+			msgs = basicSetEAttribute(newEAttribute, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EMETHOD__ATTRIBUTE,
-					newAttribute, newAttribute));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EMETHOD__EATTRIBUTE,
+					newEAttribute, newEAttribute));
 	}
 
 	/**
@@ -159,8 +159,8 @@ public class EMethodImpl extends MinimalEObjectImpl.Container implements EMethod
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.EMETHOD__ATTRIBUTE:
-			return basicSetAttribute(null, msgs);
+		case Query_metamodelPackage.EMETHOD__EATTRIBUTE:
+			return basicSetEAttribute(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -175,8 +175,8 @@ public class EMethodImpl extends MinimalEObjectImpl.Container implements EMethod
 		switch (featureID) {
 		case Query_metamodelPackage.EMETHOD__NAME:
 			return getName();
-		case Query_metamodelPackage.EMETHOD__ATTRIBUTE:
-			return getAttribute();
+		case Query_metamodelPackage.EMETHOD__EATTRIBUTE:
+			return getEAttribute();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -192,8 +192,8 @@ public class EMethodImpl extends MinimalEObjectImpl.Container implements EMethod
 		case Query_metamodelPackage.EMETHOD__NAME:
 			setName((Method) newValue);
 			return;
-		case Query_metamodelPackage.EMETHOD__ATTRIBUTE:
-			setAttribute((EAttribute) newValue);
+		case Query_metamodelPackage.EMETHOD__EATTRIBUTE:
+			setEAttribute((EAttribute) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -210,8 +210,8 @@ public class EMethodImpl extends MinimalEObjectImpl.Container implements EMethod
 		case Query_metamodelPackage.EMETHOD__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Query_metamodelPackage.EMETHOD__ATTRIBUTE:
-			setAttribute((EAttribute) null);
+		case Query_metamodelPackage.EMETHOD__EATTRIBUTE:
+			setEAttribute((EAttribute) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -227,8 +227,8 @@ public class EMethodImpl extends MinimalEObjectImpl.Container implements EMethod
 		switch (featureID) {
 		case Query_metamodelPackage.EMETHOD__NAME:
 			return name != NAME_EDEFAULT;
-		case Query_metamodelPackage.EMETHOD__ATTRIBUTE:
-			return attribute != null;
+		case Query_metamodelPackage.EMETHOD__EATTRIBUTE:
+			return eAttribute != null;
 		}
 		return super.eIsSet(featureID);
 	}

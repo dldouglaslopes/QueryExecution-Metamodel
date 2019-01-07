@@ -59,16 +59,10 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 		switch (eClass.getClassifierID()) {
 		case Query_metamodelPackage.EATTRIBUTE:
 			return createEAttribute();
-		case Query_metamodelPackage.ORDER:
-			return createOrder();
 		case Query_metamodelPackage.RANGE:
 			return createRange();
-		case Query_metamodelPackage.ESTEP:
-			return createEStep();
 		case Query_metamodelPackage.EQUERY:
 			return createEQuery();
-		case Query_metamodelPackage.COMPLEMENTARY_CONDUCTS:
-			return createComplementaryConducts();
 		case Query_metamodelPackage.DATE:
 			return createDate();
 		case Query_metamodelPackage.STATUS:
@@ -79,6 +73,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createSex();
 		case Query_metamodelPackage.EMETHOD:
 			return createEMethod();
+		case Query_metamodelPackage.ECARE_PATHWAY:
+			return createECarePathway();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,14 +88,14 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case Query_metamodelPackage.QUALIFIER:
-			return createQualifierFromString(eDataType, initialValue);
+		case Query_metamodelPackage.ORDER:
+			return createOrderFromString(eDataType, initialValue);
 		case Query_metamodelPackage.MESSAGE:
 			return createMessageFromString(eDataType, initialValue);
-		case Query_metamodelPackage.EELEMENT:
-			return createEElementFromString(eDataType, initialValue);
-		case Query_metamodelPackage.CONDUCT:
-			return createConductFromString(eDataType, initialValue);
+		case Query_metamodelPackage.ESTEP:
+			return createEStepFromString(eDataType, initialValue);
+		case Query_metamodelPackage.ECONDUCT:
+			return createEConductFromString(eDataType, initialValue);
 		case Query_metamodelPackage.GENDER:
 			return createGenderFromString(eDataType, initialValue);
 		case Query_metamodelPackage.METHOD:
@@ -117,14 +113,14 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case Query_metamodelPackage.QUALIFIER:
-			return convertQualifierToString(eDataType, instanceValue);
+		case Query_metamodelPackage.ORDER:
+			return convertOrderToString(eDataType, instanceValue);
 		case Query_metamodelPackage.MESSAGE:
 			return convertMessageToString(eDataType, instanceValue);
-		case Query_metamodelPackage.EELEMENT:
-			return convertEElementToString(eDataType, instanceValue);
-		case Query_metamodelPackage.CONDUCT:
-			return convertConductToString(eDataType, instanceValue);
+		case Query_metamodelPackage.ESTEP:
+			return convertEStepToString(eDataType, instanceValue);
+		case Query_metamodelPackage.ECONDUCT:
+			return convertEConductToString(eDataType, instanceValue);
 		case Query_metamodelPackage.GENDER:
 			return convertGenderToString(eDataType, instanceValue);
 		case Query_metamodelPackage.METHOD:
@@ -149,16 +145,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Order createOrder() {
-		OrderImpl order = new OrderImpl();
-		return order;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public Range createRange() {
 		RangeImpl range = new RangeImpl();
 		return range;
@@ -169,29 +155,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EStep createEStep() {
-		EStepImpl eStep = new EStepImpl();
-		return eStep;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EQuery createEQuery() {
 		EQueryImpl eQuery = new EQueryImpl();
 		return eQuery;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ComplementaryConducts createComplementaryConducts() {
-		ComplementaryConductsImpl complementaryConducts = new ComplementaryConductsImpl();
-		return complementaryConducts;
 	}
 
 	/**
@@ -249,8 +215,18 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Qualifier createQualifierFromString(EDataType eDataType, String initialValue) {
-		Qualifier result = Qualifier.get(initialValue);
+	public ECarePathway createECarePathway() {
+		ECarePathwayImpl eCarePathway = new ECarePathwayImpl();
+		return eCarePathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Order createOrderFromString(EDataType eDataType, String initialValue) {
+		Order result = Order.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -262,7 +238,7 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertQualifierToString(EDataType eDataType, Object instanceValue) {
+	public String convertOrderToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -293,8 +269,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EElement createEElementFromString(EDataType eDataType, String initialValue) {
-		EElement result = EElement.get(initialValue);
+	public EStep createEStepFromString(EDataType eDataType, String initialValue) {
+		EStep result = EStep.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -306,7 +282,7 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertEElementToString(EDataType eDataType, Object instanceValue) {
+	public String convertEStepToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -315,8 +291,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Conduct createConductFromString(EDataType eDataType, String initialValue) {
-		Conduct result = Conduct.get(initialValue);
+	public EConduct createEConductFromString(EDataType eDataType, String initialValue) {
+		EConduct result = EConduct.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -328,7 +304,7 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertConductToString(EDataType eDataType, Object instanceValue) {
+	public String convertEConductToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

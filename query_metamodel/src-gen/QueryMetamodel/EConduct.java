@@ -10,24 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Conduct</b></em>',
+ * A representation of the literals of the enumeration '<em><b>EConduct</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see QueryMetamodel.Query_metamodelPackage#getConduct()
+ * @see QueryMetamodel.Query_metamodelPackage#getEConduct()
  * @model
  * @generated
  */
-public enum Conduct implements Enumerator {
-	/**
-	 * The '<em><b>None</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #NONE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	NONE(0, "none", "none"),
-
+public enum EConduct implements Enumerator {
 	/**
 	 * The '<em><b>Prescription</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -57,31 +47,15 @@ public enum Conduct implements Enumerator {
 	 * @ordered
 	 */
 	MEDICATION(3, "medication", "medication"),
-
 	/**
 	 * The '<em><b>All</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #ALL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ALL(4, "all", "all");
-
-	/**
-	 * The '<em><b>None</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>None</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #NONE
-	 * @model name="none"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int NONE_VALUE = 0;
+	ALL(3, "all", "all");
 
 	/**
 	 * The '<em><b>Prescription</b></em>' literal value.
@@ -141,35 +115,35 @@ public enum Conduct implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ALL_VALUE = 4;
+	public static final int ALL_VALUE = 3;
 
 	/**
-	 * An array of all the '<em><b>Conduct</b></em>' enumerators.
+	 * An array of all the '<em><b>EConduct</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Conduct[] VALUES_ARRAY = new Conduct[] { NONE, PRESCRIPTION, PROCEDURE, MEDICATION, ALL, };
+	private static final EConduct[] VALUES_ARRAY = new EConduct[] { PRESCRIPTION, PROCEDURE, MEDICATION, ALL, };
 
 	/**
-	 * A public read-only list of all the '<em><b>Conduct</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>EConduct</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<Conduct> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<EConduct> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Conduct</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>EConduct</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Conduct get(String literal) {
+	public static EConduct get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Conduct result = VALUES_ARRAY[i];
+			EConduct result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -178,16 +152,16 @@ public enum Conduct implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Conduct</b></em>' literal with the specified name.
+	 * Returns the '<em><b>EConduct</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Conduct getByName(String name) {
+	public static EConduct getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			Conduct result = VALUES_ARRAY[i];
+			EConduct result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -196,25 +170,21 @@ public enum Conduct implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Conduct</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>EConduct</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static Conduct get(int value) {
+	public static EConduct get(int value) {
 		switch (value) {
-		case NONE_VALUE:
-			return NONE;
 		case PRESCRIPTION_VALUE:
 			return PRESCRIPTION;
 		case PROCEDURE_VALUE:
 			return PROCEDURE;
 		case MEDICATION_VALUE:
 			return MEDICATION;
-		case ALL_VALUE:
-			return ALL;
 		}
 		return null;
 	}
@@ -246,7 +216,7 @@ public enum Conduct implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private Conduct(int value, String name, String literal) {
+	private EConduct(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -290,4 +260,4 @@ public enum Conduct implements Enumerator {
 		return literal;
 	}
 
-} //Conduct
+} //EConduct

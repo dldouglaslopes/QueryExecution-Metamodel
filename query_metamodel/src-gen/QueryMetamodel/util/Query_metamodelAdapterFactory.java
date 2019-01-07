@@ -72,28 +72,13 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseOrder(Order object) {
-			return createOrderAdapter();
-		}
-
-		@Override
 		public Adapter caseRange(Range object) {
 			return createRangeAdapter();
 		}
 
 		@Override
-		public Adapter caseEStep(EStep object) {
-			return createEStepAdapter();
-		}
-
-		@Override
 		public Adapter caseEQuery(EQuery object) {
 			return createEQueryAdapter();
-		}
-
-		@Override
-		public Adapter caseComplementaryConducts(ComplementaryConducts object) {
-			return createComplementaryConductsAdapter();
 		}
 
 		@Override
@@ -122,8 +107,8 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseField(Field object) {
-			return createFieldAdapter();
+		public Adapter caseECarePathway(ECarePathway object) {
+			return createECarePathwayAdapter();
 		}
 
 		@Override
@@ -160,20 +145,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Order <em>Order</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.Order
-	 * @generated
-	 */
-	public Adapter createOrderAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Range <em>Range</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -188,20 +159,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EStep <em>EStep</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.EStep
-	 * @generated
-	 */
-	public Adapter createEStepAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EQuery <em>EQuery</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -212,20 +169,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEQueryAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.ComplementaryConducts <em>Complementary Conducts</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.ComplementaryConducts
-	 * @generated
-	 */
-	public Adapter createComplementaryConductsAdapter() {
 		return null;
 	}
 
@@ -300,16 +243,16 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Field <em>Field</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.ECarePathway <em>ECare Pathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.Field
+	 * @see QueryMetamodel.ECarePathway
 	 * @generated
 	 */
-	public Adapter createFieldAdapter() {
+	public Adapter createECarePathwayAdapter() {
 		return null;
 	}
 

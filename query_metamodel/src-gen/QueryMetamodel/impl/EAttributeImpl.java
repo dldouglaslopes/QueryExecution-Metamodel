@@ -3,31 +3,22 @@
 package QueryMetamodel.impl;
 
 import QueryMetamodel.Age;
-import QueryMetamodel.ComplementaryConducts;
 import QueryMetamodel.Date;
 import QueryMetamodel.EAttribute;
-import QueryMetamodel.EStep;
-import QueryMetamodel.Order;
+import QueryMetamodel.ECarePathway;
 import QueryMetamodel.Query_metamodelPackage;
 import QueryMetamodel.Range;
 import QueryMetamodel.Sex;
 import QueryMetamodel.Status;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,13 +29,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getSex <em>Sex</em>}</li>
- *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getOrder <em>Order</em>}</li>
  *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getAge <em>Age</em>}</li>
  *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getRange <em>Range</em>}</li>
  *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getDate <em>Date</em>}</li>
  *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getStatus <em>Status</em>}</li>
- *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getEstep <em>Estep</em>}</li>
- *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getComplementaryconducts <em>Complementaryconducts</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EAttributeImpl#getCarePathway <em>Care Pathway</em>}</li>
  * </ul>
  *
  * @generated
@@ -61,24 +50,14 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	protected Sex sex;
 
 	/**
-	 * The cached value of the '{@link #getOrder() <em>Order</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOrder()
-	 * @generated
-	 * @ordered
-	 */
-	protected Order order;
-
-	/**
-	 * The cached value of the '{@link #getAge() <em>Age</em>}' containment reference list.
+	 * The cached value of the '{@link #getAge() <em>Age</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAge()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Age> age;
+	protected Age age;
 
 	/**
 	 * The cached value of the '{@link #getRange() <em>Range</em>}' containment reference.
@@ -91,14 +70,14 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	protected Range range;
 
 	/**
-	 * The cached value of the '{@link #getDate() <em>Date</em>}' containment reference list.
+	 * The cached value of the '{@link #getDate() <em>Date</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDate()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Date> date;
+	protected Date date;
 
 	/**
 	 * The cached value of the '{@link #getStatus() <em>Status</em>}' containment reference.
@@ -111,24 +90,14 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	protected Status status;
 
 	/**
-	 * The cached value of the '{@link #getEstep() <em>Estep</em>}' containment reference list.
+	 * The cached value of the '{@link #getCarePathway() <em>Care Pathway</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEstep()
+	 * @see #getCarePathway()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EStep> estep;
-
-	/**
-	 * The cached value of the '{@link #getComplementaryconducts() <em>Complementaryconducts</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getComplementaryconducts()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ComplementaryConducts> complementaryconducts;
+	protected ECarePathway carePathway;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -204,8 +173,8 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Order getOrder() {
-		return order;
+	public Age getAge() {
+		return age;
 	}
 
 	/**
@@ -213,12 +182,12 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOrder(Order newOrder, NotificationChain msgs) {
-		Order oldOrder = order;
-		order = newOrder;
+	public NotificationChain basicSetAge(Age newAge, NotificationChain msgs) {
+		Age oldAge = age;
+		age = newAge;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Query_metamodelPackage.EATTRIBUTE__ORDER, oldOrder, newOrder);
+					Query_metamodelPackage.EATTRIBUTE__AGE, oldAge, newAge);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -232,33 +201,21 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrder(Order newOrder) {
-		if (newOrder != order) {
+	public void setAge(Age newAge) {
+		if (newAge != age) {
 			NotificationChain msgs = null;
-			if (order != null)
-				msgs = ((InternalEObject) order).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__ORDER, null, msgs);
-			if (newOrder != null)
-				msgs = ((InternalEObject) newOrder).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__ORDER, null, msgs);
-			msgs = basicSetOrder(newOrder, msgs);
+			if (age != null)
+				msgs = ((InternalEObject) age).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__AGE, null, msgs);
+			if (newAge != null)
+				msgs = ((InternalEObject) newAge).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__AGE, null, msgs);
+			msgs = basicSetAge(newAge, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EATTRIBUTE__ORDER, newOrder,
-					newOrder));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Age> getAge() {
-		if (age == null) {
-			age = new EObjectContainmentEList<Age>(Age.class, this, Query_metamodelPackage.EATTRIBUTE__AGE);
-		}
-		return age;
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EATTRIBUTE__AGE, newAge,
+					newAge));
 	}
 
 	/**
@@ -316,11 +273,49 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Date> getDate() {
-		if (date == null) {
-			date = new EObjectContainmentEList<Date>(Date.class, this, Query_metamodelPackage.EATTRIBUTE__DATE);
-		}
+	public Date getDate() {
 		return date;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDate(Date newDate, NotificationChain msgs) {
+		Date oldDate = date;
+		date = newDate;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Query_metamodelPackage.EATTRIBUTE__DATE, oldDate, newDate);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDate(Date newDate) {
+		if (newDate != date) {
+			NotificationChain msgs = null;
+			if (date != null)
+				msgs = ((InternalEObject) date).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__DATE, null, msgs);
+			if (newDate != null)
+				msgs = ((InternalEObject) newDate).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__DATE, null, msgs);
+			msgs = basicSetDate(newDate, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EATTRIBUTE__DATE, newDate,
+					newDate));
 	}
 
 	/**
@@ -378,11 +373,8 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EStep> getEstep() {
-		if (estep == null) {
-			estep = new EObjectContainmentEList<EStep>(EStep.class, this, Query_metamodelPackage.EATTRIBUTE__ESTEP);
-		}
-		return estep;
+	public ECarePathway getCarePathway() {
+		return carePathway;
 	}
 
 	/**
@@ -390,12 +382,40 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ComplementaryConducts> getComplementaryconducts() {
-		if (complementaryconducts == null) {
-			complementaryconducts = new EObjectContainmentEList<ComplementaryConducts>(ComplementaryConducts.class,
-					this, Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS);
+	public NotificationChain basicSetCarePathway(ECarePathway newCarePathway, NotificationChain msgs) {
+		ECarePathway oldCarePathway = carePathway;
+		carePathway = newCarePathway;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Query_metamodelPackage.EATTRIBUTE__CARE_PATHWAY, oldCarePathway, newCarePathway);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
 		}
-		return complementaryconducts;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCarePathway(ECarePathway newCarePathway) {
+		if (newCarePathway != carePathway) {
+			NotificationChain msgs = null;
+			if (carePathway != null)
+				msgs = ((InternalEObject) carePathway).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__CARE_PATHWAY, null, msgs);
+			if (newCarePathway != null)
+				msgs = ((InternalEObject) newCarePathway).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EATTRIBUTE__CARE_PATHWAY, null, msgs);
+			msgs = basicSetCarePathway(newCarePathway, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EATTRIBUTE__CARE_PATHWAY,
+					newCarePathway, newCarePathway));
 	}
 
 	/**
@@ -408,20 +428,16 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 		switch (featureID) {
 		case Query_metamodelPackage.EATTRIBUTE__SEX:
 			return basicSetSex(null, msgs);
-		case Query_metamodelPackage.EATTRIBUTE__ORDER:
-			return basicSetOrder(null, msgs);
 		case Query_metamodelPackage.EATTRIBUTE__AGE:
-			return ((InternalEList<?>) getAge()).basicRemove(otherEnd, msgs);
+			return basicSetAge(null, msgs);
 		case Query_metamodelPackage.EATTRIBUTE__RANGE:
 			return basicSetRange(null, msgs);
 		case Query_metamodelPackage.EATTRIBUTE__DATE:
-			return ((InternalEList<?>) getDate()).basicRemove(otherEnd, msgs);
+			return basicSetDate(null, msgs);
 		case Query_metamodelPackage.EATTRIBUTE__STATUS:
 			return basicSetStatus(null, msgs);
-		case Query_metamodelPackage.EATTRIBUTE__ESTEP:
-			return ((InternalEList<?>) getEstep()).basicRemove(otherEnd, msgs);
-		case Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS:
-			return ((InternalEList<?>) getComplementaryconducts()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.EATTRIBUTE__CARE_PATHWAY:
+			return basicSetCarePathway(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -436,8 +452,6 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 		switch (featureID) {
 		case Query_metamodelPackage.EATTRIBUTE__SEX:
 			return getSex();
-		case Query_metamodelPackage.EATTRIBUTE__ORDER:
-			return getOrder();
 		case Query_metamodelPackage.EATTRIBUTE__AGE:
 			return getAge();
 		case Query_metamodelPackage.EATTRIBUTE__RANGE:
@@ -446,10 +460,8 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 			return getDate();
 		case Query_metamodelPackage.EATTRIBUTE__STATUS:
 			return getStatus();
-		case Query_metamodelPackage.EATTRIBUTE__ESTEP:
-			return getEstep();
-		case Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS:
-			return getComplementaryconducts();
+		case Query_metamodelPackage.EATTRIBUTE__CARE_PATHWAY:
+			return getCarePathway();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -459,37 +471,26 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Query_metamodelPackage.EATTRIBUTE__SEX:
 			setSex((Sex) newValue);
 			return;
-		case Query_metamodelPackage.EATTRIBUTE__ORDER:
-			setOrder((Order) newValue);
-			return;
 		case Query_metamodelPackage.EATTRIBUTE__AGE:
-			getAge().clear();
-			getAge().addAll((Collection<? extends Age>) newValue);
+			setAge((Age) newValue);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__RANGE:
 			setRange((Range) newValue);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__DATE:
-			getDate().clear();
-			getDate().addAll((Collection<? extends Date>) newValue);
+			setDate((Date) newValue);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__STATUS:
 			setStatus((Status) newValue);
 			return;
-		case Query_metamodelPackage.EATTRIBUTE__ESTEP:
-			getEstep().clear();
-			getEstep().addAll((Collection<? extends EStep>) newValue);
-			return;
-		case Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS:
-			getComplementaryconducts().clear();
-			getComplementaryconducts().addAll((Collection<? extends ComplementaryConducts>) newValue);
+		case Query_metamodelPackage.EATTRIBUTE__CARE_PATHWAY:
+			setCarePathway((ECarePathway) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -506,26 +507,20 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 		case Query_metamodelPackage.EATTRIBUTE__SEX:
 			setSex((Sex) null);
 			return;
-		case Query_metamodelPackage.EATTRIBUTE__ORDER:
-			setOrder((Order) null);
-			return;
 		case Query_metamodelPackage.EATTRIBUTE__AGE:
-			getAge().clear();
+			setAge((Age) null);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__RANGE:
 			setRange((Range) null);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__DATE:
-			getDate().clear();
+			setDate((Date) null);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__STATUS:
 			setStatus((Status) null);
 			return;
-		case Query_metamodelPackage.EATTRIBUTE__ESTEP:
-			getEstep().clear();
-			return;
-		case Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS:
-			getComplementaryconducts().clear();
+		case Query_metamodelPackage.EATTRIBUTE__CARE_PATHWAY:
+			setCarePathway((ECarePathway) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -541,20 +536,16 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 		switch (featureID) {
 		case Query_metamodelPackage.EATTRIBUTE__SEX:
 			return sex != null;
-		case Query_metamodelPackage.EATTRIBUTE__ORDER:
-			return order != null;
 		case Query_metamodelPackage.EATTRIBUTE__AGE:
-			return age != null && !age.isEmpty();
+			return age != null;
 		case Query_metamodelPackage.EATTRIBUTE__RANGE:
 			return range != null;
 		case Query_metamodelPackage.EATTRIBUTE__DATE:
-			return date != null && !date.isEmpty();
+			return date != null;
 		case Query_metamodelPackage.EATTRIBUTE__STATUS:
 			return status != null;
-		case Query_metamodelPackage.EATTRIBUTE__ESTEP:
-			return estep != null && !estep.isEmpty();
-		case Query_metamodelPackage.EATTRIBUTE__COMPLEMENTARYCONDUCTS:
-			return complementaryconducts != null && !complementaryconducts.isEmpty();
+		case Query_metamodelPackage.EATTRIBUTE__CARE_PATHWAY:
+			return carePathway != null;
 		}
 		return super.eIsSet(featureID);
 	}

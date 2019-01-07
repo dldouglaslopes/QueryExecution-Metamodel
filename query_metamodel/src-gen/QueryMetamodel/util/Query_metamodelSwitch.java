@@ -73,13 +73,6 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.ORDER: {
-			Order order = (Order) theEObject;
-			T result = caseOrder(order);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Query_metamodelPackage.RANGE: {
 			Range range = (Range) theEObject;
 			T result = caseRange(range);
@@ -87,27 +80,9 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.ESTEP: {
-			EStep eStep = (EStep) theEObject;
-			T result = caseEStep(eStep);
-			if (result == null)
-				result = caseField(eStep);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Query_metamodelPackage.EQUERY: {
 			EQuery eQuery = (EQuery) theEObject;
 			T result = caseEQuery(eQuery);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Query_metamodelPackage.COMPLEMENTARY_CONDUCTS: {
-			ComplementaryConducts complementaryConducts = (ComplementaryConducts) theEObject;
-			T result = caseComplementaryConducts(complementaryConducts);
-			if (result == null)
-				result = caseField(complementaryConducts);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -147,9 +122,9 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.FIELD: {
-			Field field = (Field) theEObject;
-			T result = caseField(field);
+		case Query_metamodelPackage.ECARE_PATHWAY: {
+			ECarePathway eCarePathway = (ECarePathway) theEObject;
+			T result = caseECarePathway(eCarePathway);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -175,21 +150,6 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Order</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Order</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOrder(Order object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Range</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -205,21 +165,6 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EStep</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EStep</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEStep(EStep object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EQuery</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -231,21 +176,6 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEQuery(EQuery object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Complementary Conducts</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Complementary Conducts</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseComplementaryConducts(ComplementaryConducts object) {
 		return null;
 	}
 
@@ -325,17 +255,17 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Field</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ECare Pathway</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Field</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ECare Pathway</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseField(Field object) {
+	public T caseECarePathway(ECarePathway object) {
 		return null;
 	}
 
