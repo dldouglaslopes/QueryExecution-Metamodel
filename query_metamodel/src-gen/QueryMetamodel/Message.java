@@ -19,16 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Message implements Enumerator {
 	/**
-	 * The '<em><b>All</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ALL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ALL(0, "all", "all"),
-
-	/**
 	 * The '<em><b>Completed</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,21 +37,6 @@ public enum Message implements Enumerator {
 	 * @ordered
 	 */
 	ABORTED(2, "aborted", "aborted");
-
-	/**
-	 * The '<em><b>All</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>All</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #ALL
-	 * @model name="all"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ALL_VALUE = 0;
 
 	/**
 	 * The '<em><b>Completed</b></em>' literal value.
@@ -99,7 +74,7 @@ public enum Message implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Message[] VALUES_ARRAY = new Message[] { ALL, COMPLETED, ABORTED, };
+	private static final Message[] VALUES_ARRAY = new Message[] { COMPLETED, ABORTED, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Message</b></em>' enumerators.
@@ -155,8 +130,6 @@ public enum Message implements Enumerator {
 	 */
 	public static Message get(int value) {
 		switch (value) {
-		case ALL_VALUE:
-			return ALL;
 		case COMPLETED_VALUE:
 			return COMPLETED;
 		case ABORTED_VALUE:

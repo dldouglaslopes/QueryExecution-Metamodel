@@ -21,9 +21,9 @@
         defaultValueLiteral="random"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Order">
-    <eLiterals name="random"/>
-    <eLiterals name="bottom" value="1"/>
-    <eLiterals name="top" value="2"/>
+    <eLiterals name="random" value="1"/>
+    <eLiterals name="bottom" value="2"/>
+    <eLiterals name="top" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EQuery">
     <eStructuralFeatures xsi:type="ecore:EReference" name="eMethod" eType="#//EMethod"
@@ -38,27 +38,24 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Message">
-    <eLiterals name="all"/>
     <eLiterals name="completed" value="1"/>
     <eLiterals name="aborted" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EStep">
-    <eLiterals name="discharge" value="1"/>
-    <eLiterals name="referral" value="2"/>
-    <eLiterals name="procedure" value="3"/>
-    <eLiterals name="action" value="4"/>
-    <eLiterals name="information" value="5"/>
-    <eLiterals name="treatment" value="6"/>
-    <eLiterals name="prescription" value="7"/>
-    <eLiterals name="pause" value="8"/>
-    <eLiterals name="auxiliaryconduct" value="9"/>
-    <eLiterals name="all" value="9"/>
+    <eLiterals name="referral" value="1"/>
+    <eLiterals name="procedure" value="2"/>
+    <eLiterals name="action" value="3"/>
+    <eLiterals name="information" value="4"/>
+    <eLiterals name="treatment" value="5"/>
+    <eLiterals name="prescription" value="6"/>
+    <eLiterals name="pause" value="7"/>
+    <eLiterals name="auxiliaryconduct" value="8"/>
+    <eLiterals name="discharge" value="9"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="EConduct">
-    <eLiterals name="prescription" value="1"/>
-    <eLiterals name="procedure" value="2"/>
-    <eLiterals name="medication" value="3"/>
-    <eLiterals name="all" value="3"/>
+    <eLiterals name="procedure" value="1"/>
+    <eLiterals name="medication" value="2"/>
+    <eLiterals name="prescription" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Age">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -70,9 +67,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sex" eType="#//Gender"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Gender">
-    <eLiterals name="all"/>
-    <eLiterals name="male" value="1"/>
-    <eLiterals name="female" value="2"/>
+    <eLiterals name="M" value="1"/>
+    <eLiterals name="F" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//Method"/>
@@ -86,11 +82,67 @@
     <eLiterals name="prescribedMedication" value="3"/>
     <eLiterals name="occurrencyExecution" value="4"/>
     <eLiterals name="status" value="5"/>
+    <eLiterals name="conducts" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ECarePathway">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conducts" upperBound="-1"
         eType="#//EConduct"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="step" upperBound="-1" eType="#//EStep"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="steps" upperBound="-1"
+        eType="#//EStep"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="carePathways" upperBound="-1"
+        eType="#//CarePathway"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CarePathway">
+    <eLiterals name="DmTreatment" value="1" literal="Viver Bem Diabetes - Tratamento DM"/>
+    <eLiterals name="DmAdjustments" value="2" literal="Viver Bem Dm Ajustes"/>
+    <eLiterals name="AbdominalPain" value="3" literal="Dor Abdominal"/>
+    <eLiterals name="ChestPain" value="4" literal="Dor Torácica"/>
+    <eLiterals name="HDP" value="5" literal="DHEG"/>
+    <eLiterals name="Diarrhea" value="6" literal="Diarréia"/>
+    <eLiterals name="COPD" value="7" literal="DCOP"/>
+    <eLiterals name="URTI" value="8" literal="IVAS"/>
+    <eLiterals name="PneumoniaInfluenza" value="9" literal="Pneumonia &amp; Influenza"/>
+    <eLiterals name="PrematureAmniorrexis" value="10" literal="Aminiorrexe Prematura"/>
+    <eLiterals name="Toxoplasmosis" value="11" literal="Nascer Bem Toxoplasmose"/>
+    <eLiterals name="Headache" value="12" literal="Cefaléia"/>
+    <eLiterals name="Parasite" value="13" literal="Parasitose"/>
+    <eLiterals name="AfricaLineMonotherapy" value="14" literal="Viver Bem Monoterapia Linha Afro"/>
+    <eLiterals name="GestationalDiabetes" value="15" literal="Diabetes Gestational"/>
+    <eLiterals name="LumbarPain" value="16" literal="Médico da Família Dor Lombar"/>
+    <eLiterals name="AfroLineTetratherapy" value="17" literal="Viver Bem Tetraterapia Linha Afro"/>
+    <eLiterals name="Vulvovaginitis" value="18" literal="Vulvovaginite"/>
+    <eLiterals name="FebrileNeutropenia" value="19" literal="Neutropenia Febril"/>
+    <eLiterals name="Pharyngitis" value="20" literal="Faringite"/>
+    <eLiterals name="AcuteOtitisMedia" value="21" literal="Otite Média Aguda"/>
+    <eLiterals name="TetratherapyBar" value="22" literal="Viver Bem Tetraterapia Bar"/>
+    <eLiterals name="UTICystitis" value="23" literal="ITU - Cistite"/>
+    <eLiterals name="SepsisTreatment" value="24" literal="Tratamento de SEPSE"/>
+    <eLiterals name="JointPain" value="25" literal="Dor Articular"/>
+    <eLiterals name="ACEILineMonotherapy" value="26" literal="Viver Bem Monoterapia Linha IECA"/>
+    <eLiterals name="Acne" value="27"/>
+    <eLiterals name="Dyspepsia" value="28" literal="DIspepsia"/>
+    <eLiterals name="Vertigo" value="29" literal="Tontura e Vertigem"/>
+    <eLiterals name="ACEILineTetraTherapy" value="30" literal="Viver Bem Tetraterapia Linha IECA"/>
+    <eLiterals name="DoubleTherapyAfroLine" value="31" literal="Viver Bem DuploTerapia Linha Afro"/>
+    <eLiterals name="TreatmentLowRiskDyslipidemia" value="32" literal="Viver Bem Tratamento Dislipidemia - Risco Baixo"/>
+    <eLiterals name="TripleAfroLineTherapy" value="33" literal="Viver Bem Triploterapia Linha Afro"/>
+    <eLiterals name="DiabetesDyslipidemia" value="34" literal="Viver Bem Diabetes - Dislipidemia"/>
+    <eLiterals name="DoubleTherapyBar" value="35" literal="Viver Bem Duploterapia Bar"/>
+    <eLiterals name="MonotherapyBar" value="36" literal="Viver Bem Monoterapia Bar"/>
+    <eLiterals name="TreatmentDyslipidemiaHighRisk" value="37" literal="Viver Bem Tratamento Dislipidemia - Risco Alto"/>
+    <eLiterals name="TreatmentDyslipidemiaIntermediateRisk" value="38" literal="Viver Bem Tratamento Dislipidemia - Risco Intermediário"/>
+    <eLiterals name="TreatmentDyslipidemiaVeryHighRisk" value="39" literal="Viver Bem Tratamento Dislipidemia - Risco Muito Alto"/>
+    <eLiterals name="Meningitis" value="40" literal="Meningite"/>
+    <eLiterals name="Syphilis" value="41" literal="Sífilis"/>
+    <eLiterals name="ACEILineDoubleTherapy" value="42" literal="Viver Bem Duploterapia Linha IECA"/>
+    <eLiterals name="TriploterapiaBAR" value="43" literal="Viver Bem Triploterapia Bar"/>
+    <eLiterals name="UTI" value="44" literal="ITU"/>
+    <eLiterals name="BarBBCBetablocker" value="45" literal="Viver Bem Bar &amp; BCC - Betabloqueador"/>
+    <eLiterals name="UTIDiabetes" value="46" literal="Viver Bem Diabetes - ITU"/>
+    <eLiterals name="UTIPyelonephritis" value="47" literal="ITU - Pielonefrite"/>
+    <eLiterals name="AfricanAmericanPharmacological" value="48" literal="Viver Bem Protocolo Farmacológico Afroamericano"/>
+    <eLiterals name="ExposedFracture" value="49" literal="Fratura Exposta"/>
+    <eLiterals name="ACEIBBCBetablocker" value="50" literal="Viver Bem IECA &amp; BBC - Betabloqueador"/>
+    <eLiterals name="LowBackPain" value="51" literal="Lombalgia"/>
   </eClassifiers>
 </ecore:EPackage>

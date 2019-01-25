@@ -454,31 +454,31 @@ public interface Query_metamodelPackage extends EPackage {
 	int ECARE_PATHWAY = 8;
 
 	/**
-	 * The feature id for the '<em><b>Conduct</b></em>' attribute list.
+	 * The feature id for the '<em><b>Conducts</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECARE_PATHWAY__CONDUCT = 0;
+	int ECARE_PATHWAY__CONDUCTS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Step</b></em>' attribute list.
+	 * The feature id for the '<em><b>Steps</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECARE_PATHWAY__STEP = 1;
+	int ECARE_PATHWAY__STEPS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Care Pathways</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECARE_PATHWAY__NAME = 2;
+	int ECARE_PATHWAY__CARE_PATHWAYS = 2;
 
 	/**
 	 * The number of structural features of the '<em>ECare Pathway</em>' class.
@@ -557,6 +557,16 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	int METHOD = 14;
+
+	/**
+	 * The meta object id for the '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.CarePathway
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getCarePathway()
+	 * @generated
+	 */
+	int CARE_PATHWAY = 15;
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EAttribute <em>EAttribute</em>}'.
@@ -847,37 +857,37 @@ public interface Query_metamodelPackage extends EPackage {
 	EClass getECarePathway();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link QueryMetamodel.ECarePathway#getConduct <em>Conduct</em>}'.
+	 * Returns the meta object for the attribute list '{@link QueryMetamodel.ECarePathway#getConducts <em>Conducts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Conduct</em>'.
-	 * @see QueryMetamodel.ECarePathway#getConduct()
+	 * @return the meta object for the attribute list '<em>Conducts</em>'.
+	 * @see QueryMetamodel.ECarePathway#getConducts()
 	 * @see #getECarePathway()
 	 * @generated
 	 */
-	EAttribute getECarePathway_Conduct();
+	EAttribute getECarePathway_Conducts();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link QueryMetamodel.ECarePathway#getStep <em>Step</em>}'.
+	 * Returns the meta object for the attribute list '{@link QueryMetamodel.ECarePathway#getSteps <em>Steps</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Step</em>'.
-	 * @see QueryMetamodel.ECarePathway#getStep()
+	 * @return the meta object for the attribute list '<em>Steps</em>'.
+	 * @see QueryMetamodel.ECarePathway#getSteps()
 	 * @see #getECarePathway()
 	 * @generated
 	 */
-	EAttribute getECarePathway_Step();
+	EAttribute getECarePathway_Steps();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.ECarePathway#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute list '{@link QueryMetamodel.ECarePathway#getCarePathways <em>Care Pathways</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.ECarePathway#getName()
+	 * @return the meta object for the attribute list '<em>Care Pathways</em>'.
+	 * @see QueryMetamodel.ECarePathway#getCarePathways()
 	 * @see #getECarePathway()
 	 * @generated
 	 */
-	EAttribute getECarePathway_Name();
+	EAttribute getECarePathway_CarePathways();
 
 	/**
 	 * Returns the meta object for enum '{@link QueryMetamodel.Order <em>Order</em>}'.
@@ -938,6 +948,16 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getMethod();
+
+	/**
+	 * Returns the meta object for enum '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Care Pathway</em>'.
+	 * @see QueryMetamodel.CarePathway
+	 * @generated
+	 */
+	EEnum getCarePathway();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1197,28 +1217,28 @@ public interface Query_metamodelPackage extends EPackage {
 		EClass ECARE_PATHWAY = eINSTANCE.getECarePathway();
 
 		/**
-		 * The meta object literal for the '<em><b>Conduct</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Conducts</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ECARE_PATHWAY__CONDUCT = eINSTANCE.getECarePathway_Conduct();
+		EAttribute ECARE_PATHWAY__CONDUCTS = eINSTANCE.getECarePathway_Conducts();
 
 		/**
-		 * The meta object literal for the '<em><b>Step</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Steps</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ECARE_PATHWAY__STEP = eINSTANCE.getECarePathway_Step();
+		EAttribute ECARE_PATHWAY__STEPS = eINSTANCE.getECarePathway_Steps();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Care Pathways</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ECARE_PATHWAY__NAME = eINSTANCE.getECarePathway_Name();
+		EAttribute ECARE_PATHWAY__CARE_PATHWAYS = eINSTANCE.getECarePathway_CarePathways();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.
@@ -1279,6 +1299,16 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum METHOD = eINSTANCE.getMethod();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.CarePathway
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getCarePathway()
+		 * @generated
+		 */
+		EEnum CARE_PATHWAY = eINSTANCE.getCarePathway();
 
 	}
 

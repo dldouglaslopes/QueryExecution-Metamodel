@@ -15,12 +15,10 @@
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Order/top"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Message">
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Message/all"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Message/completed"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Message/aborted"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//EStep">
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EStep/discharge"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EStep/referral"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EStep/procedure"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EStep/action"/>
@@ -29,18 +27,16 @@
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EStep/prescription"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EStep/pause"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EStep/auxiliaryconduct"/>
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EStep/all"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EStep/discharge"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//EConduct">
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EConduct/prescription"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EConduct/procedure"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EConduct/medication"/>
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EConduct/all"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//EConduct/prescription"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Gender">
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Gender/all"/>
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Gender/male"/>
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Gender/female"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Gender/M"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Gender/F"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Method">
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Method/none"/>
@@ -49,6 +45,60 @@
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Method/prescribedMedication"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Method/occurrencyExecution"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Method/status"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Method/conducts"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//CarePathway">
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/DmTreatment"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/DmAdjustments"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/AbdominalPain"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/ChestPain"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/HDP"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Diarrhea"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/COPD"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/URTI"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/PneumoniaInfluenza"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/PrematureAmniorrexis"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Toxoplasmosis"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Headache"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Parasite"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/AfricaLineMonotherapy"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/GestationalDiabetes"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/LumbarPain"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/AfroLineTetratherapy"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Vulvovaginitis"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/FebrileNeutropenia"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Pharyngitis"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/AcuteOtitisMedia"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/TetratherapyBar"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/UTICystitis"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/SepsisTreatment"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/JointPain"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/ACEILineMonotherapy"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Acne"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Dyspepsia"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Vertigo"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/ACEILineTetraTherapy"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/DoubleTherapyAfroLine"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/TreatmentLowRiskDyslipidemia"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/TripleAfroLineTherapy"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/DiabetesDyslipidemia"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/DoubleTherapyBar"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/MonotherapyBar"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/TreatmentDyslipidemiaHighRisk"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/TreatmentDyslipidemiaIntermediateRisk"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/TreatmentDyslipidemiaVeryHighRisk"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Meningitis"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Syphilis"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/ACEILineDoubleTherapy"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/TriploterapiaBAR"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/UTI"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/BarBBCBetablocker"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/UTIDiabetes"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/UTIPyelonephritis"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/AfricanAmericanPharmacological"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/ExposedFracture"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/ACEIBBCBetablocker"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/LowBackPain"/>
     </genEnums>
     <genClasses ecoreClass="query_metamodel.ecore#//EAttribute">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EAttribute/sex"/>
@@ -85,9 +135,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EMethod/eAttribute"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//ECarePathway">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ECarePathway/conduct"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ECarePathway/step"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ECarePathway/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ECarePathway/conducts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ECarePathway/steps"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ECarePathway/carePathways"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

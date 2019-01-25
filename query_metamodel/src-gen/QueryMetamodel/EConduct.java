@@ -19,58 +19,32 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum EConduct implements Enumerator {
 	/**
-	 * The '<em><b>Prescription</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #PRESCRIPTION_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	PRESCRIPTION(1, "prescription", "prescription"),
-
-	/**
 	 * The '<em><b>Procedure</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #PROCEDURE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PROCEDURE(2, "procedure", "procedure"),
-
+	PROCEDURE(1, "procedure", "procedure"),
 	/**
 	 * The '<em><b>Medication</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #MEDICATION_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	MEDICATION(3, "medication", "medication"),
+	MEDICATION(2, "medication", "medication"),
 	/**
-	 * The '<em><b>All</b></em>' literal object.
+	 * The '<em><b>Prescription</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	 * @see #ALL_VALUE
+	 * @see #PRESCRIPTION_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ALL(3, "all", "all");
-
-	/**
-	 * The '<em><b>Prescription</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Prescription</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #PRESCRIPTION
-	 * @model name="prescription"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int PRESCRIPTION_VALUE = 1;
+	PRESCRIPTION(3, "prescription", "prescription");
 
 	/**
 	 * The '<em><b>Procedure</b></em>' literal value.
@@ -85,7 +59,7 @@ public enum EConduct implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROCEDURE_VALUE = 2;
+	public static final int PROCEDURE_VALUE = 1;
 
 	/**
 	 * The '<em><b>Medication</b></em>' literal value.
@@ -100,22 +74,22 @@ public enum EConduct implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MEDICATION_VALUE = 3;
+	public static final int MEDICATION_VALUE = 2;
 
 	/**
-	 * The '<em><b>All</b></em>' literal value.
+	 * The '<em><b>Prescription</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>All</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Prescription</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ALL
-	 * @model name="all"
+	 * @see #PRESCRIPTION
+	 * @model name="prescription"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ALL_VALUE = 3;
+	public static final int PRESCRIPTION_VALUE = 3;
 
 	/**
 	 * An array of all the '<em><b>EConduct</b></em>' enumerators.
@@ -123,7 +97,7 @@ public enum EConduct implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final EConduct[] VALUES_ARRAY = new EConduct[] { PRESCRIPTION, PROCEDURE, MEDICATION, ALL, };
+	private static final EConduct[] VALUES_ARRAY = new EConduct[] { PROCEDURE, MEDICATION, PRESCRIPTION, };
 
 	/**
 	 * A public read-only list of all the '<em><b>EConduct</b></em>' enumerators.
@@ -179,12 +153,12 @@ public enum EConduct implements Enumerator {
 	 */
 	public static EConduct get(int value) {
 		switch (value) {
-		case PRESCRIPTION_VALUE:
-			return PRESCRIPTION;
 		case PROCEDURE_VALUE:
 			return PROCEDURE;
 		case MEDICATION_VALUE:
 			return MEDICATION;
+		case PRESCRIPTION_VALUE:
+			return PRESCRIPTION;
 		}
 		return null;
 	}

@@ -19,118 +19,86 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum EStep implements Enumerator {
 	/**
-	 * The '<em><b>Discharge</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #DISCHARGE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	DISCHARGE(1, "discharge", "discharge"),
-
-	/**
 	 * The '<em><b>Referral</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #REFERRAL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	REFERRAL(2, "referral", "referral"),
-
+	REFERRAL(1, "referral", "referral"),
 	/**
 	 * The '<em><b>Procedure</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #PROCEDURE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PROCEDURE(3, "procedure", "procedure"),
-
+	PROCEDURE(2, "procedure", "procedure"),
 	/**
 	 * The '<em><b>Action</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #ACTION_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ACTION(4, "action", "action"),
-
+	ACTION(3, "action", "action"),
 	/**
 	 * The '<em><b>Information</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #INFORMATION_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	INFORMATION(5, "information", "information"),
-
+	INFORMATION(4, "information", "information"),
 	/**
 	 * The '<em><b>Treatment</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #TREATMENT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	TREATMENT(6, "treatment", "treatment"),
-
+	TREATMENT(5, "treatment", "treatment"),
 	/**
 	 * The '<em><b>Prescription</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #PRESCRIPTION_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PRESCRIPTION(7, "prescription", "prescription"),
-
+	PRESCRIPTION(6, "prescription", "prescription"),
 	/**
 	 * The '<em><b>Pause</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #PAUSE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PAUSE(8, "pause", "pause"),
-
+	PAUSE(7, "pause", "pause"),
 	/**
 	 * The '<em><b>Auxiliaryconduct</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	* <!-- end-user-doc -->
 	 * @see #AUXILIARYCONDUCT_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	AUXILIARYCONDUCT(9, "auxiliaryconduct", "auxiliaryconduct"),
+	AUXILIARYCONDUCT(8, "auxiliaryconduct", "auxiliaryconduct"),
 	/**
-	 * The '<em><b>All</b></em>' literal object.
+	 * The '<em><b>Discharge</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	 * @see #ALL_VALUE
+	 * @see #DISCHARGE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ALL(9, "all", "all");
-
-	/**
-	 * The '<em><b>Discharge</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Discharge</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #DISCHARGE
-	 * @model name="discharge"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int DISCHARGE_VALUE = 1;
+	DISCHARGE(9, "discharge", "discharge");
 
 	/**
 	 * The '<em><b>Referral</b></em>' literal value.
@@ -145,7 +113,7 @@ public enum EStep implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int REFERRAL_VALUE = 2;
+	public static final int REFERRAL_VALUE = 1;
 
 	/**
 	 * The '<em><b>Procedure</b></em>' literal value.
@@ -160,7 +128,7 @@ public enum EStep implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROCEDURE_VALUE = 3;
+	public static final int PROCEDURE_VALUE = 2;
 
 	/**
 	 * The '<em><b>Action</b></em>' literal value.
@@ -175,7 +143,7 @@ public enum EStep implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ACTION_VALUE = 4;
+	public static final int ACTION_VALUE = 3;
 
 	/**
 	 * The '<em><b>Information</b></em>' literal value.
@@ -190,7 +158,7 @@ public enum EStep implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int INFORMATION_VALUE = 5;
+	public static final int INFORMATION_VALUE = 4;
 
 	/**
 	 * The '<em><b>Treatment</b></em>' literal value.
@@ -205,7 +173,7 @@ public enum EStep implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TREATMENT_VALUE = 6;
+	public static final int TREATMENT_VALUE = 5;
 
 	/**
 	 * The '<em><b>Prescription</b></em>' literal value.
@@ -220,7 +188,7 @@ public enum EStep implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PRESCRIPTION_VALUE = 7;
+	public static final int PRESCRIPTION_VALUE = 6;
 
 	/**
 	 * The '<em><b>Pause</b></em>' literal value.
@@ -235,7 +203,7 @@ public enum EStep implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PAUSE_VALUE = 8;
+	public static final int PAUSE_VALUE = 7;
 
 	/**
 	 * The '<em><b>Auxiliaryconduct</b></em>' literal value.
@@ -250,22 +218,22 @@ public enum EStep implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AUXILIARYCONDUCT_VALUE = 9;
+	public static final int AUXILIARYCONDUCT_VALUE = 8;
 
 	/**
-	 * The '<em><b>All</b></em>' literal value.
+	 * The '<em><b>Discharge</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>All</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Discharge</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ALL
-	 * @model name="all"
+	 * @see #DISCHARGE
+	 * @model name="discharge"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ALL_VALUE = 9;
+	public static final int DISCHARGE_VALUE = 9;
 
 	/**
 	 * An array of all the '<em><b>EStep</b></em>' enumerators.
@@ -273,8 +241,8 @@ public enum EStep implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final EStep[] VALUES_ARRAY = new EStep[] { DISCHARGE, REFERRAL, PROCEDURE, ACTION, INFORMATION,
-			TREATMENT, PRESCRIPTION, PAUSE, AUXILIARYCONDUCT, ALL, };
+	private static final EStep[] VALUES_ARRAY = new EStep[] { REFERRAL, PROCEDURE, ACTION, INFORMATION, TREATMENT,
+			PRESCRIPTION, PAUSE, AUXILIARYCONDUCT, DISCHARGE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>EStep</b></em>' enumerators.
@@ -330,8 +298,6 @@ public enum EStep implements Enumerator {
 	 */
 	public static EStep get(int value) {
 		switch (value) {
-		case DISCHARGE_VALUE:
-			return DISCHARGE;
 		case REFERRAL_VALUE:
 			return REFERRAL;
 		case PROCEDURE_VALUE:
@@ -348,6 +314,8 @@ public enum EStep implements Enumerator {
 			return PAUSE;
 		case AUXILIARYCONDUCT_VALUE:
 			return AUXILIARYCONDUCT;
+		case DISCHARGE_VALUE:
+			return DISCHARGE;
 		}
 		return null;
 	}

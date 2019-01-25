@@ -19,79 +19,53 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Gender implements Enumerator {
 	/**
-	 * The '<em><b>All</b></em>' literal object.
+	 * The '<em><b>M</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ALL_VALUE
+	 * @see #M_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ALL(0, "all", "all"),
-
+	M(1, "M", "M"),
 	/**
-	 * The '<em><b>Male</b></em>' literal object.
+	 * The '<em><b>F</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #MALE_VALUE
+	* <!-- end-user-doc -->
+	 * @see #F_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	MALE(1, "male", "male"),
+	F(2, "F", "F");
 
 	/**
-	 * The '<em><b>Female</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #FEMALE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	FEMALE(2, "female", "female");
-
-	/**
-	 * The '<em><b>All</b></em>' literal value.
+	 * The '<em><b>M</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>All</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>M</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ALL
-	 * @model name="all"
+	 * @see #M
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ALL_VALUE = 0;
+	public static final int M_VALUE = 1;
 
 	/**
-	 * The '<em><b>Male</b></em>' literal value.
+	 * The '<em><b>F</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Male</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>F</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #MALE
-	 * @model name="male"
+	 * @see #F
+	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MALE_VALUE = 1;
-
-	/**
-	 * The '<em><b>Female</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Female</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #FEMALE
-	 * @model name="female"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int FEMALE_VALUE = 2;
+	public static final int F_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Gender</b></em>' enumerators.
@@ -99,7 +73,7 @@ public enum Gender implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Gender[] VALUES_ARRAY = new Gender[] { ALL, MALE, FEMALE, };
+	private static final Gender[] VALUES_ARRAY = new Gender[] { M, F, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Gender</b></em>' enumerators.
@@ -155,12 +129,10 @@ public enum Gender implements Enumerator {
 	 */
 	public static Gender get(int value) {
 		switch (value) {
-		case ALL_VALUE:
-			return ALL;
-		case MALE_VALUE:
-			return MALE;
-		case FEMALE_VALUE:
-			return FEMALE;
+		case M_VALUE:
+			return M;
+		case F_VALUE:
+			return F;
 		}
 		return null;
 	}

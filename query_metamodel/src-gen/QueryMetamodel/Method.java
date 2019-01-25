@@ -67,14 +67,23 @@ public enum Method implements Enumerator {
 	 */
 	OCCURRENCY_EXECUTION(4, "occurrencyExecution", "occurrencyExecution"),
 	/**
-	* The '<em><b>Status</b></em>' literal object.
-	* <!-- begin-user-doc -->
+	 * The '<em><b>Status</b></em>' literal object.
+	 * <!-- begin-user-doc -->
 	* <!-- end-user-doc -->
-	* @see #STATUS_VALUE
-	* @generated
-	* @ordered
-	*/
-	STATUS(5, "status", "status");
+	 * @see #STATUS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	STATUS(5, "status", "status"),
+	/**
+	 * The '<em><b>Conducts</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	* <!-- end-user-doc -->
+	 * @see #CONDUCTS_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	CONDUCTS(5, "conducts", "conducts");
 
 	/**
 	 * The '<em><b>None</b></em>' literal value.
@@ -167,13 +176,28 @@ public enum Method implements Enumerator {
 	public static final int STATUS_VALUE = 5;
 
 	/**
+	 * The '<em><b>Conducts</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Conducts</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #CONDUCTS
+	 * @model name="conducts"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int CONDUCTS_VALUE = 5;
+
+	/**
 	 * An array of all the '<em><b>Method</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static final Method[] VALUES_ARRAY = new Method[] { NONE, AVERAGE_BY_TIME, RECURRENCY_FLOW,
-			PRESCRIBED_MEDICATION, OCCURRENCY_EXECUTION, STATUS, };
+			PRESCRIBED_MEDICATION, OCCURRENCY_EXECUTION, STATUS, CONDUCTS, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Method</b></em>' enumerators.
