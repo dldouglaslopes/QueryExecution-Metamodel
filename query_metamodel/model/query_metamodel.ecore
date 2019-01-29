@@ -129,7 +129,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="completed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="inProgress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="STATUS"/>
+        defaultValueLiteral="COUNT STATUS"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EMethod" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EConduct" eSuperTypes="#//EMethod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="withConduct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="noConduct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="COUNT CONDUCT"/>
+  </eClassifiers>
 </ecore:EPackage>

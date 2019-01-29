@@ -102,7 +102,7 @@ public interface EStatus extends EMethod {
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>"STATUS"</code>.
+	 * The default value is <code>"COUNT STATUS"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -112,7 +112,7 @@ public interface EStatus extends EMethod {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEStatus_Name()
-	 * @model default="STATUS"
+	 * @model default="COUNT STATUS"
 	 * @generated
 	 */
 	String getName();

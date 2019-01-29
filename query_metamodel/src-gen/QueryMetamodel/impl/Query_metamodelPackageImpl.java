@@ -6,6 +6,7 @@ import QueryMetamodel.Age;
 import QueryMetamodel.CarePathway;
 import QueryMetamodel.Date;
 import QueryMetamodel.ECarePathway;
+import QueryMetamodel.EConduct;
 import QueryMetamodel.EMethod;
 import QueryMetamodel.EQuery;
 import QueryMetamodel.EStatus;
@@ -103,6 +104,13 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	private EClass eMethodEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eConductEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -495,6 +503,42 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEConduct() {
+		return eConductEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEConduct_WithConduct() {
+		return (EAttribute) eConductEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEConduct_NoConduct() {
+		return (EAttribute) eConductEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEConduct_Name() {
+		return (EAttribute) eConductEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getOrder() {
 		return orderEEnum;
 	}
@@ -606,6 +650,11 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		eMethodEClass = createEClass(EMETHOD);
 
+		eConductEClass = createEClass(ECONDUCT);
+		createEAttribute(eConductEClass, ECONDUCT__WITH_CONDUCT);
+		createEAttribute(eConductEClass, ECONDUCT__NO_CONDUCT);
+		createEAttribute(eConductEClass, ECONDUCT__NAME);
+
 		// Create enums
 		orderEEnum = createEEnum(ORDER);
 		messageEEnum = createEEnum(MESSAGE);
@@ -644,6 +693,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		// Add supertypes to classes
 		eStatusEClass.getESuperTypes().add(this.getEMethod());
+		eConductEClass.getESuperTypes().add(this.getEMethod());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(eAttributeEClass, QueryMetamodel.EAttribute.class, "EAttribute", !IS_ABSTRACT, !IS_INTERFACE,
@@ -715,10 +765,19 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEStatus_InProgress(), ecorePackage.getEInt(), "inProgress", null, 0, 1, EStatus.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStatus_Name(), ecorePackage.getEString(), "name", "STATUS", 0, 1, EStatus.class,
+		initEAttribute(getEStatus_Name(), ecorePackage.getEString(), "name", "COUNT STATUS", 0, 1, EStatus.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eMethodEClass, EMethod.class, "EMethod", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(eConductEClass, EConduct.class, "EConduct", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEConduct_WithConduct(), ecorePackage.getEInt(), "withConduct", null, 0, 1, EConduct.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEConduct_NoConduct(), ecorePackage.getEInt(), "noConduct", null, 0, 1, EConduct.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEConduct_Name(), ecorePackage.getEString(), "name", "COUNT CONDUCT", 0, 1, EConduct.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(orderEEnum, Order.class, "Order");

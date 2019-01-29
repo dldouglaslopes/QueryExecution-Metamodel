@@ -536,6 +536,61 @@ public interface Query_metamodelPackage extends EPackage {
 	int ESTATUS_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.EConductImpl <em>EConduct</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.EConductImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEConduct()
+	 * @generated
+	 */
+	int ECONDUCT = 10;
+
+	/**
+	 * The feature id for the '<em><b>With Conduct</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONDUCT__WITH_CONDUCT = EMETHOD_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>No Conduct</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONDUCT__NO_CONDUCT = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONDUCT__NAME = EMETHOD_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>EConduct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONDUCT_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>EConduct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECONDUCT_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -543,7 +598,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 10;
+	int ORDER = 11;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Message <em>Message</em>}' enum.
@@ -553,7 +608,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 11;
+	int MESSAGE = 12;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Gender <em>Gender</em>}' enum.
@@ -563,7 +618,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getGender()
 	 * @generated
 	 */
-	int GENDER = 12;
+	int GENDER = 13;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Method <em>Method</em>}' enum.
@@ -573,7 +628,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getMethod()
 	 * @generated
 	 */
-	int METHOD = 13;
+	int METHOD = 14;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}' enum.
@@ -583,7 +638,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getCarePathway()
 	 * @generated
 	 */
-	int CARE_PATHWAY = 14;
+	int CARE_PATHWAY = 15;
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EAttribute <em>EAttribute</em>}'.
@@ -926,6 +981,49 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEMethod();
+
+	/**
+	 * Returns the meta object for class '{@link QueryMetamodel.EConduct <em>EConduct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EConduct</em>'.
+	 * @see QueryMetamodel.EConduct
+	 * @generated
+	 */
+	EClass getEConduct();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.EConduct#getWithConduct <em>With Conduct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>With Conduct</em>'.
+	 * @see QueryMetamodel.EConduct#getWithConduct()
+	 * @see #getEConduct()
+	 * @generated
+	 */
+	EAttribute getEConduct_WithConduct();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.EConduct#getNoConduct <em>No Conduct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>No Conduct</em>'.
+	 * @see QueryMetamodel.EConduct#getNoConduct()
+	 * @see #getEConduct()
+	 * @generated
+	 */
+	EAttribute getEConduct_NoConduct();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.EConduct#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.EConduct#getName()
+	 * @see #getEConduct()
+	 * @generated
+	 */
+	EAttribute getEConduct_Name();
 
 	/**
 	 * Returns the meta object for enum '{@link QueryMetamodel.Order <em>Order</em>}'.
@@ -1275,6 +1373,40 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EMETHOD = eINSTANCE.getEMethod();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.impl.EConductImpl <em>EConduct</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.EConductImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEConduct()
+		 * @generated
+		 */
+		EClass ECONDUCT = eINSTANCE.getEConduct();
+
+		/**
+		 * The meta object literal for the '<em><b>With Conduct</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ECONDUCT__WITH_CONDUCT = eINSTANCE.getEConduct_WithConduct();
+
+		/**
+		 * The meta object literal for the '<em><b>No Conduct</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ECONDUCT__NO_CONDUCT = eINSTANCE.getEConduct_NoConduct();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ECONDUCT__NAME = eINSTANCE.getEConduct_Name();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.

@@ -103,6 +103,15 @@ public interface Query_metamodelFactory extends EFactory {
 	EStatus createEStatus();
 
 	/**
+	 * Returns a new object of class '<em>EConduct</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EConduct</em>'.
+	 * @generated
+	 */
+	EConduct createEConduct();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

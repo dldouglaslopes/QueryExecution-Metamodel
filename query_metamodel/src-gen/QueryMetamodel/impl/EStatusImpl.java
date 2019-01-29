@@ -96,7 +96,7 @@ public class EStatusImpl extends EMethodImpl implements EStatus {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "STATUS";
+	protected static final String NAME_EDEFAULT = "COUNT STATUS";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.

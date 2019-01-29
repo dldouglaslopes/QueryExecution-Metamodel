@@ -75,6 +75,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createECarePathway();
 		case Query_metamodelPackage.ESTATUS:
 			return createEStatus();
+		case Query_metamodelPackage.ECONDUCT:
+			return createEConduct();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -214,6 +216,16 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public EStatus createEStatus() {
 		EStatusImpl eStatus = new EStatusImpl();
 		return eStatus;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EConduct createEConduct() {
+		EConductImpl eConduct = new EConductImpl();
+		return eConduct;
 	}
 
 	/**
