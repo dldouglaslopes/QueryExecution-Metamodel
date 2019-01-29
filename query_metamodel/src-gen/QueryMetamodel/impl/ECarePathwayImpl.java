@@ -4,17 +4,14 @@ package QueryMetamodel.impl;
 
 import QueryMetamodel.CarePathway;
 import QueryMetamodel.ECarePathway;
-import QueryMetamodel.EConduct;
-import QueryMetamodel.EStep;
 import QueryMetamodel.Query_metamodelPackage;
 
-import java.util.Collection;
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,43 +21,31 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.ECarePathwayImpl#getConducts <em>Conducts</em>}</li>
- *   <li>{@link QueryMetamodel.impl.ECarePathwayImpl#getSteps <em>Steps</em>}</li>
- *   <li>{@link QueryMetamodel.impl.ECarePathwayImpl#getCarePathways <em>Care Pathways</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.ECarePathwayImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements ECarePathway {
 	/**
-	 * The cached value of the '{@link #getConducts() <em>Conducts</em>}' attribute list.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConducts()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EConduct> conducts;
+	protected static final CarePathway NAME_EDEFAULT = CarePathway.NONE;
 
 	/**
-	 * The cached value of the '{@link #getSteps() <em>Steps</em>}' attribute list.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSteps()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EStep> steps;
-
-	/**
-	 * The cached value of the '{@link #getCarePathways() <em>Care Pathways</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCarePathways()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<CarePathway> carePathways;
+	protected CarePathway name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -86,12 +71,8 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EConduct> getConducts() {
-		if (conducts == null) {
-			conducts = new EDataTypeUniqueEList<EConduct>(EConduct.class, this,
-					Query_metamodelPackage.ECARE_PATHWAY__CONDUCTS);
-		}
-		return conducts;
+	public CarePathway getName() {
+		return name;
 	}
 
 	/**
@@ -99,24 +80,12 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EStep> getSteps() {
-		if (steps == null) {
-			steps = new EDataTypeUniqueEList<EStep>(EStep.class, this, Query_metamodelPackage.ECARE_PATHWAY__STEPS);
-		}
-		return steps;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<CarePathway> getCarePathways() {
-		if (carePathways == null) {
-			carePathways = new EDataTypeUniqueEList<CarePathway>(CarePathway.class, this,
-					Query_metamodelPackage.ECARE_PATHWAY__CARE_PATHWAYS);
-		}
-		return carePathways;
+	public void setName(CarePathway newName) {
+		CarePathway oldName = name;
+		name = newName == null ? NAME_EDEFAULT : newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ECARE_PATHWAY__NAME, oldName,
+					name));
 	}
 
 	/**
@@ -127,12 +96,8 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.ECARE_PATHWAY__CONDUCTS:
-			return getConducts();
-		case Query_metamodelPackage.ECARE_PATHWAY__STEPS:
-			return getSteps();
-		case Query_metamodelPackage.ECARE_PATHWAY__CARE_PATHWAYS:
-			return getCarePathways();
+		case Query_metamodelPackage.ECARE_PATHWAY__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -142,21 +107,11 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.ECARE_PATHWAY__CONDUCTS:
-			getConducts().clear();
-			getConducts().addAll((Collection<? extends EConduct>) newValue);
-			return;
-		case Query_metamodelPackage.ECARE_PATHWAY__STEPS:
-			getSteps().clear();
-			getSteps().addAll((Collection<? extends EStep>) newValue);
-			return;
-		case Query_metamodelPackage.ECARE_PATHWAY__CARE_PATHWAYS:
-			getCarePathways().clear();
-			getCarePathways().addAll((Collection<? extends CarePathway>) newValue);
+		case Query_metamodelPackage.ECARE_PATHWAY__NAME:
+			setName((CarePathway) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -170,14 +125,8 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.ECARE_PATHWAY__CONDUCTS:
-			getConducts().clear();
-			return;
-		case Query_metamodelPackage.ECARE_PATHWAY__STEPS:
-			getSteps().clear();
-			return;
-		case Query_metamodelPackage.ECARE_PATHWAY__CARE_PATHWAYS:
-			getCarePathways().clear();
+		case Query_metamodelPackage.ECARE_PATHWAY__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -191,12 +140,8 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.ECARE_PATHWAY__CONDUCTS:
-			return conducts != null && !conducts.isEmpty();
-		case Query_metamodelPackage.ECARE_PATHWAY__STEPS:
-			return steps != null && !steps.isEmpty();
-		case Query_metamodelPackage.ECARE_PATHWAY__CARE_PATHWAYS:
-			return carePathways != null && !carePathways.isEmpty();
+		case Query_metamodelPackage.ECARE_PATHWAY__NAME:
+			return name != NAME_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -212,12 +157,8 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (conducts: ");
-		result.append(conducts);
-		result.append(", steps: ");
-		result.append(steps);
-		result.append(", carePathways: ");
-		result.append(carePathways);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

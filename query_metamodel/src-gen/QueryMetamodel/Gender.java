@@ -19,6 +19,26 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Gender implements Enumerator {
 	/**
+	 * The '<em><b>All</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ALL_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ALL(0, "all", "all"),
+
+	/**
+	 * The '<em><b>F</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #F_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	F(1, "F", "F"),
+
+	/**
 	 * The '<em><b>M</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -26,31 +46,22 @@ public enum Gender implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	M(1, "M", "M"),
-	/**
-	 * The '<em><b>F</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	 * @see #F_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	F(2, "F", "F");
+	M(2, "M", "M");
 
 	/**
-	 * The '<em><b>M</b></em>' literal value.
+	 * The '<em><b>All</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>M</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>All</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #M
-	 * @model
+	 * @see #ALL
+	 * @model name="all"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int M_VALUE = 1;
+	public static final int ALL_VALUE = 0;
 
 	/**
 	 * The '<em><b>F</b></em>' literal value.
@@ -65,7 +76,22 @@ public enum Gender implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int F_VALUE = 2;
+	public static final int F_VALUE = 1;
+
+	/**
+	 * The '<em><b>M</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>M</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #M
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int M_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Gender</b></em>' enumerators.
@@ -73,7 +99,7 @@ public enum Gender implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Gender[] VALUES_ARRAY = new Gender[] { M, F, };
+	private static final Gender[] VALUES_ARRAY = new Gender[] { ALL, F, M, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Gender</b></em>' enumerators.
@@ -129,10 +155,12 @@ public enum Gender implements Enumerator {
 	 */
 	public static Gender get(int value) {
 		switch (value) {
-		case M_VALUE:
-			return M;
+		case ALL_VALUE:
+			return ALL;
 		case F_VALUE:
 			return F;
+		case M_VALUE:
+			return M;
 		}
 		return null;
 	}

@@ -6,10 +6,9 @@ import QueryMetamodel.Age;
 import QueryMetamodel.CarePathway;
 import QueryMetamodel.Date;
 import QueryMetamodel.ECarePathway;
-import QueryMetamodel.EConduct;
 import QueryMetamodel.EMethod;
 import QueryMetamodel.EQuery;
-import QueryMetamodel.EStep;
+import QueryMetamodel.EStatus;
 import QueryMetamodel.Gender;
 import QueryMetamodel.Message;
 import QueryMetamodel.Method;
@@ -89,14 +88,21 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass eMethodEClass = null;
+	private EClass eCarePathwayEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass eCarePathwayEClass = null;
+	private EClass eStatusEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eMethodEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,20 +117,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	private EEnum messageEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum eStepEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum eConductEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -314,8 +306,17 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEQuery_EMethod() {
+	public EReference getEQuery_EAttribute() {
 		return (EReference) eQueryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEQuery_EMethod() {
+		return (EReference) eQueryEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -422,33 +423,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEMethod() {
-		return eMethodEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getEMethod_Name() {
-		return (EAttribute) eMethodEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEMethod_EAttribute() {
-		return (EReference) eMethodEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getECarePathway() {
 		return eCarePathwayEClass;
 	}
@@ -458,7 +432,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getECarePathway_Conducts() {
+	public EAttribute getECarePathway_Name() {
 		return (EAttribute) eCarePathwayEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -467,8 +441,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getECarePathway_Steps() {
-		return (EAttribute) eCarePathwayEClass.getEStructuralFeatures().get(1);
+	public EClass getEStatus() {
+		return eStatusEClass;
 	}
 
 	/**
@@ -476,8 +450,44 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getECarePathway_CarePathways() {
-		return (EAttribute) eCarePathwayEClass.getEStructuralFeatures().get(2);
+	public EAttribute getEStatus_Aborted() {
+		return (EAttribute) eStatusEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEStatus_Completed() {
+		return (EAttribute) eStatusEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEStatus_InProgress() {
+		return (EAttribute) eStatusEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEStatus_Name() {
+		return (EAttribute) eStatusEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEMethod() {
+		return eMethodEClass;
 	}
 
 	/**
@@ -496,24 +506,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EEnum getMessage() {
 		return messageEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getEStep() {
-		return eStepEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getEConduct() {
-		return eConductEEnum;
 	}
 
 	/**
@@ -585,6 +577,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(rangeEClass, RANGE__ORDER);
 
 		eQueryEClass = createEClass(EQUERY);
+		createEReference(eQueryEClass, EQUERY__EATTRIBUTE);
 		createEReference(eQueryEClass, EQUERY__EMETHOD);
 
 		dateEClass = createEClass(DATE);
@@ -602,20 +595,20 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		sexEClass = createEClass(SEX);
 		createEAttribute(sexEClass, SEX__SEX);
 
-		eMethodEClass = createEClass(EMETHOD);
-		createEAttribute(eMethodEClass, EMETHOD__NAME);
-		createEReference(eMethodEClass, EMETHOD__EATTRIBUTE);
-
 		eCarePathwayEClass = createEClass(ECARE_PATHWAY);
-		createEAttribute(eCarePathwayEClass, ECARE_PATHWAY__CONDUCTS);
-		createEAttribute(eCarePathwayEClass, ECARE_PATHWAY__STEPS);
-		createEAttribute(eCarePathwayEClass, ECARE_PATHWAY__CARE_PATHWAYS);
+		createEAttribute(eCarePathwayEClass, ECARE_PATHWAY__NAME);
+
+		eStatusEClass = createEClass(ESTATUS);
+		createEAttribute(eStatusEClass, ESTATUS__ABORTED);
+		createEAttribute(eStatusEClass, ESTATUS__COMPLETED);
+		createEAttribute(eStatusEClass, ESTATUS__IN_PROGRESS);
+		createEAttribute(eStatusEClass, ESTATUS__NAME);
+
+		eMethodEClass = createEClass(EMETHOD);
 
 		// Create enums
 		orderEEnum = createEEnum(ORDER);
 		messageEEnum = createEEnum(MESSAGE);
-		eStepEEnum = createEEnum(ESTEP);
-		eConductEEnum = createEEnum(ECONDUCT);
 		genderEEnum = createEEnum(GENDER);
 		methodEEnum = createEEnum(METHOD);
 		carePathwayEEnum = createEEnum(CARE_PATHWAY);
@@ -650,6 +643,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		eStatusEClass.getESuperTypes().add(this.getEMethod());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(eAttributeEClass, QueryMetamodel.EAttribute.class, "EAttribute", !IS_ABSTRACT, !IS_INTERFACE,
@@ -680,7 +674,10 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eQueryEClass, EQuery.class, "EQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEQuery_EMethod(), this.getEMethod(), null, "eMethod", null, 0, 1, EQuery.class, !IS_TRANSIENT,
+		initEReference(getEQuery_EAttribute(), this.getEAttribute(), null, "eAttribute", null, 1, 1, EQuery.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEQuery_EMethod(), this.getEMethod(), null, "eMethod", null, 1, 1, EQuery.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
@@ -706,22 +703,22 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		initEAttribute(getSex_Sex(), this.getGender(), "sex", null, 0, 1, Sex.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(eMethodEClass, EMethod.class, "EMethod", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEMethod_Name(), this.getMethod(), "name", null, 0, 1, EMethod.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEMethod_EAttribute(), this.getEAttribute(), null, "eAttribute", null, 0, 1, EMethod.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(eCarePathwayEClass, ECarePathway.class, "ECarePathway", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getECarePathway_Conducts(), this.getEConduct(), "conducts", null, 0, -1, ECarePathway.class,
+		initEAttribute(getECarePathway_Name(), this.getCarePathway(), "name", "None", 0, 1, ECarePathway.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getECarePathway_Steps(), this.getEStep(), "steps", null, 0, -1, ECarePathway.class,
+
+		initEClass(eStatusEClass, EStatus.class, "EStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEStatus_Aborted(), ecorePackage.getEInt(), "aborted", null, 0, 1, EStatus.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getECarePathway_CarePathways(), this.getCarePathway(), "carePathways", null, 0, -1,
-				ECarePathway.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEStatus_Completed(), ecorePackage.getEInt(), "completed", null, 0, 1, EStatus.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEStatus_InProgress(), ecorePackage.getEInt(), "inProgress", null, 0, 1, EStatus.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEStatus_Name(), ecorePackage.getEString(), "name", "STATUS", 0, 1, EStatus.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eMethodEClass, EMethod.class, "EMethod", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
 		initEEnum(orderEEnum, Order.class, "Order");
@@ -730,31 +727,16 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		addEEnumLiteral(orderEEnum, Order.TOP);
 
 		initEEnum(messageEEnum, Message.class, "Message");
-		addEEnumLiteral(messageEEnum, Message.COMPLETED);
+		addEEnumLiteral(messageEEnum, Message.ALL);
 		addEEnumLiteral(messageEEnum, Message.ABORTED);
-
-		initEEnum(eStepEEnum, EStep.class, "EStep");
-		addEEnumLiteral(eStepEEnum, EStep.REFERRAL);
-		addEEnumLiteral(eStepEEnum, EStep.PROCEDURE);
-		addEEnumLiteral(eStepEEnum, EStep.ACTION);
-		addEEnumLiteral(eStepEEnum, EStep.INFORMATION);
-		addEEnumLiteral(eStepEEnum, EStep.TREATMENT);
-		addEEnumLiteral(eStepEEnum, EStep.PRESCRIPTION);
-		addEEnumLiteral(eStepEEnum, EStep.PAUSE);
-		addEEnumLiteral(eStepEEnum, EStep.AUXILIARYCONDUCT);
-		addEEnumLiteral(eStepEEnum, EStep.DISCHARGE);
-
-		initEEnum(eConductEEnum, EConduct.class, "EConduct");
-		addEEnumLiteral(eConductEEnum, EConduct.PROCEDURE);
-		addEEnumLiteral(eConductEEnum, EConduct.MEDICATION);
-		addEEnumLiteral(eConductEEnum, EConduct.PRESCRIPTION);
+		addEEnumLiteral(messageEEnum, Message.COMPLETED);
 
 		initEEnum(genderEEnum, Gender.class, "Gender");
-		addEEnumLiteral(genderEEnum, Gender.M);
+		addEEnumLiteral(genderEEnum, Gender.ALL);
 		addEEnumLiteral(genderEEnum, Gender.F);
+		addEEnumLiteral(genderEEnum, Gender.M);
 
 		initEEnum(methodEEnum, Method.class, "Method");
-		addEEnumLiteral(methodEEnum, Method.NONE);
 		addEEnumLiteral(methodEEnum, Method.AVERAGE_BY_TIME);
 		addEEnumLiteral(methodEEnum, Method.RECURRENCY_FLOW);
 		addEEnumLiteral(methodEEnum, Method.PRESCRIBED_MEDICATION);
@@ -814,6 +796,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		addEEnumLiteral(carePathwayEEnum, CarePathway.EXPOSED_FRACTURE);
 		addEEnumLiteral(carePathwayEEnum, CarePathway.ACEIBBC_BETABLOCKER);
 		addEEnumLiteral(carePathwayEEnum, CarePathway.LOW_BACK_PAIN);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.NONE);
 
 		// Create resource
 		createResource(eNS_URI);

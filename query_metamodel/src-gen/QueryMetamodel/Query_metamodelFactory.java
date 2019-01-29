@@ -85,15 +85,6 @@ public interface Query_metamodelFactory extends EFactory {
 	Sex createSex();
 
 	/**
-	 * Returns a new object of class '<em>EMethod</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EMethod</em>'.
-	 * @generated
-	 */
-	EMethod createEMethod();
-
-	/**
 	 * Returns a new object of class '<em>ECare Pathway</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -101,6 +92,15 @@ public interface Query_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	ECarePathway createECarePathway();
+
+	/**
+	 * Returns a new object of class '<em>EStatus</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EStatus</em>'.
+	 * @generated
+	 */
+	EStatus createEStatus();
 
 	/**
 	 * Returns the package supported by this factory.

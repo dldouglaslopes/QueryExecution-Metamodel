@@ -21,7 +21,7 @@ public enum CarePathway implements Enumerator {
 	/**
 	 * The '<em><b>Dm Treatment</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #DM_TREATMENT_VALUE
 	 * @generated
 	 * @ordered
@@ -317,14 +317,15 @@ public enum CarePathway implements Enumerator {
 	 * @ordered
 	 */
 	ACEI_LINE_TETRA_THERAPY(30, "ACEILineTetraTherapy", "Viver Bem Tetraterapia Linha IECA"),
+
 	/**
-	* The '<em><b>Double Therapy Afro Line</b></em>' literal object.
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @see #DOUBLE_THERAPY_AFRO_LINE_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * The '<em><b>Double Therapy Afro Line</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #DOUBLE_THERAPY_AFRO_LINE_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	DOUBLE_THERAPY_AFRO_LINE(31, "DoubleTherapyAfroLine", "Viver Bem DuploTerapia Linha Afro"),
 
 	/**
@@ -440,14 +441,15 @@ public enum CarePathway implements Enumerator {
 	 * @ordered
 	 */
 	ACEI_LINE_DOUBLE_THERAPY(42, "ACEILineDoubleTherapy", "Viver Bem Duploterapia Linha IECA"),
+
 	/**
-	* The '<em><b>Triploterapia BAR</b></em>' literal object.
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @see #TRIPLOTERAPIA_BAR_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * The '<em><b>Triploterapia BAR</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TRIPLOTERAPIA_BAR_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	TRIPLOTERAPIA_BAR(43, "TriploterapiaBAR", "Viver Bem Triploterapia Bar"),
 
 	/**
@@ -469,14 +471,15 @@ public enum CarePathway implements Enumerator {
 	 * @ordered
 	 */
 	BAR_BBC_BETABLOCKER(45, "BarBBCBetablocker", "Viver Bem Bar & BCC - Betabloqueador"),
+
 	/**
-	* The '<em><b>UTI Diabetes</b></em>' literal object.
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @see #UTI_DIABETES_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * The '<em><b>UTI Diabetes</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #UTI_DIABETES_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	UTI_DIABETES(46, "UTIDiabetes", "Viver Bem Diabetes - ITU"),
 
 	/**
@@ -519,15 +522,26 @@ public enum CarePathway implements Enumerator {
 	 * @ordered
 	 */
 	ACEIBBC_BETABLOCKER(50, "ACEIBBCBetablocker", "Viver Bem IECA & BBC - Betabloqueador"),
+
 	/**
 	 * The '<em><b>Low Back Pain</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #LOW_BACK_PAIN_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	LOW_BACK_PAIN(51, "LowBackPain", "Lombalgia");
+	LOW_BACK_PAIN(51, "LowBackPain", "Lombalgia"),
+
+	/**
+	 * The '<em><b>None</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #NONE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	NONE(0, "None", "None");
 
 	/**
 	 * The '<em><b>Dm Treatment</b></em>' literal value.
@@ -1295,6 +1309,21 @@ public enum CarePathway implements Enumerator {
 	public static final int LOW_BACK_PAIN_VALUE = 51;
 
 	/**
+	 * The '<em><b>None</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>None</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #NONE
+	 * @model name="None"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NONE_VALUE = 0;
+
+	/**
 	 * An array of all the '<em><b>Care Pathway</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1309,7 +1338,7 @@ public enum CarePathway implements Enumerator {
 			DOUBLE_THERAPY_BAR, MONOTHERAPY_BAR, TREATMENT_DYSLIPIDEMIA_HIGH_RISK,
 			TREATMENT_DYSLIPIDEMIA_INTERMEDIATE_RISK, TREATMENT_DYSLIPIDEMIA_VERY_HIGH_RISK, MENINGITIS, SYPHILIS,
 			ACEI_LINE_DOUBLE_THERAPY, TRIPLOTERAPIA_BAR, UTI, BAR_BBC_BETABLOCKER, UTI_DIABETES, UTI_PYELONEPHRITIS,
-			AFRICAN_AMERICAN_PHARMACOLOGICAL, EXPOSED_FRACTURE, ACEIBBC_BETABLOCKER, LOW_BACK_PAIN, };
+			AFRICAN_AMERICAN_PHARMACOLOGICAL, EXPOSED_FRACTURE, ACEIBBC_BETABLOCKER, LOW_BACK_PAIN, NONE, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Care Pathway</b></em>' enumerators.
@@ -1467,6 +1496,8 @@ public enum CarePathway implements Enumerator {
 			return ACEIBBC_BETABLOCKER;
 		case LOW_BACK_PAIN_VALUE:
 			return LOW_BACK_PAIN;
+		case NONE_VALUE:
+			return NONE;
 		}
 		return null;
 	}

@@ -2,6 +2,7 @@
  */
 package QueryMetamodel.impl;
 
+import QueryMetamodel.EAttribute;
 import QueryMetamodel.EMethod;
 import QueryMetamodel.EQuery;
 import QueryMetamodel.Query_metamodelPackage;
@@ -23,12 +24,23 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link QueryMetamodel.impl.EQueryImpl#getEAttribute <em>EAttribute</em>}</li>
  *   <li>{@link QueryMetamodel.impl.EQueryImpl#getEMethod <em>EMethod</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
+	/**
+	 * The cached value of the '{@link #getEAttribute() <em>EAttribute</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getEAttribute()
+	 * @generated
+	 * @ordered
+	 */
+	protected EAttribute eAttribute;
+
 	/**
 	 * The cached value of the '{@link #getEMethod() <em>EMethod</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -56,6 +68,56 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	@Override
 	protected EClass eStaticClass() {
 		return Query_metamodelPackage.Literals.EQUERY;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEAttribute() {
+		return eAttribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetEAttribute(EAttribute newEAttribute, NotificationChain msgs) {
+		EAttribute oldEAttribute = eAttribute;
+		eAttribute = newEAttribute;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Query_metamodelPackage.EQUERY__EATTRIBUTE, oldEAttribute, newEAttribute);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEAttribute(EAttribute newEAttribute) {
+		if (newEAttribute != eAttribute) {
+			NotificationChain msgs = null;
+			if (eAttribute != null)
+				msgs = ((InternalEObject) eAttribute).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EQUERY__EATTRIBUTE, null, msgs);
+			if (newEAttribute != null)
+				msgs = ((InternalEObject) newEAttribute).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EQUERY__EATTRIBUTE, null, msgs);
+			msgs = basicSetEAttribute(newEAttribute, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EQUERY__EATTRIBUTE,
+					newEAttribute, newEAttribute));
 	}
 
 	/**
@@ -116,6 +178,8 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+		case Query_metamodelPackage.EQUERY__EATTRIBUTE:
+			return basicSetEAttribute(null, msgs);
 		case Query_metamodelPackage.EQUERY__EMETHOD:
 			return basicSetEMethod(null, msgs);
 		}
@@ -130,6 +194,8 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case Query_metamodelPackage.EQUERY__EATTRIBUTE:
+			return getEAttribute();
 		case Query_metamodelPackage.EQUERY__EMETHOD:
 			return getEMethod();
 		}
@@ -144,6 +210,9 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case Query_metamodelPackage.EQUERY__EATTRIBUTE:
+			setEAttribute((EAttribute) newValue);
+			return;
 		case Query_metamodelPackage.EQUERY__EMETHOD:
 			setEMethod((EMethod) newValue);
 			return;
@@ -159,6 +228,9 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case Query_metamodelPackage.EQUERY__EATTRIBUTE:
+			setEAttribute((EAttribute) null);
+			return;
 		case Query_metamodelPackage.EQUERY__EMETHOD:
 			setEMethod((EMethod) null);
 			return;
@@ -174,6 +246,8 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case Query_metamodelPackage.EQUERY__EATTRIBUTE:
+			return eAttribute != null;
 		case Query_metamodelPackage.EQUERY__EMETHOD:
 			return eMethod != null;
 		}

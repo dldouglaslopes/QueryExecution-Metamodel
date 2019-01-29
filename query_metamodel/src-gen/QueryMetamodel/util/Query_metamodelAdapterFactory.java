@@ -102,13 +102,18 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseEMethod(EMethod object) {
-			return createEMethodAdapter();
+		public Adapter caseECarePathway(ECarePathway object) {
+			return createECarePathwayAdapter();
 		}
 
 		@Override
-		public Adapter caseECarePathway(ECarePathway object) {
-			return createECarePathwayAdapter();
+		public Adapter caseEStatus(EStatus object) {
+			return createEStatusAdapter();
+		}
+
+		@Override
+		public Adapter caseEMethod(EMethod object) {
+			return createEMethodAdapter();
 		}
 
 		@Override
@@ -229,20 +234,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EMethod <em>EMethod</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.EMethod
-	 * @generated
-	 */
-	public Adapter createEMethodAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link QueryMetamodel.ECarePathway <em>ECare Pathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -253,6 +244,34 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createECarePathwayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EStatus <em>EStatus</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.EStatus
+	 * @generated
+	 */
+	public Adapter createEStatusAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EMethod <em>EMethod</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.EMethod
+	 * @generated
+	 */
+	public Adapter createEMethodAdapter() {
 		return null;
 	}
 

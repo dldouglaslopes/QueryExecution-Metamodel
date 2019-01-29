@@ -71,10 +71,10 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createAge();
 		case Query_metamodelPackage.SEX:
 			return createSex();
-		case Query_metamodelPackage.EMETHOD:
-			return createEMethod();
 		case Query_metamodelPackage.ECARE_PATHWAY:
 			return createECarePathway();
+		case Query_metamodelPackage.ESTATUS:
+			return createEStatus();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,10 +92,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createOrderFromString(eDataType, initialValue);
 		case Query_metamodelPackage.MESSAGE:
 			return createMessageFromString(eDataType, initialValue);
-		case Query_metamodelPackage.ESTEP:
-			return createEStepFromString(eDataType, initialValue);
-		case Query_metamodelPackage.ECONDUCT:
-			return createEConductFromString(eDataType, initialValue);
 		case Query_metamodelPackage.GENDER:
 			return createGenderFromString(eDataType, initialValue);
 		case Query_metamodelPackage.METHOD:
@@ -119,10 +115,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return convertOrderToString(eDataType, instanceValue);
 		case Query_metamodelPackage.MESSAGE:
 			return convertMessageToString(eDataType, instanceValue);
-		case Query_metamodelPackage.ESTEP:
-			return convertEStepToString(eDataType, instanceValue);
-		case Query_metamodelPackage.ECONDUCT:
-			return convertEConductToString(eDataType, instanceValue);
 		case Query_metamodelPackage.GENDER:
 			return convertGenderToString(eDataType, instanceValue);
 		case Query_metamodelPackage.METHOD:
@@ -209,9 +201,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EMethod createEMethod() {
-		EMethodImpl eMethod = new EMethodImpl();
-		return eMethod;
+	public ECarePathway createECarePathway() {
+		ECarePathwayImpl eCarePathway = new ECarePathwayImpl();
+		return eCarePathway;
 	}
 
 	/**
@@ -219,9 +211,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ECarePathway createECarePathway() {
-		ECarePathwayImpl eCarePathway = new ECarePathwayImpl();
-		return eCarePathway;
+	public EStatus createEStatus() {
+		EStatusImpl eStatus = new EStatusImpl();
+		return eStatus;
 	}
 
 	/**
@@ -265,50 +257,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * @generated
 	 */
 	public String convertMessageToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EStep createEStepFromString(EDataType eDataType, String initialValue) {
-		EStep result = EStep.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertEStepToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EConduct createEConductFromString(EDataType eDataType, String initialValue) {
-		EConduct result = EConduct.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertEConductToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

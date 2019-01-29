@@ -36,7 +36,7 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Message MESSAGE_EDEFAULT = Message.COMPLETED;
+	protected static final Message MESSAGE_EDEFAULT = Message.ALL;
 
 	/**
 	 * The cached value of the '{@link #getMessage() <em>Message</em>}' attribute.

@@ -35,7 +35,7 @@ public class SexImpl extends MinimalEObjectImpl.Container implements Sex {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Gender SEX_EDEFAULT = Gender.M;
+	protected static final Gender SEX_EDEFAULT = Gender.ALL;
 
 	/**
 	 * The cached value of the '{@link #getSex() <em>Sex</em>}' attribute.

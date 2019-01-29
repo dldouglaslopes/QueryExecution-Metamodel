@@ -196,13 +196,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int EQUERY = 2;
 
 	/**
+	 * The feature id for the '<em><b>EAttribute</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EQUERY__EATTRIBUTE = 0;
+
+	/**
 	 * The feature id for the '<em><b>EMethod</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EQUERY__EMETHOD = 0;
+	int EQUERY__EMETHOD = 1;
 
 	/**
 	 * The number of structural features of the '<em>EQuery</em>' class.
@@ -211,7 +220,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EQUERY_FEATURE_COUNT = 1;
+	int EQUERY_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>EQuery</em>' class.
@@ -398,14 +407,14 @@ public interface Query_metamodelPackage extends EPackage {
 	int SEX_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.EMethodImpl <em>EMethod</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.ECarePathwayImpl <em>ECare Pathway</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.EMethodImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEMethod()
+	 * @see QueryMetamodel.impl.ECarePathwayImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getECarePathway()
 	 * @generated
 	 */
-	int EMETHOD = 7;
+	int ECARE_PATHWAY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -414,71 +423,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMETHOD__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>EAttribute</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMETHOD__EATTRIBUTE = 1;
-
-	/**
-	 * The number of structural features of the '<em>EMethod</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMETHOD_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>EMethod</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMETHOD_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.ECarePathwayImpl <em>ECare Pathway</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.ECarePathwayImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getECarePathway()
-	 * @generated
-	 */
-	int ECARE_PATHWAY = 8;
-
-	/**
-	 * The feature id for the '<em><b>Conducts</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECARE_PATHWAY__CONDUCTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Steps</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECARE_PATHWAY__STEPS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Care Pathways</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECARE_PATHWAY__CARE_PATHWAYS = 2;
+	int ECARE_PATHWAY__NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>ECare Pathway</em>' class.
@@ -487,7 +432,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECARE_PATHWAY_FEATURE_COUNT = 3;
+	int ECARE_PATHWAY_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>ECare Pathway</em>' class.
@@ -499,6 +444,98 @@ public interface Query_metamodelPackage extends EPackage {
 	int ECARE_PATHWAY_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.EMethodImpl <em>EMethod</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.EMethodImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEMethod()
+	 * @generated
+	 */
+	int EMETHOD = 9;
+
+	/**
+	 * The number of structural features of the '<em>EMethod</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMETHOD_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>EMethod</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EMETHOD_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.EStatusImpl <em>EStatus</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.EStatusImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEStatus()
+	 * @generated
+	 */
+	int ESTATUS = 8;
+
+	/**
+	 * The feature id for the '<em><b>Aborted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTATUS__ABORTED = EMETHOD_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Completed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTATUS__COMPLETED = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>In Progress</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTATUS__IN_PROGRESS = EMETHOD_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTATUS__NAME = EMETHOD_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>EStatus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTATUS_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>EStatus</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ESTATUS_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -506,7 +543,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 9;
+	int ORDER = 10;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Message <em>Message</em>}' enum.
@@ -516,27 +553,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 10;
-
-	/**
-	 * The meta object id for the '{@link QueryMetamodel.EStep <em>EStep</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.EStep
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEStep()
-	 * @generated
-	 */
-	int ESTEP = 11;
-
-	/**
-	 * The meta object id for the '{@link QueryMetamodel.EConduct <em>EConduct</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.EConduct
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEConduct()
-	 * @generated
-	 */
-	int ECONDUCT = 12;
+	int MESSAGE = 11;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Gender <em>Gender</em>}' enum.
@@ -546,7 +563,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getGender()
 	 * @generated
 	 */
-	int GENDER = 13;
+	int GENDER = 12;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Method <em>Method</em>}' enum.
@@ -556,7 +573,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getMethod()
 	 * @generated
 	 */
-	int METHOD = 14;
+	int METHOD = 13;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}' enum.
@@ -566,7 +583,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getCarePathway()
 	 * @generated
 	 */
-	int CARE_PATHWAY = 15;
+	int CARE_PATHWAY = 14;
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EAttribute <em>EAttribute</em>}'.
@@ -685,6 +702,17 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEQuery();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.EQuery#getEAttribute <em>EAttribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>EAttribute</em>'.
+	 * @see QueryMetamodel.EQuery#getEAttribute()
+	 * @see #getEQuery()
+	 * @generated
+	 */
+	EReference getEQuery_EAttribute();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link QueryMetamodel.EQuery#getEMethod <em>EMethod</em>}'.
@@ -815,38 +843,6 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getSex_Sex();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.EMethod <em>EMethod</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EMethod</em>'.
-	 * @see QueryMetamodel.EMethod
-	 * @generated
-	 */
-	EClass getEMethod();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EMethod#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.EMethod#getName()
-	 * @see #getEMethod()
-	 * @generated
-	 */
-	EAttribute getEMethod_Name();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link QueryMetamodel.EMethod#getEAttribute <em>EAttribute</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>EAttribute</em>'.
-	 * @see QueryMetamodel.EMethod#getEAttribute()
-	 * @see #getEMethod()
-	 * @generated
-	 */
-	EReference getEMethod_EAttribute();
-
-	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.ECarePathway <em>ECare Pathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -857,37 +853,79 @@ public interface Query_metamodelPackage extends EPackage {
 	EClass getECarePathway();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link QueryMetamodel.ECarePathway#getConducts <em>Conducts</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ECarePathway#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Conducts</em>'.
-	 * @see QueryMetamodel.ECarePathway#getConducts()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.ECarePathway#getName()
 	 * @see #getECarePathway()
 	 * @generated
 	 */
-	EAttribute getECarePathway_Conducts();
+	EAttribute getECarePathway_Name();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link QueryMetamodel.ECarePathway#getSteps <em>Steps</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.EStatus <em>EStatus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Steps</em>'.
-	 * @see QueryMetamodel.ECarePathway#getSteps()
-	 * @see #getECarePathway()
+	 * @return the meta object for class '<em>EStatus</em>'.
+	 * @see QueryMetamodel.EStatus
 	 * @generated
 	 */
-	EAttribute getECarePathway_Steps();
+	EClass getEStatus();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link QueryMetamodel.ECarePathway#getCarePathways <em>Care Pathways</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.EStatus#getAborted <em>Aborted</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Care Pathways</em>'.
-	 * @see QueryMetamodel.ECarePathway#getCarePathways()
-	 * @see #getECarePathway()
+	 * @return the meta object for the attribute '<em>Aborted</em>'.
+	 * @see QueryMetamodel.EStatus#getAborted()
+	 * @see #getEStatus()
 	 * @generated
 	 */
-	EAttribute getECarePathway_CarePathways();
+	EAttribute getEStatus_Aborted();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.EStatus#getCompleted <em>Completed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Completed</em>'.
+	 * @see QueryMetamodel.EStatus#getCompleted()
+	 * @see #getEStatus()
+	 * @generated
+	 */
+	EAttribute getEStatus_Completed();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.EStatus#getInProgress <em>In Progress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>In Progress</em>'.
+	 * @see QueryMetamodel.EStatus#getInProgress()
+	 * @see #getEStatus()
+	 * @generated
+	 */
+	EAttribute getEStatus_InProgress();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.EStatus#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.EStatus#getName()
+	 * @see #getEStatus()
+	 * @generated
+	 */
+	EAttribute getEStatus_Name();
+
+	/**
+	 * Returns the meta object for class '{@link QueryMetamodel.EMethod <em>EMethod</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EMethod</em>'.
+	 * @see QueryMetamodel.EMethod
+	 * @generated
+	 */
+	EClass getEMethod();
 
 	/**
 	 * Returns the meta object for enum '{@link QueryMetamodel.Order <em>Order</em>}'.
@@ -908,26 +946,6 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getMessage();
-
-	/**
-	 * Returns the meta object for enum '{@link QueryMetamodel.EStep <em>EStep</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>EStep</em>'.
-	 * @see QueryMetamodel.EStep
-	 * @generated
-	 */
-	EEnum getEStep();
-
-	/**
-	 * Returns the meta object for enum '{@link QueryMetamodel.EConduct <em>EConduct</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>EConduct</em>'.
-	 * @see QueryMetamodel.EConduct
-	 * @generated
-	 */
-	EEnum getEConduct();
 
 	/**
 	 * Returns the meta object for enum '{@link QueryMetamodel.Gender <em>Gender</em>}'.
@@ -1077,6 +1095,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EClass EQUERY = eINSTANCE.getEQuery();
 
 		/**
+		 * The meta object literal for the '<em><b>EAttribute</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EQUERY__EATTRIBUTE = eINSTANCE.getEQuery_EAttribute();
+
+		/**
 		 * The meta object literal for the '<em><b>EMethod</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1181,32 +1207,6 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute SEX__SEX = eINSTANCE.getSex_Sex();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.EMethodImpl <em>EMethod</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.EMethodImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEMethod()
-		 * @generated
-		 */
-		EClass EMETHOD = eINSTANCE.getEMethod();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EMETHOD__NAME = eINSTANCE.getEMethod_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>EAttribute</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EMETHOD__EATTRIBUTE = eINSTANCE.getEMethod_EAttribute();
-
-		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.ECarePathwayImpl <em>ECare Pathway</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1217,28 +1217,64 @@ public interface Query_metamodelPackage extends EPackage {
 		EClass ECARE_PATHWAY = eINSTANCE.getECarePathway();
 
 		/**
-		 * The meta object literal for the '<em><b>Conducts</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ECARE_PATHWAY__CONDUCTS = eINSTANCE.getECarePathway_Conducts();
+		EAttribute ECARE_PATHWAY__NAME = eINSTANCE.getECarePathway_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Steps</b></em>' attribute list feature.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.EStatusImpl <em>EStatus</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.EStatusImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEStatus()
 		 * @generated
 		 */
-		EAttribute ECARE_PATHWAY__STEPS = eINSTANCE.getECarePathway_Steps();
+		EClass ESTATUS = eINSTANCE.getEStatus();
 
 		/**
-		 * The meta object literal for the '<em><b>Care Pathways</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Aborted</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ECARE_PATHWAY__CARE_PATHWAYS = eINSTANCE.getECarePathway_CarePathways();
+		EAttribute ESTATUS__ABORTED = eINSTANCE.getEStatus_Aborted();
+
+		/**
+		 * The meta object literal for the '<em><b>Completed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ESTATUS__COMPLETED = eINSTANCE.getEStatus_Completed();
+
+		/**
+		 * The meta object literal for the '<em><b>In Progress</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ESTATUS__IN_PROGRESS = eINSTANCE.getEStatus_InProgress();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ESTATUS__NAME = eINSTANCE.getEStatus_Name();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.impl.EMethodImpl <em>EMethod</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.EMethodImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEMethod()
+		 * @generated
+		 */
+		EClass EMETHOD = eINSTANCE.getEMethod();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.
@@ -1259,26 +1295,6 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum MESSAGE = eINSTANCE.getMessage();
-
-		/**
-		 * The meta object literal for the '{@link QueryMetamodel.EStep <em>EStep</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.EStep
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEStep()
-		 * @generated
-		 */
-		EEnum ESTEP = eINSTANCE.getEStep();
-
-		/**
-		 * The meta object literal for the '{@link QueryMetamodel.EConduct <em>EConduct</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.EConduct
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEConduct()
-		 * @generated
-		 */
-		EEnum ECONDUCT = eINSTANCE.getEConduct();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.Gender <em>Gender</em>}' enum.

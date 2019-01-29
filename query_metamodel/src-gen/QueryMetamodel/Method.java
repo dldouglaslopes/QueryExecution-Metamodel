@@ -19,16 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Method implements Enumerator {
 	/**
-	 * The '<em><b>None</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #NONE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	NONE(0, "none", "none"),
-
-	/**
 	 * The '<em><b>Average By Time</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,10 +37,11 @@ public enum Method implements Enumerator {
 	 * @ordered
 	 */
 	RECURRENCY_FLOW(2, "recurrencyFlow", "recurrencyFlow"),
+
 	/**
 	 * The '<em><b>Prescribed Medication</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #PRESCRIBED_MEDICATION_VALUE
 	 * @generated
 	 * @ordered
@@ -66,39 +57,26 @@ public enum Method implements Enumerator {
 	 * @ordered
 	 */
 	OCCURRENCY_EXECUTION(4, "occurrencyExecution", "occurrencyExecution"),
+
 	/**
 	 * The '<em><b>Status</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #STATUS_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	STATUS(5, "status", "status"),
+
 	/**
 	 * The '<em><b>Conducts</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #CONDUCTS_VALUE
 	 * @generated
 	 * @ordered
 	 */
 	CONDUCTS(5, "conducts", "conducts");
-
-	/**
-	 * The '<em><b>None</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>None</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #NONE
-	 * @model name="none"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int NONE_VALUE = 0;
 
 	/**
 	 * The '<em><b>Average By Time</b></em>' literal value.
@@ -196,8 +174,8 @@ public enum Method implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Method[] VALUES_ARRAY = new Method[] { NONE, AVERAGE_BY_TIME, RECURRENCY_FLOW,
-			PRESCRIBED_MEDICATION, OCCURRENCY_EXECUTION, STATUS, CONDUCTS, };
+	private static final Method[] VALUES_ARRAY = new Method[] { AVERAGE_BY_TIME, RECURRENCY_FLOW, PRESCRIBED_MEDICATION,
+			OCCURRENCY_EXECUTION, STATUS, CONDUCTS, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Method</b></em>' enumerators.
@@ -253,8 +231,6 @@ public enum Method implements Enumerator {
 	 */
 	public static Method get(int value) {
 		switch (value) {
-		case NONE_VALUE:
-			return NONE;
 		case AVERAGE_BY_TIME_VALUE:
 			return AVERAGE_BY_TIME;
 		case RECURRENCY_FLOW_VALUE:

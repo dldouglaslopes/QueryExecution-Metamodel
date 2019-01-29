@@ -26,7 +26,7 @@ public enum Order implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	RANDOM(1, "random", "random"),
+	RANDOM(0, "random", "random"),
 
 	/**
 	 * The '<em><b>Bottom</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum Order implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	BOTTOM(2, "bottom", "bottom"),
+	BOTTOM(1, "bottom", "bottom"),
 
 	/**
 	 * The '<em><b>Top</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum Order implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TOP(3, "top", "top");
+	TOP(2, "top", "top");
 
 	/**
 	 * The '<em><b>Random</b></em>' literal value.
@@ -61,7 +61,7 @@ public enum Order implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int RANDOM_VALUE = 1;
+	public static final int RANDOM_VALUE = 0;
 
 	/**
 	 * The '<em><b>Bottom</b></em>' literal value.
@@ -76,7 +76,7 @@ public enum Order implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int BOTTOM_VALUE = 2;
+	public static final int BOTTOM_VALUE = 1;
 
 	/**
 	 * The '<em><b>Top</b></em>' literal value.
@@ -91,7 +91,7 @@ public enum Order implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TOP_VALUE = 3;
+	public static final int TOP_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Order</b></em>' enumerators.

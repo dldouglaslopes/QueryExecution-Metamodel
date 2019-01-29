@@ -19,14 +19,14 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Message implements Enumerator {
 	/**
-	 * The '<em><b>Completed</b></em>' literal object.
+	 * The '<em><b>All</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #COMPLETED_VALUE
+	 * @see #ALL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	COMPLETED(1, "completed", "completed"),
+	ALL(0, "all", "all"),
 
 	/**
 	 * The '<em><b>Aborted</b></em>' literal object.
@@ -36,22 +36,32 @@ public enum Message implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ABORTED(2, "aborted", "aborted");
+	ABORTED(1, "aborted", "aborted"),
 
 	/**
-	 * The '<em><b>Completed</b></em>' literal value.
+	 * The '<em><b>Completed</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Completed</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #COMPLETED
-	 * @model name="completed"
+	 * @see #COMPLETED_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int COMPLETED_VALUE = 1;
+	COMPLETED(2, "completed", "completed");
+
+	/**
+	 * The '<em><b>All</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>All</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ALL
+	 * @model name="all"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ALL_VALUE = 0;
 
 	/**
 	 * The '<em><b>Aborted</b></em>' literal value.
@@ -66,7 +76,22 @@ public enum Message implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ABORTED_VALUE = 2;
+	public static final int ABORTED_VALUE = 1;
+
+	/**
+	 * The '<em><b>Completed</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Completed</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #COMPLETED
+	 * @model name="completed"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int COMPLETED_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Message</b></em>' enumerators.
@@ -74,7 +99,7 @@ public enum Message implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Message[] VALUES_ARRAY = new Message[] { COMPLETED, ABORTED, };
+	private static final Message[] VALUES_ARRAY = new Message[] { ALL, ABORTED, COMPLETED, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Message</b></em>' enumerators.
@@ -130,10 +155,12 @@ public enum Message implements Enumerator {
 	 */
 	public static Message get(int value) {
 		switch (value) {
-		case COMPLETED_VALUE:
-			return COMPLETED;
+		case ALL_VALUE:
+			return ALL;
 		case ABORTED_VALUE:
 			return ABORTED;
+		case COMPLETED_VALUE:
+			return COMPLETED;
 		}
 		return null;
 	}

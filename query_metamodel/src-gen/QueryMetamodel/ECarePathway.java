@@ -2,8 +2,6 @@
  */
 package QueryMetamodel;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,9 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.ECarePathway#getConducts <em>Conducts</em>}</li>
- *   <li>{@link QueryMetamodel.ECarePathway#getSteps <em>Steps</em>}</li>
- *   <li>{@link QueryMetamodel.ECarePathway#getCarePathways <em>Care Pathways</em>}</li>
+ *   <li>{@link QueryMetamodel.ECarePathway#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getECarePathway()
@@ -26,57 +22,33 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ECarePathway extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Conducts</b></em>' attribute list.
-	 * The list contents are of type {@link QueryMetamodel.EConduct}.
-	 * The literals are from the enumeration {@link QueryMetamodel.EConduct}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Conducts</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conducts</em>' attribute list.
-	 * @see QueryMetamodel.EConduct
-	 * @see QueryMetamodel.Query_metamodelPackage#getECarePathway_Conducts()
-	 * @model
-	 * @generated
-	 */
-	EList<EConduct> getConducts();
-
-	/**
-	 * Returns the value of the '<em><b>Steps</b></em>' attribute list.
-	 * The list contents are of type {@link QueryMetamodel.EStep}.
-	 * The literals are from the enumeration {@link QueryMetamodel.EStep}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Steps</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Steps</em>' attribute list.
-	 * @see QueryMetamodel.EStep
-	 * @see QueryMetamodel.Query_metamodelPackage#getECarePathway_Steps()
-	 * @model
-	 * @generated
-	 */
-	EList<EStep> getSteps();
-
-	/**
-	 * Returns the value of the '<em><b>Care Pathways</b></em>' attribute list.
-	 * The list contents are of type {@link QueryMetamodel.CarePathway}.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The default value is <code>"None"</code>.
 	 * The literals are from the enumeration {@link QueryMetamodel.CarePathway}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Care Pathways</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Care Pathways</em>' attribute list.
+	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see QueryMetamodel.CarePathway
-	 * @see QueryMetamodel.Query_metamodelPackage#getECarePathway_CarePathways()
-	 * @model
+	 * @see #setName(CarePathway)
+	 * @see QueryMetamodel.Query_metamodelPackage#getECarePathway_Name()
+	 * @model default="None"
 	 * @generated
 	 */
-	EList<CarePathway> getCarePathways();
+	CarePathway getName();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.ECarePathway#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see QueryMetamodel.CarePathway
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(CarePathway value);
 
 } // ECarePathway

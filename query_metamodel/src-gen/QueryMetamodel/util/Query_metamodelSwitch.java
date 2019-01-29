@@ -115,16 +115,25 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.EMETHOD: {
-			EMethod eMethod = (EMethod) theEObject;
-			T result = caseEMethod(eMethod);
+		case Query_metamodelPackage.ECARE_PATHWAY: {
+			ECarePathway eCarePathway = (ECarePathway) theEObject;
+			T result = caseECarePathway(eCarePathway);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.ECARE_PATHWAY: {
-			ECarePathway eCarePathway = (ECarePathway) theEObject;
-			T result = caseECarePathway(eCarePathway);
+		case Query_metamodelPackage.ESTATUS: {
+			EStatus eStatus = (EStatus) theEObject;
+			T result = caseEStatus(eStatus);
+			if (result == null)
+				result = caseEMethod(eStatus);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.EMETHOD: {
+			EMethod eMethod = (EMethod) theEObject;
+			T result = caseEMethod(eMethod);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -240,21 +249,6 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EMethod</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EMethod</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseEMethod(EMethod object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>ECare Pathway</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -266,6 +260,36 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseECarePathway(ECarePathway object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EStatus</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EStatus</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEStatus(EStatus object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EMethod</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EMethod</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEMethod(EMethod object) {
 		return null;
 	}
 

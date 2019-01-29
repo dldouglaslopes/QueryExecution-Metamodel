@@ -21,13 +21,15 @@
         defaultValueLiteral="random"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Order">
-    <eLiterals name="random" value="1"/>
-    <eLiterals name="bottom" value="2"/>
-    <eLiterals name="top" value="3"/>
+    <eLiterals name="random"/>
+    <eLiterals name="bottom" value="1"/>
+    <eLiterals name="top" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EQuery">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="eMethod" eType="#//EMethod"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eAttribute" lowerBound="1"
+        eType="#//EAttribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eMethod" lowerBound="1"
+        eType="#//EMethod" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Date">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
@@ -38,24 +40,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Message">
-    <eLiterals name="completed" value="1"/>
-    <eLiterals name="aborted" value="2"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EStep">
-    <eLiterals name="referral" value="1"/>
-    <eLiterals name="procedure" value="2"/>
-    <eLiterals name="action" value="3"/>
-    <eLiterals name="information" value="4"/>
-    <eLiterals name="treatment" value="5"/>
-    <eLiterals name="prescription" value="6"/>
-    <eLiterals name="pause" value="7"/>
-    <eLiterals name="auxiliaryconduct" value="8"/>
-    <eLiterals name="discharge" value="9"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="EConduct">
-    <eLiterals name="procedure" value="1"/>
-    <eLiterals name="medication" value="2"/>
-    <eLiterals name="prescription" value="3"/>
+    <eLiterals name="all" literal="all"/>
+    <eLiterals name="aborted" value="1"/>
+    <eLiterals name="completed" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Age">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
@@ -67,16 +54,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sex" eType="#//Gender"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Gender">
-    <eLiterals name="M" value="1"/>
-    <eLiterals name="F" value="2"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="EMethod">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//Method"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="eAttribute" eType="#//EAttribute"
-        containment="true"/>
+    <eLiterals name="all"/>
+    <eLiterals name="F" value="1"/>
+    <eLiterals name="M" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="Method">
-    <eLiterals name="none"/>
     <eLiterals name="averageByTime" value="1"/>
     <eLiterals name="recurrencyFlow" value="2"/>
     <eLiterals name="prescribedMedication" value="3"/>
@@ -85,12 +67,8 @@
     <eLiterals name="conducts" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ECarePathway">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conducts" upperBound="-1"
-        eType="#//EConduct"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="steps" upperBound="-1"
-        eType="#//EStep"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="carePathways" upperBound="-1"
-        eType="#//CarePathway"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//CarePathway"
+        defaultValueLiteral="None"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CarePathway">
     <eLiterals name="DmTreatment" value="1" literal="Viver Bem Diabetes - Tratamento DM"/>
@@ -144,5 +122,14 @@
     <eLiterals name="ExposedFracture" value="49" literal="Fratura Exposta"/>
     <eLiterals name="ACEIBBCBetablocker" value="50" literal="Viver Bem IECA &amp; BBC - Betabloqueador"/>
     <eLiterals name="LowBackPain" value="51" literal="Lombalgia"/>
+    <eLiterals name="None"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EStatus" eSuperTypes="#//EMethod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aborted" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="completed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inProgress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="STATUS"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EMethod" abstract="true"/>
 </ecore:EPackage>
