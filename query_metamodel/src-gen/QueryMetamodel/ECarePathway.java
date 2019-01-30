@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.ECarePathway#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.ECarePathway#isConduct <em>Conduct</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getECarePathway()
@@ -50,5 +51,31 @@ public interface ECarePathway extends EObject {
 	 * @generated
 	 */
 	void setName(CarePathway value);
+
+	/**
+	 * Returns the value of the '<em><b>Conduct</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Conduct</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Conduct</em>' attribute.
+	 * @see #setConduct(boolean)
+	 * @see QueryMetamodel.Query_metamodelPackage#getECarePathway_Conduct()
+	 * @model
+	 * @generated
+	 */
+	boolean isConduct();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.ECarePathway#isConduct <em>Conduct</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Conduct</em>' attribute.
+	 * @see #isConduct()
+	 * @generated
+	 */
+	void setConduct(boolean value);
 
 } // ECarePathway

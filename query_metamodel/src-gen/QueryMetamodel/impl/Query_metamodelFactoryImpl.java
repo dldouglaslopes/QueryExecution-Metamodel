@@ -79,6 +79,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createEConduct();
 		case Query_metamodelPackage.ERECURRENT_FLOW:
 			return createERecurrentFlow();
+		case Query_metamodelPackage.EAVERAGE_TIME:
+			return createEAverageTime();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -238,6 +240,16 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public ERecurrentFlow createERecurrentFlow() {
 		ERecurrentFlowImpl eRecurrentFlow = new ERecurrentFlowImpl();
 		return eRecurrentFlow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAverageTime createEAverageTime() {
+		EAverageTimeImpl eAverageTime = new EAverageTimeImpl();
+		return eAverageTime;
 	}
 
 	/**

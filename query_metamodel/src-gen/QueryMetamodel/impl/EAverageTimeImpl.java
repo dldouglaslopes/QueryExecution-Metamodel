@@ -2,8 +2,7 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.CarePathway;
-import QueryMetamodel.ECarePathway;
+import QueryMetamodel.EAverageTime;
 import QueryMetamodel.Query_metamodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -11,23 +10,42 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>ECare Pathway</b></em>'.
+ * An implementation of the model object '<em><b>EAverage Time</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.ECarePathwayImpl#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.impl.ECarePathwayImpl#isConduct <em>Conduct</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EAverageTimeImpl#getAverage <em>Average</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EAverageTimeImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements ECarePathway {
+public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
+	/**
+	 * The default value of the '{@link #getAverage() <em>Average</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAverage()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double AVERAGE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getAverage() <em>Average</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAverage()
+	 * @generated
+	 * @ordered
+	 */
+	protected double average = AVERAGE_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -36,7 +54,7 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	 * @generated
 	 * @ordered
 	 */
-	protected static final CarePathway NAME_EDEFAULT = CarePathway.NONE;
+	protected static final String NAME_EDEFAULT = "SHOW RECURRENT FLOW";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -46,34 +64,14 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	 * @generated
 	 * @ordered
 	 */
-	protected CarePathway name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isConduct() <em>Conduct</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isConduct()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean CONDUCT_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isConduct() <em>Conduct</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isConduct()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean conduct = CONDUCT_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ECarePathwayImpl() {
+	protected EAverageTimeImpl() {
 		super();
 	}
 
@@ -84,7 +82,7 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.ECARE_PATHWAY;
+		return Query_metamodelPackage.Literals.EAVERAGE_TIME;
 	}
 
 	/**
@@ -92,7 +90,29 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CarePathway getName() {
+	public double getAverage() {
+		return average;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAverage(double newAverage) {
+		double oldAverage = average;
+		average = newAverage;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EAVERAGE_TIME__AVERAGE,
+					oldAverage, average));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
 		return name;
 	}
 
@@ -101,34 +121,12 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(CarePathway newName) {
-		CarePathway oldName = name;
-		name = newName == null ? NAME_EDEFAULT : newName;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ECARE_PATHWAY__NAME, oldName,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EAVERAGE_TIME__NAME, oldName,
 					name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isConduct() {
-		return conduct;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setConduct(boolean newConduct) {
-		boolean oldConduct = conduct;
-		conduct = newConduct;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ECARE_PATHWAY__CONDUCT,
-					oldConduct, conduct));
 	}
 
 	/**
@@ -139,10 +137,10 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.ECARE_PATHWAY__NAME:
+		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
+			return getAverage();
+		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
 			return getName();
-		case Query_metamodelPackage.ECARE_PATHWAY__CONDUCT:
-			return isConduct();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -155,11 +153,11 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.ECARE_PATHWAY__NAME:
-			setName((CarePathway) newValue);
+		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
+			setAverage((Double) newValue);
 			return;
-		case Query_metamodelPackage.ECARE_PATHWAY__CONDUCT:
-			setConduct((Boolean) newValue);
+		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
+			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -173,11 +171,11 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.ECARE_PATHWAY__NAME:
-			setName(NAME_EDEFAULT);
+		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
+			setAverage(AVERAGE_EDEFAULT);
 			return;
-		case Query_metamodelPackage.ECARE_PATHWAY__CONDUCT:
-			setConduct(CONDUCT_EDEFAULT);
+		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -191,10 +189,10 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.ECARE_PATHWAY__NAME:
-			return name != NAME_EDEFAULT;
-		case Query_metamodelPackage.ECARE_PATHWAY__CONDUCT:
-			return conduct != CONDUCT_EDEFAULT;
+		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
+			return average != AVERAGE_EDEFAULT;
+		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -210,12 +208,12 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
+		result.append(" (average: ");
+		result.append(average);
+		result.append(", name: ");
 		result.append(name);
-		result.append(", conduct: ");
-		result.append(conduct);
 		result.append(')');
 		return result.toString();
 	}
 
-} //ECarePathwayImpl
+} //EAverageTimeImpl

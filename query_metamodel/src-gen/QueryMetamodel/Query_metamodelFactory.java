@@ -121,6 +121,15 @@ public interface Query_metamodelFactory extends EFactory {
 	ERecurrentFlow createERecurrentFlow();
 
 	/**
+	 * Returns a new object of class '<em>EAverage Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EAverage Time</em>'.
+	 * @generated
+	 */
+	EAverageTime createEAverageTime();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -119,6 +119,7 @@
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//ECarePathway">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ECarePathway/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ECarePathway/conduct"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//EStatus">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EStatus/aborted"/>
@@ -135,6 +136,10 @@
     <genClasses ecoreClass="query_metamodel.ecore#//ERecurrentFlow">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ERecurrentFlow/flows"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ERecurrentFlow/name"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//EAverageTime">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EAverageTime/average"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EAverageTime/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

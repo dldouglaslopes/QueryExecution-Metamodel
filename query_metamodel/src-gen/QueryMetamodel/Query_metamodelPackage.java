@@ -426,13 +426,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int ECARE_PATHWAY__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Conduct</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECARE_PATHWAY__CONDUCT = 1;
+
+	/**
 	 * The number of structural features of the '<em>ECare Pathway</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECARE_PATHWAY_FEATURE_COUNT = 1;
+	int ECARE_PATHWAY_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>ECare Pathway</em>' class.
@@ -637,6 +646,52 @@ public interface Query_metamodelPackage extends EPackage {
 	int ERECURRENT_FLOW_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.EAverageTimeImpl <em>EAverage Time</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.EAverageTimeImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEAverageTime()
+	 * @generated
+	 */
+	int EAVERAGE_TIME = 12;
+
+	/**
+	 * The feature id for the '<em><b>Average</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAVERAGE_TIME__AVERAGE = EMETHOD_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAVERAGE_TIME__NAME = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>EAverage Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAVERAGE_TIME_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>EAverage Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EAVERAGE_TIME_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -644,7 +699,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 12;
+	int ORDER = 13;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Message <em>Message</em>}' enum.
@@ -654,7 +709,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 13;
+	int MESSAGE = 14;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Gender <em>Gender</em>}' enum.
@@ -664,7 +719,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getGender()
 	 * @generated
 	 */
-	int GENDER = 14;
+	int GENDER = 15;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Method <em>Method</em>}' enum.
@@ -674,7 +729,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getMethod()
 	 * @generated
 	 */
-	int METHOD = 15;
+	int METHOD = 16;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}' enum.
@@ -684,7 +739,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getCarePathway()
 	 * @generated
 	 */
-	int CARE_PATHWAY = 16;
+	int CARE_PATHWAY = 17;
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EAttribute <em>EAttribute</em>}'.
@@ -965,6 +1020,17 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getECarePathway_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ECarePathway#isConduct <em>Conduct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Conduct</em>'.
+	 * @see QueryMetamodel.ECarePathway#isConduct()
+	 * @see #getECarePathway()
+	 * @generated
+	 */
+	EAttribute getECarePathway_Conduct();
+
+	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EStatus <em>EStatus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1102,6 +1168,38 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getERecurrentFlow_Name();
+
+	/**
+	 * Returns the meta object for class '{@link QueryMetamodel.EAverageTime <em>EAverage Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>EAverage Time</em>'.
+	 * @see QueryMetamodel.EAverageTime
+	 * @generated
+	 */
+	EClass getEAverageTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.EAverageTime#getAverage <em>Average</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Average</em>'.
+	 * @see QueryMetamodel.EAverageTime#getAverage()
+	 * @see #getEAverageTime()
+	 * @generated
+	 */
+	EAttribute getEAverageTime_Average();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.EAverageTime#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.EAverageTime#getName()
+	 * @see #getEAverageTime()
+	 * @generated
+	 */
+	EAttribute getEAverageTime_Name();
 
 	/**
 	 * Returns the meta object for enum '{@link QueryMetamodel.Order <em>Order</em>}'.
@@ -1401,6 +1499,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute ECARE_PATHWAY__NAME = eINSTANCE.getECarePathway_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Conduct</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ECARE_PATHWAY__CONDUCT = eINSTANCE.getECarePathway_Conduct();
+
+		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.EStatusImpl <em>EStatus</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1511,6 +1617,32 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ERECURRENT_FLOW__NAME = eINSTANCE.getERecurrentFlow_Name();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.impl.EAverageTimeImpl <em>EAverage Time</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.EAverageTimeImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEAverageTime()
+		 * @generated
+		 */
+		EClass EAVERAGE_TIME = eINSTANCE.getEAverageTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Average</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EAVERAGE_TIME__AVERAGE = eINSTANCE.getEAverageTime_Average();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EAVERAGE_TIME__NAME = eINSTANCE.getEAverageTime_Name();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.

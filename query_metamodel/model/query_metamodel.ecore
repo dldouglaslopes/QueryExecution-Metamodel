@@ -69,6 +69,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ECarePathway">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//CarePathway"
         defaultValueLiteral="None"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CarePathway">
     <eLiterals name="DmTreatment" value="1" literal="Viver Bem Diabetes - Tratamento DM"/>
@@ -141,6 +142,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="ERecurrentFlow" eSuperTypes="#//EMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="flows" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="SHOW RECURRENT FLOW"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EAverageTime" eSuperTypes="#//EMethod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="average" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="SHOW RECURRENT FLOW"/>
   </eClassifiers>

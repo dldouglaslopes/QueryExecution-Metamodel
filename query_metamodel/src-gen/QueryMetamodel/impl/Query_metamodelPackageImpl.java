@@ -5,6 +5,7 @@ package QueryMetamodel.impl;
 import QueryMetamodel.Age;
 import QueryMetamodel.CarePathway;
 import QueryMetamodel.Date;
+import QueryMetamodel.EAverageTime;
 import QueryMetamodel.ECarePathway;
 import QueryMetamodel.EConduct;
 import QueryMetamodel.EMethod;
@@ -119,6 +120,13 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	private EClass eRecurrentFlowEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eAverageTimeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -457,6 +465,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getECarePathway_Conduct() {
+		return (EAttribute) eCarePathwayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getEStatus() {
 		return eStatusEClass;
 	}
@@ -574,6 +591,33 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEAverageTime() {
+		return eAverageTimeEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEAverageTime_Average() {
+		return (EAttribute) eAverageTimeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEAverageTime_Name() {
+		return (EAttribute) eAverageTimeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getOrder() {
 		return orderEEnum;
 	}
@@ -676,6 +720,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		eCarePathwayEClass = createEClass(ECARE_PATHWAY);
 		createEAttribute(eCarePathwayEClass, ECARE_PATHWAY__NAME);
+		createEAttribute(eCarePathwayEClass, ECARE_PATHWAY__CONDUCT);
 
 		eStatusEClass = createEClass(ESTATUS);
 		createEAttribute(eStatusEClass, ESTATUS__ABORTED);
@@ -693,6 +738,10 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		eRecurrentFlowEClass = createEClass(ERECURRENT_FLOW);
 		createEAttribute(eRecurrentFlowEClass, ERECURRENT_FLOW__FLOWS);
 		createEAttribute(eRecurrentFlowEClass, ERECURRENT_FLOW__NAME);
+
+		eAverageTimeEClass = createEClass(EAVERAGE_TIME);
+		createEAttribute(eAverageTimeEClass, EAVERAGE_TIME__AVERAGE);
+		createEAttribute(eAverageTimeEClass, EAVERAGE_TIME__NAME);
 
 		// Create enums
 		orderEEnum = createEEnum(ORDER);
@@ -734,6 +783,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		eStatusEClass.getESuperTypes().add(this.getEMethod());
 		eConductEClass.getESuperTypes().add(this.getEMethod());
 		eRecurrentFlowEClass.getESuperTypes().add(this.getEMethod());
+		eAverageTimeEClass.getESuperTypes().add(this.getEMethod());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(eAttributeEClass, QueryMetamodel.EAttribute.class, "EAttribute", !IS_ABSTRACT, !IS_INTERFACE,
@@ -797,6 +847,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getECarePathway_Name(), this.getCarePathway(), "name", "None", 0, 1, ECarePathway.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getECarePathway_Conduct(), ecorePackage.getEBoolean(), "conduct", null, 0, 1, ECarePathway.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eStatusEClass, EStatus.class, "EStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEStatus_Aborted(), ecorePackage.getEInt(), "aborted", null, 0, 1, EStatus.class,
@@ -825,6 +877,14 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getERecurrentFlow_Name(), ecorePackage.getEString(), "name", "SHOW RECURRENT FLOW", 0, 1,
 				ERecurrentFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(eAverageTimeEClass, EAverageTime.class, "EAverageTime", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEAverageTime_Average(), ecorePackage.getEDouble(), "average", null, 0, 1, EAverageTime.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEAverageTime_Name(), ecorePackage.getEString(), "name", "SHOW RECURRENT FLOW", 0, 1,
+				EAverageTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
