@@ -9,6 +9,7 @@ import QueryMetamodel.ECarePathway;
 import QueryMetamodel.EConduct;
 import QueryMetamodel.EMethod;
 import QueryMetamodel.EQuery;
+import QueryMetamodel.ERecurrentFlow;
 import QueryMetamodel.EStatus;
 import QueryMetamodel.Gender;
 import QueryMetamodel.Message;
@@ -111,6 +112,13 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	private EClass eConductEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eRecurrentFlowEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -539,6 +547,42 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getERecurrentFlow() {
+		return eRecurrentFlowEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getERecurrentFlow_Flows() {
+		return (EAttribute) eRecurrentFlowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getERecurrentFlow_Percentages() {
+		return (EAttribute) eRecurrentFlowEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getERecurrentFlow_Name() {
+		return (EAttribute) eRecurrentFlowEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getOrder() {
 		return orderEEnum;
 	}
@@ -655,6 +699,11 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(eConductEClass, ECONDUCT__NO_CONDUCT);
 		createEAttribute(eConductEClass, ECONDUCT__NAME);
 
+		eRecurrentFlowEClass = createEClass(ERECURRENT_FLOW);
+		createEAttribute(eRecurrentFlowEClass, ERECURRENT_FLOW__FLOWS);
+		createEAttribute(eRecurrentFlowEClass, ERECURRENT_FLOW__PERCENTAGES);
+		createEAttribute(eRecurrentFlowEClass, ERECURRENT_FLOW__NAME);
+
 		// Create enums
 		orderEEnum = createEEnum(ORDER);
 		messageEEnum = createEEnum(MESSAGE);
@@ -694,6 +743,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		// Add supertypes to classes
 		eStatusEClass.getESuperTypes().add(this.getEMethod());
 		eConductEClass.getESuperTypes().add(this.getEMethod());
+		eRecurrentFlowEClass.getESuperTypes().add(this.getEMethod());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(eAttributeEClass, QueryMetamodel.EAttribute.class, "EAttribute", !IS_ABSTRACT, !IS_INTERFACE,
@@ -778,6 +828,17 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEConduct_Name(), ecorePackage.getEString(), "name", "COUNT CONDUCT", 0, 1, EConduct.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eRecurrentFlowEClass, ERecurrentFlow.class, "ERecurrentFlow", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getERecurrentFlow_Flows(), ecorePackage.getEString(), "flows", null, 0, -1, ERecurrentFlow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getERecurrentFlow_Percentages(), ecorePackage.getEDouble(), "percentages", null, 0, -1,
+				ERecurrentFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getERecurrentFlow_Name(), ecorePackage.getEString(), "name", "SHOW RECURRENT FLOW", 0, 1,
+				ERecurrentFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(orderEEnum, Order.class, "Order");

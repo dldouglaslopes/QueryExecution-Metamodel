@@ -132,5 +132,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EConduct/noConduct"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EConduct/name"/>
     </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//ERecurrentFlow">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ERecurrentFlow/flows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ERecurrentFlow/percentages"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ERecurrentFlow/name"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

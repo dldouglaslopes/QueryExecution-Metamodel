@@ -77,6 +77,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createEStatus();
 		case Query_metamodelPackage.ECONDUCT:
 			return createEConduct();
+		case Query_metamodelPackage.ERECURRENT_FLOW:
+			return createERecurrentFlow();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -226,6 +228,16 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public EConduct createEConduct() {
 		EConductImpl eConduct = new EConductImpl();
 		return eConduct;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ERecurrentFlow createERecurrentFlow() {
+		ERecurrentFlowImpl eRecurrentFlow = new ERecurrentFlowImpl();
+		return eRecurrentFlow;
 	}
 
 	/**

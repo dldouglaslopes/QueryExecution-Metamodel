@@ -138,4 +138,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="COUNT CONDUCT"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ERecurrentFlow" eSuperTypes="#//EMethod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="flows" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentages" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="SHOW RECURRENT FLOW"/>
+  </eClassifiers>
 </ecore:EPackage>

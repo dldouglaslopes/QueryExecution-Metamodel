@@ -591,6 +591,61 @@ public interface Query_metamodelPackage extends EPackage {
 	int ECONDUCT_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.ERecurrentFlowImpl <em>ERecurrent Flow</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.ERecurrentFlowImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getERecurrentFlow()
+	 * @generated
+	 */
+	int ERECURRENT_FLOW = 11;
+
+	/**
+	 * The feature id for the '<em><b>Flows</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERECURRENT_FLOW__FLOWS = EMETHOD_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Percentages</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERECURRENT_FLOW__PERCENTAGES = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERECURRENT_FLOW__NAME = EMETHOD_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>ERecurrent Flow</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERECURRENT_FLOW_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>ERecurrent Flow</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ERECURRENT_FLOW_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -598,7 +653,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 11;
+	int ORDER = 12;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Message <em>Message</em>}' enum.
@@ -608,7 +663,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 12;
+	int MESSAGE = 13;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Gender <em>Gender</em>}' enum.
@@ -618,7 +673,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getGender()
 	 * @generated
 	 */
-	int GENDER = 13;
+	int GENDER = 14;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Method <em>Method</em>}' enum.
@@ -628,7 +683,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getMethod()
 	 * @generated
 	 */
-	int METHOD = 14;
+	int METHOD = 15;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}' enum.
@@ -638,7 +693,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getCarePathway()
 	 * @generated
 	 */
-	int CARE_PATHWAY = 15;
+	int CARE_PATHWAY = 16;
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EAttribute <em>EAttribute</em>}'.
@@ -1026,6 +1081,49 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getEConduct_Name();
 
 	/**
+	 * Returns the meta object for class '{@link QueryMetamodel.ERecurrentFlow <em>ERecurrent Flow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ERecurrent Flow</em>'.
+	 * @see QueryMetamodel.ERecurrentFlow
+	 * @generated
+	 */
+	EClass getERecurrentFlow();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link QueryMetamodel.ERecurrentFlow#getFlows <em>Flows</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Flows</em>'.
+	 * @see QueryMetamodel.ERecurrentFlow#getFlows()
+	 * @see #getERecurrentFlow()
+	 * @generated
+	 */
+	EAttribute getERecurrentFlow_Flows();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link QueryMetamodel.ERecurrentFlow#getPercentages <em>Percentages</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Percentages</em>'.
+	 * @see QueryMetamodel.ERecurrentFlow#getPercentages()
+	 * @see #getERecurrentFlow()
+	 * @generated
+	 */
+	EAttribute getERecurrentFlow_Percentages();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ERecurrentFlow#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.ERecurrentFlow#getName()
+	 * @see #getERecurrentFlow()
+	 * @generated
+	 */
+	EAttribute getERecurrentFlow_Name();
+
+	/**
 	 * Returns the meta object for enum '{@link QueryMetamodel.Order <em>Order</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1407,6 +1505,40 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ECONDUCT__NAME = eINSTANCE.getEConduct_Name();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.impl.ERecurrentFlowImpl <em>ERecurrent Flow</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.ERecurrentFlowImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getERecurrentFlow()
+		 * @generated
+		 */
+		EClass ERECURRENT_FLOW = eINSTANCE.getERecurrentFlow();
+
+		/**
+		 * The meta object literal for the '<em><b>Flows</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ERECURRENT_FLOW__FLOWS = eINSTANCE.getERecurrentFlow_Flows();
+
+		/**
+		 * The meta object literal for the '<em><b>Percentages</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ERECURRENT_FLOW__PERCENTAGES = eINSTANCE.getERecurrentFlow_Percentages();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ERECURRENT_FLOW__NAME = eINSTANCE.getERecurrentFlow_Name();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.
