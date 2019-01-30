@@ -524,10 +524,6 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_jEwr8SS6Eem3AZgoguN-8g" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_jEwr8iS6Eem3AZgoguN-8g"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_vwNq4CS6Eem3AZgoguN-8g" type="3010" element="_vul6QCS6Eem3AZgoguN-8g">
-              <styles xmi:type="notation:FontStyle" xmi:id="_vwNq4SS6Eem3AZgoguN-8g" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_vwNq4iS6Eem3AZgoguN-8g"/>
-            </children>
             <children xmi:type="notation:Node" xmi:id="_22rXQCS6Eem3AZgoguN-8g" type="3010" element="_21cBICS6Eem3AZgoguN-8g">
               <styles xmi:type="notation:FontStyle" xmi:id="_22rXQSS6Eem3AZgoguN-8g" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_22rXQiS6Eem3AZgoguN-8g"/>
@@ -536,7 +532,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_aFH3ciS6Eem3AZgoguN-8g"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_aECSUCS6Eem3AZgoguN-8g" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aECSUSS6Eem3AZgoguN-8g" x="-210" y="415" width="258" height="100"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_aECSUSS6Eem3AZgoguN-8g" x="-210" y="415" width="258" height="68"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_lc7jAQIlEemk6_vXH5-qIA"/>
         <edges xmi:type="notation:Edge" xmi:id="_GFMkoAOlEemCw4JjNJ5qvA" type="4001" element="_GEbvoAOlEemCw4JjNJ5qvA" source="_VWEQUAIpEemk6_vXH5-qIA" target="_DphvkAJJEemT-oT4zLBSGA">
@@ -1694,14 +1690,6 @@
         <target xmi:type="ecore:EAttribute" href="query_metamodel.ecore#//ERecurrentFlow/flows"/>
         <semanticElements xmi:type="ecore:EAttribute" href="query_metamodel.ecore#//ERecurrentFlow/flows"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_uydpMCS6Eem3AZgoguN-8g" labelAlignment="LEFT">
-          <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_vul6QCS6Eem3AZgoguN-8g" name="percentages : EDouble" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="query_metamodel.ecore#//ERecurrentFlow/percentages"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="query_metamodel.ecore#//ERecurrentFlow/percentages"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_1yhLkCS6Eem3AZgoguN-8g" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

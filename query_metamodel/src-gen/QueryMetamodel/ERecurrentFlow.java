@@ -14,7 +14,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.ERecurrentFlow#getFlows <em>Flows</em>}</li>
- *   <li>{@link QueryMetamodel.ERecurrentFlow#getPercentages <em>Percentages</em>}</li>
  *   <li>{@link QueryMetamodel.ERecurrentFlow#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -38,22 +37,6 @@ public interface ERecurrentFlow extends EMethod {
 	 * @generated
 	 */
 	EList<String> getFlows();
-
-	/**
-	 * Returns the value of the '<em><b>Percentages</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Double}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Percentages</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Percentages</em>' attribute list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getERecurrentFlow_Percentages()
-	 * @model
-	 * @generated
-	 */
-	EList<Double> getPercentages();
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

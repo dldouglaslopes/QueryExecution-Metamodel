@@ -26,7 +26,6 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.impl.ERecurrentFlowImpl#getFlows <em>Flows</em>}</li>
- *   <li>{@link QueryMetamodel.impl.ERecurrentFlowImpl#getPercentages <em>Percentages</em>}</li>
  *   <li>{@link QueryMetamodel.impl.ERecurrentFlowImpl#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -42,16 +41,6 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 	 * @ordered
 	 */
 	protected EList<String> flows;
-
-	/**
-	 * The cached value of the '{@link #getPercentages() <em>Percentages</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPercentages()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Double> percentages;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -109,19 +98,6 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Double> getPercentages() {
-		if (percentages == null) {
-			percentages = new EDataTypeUniqueEList<Double>(Double.class, this,
-					Query_metamodelPackage.ERECURRENT_FLOW__PERCENTAGES);
-		}
-		return percentages;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -149,8 +125,6 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 		switch (featureID) {
 		case Query_metamodelPackage.ERECURRENT_FLOW__FLOWS:
 			return getFlows();
-		case Query_metamodelPackage.ERECURRENT_FLOW__PERCENTAGES:
-			return getPercentages();
 		case Query_metamodelPackage.ERECURRENT_FLOW__NAME:
 			return getName();
 		}
@@ -170,10 +144,6 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 			getFlows().clear();
 			getFlows().addAll((Collection<? extends String>) newValue);
 			return;
-		case Query_metamodelPackage.ERECURRENT_FLOW__PERCENTAGES:
-			getPercentages().clear();
-			getPercentages().addAll((Collection<? extends Double>) newValue);
-			return;
 		case Query_metamodelPackage.ERECURRENT_FLOW__NAME:
 			setName((String) newValue);
 			return;
@@ -192,9 +162,6 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 		case Query_metamodelPackage.ERECURRENT_FLOW__FLOWS:
 			getFlows().clear();
 			return;
-		case Query_metamodelPackage.ERECURRENT_FLOW__PERCENTAGES:
-			getPercentages().clear();
-			return;
 		case Query_metamodelPackage.ERECURRENT_FLOW__NAME:
 			setName(NAME_EDEFAULT);
 			return;
@@ -212,8 +179,6 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 		switch (featureID) {
 		case Query_metamodelPackage.ERECURRENT_FLOW__FLOWS:
 			return flows != null && !flows.isEmpty();
-		case Query_metamodelPackage.ERECURRENT_FLOW__PERCENTAGES:
-			return percentages != null && !percentages.isEmpty();
 		case Query_metamodelPackage.ERECURRENT_FLOW__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
@@ -233,8 +198,6 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (flows: ");
 		result.append(flows);
-		result.append(", percentages: ");
-		result.append(percentages);
 		result.append(", name: ");
 		result.append(name);
 		result.append(')');

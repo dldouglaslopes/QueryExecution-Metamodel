@@ -565,17 +565,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getERecurrentFlow_Percentages() {
-		return (EAttribute) eRecurrentFlowEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getERecurrentFlow_Name() {
-		return (EAttribute) eRecurrentFlowEClass.getEStructuralFeatures().get(2);
+		return (EAttribute) eRecurrentFlowEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -701,7 +692,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		eRecurrentFlowEClass = createEClass(ERECURRENT_FLOW);
 		createEAttribute(eRecurrentFlowEClass, ERECURRENT_FLOW__FLOWS);
-		createEAttribute(eRecurrentFlowEClass, ERECURRENT_FLOW__PERCENTAGES);
 		createEAttribute(eRecurrentFlowEClass, ERECURRENT_FLOW__NAME);
 
 		// Create enums
@@ -833,9 +823,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getERecurrentFlow_Flows(), ecorePackage.getEString(), "flows", null, 0, -1, ERecurrentFlow.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getERecurrentFlow_Percentages(), ecorePackage.getEDouble(), "percentages", null, 0, -1,
-				ERecurrentFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getERecurrentFlow_Name(), ecorePackage.getEString(), "name", "SHOW RECURRENT FLOW", 0, 1,
 				ERecurrentFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);

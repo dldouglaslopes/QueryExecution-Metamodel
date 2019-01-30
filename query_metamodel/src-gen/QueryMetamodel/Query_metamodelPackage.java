@@ -610,22 +610,13 @@ public interface Query_metamodelPackage extends EPackage {
 	int ERECURRENT_FLOW__FLOWS = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Percentages</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ERECURRENT_FLOW__PERCENTAGES = EMETHOD_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ERECURRENT_FLOW__NAME = EMETHOD_FEATURE_COUNT + 2;
+	int ERECURRENT_FLOW__NAME = EMETHOD_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>ERecurrent Flow</em>' class.
@@ -634,7 +625,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ERECURRENT_FLOW_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 3;
+	int ERECURRENT_FLOW_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>ERecurrent Flow</em>' class.
@@ -1102,17 +1093,6 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getERecurrentFlow_Flows();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link QueryMetamodel.ERecurrentFlow#getPercentages <em>Percentages</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Percentages</em>'.
-	 * @see QueryMetamodel.ERecurrentFlow#getPercentages()
-	 * @see #getERecurrentFlow()
-	 * @generated
-	 */
-	EAttribute getERecurrentFlow_Percentages();
-
-	/**
 	 * Returns the meta object for the attribute '{@link QueryMetamodel.ERecurrentFlow#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1523,14 +1503,6 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ERECURRENT_FLOW__FLOWS = eINSTANCE.getERecurrentFlow_Flows();
-
-		/**
-		 * The meta object literal for the '<em><b>Percentages</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ERECURRENT_FLOW__PERCENTAGES = eINSTANCE.getERecurrentFlow_Percentages();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
