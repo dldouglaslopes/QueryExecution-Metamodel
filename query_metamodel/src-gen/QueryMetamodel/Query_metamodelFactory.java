@@ -130,6 +130,24 @@ public interface Query_metamodelFactory extends EFactory {
 	EAverageTime createEAverageTime();
 
 	/**
+	 * Returns a new object of class '<em>EPrescribed Medication</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EPrescribed Medication</em>'.
+	 * @generated
+	 */
+	EPrescribedMedication createEPrescribedMedication();
+
+	/**
+	 * Returns a new object of class '<em>EOccurrence</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>EOccurrence</em>'.
+	 * @generated
+	 */
+	EOccurrence createEOccurrence();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

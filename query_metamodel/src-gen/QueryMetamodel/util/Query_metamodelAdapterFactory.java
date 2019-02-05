@@ -132,6 +132,16 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseEPrescribedMedication(EPrescribedMedication object) {
+			return createEPrescribedMedicationAdapter();
+		}
+
+		@Override
+		public Adapter caseEOccurrence(EOccurrence object) {
+			return createEOccurrenceAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -329,6 +339,34 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEAverageTimeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EPrescribedMedication <em>EPrescribed Medication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.EPrescribedMedication
+	 * @generated
+	 */
+	public Adapter createEPrescribedMedicationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EOccurrence <em>EOccurrence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.EOccurrence
+	 * @generated
+	 */
+	public Adapter createEOccurrenceAdapter() {
 		return null;
 	}
 

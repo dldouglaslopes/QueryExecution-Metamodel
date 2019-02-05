@@ -58,18 +58,10 @@
     <eLiterals name="F" value="1"/>
     <eLiterals name="M" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Method">
-    <eLiterals name="averageByTime" value="1"/>
-    <eLiterals name="recurrencyFlow" value="2"/>
-    <eLiterals name="prescribedMedication" value="3"/>
-    <eLiterals name="occurrencyExecution" value="4"/>
-    <eLiterals name="status" value="5"/>
-    <eLiterals name="conducts" value="5"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ECarePathway">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//CarePathway"
         defaultValueLiteral="None"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct" eType="#//ComplementaryConduct"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="CarePathway">
     <eLiterals name="DmTreatment" value="1" literal="Viver Bem Diabetes - Tratamento DM"/>
@@ -148,6 +140,38 @@
   <eClassifiers xsi:type="ecore:EClass" name="EAverageTime" eSuperTypes="#//EMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="average" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="SHOW RECURRENT FLOW"/>
+        defaultValueLiteral="SHOW AVERAGE TIME"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EPrescribedMedication" eSuperTypes="#//EMethod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="medications" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="SHOW PRESCRIBED MEDICATIONS"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EOccurrence" eSuperTypes="#//EMethod">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="COUNT CARE PATHWAY OCCURRENCES"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EStep">
+    <eLiterals name="AuxiliaryConduct" value="1" literal="AuxilioConduta"/>
+    <eLiterals name="Treatment" value="2" literal="Tratamento"/>
+    <eLiterals name="Action" value="3"/>
+    <eLiterals name="Discharge" value="4" literal="Alta"/>
+    <eLiterals name="Referral" value="5" literal="Encaminhamento"/>
+    <eLiterals name="Procedure" value="6" literal="Procedimento"/>
+    <eLiterals name="Prescription" value="7" literal="Receita"/>
+    <eLiterals name="Pause" value="8" literal="Pausa"/>
+    <eLiterals name="Information" value="9" literal="Informação"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Conduct">
+    <eLiterals name="Procedure" value="1" literal="ProcedimentoComplementar"/>
+    <eLiterals name="Medication" value="2" literal="MedicamentoComplementar"/>
+    <eLiterals name="Prescription" value="3" literal="ReceitaComplementar"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ComplementaryConduct">
+    <eLiterals name="all"/>
+    <eLiterals name="false" value="1"/>
+    <eLiterals name="true" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

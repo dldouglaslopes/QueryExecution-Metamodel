@@ -3,6 +3,7 @@
 package QueryMetamodel.impl;
 
 import QueryMetamodel.CarePathway;
+import QueryMetamodel.ComplementaryConduct;
 import QueryMetamodel.ECarePathway;
 import QueryMetamodel.Query_metamodelPackage;
 
@@ -22,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.impl.ECarePathwayImpl#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.impl.ECarePathwayImpl#isConduct <em>Conduct</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.ECarePathwayImpl#getConduct <em>Conduct</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,24 +50,24 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	protected CarePathway name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isConduct() <em>Conduct</em>}' attribute.
+	 * The default value of the '{@link #getConduct() <em>Conduct</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isConduct()
+	 * @see #getConduct()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean CONDUCT_EDEFAULT = false;
+	protected static final ComplementaryConduct CONDUCT_EDEFAULT = ComplementaryConduct.ALL;
 
 	/**
-	 * The cached value of the '{@link #isConduct() <em>Conduct</em>}' attribute.
+	 * The cached value of the '{@link #getConduct() <em>Conduct</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isConduct()
+	 * @see #getConduct()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean conduct = CONDUCT_EDEFAULT;
+	protected ComplementaryConduct conduct = CONDUCT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,7 +115,7 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isConduct() {
+	public ComplementaryConduct getConduct() {
 		return conduct;
 	}
 
@@ -123,9 +124,9 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConduct(boolean newConduct) {
-		boolean oldConduct = conduct;
-		conduct = newConduct;
+	public void setConduct(ComplementaryConduct newConduct) {
+		ComplementaryConduct oldConduct = conduct;
+		conduct = newConduct == null ? CONDUCT_EDEFAULT : newConduct;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ECARE_PATHWAY__CONDUCT,
 					oldConduct, conduct));
@@ -142,7 +143,7 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 		case Query_metamodelPackage.ECARE_PATHWAY__NAME:
 			return getName();
 		case Query_metamodelPackage.ECARE_PATHWAY__CONDUCT:
-			return isConduct();
+			return getConduct();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,7 +160,7 @@ public class ECarePathwayImpl extends MinimalEObjectImpl.Container implements EC
 			setName((CarePathway) newValue);
 			return;
 		case Query_metamodelPackage.ECARE_PATHWAY__CONDUCT:
-			setConduct((Boolean) newValue);
+			setConduct((ComplementaryConduct) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

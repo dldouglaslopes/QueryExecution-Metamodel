@@ -165,6 +165,24 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case Query_metamodelPackage.EPRESCRIBED_MEDICATION: {
+			EPrescribedMedication ePrescribedMedication = (EPrescribedMedication) theEObject;
+			T result = caseEPrescribedMedication(ePrescribedMedication);
+			if (result == null)
+				result = caseEMethod(ePrescribedMedication);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.EOCCURRENCE: {
+			EOccurrence eOccurrence = (EOccurrence) theEObject;
+			T result = caseEOccurrence(eOccurrence);
+			if (result == null)
+				result = caseEMethod(eOccurrence);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -362,6 +380,36 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEAverageTime(EAverageTime object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EPrescribed Medication</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EPrescribed Medication</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEPrescribedMedication(EPrescribedMedication object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>EOccurrence</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>EOccurrence</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEOccurrence(EOccurrence object) {
 		return null;
 	}
 

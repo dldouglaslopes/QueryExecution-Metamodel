@@ -4,24 +4,27 @@ package QueryMetamodel.impl;
 
 import QueryMetamodel.Age;
 import QueryMetamodel.CarePathway;
+import QueryMetamodel.ComplementaryConduct;
+import QueryMetamodel.Conduct;
 import QueryMetamodel.Date;
 import QueryMetamodel.EAverageTime;
 import QueryMetamodel.ECarePathway;
 import QueryMetamodel.EConduct;
 import QueryMetamodel.EMethod;
+import QueryMetamodel.EOccurrence;
+import QueryMetamodel.EPrescribedMedication;
 import QueryMetamodel.EQuery;
 import QueryMetamodel.ERecurrentFlow;
 import QueryMetamodel.EStatus;
+import QueryMetamodel.EStep;
 import QueryMetamodel.Gender;
 import QueryMetamodel.Message;
-import QueryMetamodel.Method;
 import QueryMetamodel.Order;
 import QueryMetamodel.Query_metamodelFactory;
 import QueryMetamodel.Query_metamodelPackage;
 import QueryMetamodel.Range;
 import QueryMetamodel.Sex;
 import QueryMetamodel.Status;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -133,6 +136,20 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass ePrescribedMedicationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass eOccurrenceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum orderEEnum = null;
 
 	/**
@@ -154,14 +171,28 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum methodEEnum = null;
+	private EEnum carePathwayEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum carePathwayEEnum = null;
+	private EEnum eStepEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum conductEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum complementaryConductEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -618,6 +649,60 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEPrescribedMedication() {
+		return ePrescribedMedicationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEPrescribedMedication_Medications() {
+		return (EAttribute) ePrescribedMedicationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEPrescribedMedication_Name() {
+		return (EAttribute) ePrescribedMedicationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEOccurrence() {
+		return eOccurrenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEOccurrence_Value() {
+		return (EAttribute) eOccurrenceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getEOccurrence_Name() {
+		return (EAttribute) eOccurrenceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getOrder() {
 		return orderEEnum;
 	}
@@ -645,8 +730,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getMethod() {
-		return methodEEnum;
+	public EEnum getCarePathway() {
+		return carePathwayEEnum;
 	}
 
 	/**
@@ -654,8 +739,26 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getCarePathway() {
-		return carePathwayEEnum;
+	public EEnum getEStep() {
+		return eStepEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getConduct() {
+		return conductEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getComplementaryConduct() {
+		return complementaryConductEEnum;
 	}
 
 	/**
@@ -743,12 +846,22 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(eAverageTimeEClass, EAVERAGE_TIME__AVERAGE);
 		createEAttribute(eAverageTimeEClass, EAVERAGE_TIME__NAME);
 
+		ePrescribedMedicationEClass = createEClass(EPRESCRIBED_MEDICATION);
+		createEAttribute(ePrescribedMedicationEClass, EPRESCRIBED_MEDICATION__MEDICATIONS);
+		createEAttribute(ePrescribedMedicationEClass, EPRESCRIBED_MEDICATION__NAME);
+
+		eOccurrenceEClass = createEClass(EOCCURRENCE);
+		createEAttribute(eOccurrenceEClass, EOCCURRENCE__VALUE);
+		createEAttribute(eOccurrenceEClass, EOCCURRENCE__NAME);
+
 		// Create enums
 		orderEEnum = createEEnum(ORDER);
 		messageEEnum = createEEnum(MESSAGE);
 		genderEEnum = createEEnum(GENDER);
-		methodEEnum = createEEnum(METHOD);
 		carePathwayEEnum = createEEnum(CARE_PATHWAY);
+		eStepEEnum = createEEnum(ESTEP);
+		conductEEnum = createEEnum(CONDUCT);
+		complementaryConductEEnum = createEEnum(COMPLEMENTARY_CONDUCT);
 	}
 
 	/**
@@ -784,6 +897,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		eConductEClass.getESuperTypes().add(this.getEMethod());
 		eRecurrentFlowEClass.getESuperTypes().add(this.getEMethod());
 		eAverageTimeEClass.getESuperTypes().add(this.getEMethod());
+		ePrescribedMedicationEClass.getESuperTypes().add(this.getEMethod());
+		eOccurrenceEClass.getESuperTypes().add(this.getEMethod());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(eAttributeEClass, QueryMetamodel.EAttribute.class, "EAttribute", !IS_ABSTRACT, !IS_INTERFACE,
@@ -847,8 +962,9 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getECarePathway_Name(), this.getCarePathway(), "name", "None", 0, 1, ECarePathway.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getECarePathway_Conduct(), ecorePackage.getEBoolean(), "conduct", null, 0, 1, ECarePathway.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getECarePathway_Conduct(), this.getComplementaryConduct(), "conduct", null, 0, 1,
+				ECarePathway.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(eStatusEClass, EStatus.class, "EStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEStatus_Aborted(), ecorePackage.getEInt(), "aborted", null, 0, 1, EStatus.class,
@@ -883,8 +999,25 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEAverageTime_Average(), ecorePackage.getEDouble(), "average", null, 0, 1, EAverageTime.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEAverageTime_Name(), ecorePackage.getEString(), "name", "SHOW RECURRENT FLOW", 0, 1,
+		initEAttribute(getEAverageTime_Name(), ecorePackage.getEString(), "name", "SHOW AVERAGE TIME", 0, 1,
 				EAverageTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(ePrescribedMedicationEClass, EPrescribedMedication.class, "EPrescribedMedication", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEPrescribedMedication_Medications(), ecorePackage.getEString(), "medications", null, 0, -1,
+				EPrescribedMedication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEPrescribedMedication_Name(), ecorePackage.getEString(), "name",
+				"SHOW PRESCRIBED MEDICATIONS", 0, 1, EPrescribedMedication.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eOccurrenceEClass, EOccurrence.class, "EOccurrence", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEOccurrence_Value(), ecorePackage.getEInt(), "value", null, 0, 1, EOccurrence.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getEOccurrence_Name(), ecorePackage.getEString(), "name", "COUNT CARE PATHWAY OCCURRENCES", 0, 1,
+				EOccurrence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
@@ -902,14 +1035,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		addEEnumLiteral(genderEEnum, Gender.ALL);
 		addEEnumLiteral(genderEEnum, Gender.F);
 		addEEnumLiteral(genderEEnum, Gender.M);
-
-		initEEnum(methodEEnum, Method.class, "Method");
-		addEEnumLiteral(methodEEnum, Method.AVERAGE_BY_TIME);
-		addEEnumLiteral(methodEEnum, Method.RECURRENCY_FLOW);
-		addEEnumLiteral(methodEEnum, Method.PRESCRIBED_MEDICATION);
-		addEEnumLiteral(methodEEnum, Method.OCCURRENCY_EXECUTION);
-		addEEnumLiteral(methodEEnum, Method.STATUS);
-		addEEnumLiteral(methodEEnum, Method.CONDUCTS);
 
 		initEEnum(carePathwayEEnum, CarePathway.class, "CarePathway");
 		addEEnumLiteral(carePathwayEEnum, CarePathway.DM_TREATMENT);
@@ -964,6 +1089,27 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		addEEnumLiteral(carePathwayEEnum, CarePathway.ACEIBBC_BETABLOCKER);
 		addEEnumLiteral(carePathwayEEnum, CarePathway.LOW_BACK_PAIN);
 		addEEnumLiteral(carePathwayEEnum, CarePathway.NONE);
+
+		initEEnum(eStepEEnum, EStep.class, "EStep");
+		addEEnumLiteral(eStepEEnum, EStep.AUXILIARY_CONDUCT);
+		addEEnumLiteral(eStepEEnum, EStep.TREATMENT);
+		addEEnumLiteral(eStepEEnum, EStep.ACTION);
+		addEEnumLiteral(eStepEEnum, EStep.DISCHARGE);
+		addEEnumLiteral(eStepEEnum, EStep.REFERRAL);
+		addEEnumLiteral(eStepEEnum, EStep.PROCEDURE);
+		addEEnumLiteral(eStepEEnum, EStep.PRESCRIPTION);
+		addEEnumLiteral(eStepEEnum, EStep.PAUSE);
+		addEEnumLiteral(eStepEEnum, EStep.INFORMATION);
+
+		initEEnum(conductEEnum, Conduct.class, "Conduct");
+		addEEnumLiteral(conductEEnum, Conduct.PROCEDURE);
+		addEEnumLiteral(conductEEnum, Conduct.MEDICATION);
+		addEEnumLiteral(conductEEnum, Conduct.PRESCRIPTION);
+
+		initEEnum(complementaryConductEEnum, ComplementaryConduct.class, "ComplementaryConduct");
+		addEEnumLiteral(complementaryConductEEnum, ComplementaryConduct.ALL);
+		addEEnumLiteral(complementaryConductEEnum, ComplementaryConduct.FALSE);
+		addEEnumLiteral(complementaryConductEEnum, ComplementaryConduct.TRUE);
 
 		// Create resource
 		createResource(eNS_URI);

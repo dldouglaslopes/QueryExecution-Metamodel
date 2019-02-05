@@ -2,7 +2,7 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.EAverageTime;
+import QueryMetamodel.EOccurrence;
 import QueryMetamodel.Query_metamodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -13,38 +13,38 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>EAverage Time</b></em>'.
+ * An implementation of the model object '<em><b>EOccurrence</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.EAverageTimeImpl#getAverage <em>Average</em>}</li>
- *   <li>{@link QueryMetamodel.impl.EAverageTimeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EOccurrenceImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EOccurrenceImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
+public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
 	/**
-	 * The default value of the '{@link #getAverage() <em>Average</em>}' attribute.
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAverage()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double AVERAGE_EDEFAULT = 0.0;
+	protected static final int VALUE_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getAverage() <em>Average</em>}' attribute.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAverage()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected double average = AVERAGE_EDEFAULT;
+	protected int value = VALUE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -54,7 +54,7 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "SHOW AVERAGE TIME";
+	protected static final String NAME_EDEFAULT = "COUNT CARE PATHWAY OCCURRENCES";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -71,7 +71,7 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EAverageTimeImpl() {
+	protected EOccurrenceImpl() {
 		super();
 	}
 
@@ -82,7 +82,7 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.EAVERAGE_TIME;
+		return Query_metamodelPackage.Literals.EOCCURRENCE;
 	}
 
 	/**
@@ -90,8 +90,8 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public double getAverage() {
-		return average;
+	public int getValue() {
+		return value;
 	}
 
 	/**
@@ -99,12 +99,12 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAverage(double newAverage) {
-		double oldAverage = average;
-		average = newAverage;
+	public void setValue(int newValue) {
+		int oldValue = value;
+		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EAVERAGE_TIME__AVERAGE,
-					oldAverage, average));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EOCCURRENCE__VALUE, oldValue,
+					value));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EAVERAGE_TIME__NAME, oldName,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EOCCURRENCE__NAME, oldName,
 					name));
 	}
 
@@ -137,9 +137,9 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
-			return getAverage();
-		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
+		case Query_metamodelPackage.EOCCURRENCE__VALUE:
+			return getValue();
+		case Query_metamodelPackage.EOCCURRENCE__NAME:
 			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -153,10 +153,10 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
-			setAverage((Double) newValue);
+		case Query_metamodelPackage.EOCCURRENCE__VALUE:
+			setValue((Integer) newValue);
 			return;
-		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
+		case Query_metamodelPackage.EOCCURRENCE__NAME:
 			setName((String) newValue);
 			return;
 		}
@@ -171,10 +171,10 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
-			setAverage(AVERAGE_EDEFAULT);
+		case Query_metamodelPackage.EOCCURRENCE__VALUE:
+			setValue(VALUE_EDEFAULT);
 			return;
-		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
+		case Query_metamodelPackage.EOCCURRENCE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
 		}
@@ -189,9 +189,9 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
-			return average != AVERAGE_EDEFAULT;
-		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
+		case Query_metamodelPackage.EOCCURRENCE__VALUE:
+			return value != VALUE_EDEFAULT;
+		case Query_metamodelPackage.EOCCURRENCE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
@@ -208,12 +208,12 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (average: ");
-		result.append(average);
+		result.append(" (value: ");
+		result.append(value);
 		result.append(", name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();
 	}
 
-} //EAverageTimeImpl
+} //EOccurrenceImpl
