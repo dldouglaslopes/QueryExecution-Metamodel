@@ -54,7 +54,7 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "SHOW AVERAGE TIME";
+	protected static final String NAME_EDEFAULT = "AverageTime";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.

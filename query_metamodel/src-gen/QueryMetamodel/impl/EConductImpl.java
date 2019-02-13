@@ -75,7 +75,7 @@ public class EConductImpl extends EMethodImpl implements EConduct {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "COUNT CONDUCT";
+	protected static final String NAME_EDEFAULT = "CountConduct";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.

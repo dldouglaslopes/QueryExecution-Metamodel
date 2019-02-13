@@ -48,7 +48,7 @@ public interface EOccurrence extends EMethod {
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>"COUNT CARE PATHWAY OCCURRENCES"</code>.
+	 * The default value is <code>"CarePathwaysOccurrences"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -58,7 +58,7 @@ public interface EOccurrence extends EMethod {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEOccurrence_Name()
-	 * @model default="COUNT CARE PATHWAY OCCURRENCES"
+	 * @model default="CarePathwaysOccurrences"
 	 * @generated
 	 */
 	String getName();

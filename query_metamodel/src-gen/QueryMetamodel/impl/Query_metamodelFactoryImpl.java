@@ -81,10 +81,18 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createERecurrentFlow();
 		case Query_metamodelPackage.EAVERAGE_TIME:
 			return createEAverageTime();
-		case Query_metamodelPackage.EPRESCRIBED_MEDICATION:
-			return createEPrescribedMedication();
+		case Query_metamodelPackage.EMEDICATION:
+			return createEMedication();
 		case Query_metamodelPackage.EOCCURRENCE:
 			return createEOccurrence();
+		case Query_metamodelPackage.FLOW:
+			return createFlow();
+		case Query_metamodelPackage.MEDICATION:
+			return createMedication();
+		case Query_metamodelPackage.SEQUENCE:
+			return createSequence();
+		case Query_metamodelPackage.PATHWAY:
+			return createPathway();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -269,9 +277,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EPrescribedMedication createEPrescribedMedication() {
-		EPrescribedMedicationImpl ePrescribedMedication = new EPrescribedMedicationImpl();
-		return ePrescribedMedication;
+	public EMedication createEMedication() {
+		EMedicationImpl eMedication = new EMedicationImpl();
+		return eMedication;
 	}
 
 	/**
@@ -282,6 +290,46 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public EOccurrence createEOccurrence() {
 		EOccurrenceImpl eOccurrence = new EOccurrenceImpl();
 		return eOccurrence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Flow createFlow() {
+		FlowImpl flow = new FlowImpl();
+		return flow;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Medication createMedication() {
+		MedicationImpl medication = new MedicationImpl();
+		return medication;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Sequence createSequence() {
+		SequenceImpl sequence = new SequenceImpl();
+		return sequence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Pathway createPathway() {
+		PathwayImpl pathway = new PathwayImpl();
+		return pathway;
 	}
 
 	/**

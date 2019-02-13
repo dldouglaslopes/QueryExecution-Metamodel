@@ -75,7 +75,7 @@ public interface EConduct extends EMethod {
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>"COUNT CONDUCT"</code>.
+	 * The default value is <code>"CountConduct"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -85,7 +85,7 @@ public interface EConduct extends EMethod {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEConduct_Name()
-	 * @model default="COUNT CONDUCT"
+	 * @model default="CountConduct"
 	 * @generated
 	 */
 	String getName();

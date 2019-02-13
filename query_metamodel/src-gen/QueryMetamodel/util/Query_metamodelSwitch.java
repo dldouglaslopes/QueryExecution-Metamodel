@@ -165,11 +165,11 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.EPRESCRIBED_MEDICATION: {
-			EPrescribedMedication ePrescribedMedication = (EPrescribedMedication) theEObject;
-			T result = caseEPrescribedMedication(ePrescribedMedication);
+		case Query_metamodelPackage.EMEDICATION: {
+			EMedication eMedication = (EMedication) theEObject;
+			T result = caseEMedication(eMedication);
 			if (result == null)
-				result = caseEMethod(ePrescribedMedication);
+				result = caseEMethod(eMedication);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -179,6 +179,34 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 			T result = caseEOccurrence(eOccurrence);
 			if (result == null)
 				result = caseEMethod(eOccurrence);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.FLOW: {
+			Flow flow = (Flow) theEObject;
+			T result = caseFlow(flow);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.MEDICATION: {
+			Medication medication = (Medication) theEObject;
+			T result = caseMedication(medication);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.SEQUENCE: {
+			Sequence sequence = (Sequence) theEObject;
+			T result = caseSequence(sequence);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.PATHWAY: {
+			Pathway pathway = (Pathway) theEObject;
+			T result = casePathway(pathway);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -384,17 +412,17 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EPrescribed Medication</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>EMedication</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EPrescribed Medication</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>EMedication</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEPrescribedMedication(EPrescribedMedication object) {
+	public T caseEMedication(EMedication object) {
 		return null;
 	}
 
@@ -410,6 +438,66 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEOccurrence(EOccurrence object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Flow</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Flow</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFlow(Flow object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Medication</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Medication</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMedication(Medication object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sequence</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sequence</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSequence(Sequence object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pathway</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pathway</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePathway(Pathway object) {
 		return null;
 	}
 

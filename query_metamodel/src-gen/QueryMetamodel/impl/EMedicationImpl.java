@@ -2,8 +2,8 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.ERecurrentFlow;
-import QueryMetamodel.Flow;
+import QueryMetamodel.EMedication;
+import QueryMetamodel.Medication;
 import QueryMetamodel.Query_metamodelPackage;
 
 import java.util.Collection;
@@ -23,19 +23,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>ERecurrent Flow</b></em>'.
+ * An implementation of the model object '<em><b>EMedication</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.ERecurrentFlowImpl#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.impl.ERecurrentFlowImpl#getFlows <em>Flows</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EMedicationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.EMedicationImpl#getMedications <em>Medications</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
+public class EMedicationImpl extends EMethodImpl implements EMedication {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "RecurrentFlow";
+	protected static final String NAME_EDEFAULT = "PrescribedMedications";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -57,21 +57,21 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getFlows() <em>Flows</em>}' containment reference list.
+	 * The cached value of the '{@link #getMedications() <em>Medications</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFlows()
+	 * @see #getMedications()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Flow> flows;
+	protected EList<Medication> medications;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ERecurrentFlowImpl() {
+	protected EMedicationImpl() {
 		super();
 	}
 
@@ -82,7 +82,7 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.ERECURRENT_FLOW;
+		return Query_metamodelPackage.Literals.EMEDICATION;
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ERECURRENT_FLOW__NAME, oldName,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EMEDICATION__NAME, oldName,
 					name));
 	}
 
@@ -112,11 +112,12 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Flow> getFlows() {
-		if (flows == null) {
-			flows = new EObjectContainmentEList<Flow>(Flow.class, this, Query_metamodelPackage.ERECURRENT_FLOW__FLOWS);
+	public EList<Medication> getMedications() {
+		if (medications == null) {
+			medications = new EObjectContainmentEList<Medication>(Medication.class, this,
+					Query_metamodelPackage.EMEDICATION__MEDICATIONS);
 		}
-		return flows;
+		return medications;
 	}
 
 	/**
@@ -127,8 +128,8 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.ERECURRENT_FLOW__FLOWS:
-			return ((InternalEList<?>) getFlows()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.EMEDICATION__MEDICATIONS:
+			return ((InternalEList<?>) getMedications()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -141,10 +142,10 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.ERECURRENT_FLOW__NAME:
+		case Query_metamodelPackage.EMEDICATION__NAME:
 			return getName();
-		case Query_metamodelPackage.ERECURRENT_FLOW__FLOWS:
-			return getFlows();
+		case Query_metamodelPackage.EMEDICATION__MEDICATIONS:
+			return getMedications();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,12 +159,12 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.ERECURRENT_FLOW__NAME:
+		case Query_metamodelPackage.EMEDICATION__NAME:
 			setName((String) newValue);
 			return;
-		case Query_metamodelPackage.ERECURRENT_FLOW__FLOWS:
-			getFlows().clear();
-			getFlows().addAll((Collection<? extends Flow>) newValue);
+		case Query_metamodelPackage.EMEDICATION__MEDICATIONS:
+			getMedications().clear();
+			getMedications().addAll((Collection<? extends Medication>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,11 +178,11 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.ERECURRENT_FLOW__NAME:
+		case Query_metamodelPackage.EMEDICATION__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Query_metamodelPackage.ERECURRENT_FLOW__FLOWS:
-			getFlows().clear();
+		case Query_metamodelPackage.EMEDICATION__MEDICATIONS:
+			getMedications().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -195,10 +196,10 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.ERECURRENT_FLOW__NAME:
+		case Query_metamodelPackage.EMEDICATION__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Query_metamodelPackage.ERECURRENT_FLOW__FLOWS:
-			return flows != null && !flows.isEmpty();
+		case Query_metamodelPackage.EMEDICATION__MEDICATIONS:
+			return medications != null && !medications.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -220,4 +221,4 @@ public class ERecurrentFlowImpl extends EMethodImpl implements ERecurrentFlow {
 		return result.toString();
 	}
 
-} //ERecurrentFlowImpl
+} //EMedicationImpl

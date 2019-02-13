@@ -2,76 +2,77 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.EOccurrence;
 import QueryMetamodel.Query_metamodelPackage;
+import QueryMetamodel.Sequence;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>EOccurrence</b></em>'.
+ * An implementation of the model object '<em><b>Sequence</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.EOccurrenceImpl#getValue <em>Value</em>}</li>
- *   <li>{@link QueryMetamodel.impl.EOccurrenceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.SequenceImpl#getId <em>Id</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.SequenceImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
+public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequence {
 	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int VALUE_EDEFAULT = 0;
+	protected static final String ID_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getId()
 	 * @generated
 	 * @ordered
 	 */
-	protected int value = VALUE_EDEFAULT;
+	protected String id = ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "CarePathwaysOccurrences";
+	protected static final String TYPE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getType()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EOccurrenceImpl() {
+	protected SequenceImpl() {
 		super();
 	}
 
@@ -82,7 +83,7 @@ public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.EOCCURRENCE;
+		return Query_metamodelPackage.Literals.SEQUENCE;
 	}
 
 	/**
@@ -90,8 +91,8 @@ public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getValue() {
-		return value;
+	public String getId() {
+		return id;
 	}
 
 	/**
@@ -99,12 +100,11 @@ public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(int newValue) {
-		int oldValue = value;
-		value = newValue;
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EOCCURRENCE__VALUE, oldValue,
-					value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.SEQUENCE__ID, oldId, id));
 	}
 
 	/**
@@ -112,8 +112,8 @@ public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getType() {
+		return type;
 	}
 
 	/**
@@ -121,12 +121,12 @@ public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setType(String newType) {
+		String oldType = type;
+		type = newType;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EOCCURRENCE__NAME, oldName,
-					name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.SEQUENCE__TYPE, oldType,
+					type));
 	}
 
 	/**
@@ -137,10 +137,10 @@ public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.EOCCURRENCE__VALUE:
-			return getValue();
-		case Query_metamodelPackage.EOCCURRENCE__NAME:
-			return getName();
+		case Query_metamodelPackage.SEQUENCE__ID:
+			return getId();
+		case Query_metamodelPackage.SEQUENCE__TYPE:
+			return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -153,11 +153,11 @@ public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.EOCCURRENCE__VALUE:
-			setValue((Integer) newValue);
+		case Query_metamodelPackage.SEQUENCE__ID:
+			setId((String) newValue);
 			return;
-		case Query_metamodelPackage.EOCCURRENCE__NAME:
-			setName((String) newValue);
+		case Query_metamodelPackage.SEQUENCE__TYPE:
+			setType((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -171,11 +171,11 @@ public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.EOCCURRENCE__VALUE:
-			setValue(VALUE_EDEFAULT);
+		case Query_metamodelPackage.SEQUENCE__ID:
+			setId(ID_EDEFAULT);
 			return;
-		case Query_metamodelPackage.EOCCURRENCE__NAME:
-			setName(NAME_EDEFAULT);
+		case Query_metamodelPackage.SEQUENCE__TYPE:
+			setType(TYPE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -189,10 +189,10 @@ public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.EOCCURRENCE__VALUE:
-			return value != VALUE_EDEFAULT;
-		case Query_metamodelPackage.EOCCURRENCE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Query_metamodelPackage.SEQUENCE__ID:
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+		case Query_metamodelPackage.SEQUENCE__TYPE:
+			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -208,12 +208,12 @@ public class EOccurrenceImpl extends EMethodImpl implements EOccurrence {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (value: ");
-		result.append(value);
-		result.append(", name: ");
-		result.append(name);
+		result.append(" (id: ");
+		result.append(id);
+		result.append(", type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}
 
-} //EOccurrenceImpl
+} //SequenceImpl

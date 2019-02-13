@@ -147,20 +147,41 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EConduct/name"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//ERecurrentFlow">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ERecurrentFlow/flows"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ERecurrentFlow/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//ERecurrentFlow/flows"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//EAverageTime">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EAverageTime/average"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EAverageTime/name"/>
     </genClasses>
-    <genClasses ecoreClass="query_metamodel.ecore#//EPrescribedMedication">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EPrescribedMedication/medications"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EPrescribedMedication/name"/>
+    <genClasses ecoreClass="query_metamodel.ecore#//EMedication">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EMedication/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EMedication/medications"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//EOccurrence">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EOccurrence/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//EOccurrence/name"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Flow">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Flow/percentage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Flow/quantity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Flow/sequences"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Medication">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Medication/percentage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Medication/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Medication/quantity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Medication/pathway"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Sequence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Sequence/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Sequence/type"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Pathway">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/percentage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/quantity"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

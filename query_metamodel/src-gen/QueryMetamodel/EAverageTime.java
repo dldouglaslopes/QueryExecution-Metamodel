@@ -48,7 +48,7 @@ public interface EAverageTime extends EMethod {
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>"SHOW AVERAGE TIME"</code>.
+	 * The default value is <code>"AverageTime"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -58,7 +58,7 @@ public interface EAverageTime extends EMethod {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEAverageTime_Name()
-	 * @model default="SHOW AVERAGE TIME"
+	 * @model default="AverageTime"
 	 * @generated
 	 */
 	String getName();

@@ -10,21 +10,26 @@ import QueryMetamodel.Date;
 import QueryMetamodel.EAverageTime;
 import QueryMetamodel.ECarePathway;
 import QueryMetamodel.EConduct;
+import QueryMetamodel.EMedication;
 import QueryMetamodel.EMethod;
 import QueryMetamodel.EOccurrence;
-import QueryMetamodel.EPrescribedMedication;
 import QueryMetamodel.EQuery;
 import QueryMetamodel.ERecurrentFlow;
 import QueryMetamodel.EStatus;
 import QueryMetamodel.EStep;
+import QueryMetamodel.Flow;
 import QueryMetamodel.Gender;
+import QueryMetamodel.Medication;
 import QueryMetamodel.Message;
 import QueryMetamodel.Order;
+import QueryMetamodel.Pathway;
 import QueryMetamodel.Query_metamodelFactory;
 import QueryMetamodel.Query_metamodelPackage;
 import QueryMetamodel.Range;
+import QueryMetamodel.Sequence;
 import QueryMetamodel.Sex;
 import QueryMetamodel.Status;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -136,7 +141,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass ePrescribedMedicationEClass = null;
+	private EClass eMedicationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -144,6 +149,34 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	private EClass eOccurrenceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass flowEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass medicationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sequenceEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pathwayEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -604,7 +637,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getERecurrentFlow_Flows() {
+	public EAttribute getERecurrentFlow_Name() {
 		return (EAttribute) eRecurrentFlowEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -613,8 +646,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getERecurrentFlow_Name() {
-		return (EAttribute) eRecurrentFlowEClass.getEStructuralFeatures().get(1);
+	public EReference getERecurrentFlow_Flows() {
+		return (EReference) eRecurrentFlowEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -649,8 +682,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEPrescribedMedication() {
-		return ePrescribedMedicationEClass;
+	public EClass getEMedication() {
+		return eMedicationEClass;
 	}
 
 	/**
@@ -658,8 +691,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEPrescribedMedication_Medications() {
-		return (EAttribute) ePrescribedMedicationEClass.getEStructuralFeatures().get(0);
+	public EAttribute getEMedication_Name() {
+		return (EAttribute) eMedicationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -667,8 +700,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEPrescribedMedication_Name() {
-		return (EAttribute) ePrescribedMedicationEClass.getEStructuralFeatures().get(1);
+	public EReference getEMedication_Medications() {
+		return (EReference) eMedicationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -696,6 +729,159 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EAttribute getEOccurrence_Name() {
 		return (EAttribute) eOccurrenceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFlow() {
+		return flowEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFlow_Percentage() {
+		return (EAttribute) flowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFlow_Quantity() {
+		return (EAttribute) flowEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFlow_Sequences() {
+		return (EReference) flowEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMedication() {
+		return medicationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMedication_Percentage() {
+		return (EAttribute) medicationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMedication_Name() {
+		return (EAttribute) medicationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMedication_Quantity() {
+		return (EAttribute) medicationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMedication_Pathway() {
+		return (EReference) medicationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getSequence() {
+		return sequenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSequence_Id() {
+		return (EAttribute) sequenceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getSequence_Type() {
+		return (EAttribute) sequenceEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPathway() {
+		return pathwayEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPathway_Id() {
+		return (EAttribute) pathwayEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPathway_Name() {
+		return (EAttribute) pathwayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPathway_Percentage() {
+		return (EAttribute) pathwayEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPathway_Quantity() {
+		return (EAttribute) pathwayEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -839,20 +1025,41 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(eConductEClass, ECONDUCT__NAME);
 
 		eRecurrentFlowEClass = createEClass(ERECURRENT_FLOW);
-		createEAttribute(eRecurrentFlowEClass, ERECURRENT_FLOW__FLOWS);
 		createEAttribute(eRecurrentFlowEClass, ERECURRENT_FLOW__NAME);
+		createEReference(eRecurrentFlowEClass, ERECURRENT_FLOW__FLOWS);
 
 		eAverageTimeEClass = createEClass(EAVERAGE_TIME);
 		createEAttribute(eAverageTimeEClass, EAVERAGE_TIME__AVERAGE);
 		createEAttribute(eAverageTimeEClass, EAVERAGE_TIME__NAME);
 
-		ePrescribedMedicationEClass = createEClass(EPRESCRIBED_MEDICATION);
-		createEAttribute(ePrescribedMedicationEClass, EPRESCRIBED_MEDICATION__MEDICATIONS);
-		createEAttribute(ePrescribedMedicationEClass, EPRESCRIBED_MEDICATION__NAME);
+		eMedicationEClass = createEClass(EMEDICATION);
+		createEAttribute(eMedicationEClass, EMEDICATION__NAME);
+		createEReference(eMedicationEClass, EMEDICATION__MEDICATIONS);
 
 		eOccurrenceEClass = createEClass(EOCCURRENCE);
 		createEAttribute(eOccurrenceEClass, EOCCURRENCE__VALUE);
 		createEAttribute(eOccurrenceEClass, EOCCURRENCE__NAME);
+
+		flowEClass = createEClass(FLOW);
+		createEAttribute(flowEClass, FLOW__PERCENTAGE);
+		createEAttribute(flowEClass, FLOW__QUANTITY);
+		createEReference(flowEClass, FLOW__SEQUENCES);
+
+		medicationEClass = createEClass(MEDICATION);
+		createEAttribute(medicationEClass, MEDICATION__PERCENTAGE);
+		createEAttribute(medicationEClass, MEDICATION__NAME);
+		createEAttribute(medicationEClass, MEDICATION__QUANTITY);
+		createEReference(medicationEClass, MEDICATION__PATHWAY);
+
+		sequenceEClass = createEClass(SEQUENCE);
+		createEAttribute(sequenceEClass, SEQUENCE__ID);
+		createEAttribute(sequenceEClass, SEQUENCE__TYPE);
+
+		pathwayEClass = createEClass(PATHWAY);
+		createEAttribute(pathwayEClass, PATHWAY__ID);
+		createEAttribute(pathwayEClass, PATHWAY__NAME);
+		createEAttribute(pathwayEClass, PATHWAY__PERCENTAGE);
+		createEAttribute(pathwayEClass, PATHWAY__QUANTITY);
 
 		// Create enums
 		orderEEnum = createEEnum(ORDER);
@@ -897,7 +1104,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		eConductEClass.getESuperTypes().add(this.getEMethod());
 		eRecurrentFlowEClass.getESuperTypes().add(this.getEMethod());
 		eAverageTimeEClass.getESuperTypes().add(this.getEMethod());
-		ePrescribedMedicationEClass.getESuperTypes().add(this.getEMethod());
+		eMedicationEClass.getESuperTypes().add(this.getEMethod());
 		eOccurrenceEClass.getESuperTypes().add(this.getEMethod());
 
 		// Initialize classes, features, and operations; add parameters
@@ -973,7 +1180,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEStatus_InProgress(), ecorePackage.getEInt(), "inProgress", null, 0, 1, EStatus.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEStatus_Name(), ecorePackage.getEString(), "name", "COUNT STATUS", 0, 1, EStatus.class,
+		initEAttribute(getEStatus_Name(), ecorePackage.getEString(), "name", "CountStatus", 0, 1, EStatus.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eMethodEClass, EMethod.class, "EMethod", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -984,41 +1191,80 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getEConduct_NoConduct(), ecorePackage.getEInt(), "noConduct", null, 0, 1, EConduct.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEConduct_Name(), ecorePackage.getEString(), "name", "COUNT CONDUCT", 0, 1, EConduct.class,
+		initEAttribute(getEConduct_Name(), ecorePackage.getEString(), "name", "CountConduct", 0, 1, EConduct.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eRecurrentFlowEClass, ERecurrentFlow.class, "ERecurrentFlow", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getERecurrentFlow_Flows(), ecorePackage.getEString(), "flows", null, 0, -1, ERecurrentFlow.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getERecurrentFlow_Name(), ecorePackage.getEString(), "name", "SHOW RECURRENT FLOW", 0, 1,
+		initEAttribute(getERecurrentFlow_Name(), ecorePackage.getEString(), "name", "RecurrentFlow", 0, 1,
 				ERecurrentFlow.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEReference(getERecurrentFlow_Flows(), this.getFlow(), null, "flows", null, 0, -1, ERecurrentFlow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eAverageTimeEClass, EAverageTime.class, "EAverageTime", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEAverageTime_Average(), ecorePackage.getEDouble(), "average", null, 0, 1, EAverageTime.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEAverageTime_Name(), ecorePackage.getEString(), "name", "SHOW AVERAGE TIME", 0, 1,
+		initEAttribute(getEAverageTime_Name(), ecorePackage.getEString(), "name", "AverageTime", 0, 1,
 				EAverageTime.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
-		initEClass(ePrescribedMedicationEClass, EPrescribedMedication.class, "EPrescribedMedication", !IS_ABSTRACT,
-				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEPrescribedMedication_Medications(), ecorePackage.getEString(), "medications", null, 0, -1,
-				EPrescribedMedication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEPrescribedMedication_Name(), ecorePackage.getEString(), "name",
-				"SHOW PRESCRIBED MEDICATIONS", 0, 1, EPrescribedMedication.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(eMedicationEClass, EMedication.class, "EMedication", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getEMedication_Name(), ecorePackage.getEString(), "name", "PrescribedMedications", 0, 1,
+				EMedication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getEMedication_Medications(), this.getMedication(), null, "medications", null, 0, -1,
+				EMedication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(eOccurrenceEClass, EOccurrence.class, "EOccurrence", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEOccurrence_Value(), ecorePackage.getEInt(), "value", null, 0, 1, EOccurrence.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEOccurrence_Name(), ecorePackage.getEString(), "name", "COUNT CARE PATHWAY OCCURRENCES", 0, 1,
+		initEAttribute(getEOccurrence_Name(), ecorePackage.getEString(), "name", "CarePathwaysOccurrences", 0, 1,
 				EOccurrence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(flowEClass, Flow.class, "Flow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFlow_Percentage(), ecorePackage.getEString(), "percentage", "", 0, 1, Flow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFlow_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Flow.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFlow_Sequences(), this.getSequence(), null, "sequences", null, 0, -1, Flow.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(medicationEClass, Medication.class, "Medication", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMedication_Percentage(), ecorePackage.getEString(), "percentage", "", 0, 1, Medication.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMedication_Name(), ecorePackage.getEString(), "name", null, 0, 1, Medication.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMedication_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Medication.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMedication_Pathway(), this.getPathway(), null, "pathway", null, 0, -1, Medication.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(sequenceEClass, Sequence.class, "Sequence", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSequence_Id(), ecorePackage.getEString(), "id", null, 0, 1, Sequence.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSequence_Type(), ecorePackage.getEString(), "type", null, 0, 1, Sequence.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(pathwayEClass, Pathway.class, "Pathway", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPathway_Id(), ecorePackage.getEInt(), "id", null, 0, -1, Pathway.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPathway_Name(), ecorePackage.getEString(), "name", null, 0, 1, Pathway.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPathway_Percentage(), ecorePackage.getEString(), "percentage", "", 0, 1, Pathway.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPathway_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Pathway.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(orderEEnum, Order.class, "Order");

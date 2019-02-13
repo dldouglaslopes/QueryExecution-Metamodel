@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.ERecurrentFlow#getFlows <em>Flows</em>}</li>
  *   <li>{@link QueryMetamodel.ERecurrentFlow#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.ERecurrentFlow#getFlows <em>Flows</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getERecurrentFlow()
@@ -23,24 +23,8 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface ERecurrentFlow extends EMethod {
 	/**
-	 * Returns the value of the '<em><b>Flows</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Flows</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flows</em>' attribute list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getERecurrentFlow_Flows()
-	 * @model
-	 * @generated
-	 */
-	EList<String> getFlows();
-
-	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>"SHOW RECURRENT FLOW"</code>.
+	 * The default value is <code>"RecurrentFlow"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -50,7 +34,7 @@ public interface ERecurrentFlow extends EMethod {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see QueryMetamodel.Query_metamodelPackage#getERecurrentFlow_Name()
-	 * @model default="SHOW RECURRENT FLOW"
+	 * @model default="RecurrentFlow"
 	 * @generated
 	 */
 	String getName();
@@ -64,5 +48,21 @@ public interface ERecurrentFlow extends EMethod {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Flows</b></em>' containment reference list.
+	 * The list contents are of type {@link QueryMetamodel.Flow}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Flows</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Flows</em>' containment reference list.
+	 * @see QueryMetamodel.Query_metamodelPackage#getERecurrentFlow_Flows()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Flow> getFlows();
 
 } // ERecurrentFlow

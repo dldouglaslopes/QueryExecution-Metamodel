@@ -130,13 +130,13 @@ public interface Query_metamodelFactory extends EFactory {
 	EAverageTime createEAverageTime();
 
 	/**
-	 * Returns a new object of class '<em>EPrescribed Medication</em>'.
+	 * Returns a new object of class '<em>EMedication</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EPrescribed Medication</em>'.
+	 * @return a new object of class '<em>EMedication</em>'.
 	 * @generated
 	 */
-	EPrescribedMedication createEPrescribedMedication();
+	EMedication createEMedication();
 
 	/**
 	 * Returns a new object of class '<em>EOccurrence</em>'.
@@ -146,6 +146,42 @@ public interface Query_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	EOccurrence createEOccurrence();
+
+	/**
+	 * Returns a new object of class '<em>Flow</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Flow</em>'.
+	 * @generated
+	 */
+	Flow createFlow();
+
+	/**
+	 * Returns a new object of class '<em>Medication</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Medication</em>'.
+	 * @generated
+	 */
+	Medication createMedication();
+
+	/**
+	 * Returns a new object of class '<em>Sequence</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sequence</em>'.
+	 * @generated
+	 */
+	Sequence createSequence();
+
+	/**
+	 * Returns a new object of class '<em>Pathway</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pathway</em>'.
+	 * @generated
+	 */
+	Pathway createPathway();
 
 	/**
 	 * Returns the package supported by this factory.

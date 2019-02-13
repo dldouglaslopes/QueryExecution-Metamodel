@@ -132,13 +132,33 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseEPrescribedMedication(EPrescribedMedication object) {
-			return createEPrescribedMedicationAdapter();
+		public Adapter caseEMedication(EMedication object) {
+			return createEMedicationAdapter();
 		}
 
 		@Override
 		public Adapter caseEOccurrence(EOccurrence object) {
 			return createEOccurrenceAdapter();
+		}
+
+		@Override
+		public Adapter caseFlow(Flow object) {
+			return createFlowAdapter();
+		}
+
+		@Override
+		public Adapter caseMedication(Medication object) {
+			return createMedicationAdapter();
+		}
+
+		@Override
+		public Adapter caseSequence(Sequence object) {
+			return createSequenceAdapter();
+		}
+
+		@Override
+		public Adapter casePathway(Pathway object) {
+			return createPathwayAdapter();
 		}
 
 		@Override
@@ -343,16 +363,16 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EPrescribedMedication <em>EPrescribed Medication</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EMedication <em>EMedication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.EPrescribedMedication
+	 * @see QueryMetamodel.EMedication
 	 * @generated
 	 */
-	public Adapter createEPrescribedMedicationAdapter() {
+	public Adapter createEMedicationAdapter() {
 		return null;
 	}
 
@@ -367,6 +387,62 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEOccurrenceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Flow <em>Flow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.Flow
+	 * @generated
+	 */
+	public Adapter createFlowAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Medication <em>Medication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.Medication
+	 * @generated
+	 */
+	public Adapter createMedicationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Sequence <em>Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.Sequence
+	 * @generated
+	 */
+	public Adapter createSequenceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Pathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.Pathway
+	 * @generated
+	 */
+	public Adapter createPathwayAdapter() {
 		return null;
 	}
 
