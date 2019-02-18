@@ -10,116 +10,116 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>EConduct</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Boolen Conduct</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see QueryMetamodel.Query_metamodelPackage#getEConduct()
+ * @see QueryMetamodel.Query_metamodelPackage#getBoolenConduct()
  * @model
  * @generated
  */
-public enum EConduct implements Enumerator {
+public enum BoolenConduct implements Enumerator {
 	/**
-	 * The '<em><b>Procedure</b></em>' literal object.
+	 * The '<em><b>All</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PROCEDURE_VALUE
+	 * @see #ALL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PROCEDURE(1, "Procedure", "ProcedimentoComplementar"),
+	ALL(0, "all", "all"),
 
 	/**
-	 * The '<em><b>Medication</b></em>' literal object.
+	 * The '<em><b>False</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #MEDICATION_VALUE
+	 * @see #FALSE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	MEDICATION(2, "Medication", "MedicamentoComplementar"),
+	FALSE(1, "false", "false"),
 
 	/**
-	 * The '<em><b>Prescription</b></em>' literal object.
+	 * The '<em><b>True</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PRESCRIPTION_VALUE
+	 * @see #TRUE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PRESCRIPTION(3, "Prescription", "ReceitaComplementar");
+	TRUE(2, "true", "true");
 
 	/**
-	 * The '<em><b>Procedure</b></em>' literal value.
+	 * The '<em><b>All</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Procedure</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>All</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PROCEDURE
-	 * @model name="Procedure" literal="ProcedimentoComplementar"
+	 * @see #ALL
+	 * @model name="all"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PROCEDURE_VALUE = 1;
+	public static final int ALL_VALUE = 0;
 
 	/**
-	 * The '<em><b>Medication</b></em>' literal value.
+	 * The '<em><b>False</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Medication</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>False</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #MEDICATION
-	 * @model name="Medication" literal="MedicamentoComplementar"
+	 * @see #FALSE
+	 * @model name="false"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MEDICATION_VALUE = 2;
+	public static final int FALSE_VALUE = 1;
 
 	/**
-	 * The '<em><b>Prescription</b></em>' literal value.
+	 * The '<em><b>True</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Prescription</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>True</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PRESCRIPTION
-	 * @model name="Prescription" literal="ReceitaComplementar"
+	 * @see #TRUE
+	 * @model name="true"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PRESCRIPTION_VALUE = 3;
+	public static final int TRUE_VALUE = 2;
 
 	/**
-	 * An array of all the '<em><b>EConduct</b></em>' enumerators.
+	 * An array of all the '<em><b>Boolen Conduct</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final EConduct[] VALUES_ARRAY = new EConduct[] { PROCEDURE, MEDICATION, PRESCRIPTION, };
+	private static final BoolenConduct[] VALUES_ARRAY = new BoolenConduct[] { ALL, FALSE, TRUE, };
 
 	/**
-	 * A public read-only list of all the '<em><b>EConduct</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Boolen Conduct</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<EConduct> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<BoolenConduct> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>EConduct</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Boolen Conduct</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static EConduct get(String literal) {
+	public static BoolenConduct get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			EConduct result = VALUES_ARRAY[i];
+			BoolenConduct result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -128,16 +128,16 @@ public enum EConduct implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>EConduct</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Boolen Conduct</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static EConduct getByName(String name) {
+	public static BoolenConduct getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			EConduct result = VALUES_ARRAY[i];
+			BoolenConduct result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -146,21 +146,21 @@ public enum EConduct implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>EConduct</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Boolen Conduct</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static EConduct get(int value) {
+	public static BoolenConduct get(int value) {
 		switch (value) {
-		case PROCEDURE_VALUE:
-			return PROCEDURE;
-		case MEDICATION_VALUE:
-			return MEDICATION;
-		case PRESCRIPTION_VALUE:
-			return PRESCRIPTION;
+		case ALL_VALUE:
+			return ALL;
+		case FALSE_VALUE:
+			return FALSE;
+		case TRUE_VALUE:
+			return TRUE;
 		}
 		return null;
 	}
@@ -192,7 +192,7 @@ public enum EConduct implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EConduct(int value, String name, String literal) {
+	private BoolenConduct(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -236,4 +236,4 @@ public enum EConduct implements Enumerator {
 		return literal;
 	}
 
-} //EConduct
+} //BoolenConduct

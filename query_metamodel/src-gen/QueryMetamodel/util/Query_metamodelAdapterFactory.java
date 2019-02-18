@@ -72,8 +72,8 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseRange(Range object) {
-			return createRangeAdapter();
+		public Adapter caseARange(ARange object) {
+			return createARangeAdapter();
 		}
 
 		@Override
@@ -82,33 +82,33 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseDate(Date object) {
-			return createDateAdapter();
+		public Adapter caseADate(ADate object) {
+			return createADateAdapter();
 		}
 
 		@Override
-		public Adapter caseStatus(Status object) {
-			return createStatusAdapter();
+		public Adapter caseAStatus(AStatus object) {
+			return createAStatusAdapter();
 		}
 
 		@Override
-		public Adapter caseAge(Age object) {
-			return createAgeAdapter();
+		public Adapter caseAAge(AAge object) {
+			return createAAgeAdapter();
 		}
 
 		@Override
-		public Adapter caseSex(Sex object) {
-			return createSexAdapter();
+		public Adapter caseASex(ASex object) {
+			return createASexAdapter();
 		}
 
 		@Override
-		public Adapter caseECarePathway(ECarePathway object) {
-			return createECarePathwayAdapter();
+		public Adapter caseACarePathway(ACarePathway object) {
+			return createACarePathwayAdapter();
 		}
 
 		@Override
-		public Adapter caseEStatus(EStatus object) {
-			return createEStatusAdapter();
+		public Adapter caseQStatus(QStatus object) {
+			return createQStatusAdapter();
 		}
 
 		@Override
@@ -117,28 +117,28 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseEConduct(EConduct object) {
-			return createEConductAdapter();
+		public Adapter caseQConduct(QConduct object) {
+			return createQConductAdapter();
 		}
 
 		@Override
-		public Adapter caseERecurrentFlow(ERecurrentFlow object) {
-			return createERecurrentFlowAdapter();
+		public Adapter caseQRecurrentFlow(QRecurrentFlow object) {
+			return createQRecurrentFlowAdapter();
 		}
 
 		@Override
-		public Adapter caseEAverageTime(EAverageTime object) {
-			return createEAverageTimeAdapter();
+		public Adapter caseQAverageTime(QAverageTime object) {
+			return createQAverageTimeAdapter();
 		}
 
 		@Override
-		public Adapter caseEMedication(EMedication object) {
-			return createEMedicationAdapter();
+		public Adapter caseQMedication(QMedication object) {
+			return createQMedicationAdapter();
 		}
 
 		@Override
-		public Adapter caseEOccurrence(EOccurrence object) {
-			return createEOccurrenceAdapter();
+		public Adapter caseQOccurrence(QOccurrence object) {
+			return createQOccurrenceAdapter();
 		}
 
 		@Override
@@ -159,6 +159,26 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter casePathway(Pathway object) {
 			return createPathwayAdapter();
+		}
+
+		@Override
+		public Adapter caseStatus(Status object) {
+			return createStatusAdapter();
+		}
+
+		@Override
+		public Adapter caseConduct(Conduct object) {
+			return createConductAdapter();
+		}
+
+		@Override
+		public Adapter caseAverageTime(AverageTime object) {
+			return createAverageTimeAdapter();
+		}
+
+		@Override
+		public Adapter caseOccurrence(Occurrence object) {
+			return createOccurrenceAdapter();
 		}
 
 		@Override
@@ -195,16 +215,16 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Range <em>Range</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.ARange <em>ARange</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.Range
+	 * @see QueryMetamodel.ARange
 	 * @generated
 	 */
-	public Adapter createRangeAdapter() {
+	public Adapter createARangeAdapter() {
 		return null;
 	}
 
@@ -223,86 +243,86 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Date <em>Date</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.ADate <em>ADate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.Date
+	 * @see QueryMetamodel.ADate
 	 * @generated
 	 */
-	public Adapter createDateAdapter() {
+	public Adapter createADateAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Status <em>Status</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.AStatus <em>AStatus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.Status
+	 * @see QueryMetamodel.AStatus
 	 * @generated
 	 */
-	public Adapter createStatusAdapter() {
+	public Adapter createAStatusAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Age <em>Age</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.AAge <em>AAge</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.Age
+	 * @see QueryMetamodel.AAge
 	 * @generated
 	 */
-	public Adapter createAgeAdapter() {
+	public Adapter createAAgeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Sex <em>Sex</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.ASex <em>ASex</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.Sex
+	 * @see QueryMetamodel.ASex
 	 * @generated
 	 */
-	public Adapter createSexAdapter() {
+	public Adapter createASexAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.ECarePathway <em>ECare Pathway</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.ACarePathway <em>ACare Pathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.ECarePathway
+	 * @see QueryMetamodel.ACarePathway
 	 * @generated
 	 */
-	public Adapter createECarePathwayAdapter() {
+	public Adapter createACarePathwayAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EStatus <em>EStatus</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QStatus <em>QStatus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.EStatus
+	 * @see QueryMetamodel.QStatus
 	 * @generated
 	 */
-	public Adapter createEStatusAdapter() {
+	public Adapter createQStatusAdapter() {
 		return null;
 	}
 
@@ -321,72 +341,72 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EConduct <em>EConduct</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QConduct <em>QConduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.EConduct
+	 * @see QueryMetamodel.QConduct
 	 * @generated
 	 */
-	public Adapter createEConductAdapter() {
+	public Adapter createQConductAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.ERecurrentFlow <em>ERecurrent Flow</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QRecurrentFlow <em>QRecurrent Flow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.ERecurrentFlow
+	 * @see QueryMetamodel.QRecurrentFlow
 	 * @generated
 	 */
-	public Adapter createERecurrentFlowAdapter() {
+	public Adapter createQRecurrentFlowAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EAverageTime <em>EAverage Time</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QAverageTime <em>QAverage Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.EAverageTime
+	 * @see QueryMetamodel.QAverageTime
 	 * @generated
 	 */
-	public Adapter createEAverageTimeAdapter() {
+	public Adapter createQAverageTimeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EMedication <em>EMedication</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QMedication <em>QMedication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.EMedication
+	 * @see QueryMetamodel.QMedication
 	 * @generated
 	 */
-	public Adapter createEMedicationAdapter() {
+	public Adapter createQMedicationAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.EOccurrence <em>EOccurrence</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QOccurrence <em>QOccurrence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.EOccurrence
+	 * @see QueryMetamodel.QOccurrence
 	 * @generated
 	 */
-	public Adapter createEOccurrenceAdapter() {
+	public Adapter createQOccurrenceAdapter() {
 		return null;
 	}
 
@@ -443,6 +463,62 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPathwayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Status <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.Status
+	 * @generated
+	 */
+	public Adapter createStatusAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Conduct <em>Conduct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.Conduct
+	 * @generated
+	 */
+	public Adapter createConductAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.AverageTime <em>Average Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.AverageTime
+	 * @generated
+	 */
+	public Adapter createAverageTimeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Occurrence <em>Occurrence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.Occurrence
+	 * @generated
+	 */
+	public Adapter createOccurrenceAdapter() {
 		return null;
 	}
 

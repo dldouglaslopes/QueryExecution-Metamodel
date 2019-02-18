@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link QueryMetamodel.impl.SequenceImpl#getId <em>Id</em>}</li>
  *   <li>{@link QueryMetamodel.impl.SequenceImpl#getType <em>Type</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.SequenceImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * @ordered
 	 */
 	protected String type = TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,6 +155,28 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.SEQUENCE__NAME, oldName,
+					name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -141,6 +184,8 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 			return getId();
 		case Query_metamodelPackage.SEQUENCE__TYPE:
 			return getType();
+		case Query_metamodelPackage.SEQUENCE__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -158,6 +203,9 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 			return;
 		case Query_metamodelPackage.SEQUENCE__TYPE:
 			setType((String) newValue);
+			return;
+		case Query_metamodelPackage.SEQUENCE__NAME:
+			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -177,6 +225,9 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 		case Query_metamodelPackage.SEQUENCE__TYPE:
 			setType(TYPE_EDEFAULT);
 			return;
+		case Query_metamodelPackage.SEQUENCE__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -193,6 +244,8 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		case Query_metamodelPackage.SEQUENCE__TYPE:
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+		case Query_metamodelPackage.SEQUENCE__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -212,6 +265,8 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 		result.append(id);
 		result.append(", type: ");
 		result.append(type);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

@@ -31,13 +31,13 @@ public interface Query_metamodelFactory extends EFactory {
 	EAttribute createEAttribute();
 
 	/**
-	 * Returns a new object of class '<em>Range</em>'.
+	 * Returns a new object of class '<em>ARange</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Range</em>'.
+	 * @return a new object of class '<em>ARange</em>'.
 	 * @generated
 	 */
-	Range createRange();
+	ARange createARange();
 
 	/**
 	 * Returns a new object of class '<em>EQuery</em>'.
@@ -49,103 +49,103 @@ public interface Query_metamodelFactory extends EFactory {
 	EQuery createEQuery();
 
 	/**
-	 * Returns a new object of class '<em>Date</em>'.
+	 * Returns a new object of class '<em>ADate</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Date</em>'.
+	 * @return a new object of class '<em>ADate</em>'.
 	 * @generated
 	 */
-	Date createDate();
+	ADate createADate();
 
 	/**
-	 * Returns a new object of class '<em>Status</em>'.
+	 * Returns a new object of class '<em>AStatus</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Status</em>'.
+	 * @return a new object of class '<em>AStatus</em>'.
 	 * @generated
 	 */
-	Status createStatus();
+	AStatus createAStatus();
 
 	/**
-	 * Returns a new object of class '<em>Age</em>'.
+	 * Returns a new object of class '<em>AAge</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Age</em>'.
+	 * @return a new object of class '<em>AAge</em>'.
 	 * @generated
 	 */
-	Age createAge();
+	AAge createAAge();
 
 	/**
-	 * Returns a new object of class '<em>Sex</em>'.
+	 * Returns a new object of class '<em>ASex</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sex</em>'.
+	 * @return a new object of class '<em>ASex</em>'.
 	 * @generated
 	 */
-	Sex createSex();
+	ASex createASex();
 
 	/**
-	 * Returns a new object of class '<em>ECare Pathway</em>'.
+	 * Returns a new object of class '<em>ACare Pathway</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ECare Pathway</em>'.
+	 * @return a new object of class '<em>ACare Pathway</em>'.
 	 * @generated
 	 */
-	ECarePathway createECarePathway();
+	ACarePathway createACarePathway();
 
 	/**
-	 * Returns a new object of class '<em>EStatus</em>'.
+	 * Returns a new object of class '<em>QStatus</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EStatus</em>'.
+	 * @return a new object of class '<em>QStatus</em>'.
 	 * @generated
 	 */
-	EStatus createEStatus();
+	QStatus createQStatus();
 
 	/**
-	 * Returns a new object of class '<em>EConduct</em>'.
+	 * Returns a new object of class '<em>QConduct</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EConduct</em>'.
+	 * @return a new object of class '<em>QConduct</em>'.
 	 * @generated
 	 */
-	EConduct createEConduct();
+	QConduct createQConduct();
 
 	/**
-	 * Returns a new object of class '<em>ERecurrent Flow</em>'.
+	 * Returns a new object of class '<em>QRecurrent Flow</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ERecurrent Flow</em>'.
+	 * @return a new object of class '<em>QRecurrent Flow</em>'.
 	 * @generated
 	 */
-	ERecurrentFlow createERecurrentFlow();
+	QRecurrentFlow createQRecurrentFlow();
 
 	/**
-	 * Returns a new object of class '<em>EAverage Time</em>'.
+	 * Returns a new object of class '<em>QAverage Time</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EAverage Time</em>'.
+	 * @return a new object of class '<em>QAverage Time</em>'.
 	 * @generated
 	 */
-	EAverageTime createEAverageTime();
+	QAverageTime createQAverageTime();
 
 	/**
-	 * Returns a new object of class '<em>EMedication</em>'.
+	 * Returns a new object of class '<em>QMedication</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EMedication</em>'.
+	 * @return a new object of class '<em>QMedication</em>'.
 	 * @generated
 	 */
-	EMedication createEMedication();
+	QMedication createQMedication();
 
 	/**
-	 * Returns a new object of class '<em>EOccurrence</em>'.
+	 * Returns a new object of class '<em>QOccurrence</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>EOccurrence</em>'.
+	 * @return a new object of class '<em>QOccurrence</em>'.
 	 * @generated
 	 */
-	EOccurrence createEOccurrence();
+	QOccurrence createQOccurrence();
 
 	/**
 	 * Returns a new object of class '<em>Flow</em>'.
@@ -182,6 +182,42 @@ public interface Query_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Pathway createPathway();
+
+	/**
+	 * Returns a new object of class '<em>Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Status</em>'.
+	 * @generated
+	 */
+	Status createStatus();
+
+	/**
+	 * Returns a new object of class '<em>Conduct</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Conduct</em>'.
+	 * @generated
+	 */
+	Conduct createConduct();
+
+	/**
+	 * Returns a new object of class '<em>Average Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Average Time</em>'.
+	 * @generated
+	 */
+	AverageTime createAverageTime();
+
+	/**
+	 * Returns a new object of class '<em>Occurrence</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Occurrence</em>'.
+	 * @generated
+	 */
+	Occurrence createOccurrence();
 
 	/**
 	 * Returns the package supported by this factory.

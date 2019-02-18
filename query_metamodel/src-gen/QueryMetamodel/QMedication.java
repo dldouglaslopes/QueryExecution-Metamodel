@@ -6,22 +6,22 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>EMedication</b></em>'.
+ * A representation of the model object '<em><b>QMedication</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.EMedication#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.EMedication#getMedications <em>Medications</em>}</li>
+ *   <li>{@link QueryMetamodel.QMedication#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.QMedication#getMedications <em>Medications</em>}</li>
  * </ul>
  *
- * @see QueryMetamodel.Query_metamodelPackage#getEMedication()
+ * @see QueryMetamodel.Query_metamodelPackage#getQMedication()
  * @model
  * @generated
  */
-public interface EMedication extends EMethod {
+public interface QMedication extends EMethod {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>"PrescribedMedications"</code>.
@@ -33,14 +33,14 @@ public interface EMedication extends EMethod {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see QueryMetamodel.Query_metamodelPackage#getEMedication_Name()
+	 * @see QueryMetamodel.Query_metamodelPackage#getQMedication_Name()
 	 * @model default="PrescribedMedications"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.EMedication#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link QueryMetamodel.QMedication#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -59,10 +59,10 @@ public interface EMedication extends EMethod {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Medications</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getEMedication_Medications()
+	 * @see QueryMetamodel.Query_metamodelPackage#getQMedication_Medications()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Medication> getMedications();
 
-} // EMedication
+} // QMedication

@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Complementary Conduct</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Boolean Conduct</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see QueryMetamodel.Query_metamodelPackage#getComplementaryConduct()
+ * @see QueryMetamodel.Query_metamodelPackage#getBooleanConduct()
  * @model
  * @generated
  */
-public enum ComplementaryConduct implements Enumerator {
+public enum BooleanConduct implements Enumerator {
 	/**
 	 * The '<em><b>All</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -94,32 +94,32 @@ public enum ComplementaryConduct implements Enumerator {
 	public static final int TRUE_VALUE = 2;
 
 	/**
-	 * An array of all the '<em><b>Complementary Conduct</b></em>' enumerators.
+	 * An array of all the '<em><b>Boolean Conduct</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final ComplementaryConduct[] VALUES_ARRAY = new ComplementaryConduct[] { ALL, FALSE, TRUE, };
+	private static final BooleanConduct[] VALUES_ARRAY = new BooleanConduct[] { ALL, FALSE, TRUE, };
 
 	/**
-	 * A public read-only list of all the '<em><b>Complementary Conduct</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Boolean Conduct</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<ComplementaryConduct> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<BooleanConduct> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Complementary Conduct</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Boolean Conduct</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ComplementaryConduct get(String literal) {
+	public static BooleanConduct get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ComplementaryConduct result = VALUES_ARRAY[i];
+			BooleanConduct result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -128,16 +128,16 @@ public enum ComplementaryConduct implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Complementary Conduct</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Boolean Conduct</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ComplementaryConduct getByName(String name) {
+	public static BooleanConduct getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			ComplementaryConduct result = VALUES_ARRAY[i];
+			BooleanConduct result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -146,14 +146,14 @@ public enum ComplementaryConduct implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Complementary Conduct</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Boolean Conduct</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static ComplementaryConduct get(int value) {
+	public static BooleanConduct get(int value) {
 		switch (value) {
 		case ALL_VALUE:
 			return ALL;
@@ -192,7 +192,7 @@ public enum ComplementaryConduct implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private ComplementaryConduct(int value, String name, String literal) {
+	private BooleanConduct(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -236,4 +236,4 @@ public enum ComplementaryConduct implements Enumerator {
 		return literal;
 	}
 
-} //ComplementaryConduct
+} //BooleanConduct

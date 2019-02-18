@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  *   <li>{@link QueryMetamodel.impl.PathwayImpl#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.impl.PathwayImpl#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.impl.PathwayImpl#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.PathwayImpl#getPathway <em>Pathway</em>}</li>
  * </ul>
  *
  * @generated
@@ -104,6 +105,26 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 * @ordered
 	 */
 	protected int quantity = QUANTITY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPathway() <em>Pathway</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PATHWAY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected String pathway = PATHWAY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -206,6 +227,28 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPathway() {
+		return pathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPathway(String newPathway) {
+		String oldPathway = pathway;
+		pathway = newPathway;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.PATHWAY__PATHWAY, oldPathway,
+					pathway));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -217,6 +260,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 			return getPercentage();
 		case Query_metamodelPackage.PATHWAY__QUANTITY:
 			return getQuantity();
+		case Query_metamodelPackage.PATHWAY__PATHWAY:
+			return getPathway();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -243,6 +288,9 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		case Query_metamodelPackage.PATHWAY__QUANTITY:
 			setQuantity((Integer) newValue);
 			return;
+		case Query_metamodelPackage.PATHWAY__PATHWAY:
+			setPathway((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -267,6 +315,9 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		case Query_metamodelPackage.PATHWAY__QUANTITY:
 			setQuantity(QUANTITY_EDEFAULT);
 			return;
+		case Query_metamodelPackage.PATHWAY__PATHWAY:
+			setPathway(PATHWAY_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -287,6 +338,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 			return PERCENTAGE_EDEFAULT == null ? percentage != null : !PERCENTAGE_EDEFAULT.equals(percentage);
 		case Query_metamodelPackage.PATHWAY__QUANTITY:
 			return quantity != QUANTITY_EDEFAULT;
+		case Query_metamodelPackage.PATHWAY__PATHWAY:
+			return PATHWAY_EDEFAULT == null ? pathway != null : !PATHWAY_EDEFAULT.equals(pathway);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -310,6 +363,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		result.append(percentage);
 		result.append(", quantity: ");
 		result.append(quantity);
+		result.append(", pathway: ");
+		result.append(pathway);
 		result.append(')');
 		return result.toString();
 	}

@@ -2,14 +2,14 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.Age;
-import QueryMetamodel.Date;
+import QueryMetamodel.AAge;
+import QueryMetamodel.ACarePathway;
+import QueryMetamodel.ADate;
+import QueryMetamodel.ARange;
+import QueryMetamodel.ASex;
+import QueryMetamodel.AStatus;
 import QueryMetamodel.EAttribute;
-import QueryMetamodel.ECarePathway;
 import QueryMetamodel.Query_metamodelPackage;
-import QueryMetamodel.Range;
-import QueryMetamodel.Sex;
-import QueryMetamodel.Status;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -47,7 +47,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * @generated
 	 * @ordered
 	 */
-	protected Sex sex;
+	protected ASex sex;
 
 	/**
 	 * The cached value of the '{@link #getAge() <em>Age</em>}' containment reference.
@@ -57,7 +57,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * @generated
 	 * @ordered
 	 */
-	protected Age age;
+	protected AAge age;
 
 	/**
 	 * The cached value of the '{@link #getRange() <em>Range</em>}' containment reference.
@@ -67,7 +67,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * @generated
 	 * @ordered
 	 */
-	protected Range range;
+	protected ARange range;
 
 	/**
 	 * The cached value of the '{@link #getDate() <em>Date</em>}' containment reference.
@@ -77,7 +77,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * @generated
 	 * @ordered
 	 */
-	protected Date date;
+	protected ADate date;
 
 	/**
 	 * The cached value of the '{@link #getStatus() <em>Status</em>}' containment reference.
@@ -87,7 +87,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * @generated
 	 * @ordered
 	 */
-	protected Status status;
+	protected AStatus status;
 
 	/**
 	 * The cached value of the '{@link #getCarePathway() <em>Care Pathway</em>}' containment reference.
@@ -97,7 +97,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * @generated
 	 * @ordered
 	 */
-	protected ECarePathway carePathway;
+	protected ACarePathway carePathway;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,7 +123,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Sex getSex() {
+	public ASex getSex() {
 		return sex;
 	}
 
@@ -132,8 +132,8 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSex(Sex newSex, NotificationChain msgs) {
-		Sex oldSex = sex;
+	public NotificationChain basicSetSex(ASex newSex, NotificationChain msgs) {
+		ASex oldSex = sex;
 		sex = newSex;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -151,7 +151,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSex(Sex newSex) {
+	public void setSex(ASex newSex) {
 		if (newSex != sex) {
 			NotificationChain msgs = null;
 			if (sex != null)
@@ -173,7 +173,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Age getAge() {
+	public AAge getAge() {
 		return age;
 	}
 
@@ -182,8 +182,8 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAge(Age newAge, NotificationChain msgs) {
-		Age oldAge = age;
+	public NotificationChain basicSetAge(AAge newAge, NotificationChain msgs) {
+		AAge oldAge = age;
 		age = newAge;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -201,7 +201,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAge(Age newAge) {
+	public void setAge(AAge newAge) {
 		if (newAge != age) {
 			NotificationChain msgs = null;
 			if (age != null)
@@ -223,7 +223,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Range getRange() {
+	public ARange getRange() {
 		return range;
 	}
 
@@ -232,8 +232,8 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRange(Range newRange, NotificationChain msgs) {
-		Range oldRange = range;
+	public NotificationChain basicSetRange(ARange newRange, NotificationChain msgs) {
+		ARange oldRange = range;
 		range = newRange;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -251,7 +251,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRange(Range newRange) {
+	public void setRange(ARange newRange) {
 		if (newRange != range) {
 			NotificationChain msgs = null;
 			if (range != null)
@@ -273,7 +273,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getDate() {
+	public ADate getDate() {
 		return date;
 	}
 
@@ -282,8 +282,8 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDate(Date newDate, NotificationChain msgs) {
-		Date oldDate = date;
+	public NotificationChain basicSetDate(ADate newDate, NotificationChain msgs) {
+		ADate oldDate = date;
 		date = newDate;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -301,7 +301,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDate(Date newDate) {
+	public void setDate(ADate newDate) {
 		if (newDate != date) {
 			NotificationChain msgs = null;
 			if (date != null)
@@ -323,7 +323,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Status getStatus() {
+	public AStatus getStatus() {
 		return status;
 	}
 
@@ -332,8 +332,8 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetStatus(Status newStatus, NotificationChain msgs) {
-		Status oldStatus = status;
+	public NotificationChain basicSetStatus(AStatus newStatus, NotificationChain msgs) {
+		AStatus oldStatus = status;
 		status = newStatus;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -351,7 +351,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStatus(Status newStatus) {
+	public void setStatus(AStatus newStatus) {
 		if (newStatus != status) {
 			NotificationChain msgs = null;
 			if (status != null)
@@ -373,7 +373,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ECarePathway getCarePathway() {
+	public ACarePathway getCarePathway() {
 		return carePathway;
 	}
 
@@ -382,8 +382,8 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetCarePathway(ECarePathway newCarePathway, NotificationChain msgs) {
-		ECarePathway oldCarePathway = carePathway;
+	public NotificationChain basicSetCarePathway(ACarePathway newCarePathway, NotificationChain msgs) {
+		ACarePathway oldCarePathway = carePathway;
 		carePathway = newCarePathway;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -401,7 +401,7 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCarePathway(ECarePathway newCarePathway) {
+	public void setCarePathway(ACarePathway newCarePathway) {
 		if (newCarePathway != carePathway) {
 			NotificationChain msgs = null;
 			if (carePathway != null)
@@ -475,22 +475,22 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Query_metamodelPackage.EATTRIBUTE__SEX:
-			setSex((Sex) newValue);
+			setSex((ASex) newValue);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__AGE:
-			setAge((Age) newValue);
+			setAge((AAge) newValue);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__RANGE:
-			setRange((Range) newValue);
+			setRange((ARange) newValue);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__DATE:
-			setDate((Date) newValue);
+			setDate((ADate) newValue);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__STATUS:
-			setStatus((Status) newValue);
+			setStatus((AStatus) newValue);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__CARE_PATHWAY:
-			setCarePathway((ECarePathway) newValue);
+			setCarePathway((ACarePathway) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -505,22 +505,22 @@ public class EAttributeImpl extends MinimalEObjectImpl.Container implements EAtt
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case Query_metamodelPackage.EATTRIBUTE__SEX:
-			setSex((Sex) null);
+			setSex((ASex) null);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__AGE:
-			setAge((Age) null);
+			setAge((AAge) null);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__RANGE:
-			setRange((Range) null);
+			setRange((ARange) null);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__DATE:
-			setDate((Date) null);
+			setDate((ADate) null);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__STATUS:
-			setStatus((Status) null);
+			setStatus((AStatus) null);
 			return;
 		case Query_metamodelPackage.EATTRIBUTE__CARE_PATHWAY:
-			setCarePathway((ECarePathway) null);
+			setCarePathway((ACarePathway) null);
 			return;
 		}
 		super.eUnset(featureID);

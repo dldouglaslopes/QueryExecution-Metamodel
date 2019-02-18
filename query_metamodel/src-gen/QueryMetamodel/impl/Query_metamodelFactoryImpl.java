@@ -59,32 +59,32 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 		switch (eClass.getClassifierID()) {
 		case Query_metamodelPackage.EATTRIBUTE:
 			return createEAttribute();
-		case Query_metamodelPackage.RANGE:
-			return createRange();
+		case Query_metamodelPackage.ARANGE:
+			return createARange();
 		case Query_metamodelPackage.EQUERY:
 			return createEQuery();
-		case Query_metamodelPackage.DATE:
-			return createDate();
-		case Query_metamodelPackage.STATUS:
-			return createStatus();
-		case Query_metamodelPackage.AGE:
-			return createAge();
-		case Query_metamodelPackage.SEX:
-			return createSex();
-		case Query_metamodelPackage.ECARE_PATHWAY:
-			return createECarePathway();
-		case Query_metamodelPackage.ESTATUS:
-			return createEStatus();
-		case Query_metamodelPackage.ECONDUCT:
-			return createEConduct();
-		case Query_metamodelPackage.ERECURRENT_FLOW:
-			return createERecurrentFlow();
-		case Query_metamodelPackage.EAVERAGE_TIME:
-			return createEAverageTime();
-		case Query_metamodelPackage.EMEDICATION:
-			return createEMedication();
-		case Query_metamodelPackage.EOCCURRENCE:
-			return createEOccurrence();
+		case Query_metamodelPackage.ADATE:
+			return createADate();
+		case Query_metamodelPackage.ASTATUS:
+			return createAStatus();
+		case Query_metamodelPackage.AAGE:
+			return createAAge();
+		case Query_metamodelPackage.ASEX:
+			return createASex();
+		case Query_metamodelPackage.ACARE_PATHWAY:
+			return createACarePathway();
+		case Query_metamodelPackage.QSTATUS:
+			return createQStatus();
+		case Query_metamodelPackage.QCONDUCT:
+			return createQConduct();
+		case Query_metamodelPackage.QRECURRENT_FLOW:
+			return createQRecurrentFlow();
+		case Query_metamodelPackage.QAVERAGE_TIME:
+			return createQAverageTime();
+		case Query_metamodelPackage.QMEDICATION:
+			return createQMedication();
+		case Query_metamodelPackage.QOCCURRENCE:
+			return createQOccurrence();
 		case Query_metamodelPackage.FLOW:
 			return createFlow();
 		case Query_metamodelPackage.MEDICATION:
@@ -93,6 +93,14 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createSequence();
 		case Query_metamodelPackage.PATHWAY:
 			return createPathway();
+		case Query_metamodelPackage.STATUS:
+			return createStatus();
+		case Query_metamodelPackage.CONDUCT:
+			return createConduct();
+		case Query_metamodelPackage.AVERAGE_TIME:
+			return createAverageTime();
+		case Query_metamodelPackage.OCCURRENCE:
+			return createOccurrence();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -116,10 +124,10 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createCarePathwayFromString(eDataType, initialValue);
 		case Query_metamodelPackage.ESTEP:
 			return createEStepFromString(eDataType, initialValue);
-		case Query_metamodelPackage.CONDUCT:
-			return createConductFromString(eDataType, initialValue);
-		case Query_metamodelPackage.COMPLEMENTARY_CONDUCT:
-			return createComplementaryConductFromString(eDataType, initialValue);
+		case Query_metamodelPackage.ECONDUCT:
+			return createEConductFromString(eDataType, initialValue);
+		case Query_metamodelPackage.BOOLEAN_CONDUCT:
+			return createBooleanConductFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -143,10 +151,10 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return convertCarePathwayToString(eDataType, instanceValue);
 		case Query_metamodelPackage.ESTEP:
 			return convertEStepToString(eDataType, instanceValue);
-		case Query_metamodelPackage.CONDUCT:
-			return convertConductToString(eDataType, instanceValue);
-		case Query_metamodelPackage.COMPLEMENTARY_CONDUCT:
-			return convertComplementaryConductToString(eDataType, instanceValue);
+		case Query_metamodelPackage.ECONDUCT:
+			return convertEConductToString(eDataType, instanceValue);
+		case Query_metamodelPackage.BOOLEAN_CONDUCT:
+			return convertBooleanConductToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -167,9 +175,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Range createRange() {
-		RangeImpl range = new RangeImpl();
-		return range;
+	public ARange createARange() {
+		ARangeImpl aRange = new ARangeImpl();
+		return aRange;
 	}
 
 	/**
@@ -187,9 +195,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date createDate() {
-		DateImpl date = new DateImpl();
-		return date;
+	public ADate createADate() {
+		ADateImpl aDate = new ADateImpl();
+		return aDate;
 	}
 
 	/**
@@ -197,9 +205,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Status createStatus() {
-		StatusImpl status = new StatusImpl();
-		return status;
+	public AStatus createAStatus() {
+		AStatusImpl aStatus = new AStatusImpl();
+		return aStatus;
 	}
 
 	/**
@@ -207,9 +215,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Age createAge() {
-		AgeImpl age = new AgeImpl();
-		return age;
+	public AAge createAAge() {
+		AAgeImpl aAge = new AAgeImpl();
+		return aAge;
 	}
 
 	/**
@@ -217,9 +225,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Sex createSex() {
-		SexImpl sex = new SexImpl();
-		return sex;
+	public ASex createASex() {
+		ASexImpl aSex = new ASexImpl();
+		return aSex;
 	}
 
 	/**
@@ -227,9 +235,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ECarePathway createECarePathway() {
-		ECarePathwayImpl eCarePathway = new ECarePathwayImpl();
-		return eCarePathway;
+	public ACarePathway createACarePathway() {
+		ACarePathwayImpl aCarePathway = new ACarePathwayImpl();
+		return aCarePathway;
 	}
 
 	/**
@@ -237,9 +245,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EStatus createEStatus() {
-		EStatusImpl eStatus = new EStatusImpl();
-		return eStatus;
+	public QStatus createQStatus() {
+		QStatusImpl qStatus = new QStatusImpl();
+		return qStatus;
 	}
 
 	/**
@@ -247,9 +255,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EConduct createEConduct() {
-		EConductImpl eConduct = new EConductImpl();
-		return eConduct;
+	public QConduct createQConduct() {
+		QConductImpl qConduct = new QConductImpl();
+		return qConduct;
 	}
 
 	/**
@@ -257,9 +265,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ERecurrentFlow createERecurrentFlow() {
-		ERecurrentFlowImpl eRecurrentFlow = new ERecurrentFlowImpl();
-		return eRecurrentFlow;
+	public QRecurrentFlow createQRecurrentFlow() {
+		QRecurrentFlowImpl qRecurrentFlow = new QRecurrentFlowImpl();
+		return qRecurrentFlow;
 	}
 
 	/**
@@ -267,9 +275,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAverageTime createEAverageTime() {
-		EAverageTimeImpl eAverageTime = new EAverageTimeImpl();
-		return eAverageTime;
+	public QAverageTime createQAverageTime() {
+		QAverageTimeImpl qAverageTime = new QAverageTimeImpl();
+		return qAverageTime;
 	}
 
 	/**
@@ -277,9 +285,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EMedication createEMedication() {
-		EMedicationImpl eMedication = new EMedicationImpl();
-		return eMedication;
+	public QMedication createQMedication() {
+		QMedicationImpl qMedication = new QMedicationImpl();
+		return qMedication;
 	}
 
 	/**
@@ -287,9 +295,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOccurrence createEOccurrence() {
-		EOccurrenceImpl eOccurrence = new EOccurrenceImpl();
-		return eOccurrence;
+	public QOccurrence createQOccurrence() {
+		QOccurrenceImpl qOccurrence = new QOccurrenceImpl();
+		return qOccurrence;
 	}
 
 	/**
@@ -330,6 +338,46 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public Pathway createPathway() {
 		PathwayImpl pathway = new PathwayImpl();
 		return pathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Status createStatus() {
+		StatusImpl status = new StatusImpl();
+		return status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Conduct createConduct() {
+		ConductImpl conduct = new ConductImpl();
+		return conduct;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AverageTime createAverageTime() {
+		AverageTimeImpl averageTime = new AverageTimeImpl();
+		return averageTime;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Occurrence createOccurrence() {
+		OccurrenceImpl occurrence = new OccurrenceImpl();
+		return occurrence;
 	}
 
 	/**
@@ -447,8 +495,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Conduct createConductFromString(EDataType eDataType, String initialValue) {
-		Conduct result = Conduct.get(initialValue);
+	public EConduct createEConductFromString(EDataType eDataType, String initialValue) {
+		EConduct result = EConduct.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -460,7 +508,7 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertConductToString(EDataType eDataType, Object instanceValue) {
+	public String convertEConductToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
@@ -469,8 +517,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ComplementaryConduct createComplementaryConductFromString(EDataType eDataType, String initialValue) {
-		ComplementaryConduct result = ComplementaryConduct.get(initialValue);
+	public BooleanConduct createBooleanConductFromString(EDataType eDataType, String initialValue) {
+		BooleanConduct result = BooleanConduct.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -482,7 +530,7 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertComplementaryConductToString(EDataType eDataType, Object instanceValue) {
+	public String convertBooleanConductToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -2,9 +2,9 @@
  */
 package QueryMetamodel.impl;
 
+import QueryMetamodel.ASex;
 import QueryMetamodel.Gender;
 import QueryMetamodel.Query_metamodelPackage;
-import QueryMetamodel.Sex;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -15,18 +15,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Sex</b></em>'.
+ * An implementation of the model object '<em><b>ASex</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.SexImpl#getSex <em>Sex</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.ASexImpl#getSex <em>Sex</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SexImpl extends MinimalEObjectImpl.Container implements Sex {
+public class ASexImpl extends MinimalEObjectImpl.Container implements ASex {
 	/**
 	 * The default value of the '{@link #getSex() <em>Sex</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -52,7 +52,7 @@ public class SexImpl extends MinimalEObjectImpl.Container implements Sex {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SexImpl() {
+	protected ASexImpl() {
 		super();
 	}
 
@@ -63,7 +63,7 @@ public class SexImpl extends MinimalEObjectImpl.Container implements Sex {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.SEX;
+		return Query_metamodelPackage.Literals.ASEX;
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class SexImpl extends MinimalEObjectImpl.Container implements Sex {
 		Gender oldSex = sex;
 		sex = newSex == null ? SEX_EDEFAULT : newSex;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.SEX__SEX, oldSex, sex));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ASEX__SEX, oldSex, sex));
 	}
 
 	/**
@@ -95,7 +95,7 @@ public class SexImpl extends MinimalEObjectImpl.Container implements Sex {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.SEX__SEX:
+		case Query_metamodelPackage.ASEX__SEX:
 			return getSex();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -109,7 +109,7 @@ public class SexImpl extends MinimalEObjectImpl.Container implements Sex {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.SEX__SEX:
+		case Query_metamodelPackage.ASEX__SEX:
 			setSex((Gender) newValue);
 			return;
 		}
@@ -124,7 +124,7 @@ public class SexImpl extends MinimalEObjectImpl.Container implements Sex {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.SEX__SEX:
+		case Query_metamodelPackage.ASEX__SEX:
 			setSex(SEX_EDEFAULT);
 			return;
 		}
@@ -139,7 +139,7 @@ public class SexImpl extends MinimalEObjectImpl.Container implements Sex {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.SEX__SEX:
+		case Query_metamodelPackage.ASEX__SEX:
 			return sex != SEX_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -162,4 +162,4 @@ public class SexImpl extends MinimalEObjectImpl.Container implements Sex {
 		return result.toString();
 	}
 
-} //SexImpl
+} //ASexImpl

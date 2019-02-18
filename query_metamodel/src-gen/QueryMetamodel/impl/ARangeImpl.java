@@ -2,7 +2,8 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.Date;
+import QueryMetamodel.ARange;
+import QueryMetamodel.Order;
 import QueryMetamodel.Query_metamodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -14,65 +15,65 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Date</b></em>'.
+ * An implementation of the model object '<em><b>ARange</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.DateImpl#getFrom <em>From</em>}</li>
- *   <li>{@link QueryMetamodel.impl.DateImpl#getTo <em>To</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.ARangeImpl#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.ARangeImpl#getOrder <em>Order</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DateImpl extends MinimalEObjectImpl.Container implements Date {
+public class ARangeImpl extends MinimalEObjectImpl.Container implements ARange {
 	/**
-	 * The default value of the '{@link #getFrom() <em>From</em>}' attribute.
+	 * The default value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFrom()
+	 * @see #getQuantity()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final java.util.Date FROM_EDEFAULT = null;
+	protected static final int QUANTITY_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getFrom() <em>From</em>}' attribute.
+	 * The cached value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFrom()
+	 * @see #getQuantity()
 	 * @generated
 	 * @ordered
 	 */
-	protected java.util.Date from = FROM_EDEFAULT;
+	protected int quantity = QUANTITY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTo() <em>To</em>}' attribute.
+	 * The default value of the '{@link #getOrder() <em>Order</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTo()
+	 * @see #getOrder()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final java.util.Date TO_EDEFAULT = null;
+	protected static final Order ORDER_EDEFAULT = Order.RANDOM;
 
 	/**
-	 * The cached value of the '{@link #getTo() <em>To</em>}' attribute.
+	 * The cached value of the '{@link #getOrder() <em>Order</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTo()
+	 * @see #getOrder()
 	 * @generated
 	 * @ordered
 	 */
-	protected java.util.Date to = TO_EDEFAULT;
+	protected Order order = ORDER_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DateImpl() {
+	protected ARangeImpl() {
 		super();
 	}
 
@@ -83,7 +84,7 @@ public class DateImpl extends MinimalEObjectImpl.Container implements Date {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.DATE;
+		return Query_metamodelPackage.Literals.ARANGE;
 	}
 
 	/**
@@ -91,8 +92,8 @@ public class DateImpl extends MinimalEObjectImpl.Container implements Date {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public java.util.Date getFrom() {
-		return from;
+	public int getQuantity() {
+		return quantity;
 	}
 
 	/**
@@ -100,11 +101,12 @@ public class DateImpl extends MinimalEObjectImpl.Container implements Date {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFrom(java.util.Date newFrom) {
-		java.util.Date oldFrom = from;
-		from = newFrom;
+	public void setQuantity(int newQuantity) {
+		int oldQuantity = quantity;
+		quantity = newQuantity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.DATE__FROM, oldFrom, from));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ARANGE__QUANTITY, oldQuantity,
+					quantity));
 	}
 
 	/**
@@ -112,8 +114,8 @@ public class DateImpl extends MinimalEObjectImpl.Container implements Date {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public java.util.Date getTo() {
-		return to;
+	public Order getOrder() {
+		return order;
 	}
 
 	/**
@@ -121,11 +123,12 @@ public class DateImpl extends MinimalEObjectImpl.Container implements Date {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTo(java.util.Date newTo) {
-		java.util.Date oldTo = to;
-		to = newTo;
+	public void setOrder(Order newOrder) {
+		Order oldOrder = order;
+		order = newOrder == null ? ORDER_EDEFAULT : newOrder;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.DATE__TO, oldTo, to));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ARANGE__ORDER, oldOrder,
+					order));
 	}
 
 	/**
@@ -136,10 +139,10 @@ public class DateImpl extends MinimalEObjectImpl.Container implements Date {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.DATE__FROM:
-			return getFrom();
-		case Query_metamodelPackage.DATE__TO:
-			return getTo();
+		case Query_metamodelPackage.ARANGE__QUANTITY:
+			return getQuantity();
+		case Query_metamodelPackage.ARANGE__ORDER:
+			return getOrder();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -152,11 +155,11 @@ public class DateImpl extends MinimalEObjectImpl.Container implements Date {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.DATE__FROM:
-			setFrom((java.util.Date) newValue);
+		case Query_metamodelPackage.ARANGE__QUANTITY:
+			setQuantity((Integer) newValue);
 			return;
-		case Query_metamodelPackage.DATE__TO:
-			setTo((java.util.Date) newValue);
+		case Query_metamodelPackage.ARANGE__ORDER:
+			setOrder((Order) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -170,11 +173,11 @@ public class DateImpl extends MinimalEObjectImpl.Container implements Date {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.DATE__FROM:
-			setFrom(FROM_EDEFAULT);
+		case Query_metamodelPackage.ARANGE__QUANTITY:
+			setQuantity(QUANTITY_EDEFAULT);
 			return;
-		case Query_metamodelPackage.DATE__TO:
-			setTo(TO_EDEFAULT);
+		case Query_metamodelPackage.ARANGE__ORDER:
+			setOrder(ORDER_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -188,10 +191,10 @@ public class DateImpl extends MinimalEObjectImpl.Container implements Date {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.DATE__FROM:
-			return FROM_EDEFAULT == null ? from != null : !FROM_EDEFAULT.equals(from);
-		case Query_metamodelPackage.DATE__TO:
-			return TO_EDEFAULT == null ? to != null : !TO_EDEFAULT.equals(to);
+		case Query_metamodelPackage.ARANGE__QUANTITY:
+			return quantity != QUANTITY_EDEFAULT;
+		case Query_metamodelPackage.ARANGE__ORDER:
+			return order != ORDER_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -207,12 +210,12 @@ public class DateImpl extends MinimalEObjectImpl.Container implements Date {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (from: ");
-		result.append(from);
-		result.append(", to: ");
-		result.append(to);
+		result.append(" (quantity: ");
+		result.append(quantity);
+		result.append(", order: ");
+		result.append(order);
 		result.append(')');
 		return result.toString();
 	}
 
-} //DateImpl
+} //ARangeImpl

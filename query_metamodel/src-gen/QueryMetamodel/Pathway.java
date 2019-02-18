@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link QueryMetamodel.Pathway#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.Pathway#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.Pathway#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link QueryMetamodel.Pathway#getPathway <em>Pathway</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getPathway()
@@ -120,5 +121,31 @@ public interface Pathway extends EObject {
 	 * @generated
 	 */
 	void setQuantity(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Pathway</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pathway</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pathway</em>' attribute.
+	 * @see #setPathway(String)
+	 * @see QueryMetamodel.Query_metamodelPackage#getPathway_Pathway()
+	 * @model
+	 * @generated
+	 */
+	String getPathway();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.Pathway#getPathway <em>Pathway</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pathway</em>' attribute.
+	 * @see #getPathway()
+	 * @generated
+	 */
+	void setPathway(String value);
 
 } // Pathway

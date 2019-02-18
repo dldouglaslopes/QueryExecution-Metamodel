@@ -140,14 +140,14 @@ public interface Query_metamodelPackage extends EPackage {
 	int EATTRIBUTE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.RangeImpl <em>Range</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.ARangeImpl <em>ARange</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.RangeImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getRange()
+	 * @see QueryMetamodel.impl.ARangeImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getARange()
 	 * @generated
 	 */
-	int RANGE = 1;
+	int ARANGE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
@@ -156,7 +156,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RANGE__QUANTITY = 0;
+	int ARANGE__QUANTITY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Order</b></em>' attribute.
@@ -165,25 +165,25 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RANGE__ORDER = 1;
+	int ARANGE__ORDER = 1;
 
 	/**
-	 * The number of structural features of the '<em>Range</em>' class.
+	 * The number of structural features of the '<em>ARange</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RANGE_FEATURE_COUNT = 2;
+	int ARANGE_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Range</em>' class.
+	 * The number of operations of the '<em>ARange</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RANGE_OPERATION_COUNT = 0;
+	int ARANGE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.impl.EQueryImpl <em>EQuery</em>}' class.
@@ -232,14 +232,14 @@ public interface Query_metamodelPackage extends EPackage {
 	int EQUERY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.DateImpl <em>Date</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.ADateImpl <em>ADate</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.DateImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getDate()
+	 * @see QueryMetamodel.impl.ADateImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getADate()
 	 * @generated
 	 */
-	int DATE = 3;
+	int ADATE = 3;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' attribute.
@@ -248,7 +248,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE__FROM = 0;
+	int ADATE__FROM = 0;
 
 	/**
 	 * The feature id for the '<em><b>To</b></em>' attribute.
@@ -257,35 +257,35 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATE__TO = 1;
+	int ADATE__TO = 1;
 
 	/**
-	 * The number of structural features of the '<em>Date</em>' class.
+	 * The number of structural features of the '<em>ADate</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_FEATURE_COUNT = 2;
+	int ADATE_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Date</em>' class.
+	 * The number of operations of the '<em>ADate</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_OPERATION_COUNT = 0;
+	int ADATE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.StatusImpl <em>Status</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.AStatusImpl <em>AStatus</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.StatusImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getStatus()
+	 * @see QueryMetamodel.impl.AStatusImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getAStatus()
 	 * @generated
 	 */
-	int STATUS = 4;
+	int ASTATUS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Message</b></em>' attribute.
@@ -294,7 +294,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATUS__MESSAGE = 0;
+	int ASTATUS__MESSAGE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -303,35 +303,35 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATUS__VALUE = 1;
+	int ASTATUS__VALUE = 1;
 
 	/**
-	 * The number of structural features of the '<em>Status</em>' class.
+	 * The number of structural features of the '<em>AStatus</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATUS_FEATURE_COUNT = 2;
+	int ASTATUS_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Status</em>' class.
+	 * The number of operations of the '<em>AStatus</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATUS_OPERATION_COUNT = 0;
+	int ASTATUS_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.AgeImpl <em>Age</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.AAgeImpl <em>AAge</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.AgeImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getAge()
+	 * @see QueryMetamodel.impl.AAgeImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getAAge()
 	 * @generated
 	 */
-	int AGE = 5;
+	int AAGE = 5;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' attribute.
@@ -340,7 +340,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AGE__FROM = 0;
+	int AAGE__FROM = 0;
 
 	/**
 	 * The feature id for the '<em><b>To</b></em>' attribute.
@@ -349,35 +349,35 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int AGE__TO = 1;
+	int AAGE__TO = 1;
 
 	/**
-	 * The number of structural features of the '<em>Age</em>' class.
+	 * The number of structural features of the '<em>AAge</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AGE_FEATURE_COUNT = 2;
+	int AAGE_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>Age</em>' class.
+	 * The number of operations of the '<em>AAge</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AGE_OPERATION_COUNT = 0;
+	int AAGE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.SexImpl <em>Sex</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.ASexImpl <em>ASex</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.SexImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getSex()
+	 * @see QueryMetamodel.impl.ASexImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getASex()
 	 * @generated
 	 */
-	int SEX = 6;
+	int ASEX = 6;
 
 	/**
 	 * The feature id for the '<em><b>Sex</b></em>' attribute.
@@ -386,35 +386,35 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SEX__SEX = 0;
+	int ASEX__SEX = 0;
 
 	/**
-	 * The number of structural features of the '<em>Sex</em>' class.
+	 * The number of structural features of the '<em>ASex</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEX_FEATURE_COUNT = 1;
+	int ASEX_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>Sex</em>' class.
+	 * The number of operations of the '<em>ASex</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEX_OPERATION_COUNT = 0;
+	int ASEX_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.ECarePathwayImpl <em>ECare Pathway</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.ACarePathwayImpl <em>ACare Pathway</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.ECarePathwayImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getECarePathway()
+	 * @see QueryMetamodel.impl.ACarePathwayImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getACarePathway()
 	 * @generated
 	 */
-	int ECARE_PATHWAY = 7;
+	int ACARE_PATHWAY = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -423,7 +423,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECARE_PATHWAY__NAME = 0;
+	int ACARE_PATHWAY__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Conduct</b></em>' attribute.
@@ -432,25 +432,25 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECARE_PATHWAY__CONDUCT = 1;
+	int ACARE_PATHWAY__CONDUCT = 1;
 
 	/**
-	 * The number of structural features of the '<em>ECare Pathway</em>' class.
+	 * The number of structural features of the '<em>ACare Pathway</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECARE_PATHWAY_FEATURE_COUNT = 2;
+	int ACARE_PATHWAY_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>ECare Pathway</em>' class.
+	 * The number of operations of the '<em>ACare Pathway</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECARE_PATHWAY_OPERATION_COUNT = 0;
+	int ACARE_PATHWAY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.impl.EMethodImpl <em>EMethod</em>}' class.
@@ -481,41 +481,14 @@ public interface Query_metamodelPackage extends EPackage {
 	int EMETHOD_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.EStatusImpl <em>EStatus</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.QStatusImpl <em>QStatus</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.EStatusImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEStatus()
+	 * @see QueryMetamodel.impl.QStatusImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQStatus()
 	 * @generated
 	 */
-	int ESTATUS = 8;
-
-	/**
-	 * The feature id for the '<em><b>Aborted</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTATUS__ABORTED = EMETHOD_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Completed</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTATUS__COMPLETED = EMETHOD_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>In Progress</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ESTATUS__IN_PROGRESS = EMETHOD_FEATURE_COUNT + 2;
+	int QSTATUS = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -524,53 +497,53 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ESTATUS__NAME = EMETHOD_FEATURE_COUNT + 3;
+	int QSTATUS__NAME = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>EStatus</em>' class.
+	 * The feature id for the '<em><b>Status</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ESTATUS_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 4;
+	int QSTATUS__STATUS = EMETHOD_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>EStatus</em>' class.
+	 * The number of structural features of the '<em>QStatus</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ESTATUS_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+	int QSTATUS_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.EConductImpl <em>EConduct</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.EConductImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEConduct()
-	 * @generated
-	 */
-	int ECONDUCT = 10;
-
-	/**
-	 * The feature id for the '<em><b>With Conduct</b></em>' attribute.
+	 * The number of operations of the '<em>QStatus</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECONDUCT__WITH_CONDUCT = EMETHOD_FEATURE_COUNT + 0;
+	int QSTATUS_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>No Conduct</b></em>' attribute.
+	 * The meta object id for the '{@link QueryMetamodel.impl.QConductImpl <em>QConduct</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.QConductImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQConduct()
+	 * @generated
+	 */
+	int QCONDUCT = 10;
+
+	/**
+	 * The feature id for the '<em><b>Conduct</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECONDUCT__NO_CONDUCT = EMETHOD_FEATURE_COUNT + 1;
+	int QCONDUCT__CONDUCT = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -579,35 +552,35 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECONDUCT__NAME = EMETHOD_FEATURE_COUNT + 2;
+	int QCONDUCT__NAME = EMETHOD_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>EConduct</em>' class.
+	 * The number of structural features of the '<em>QConduct</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECONDUCT_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 3;
+	int QCONDUCT_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>EConduct</em>' class.
+	 * The number of operations of the '<em>QConduct</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECONDUCT_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+	int QCONDUCT_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.ERecurrentFlowImpl <em>ERecurrent Flow</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.QRecurrentFlowImpl <em>QRecurrent Flow</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.ERecurrentFlowImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getERecurrentFlow()
+	 * @see QueryMetamodel.impl.QRecurrentFlowImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQRecurrentFlow()
 	 * @generated
 	 */
-	int ERECURRENT_FLOW = 11;
+	int QRECURRENT_FLOW = 11;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -616,7 +589,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ERECURRENT_FLOW__NAME = EMETHOD_FEATURE_COUNT + 0;
+	int QRECURRENT_FLOW__NAME = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Flows</b></em>' containment reference list.
@@ -625,44 +598,35 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ERECURRENT_FLOW__FLOWS = EMETHOD_FEATURE_COUNT + 1;
+	int QRECURRENT_FLOW__FLOWS = EMETHOD_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>ERecurrent Flow</em>' class.
+	 * The number of structural features of the '<em>QRecurrent Flow</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ERECURRENT_FLOW_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
+	int QRECURRENT_FLOW_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>ERecurrent Flow</em>' class.
+	 * The number of operations of the '<em>QRecurrent Flow</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ERECURRENT_FLOW_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+	int QRECURRENT_FLOW_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.EAverageTimeImpl <em>EAverage Time</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.QAverageTimeImpl <em>QAverage Time</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.EAverageTimeImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEAverageTime()
+	 * @see QueryMetamodel.impl.QAverageTimeImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQAverageTime()
 	 * @generated
 	 */
-	int EAVERAGE_TIME = 12;
-
-	/**
-	 * The feature id for the '<em><b>Average</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EAVERAGE_TIME__AVERAGE = EMETHOD_FEATURE_COUNT + 0;
+	int QAVERAGE_TIME = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -671,35 +635,44 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EAVERAGE_TIME__NAME = EMETHOD_FEATURE_COUNT + 1;
+	int QAVERAGE_TIME__NAME = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>EAverage Time</em>' class.
+	 * The feature id for the '<em><b>Average Time</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EAVERAGE_TIME_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
+	int QAVERAGE_TIME__AVERAGE_TIME = EMETHOD_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>EAverage Time</em>' class.
+	 * The number of structural features of the '<em>QAverage Time</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EAVERAGE_TIME_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+	int QAVERAGE_TIME_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.EMedicationImpl <em>EMedication</em>}' class.
+	 * The number of operations of the '<em>QAverage Time</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.EMedicationImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEMedication()
+	 * @generated
+	 * @ordered
+	 */
+	int QAVERAGE_TIME_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.QMedicationImpl <em>QMedication</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.QMedicationImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQMedication()
 	 * @generated
 	 */
-	int EMEDICATION = 13;
+	int QMEDICATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -708,7 +681,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMEDICATION__NAME = EMETHOD_FEATURE_COUNT + 0;
+	int QMEDICATION__NAME = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Medications</b></em>' containment reference list.
@@ -717,44 +690,35 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EMEDICATION__MEDICATIONS = EMETHOD_FEATURE_COUNT + 1;
+	int QMEDICATION__MEDICATIONS = EMETHOD_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>EMedication</em>' class.
+	 * The number of structural features of the '<em>QMedication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMEDICATION_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
+	int QMEDICATION_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>EMedication</em>' class.
+	 * The number of operations of the '<em>QMedication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMEDICATION_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+	int QMEDICATION_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.EOccurrenceImpl <em>EOccurrence</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.QOccurrenceImpl <em>QOccurrence</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.EOccurrenceImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEOccurrence()
+	 * @see QueryMetamodel.impl.QOccurrenceImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQOccurrence()
 	 * @generated
 	 */
-	int EOCCURRENCE = 14;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EOCCURRENCE__VALUE = EMETHOD_FEATURE_COUNT + 0;
+	int QOCCURRENCE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -763,25 +727,34 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EOCCURRENCE__NAME = EMETHOD_FEATURE_COUNT + 1;
+	int QOCCURRENCE__NAME = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>EOccurrence</em>' class.
+	 * The feature id for the '<em><b>Occurrence</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EOCCURRENCE_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
+	int QOCCURRENCE__OCCURRENCE = EMETHOD_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>EOccurrence</em>' class.
+	 * The number of structural features of the '<em>QOccurrence</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EOCCURRENCE_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+	int QOCCURRENCE_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>QOccurrence</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QOCCURRENCE_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.impl.FlowImpl <em>Flow</em>}' class.
@@ -931,13 +904,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int SEQUENCE__TYPE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SEQUENCE__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Sequence</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SEQUENCE_FEATURE_COUNT = 2;
+	int SEQUENCE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Sequence</em>' class.
@@ -995,13 +977,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int PATHWAY__QUANTITY = 3;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATHWAY__PATHWAY = 4;
+
+	/**
 	 * The number of structural features of the '<em>Pathway</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATHWAY_FEATURE_COUNT = 4;
+	int PATHWAY_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Pathway</em>' class.
@@ -1013,6 +1004,217 @@ public interface Query_metamodelPackage extends EPackage {
 	int PATHWAY_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.StatusImpl <em>Status</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.StatusImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getStatus()
+	 * @generated
+	 */
+	int STATUS = 19;
+
+	/**
+	 * The feature id for the '<em><b>In Progress</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATUS__IN_PROGRESS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Completed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATUS__COMPLETED = 1;
+
+	/**
+	 * The feature id for the '<em><b>Aborted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATUS__ABORTED = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATUS__NAME = 3;
+
+	/**
+	 * The number of structural features of the '<em>Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATUS_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Status</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATUS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.ConductImpl <em>Conduct</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.ConductImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getConduct()
+	 * @generated
+	 */
+	int CONDUCT = 20;
+
+	/**
+	 * The feature id for the '<em><b>No Conduct</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDUCT__NO_CONDUCT = 0;
+
+	/**
+	 * The feature id for the '<em><b>With Conduct</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDUCT__WITH_CONDUCT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDUCT__NAME = 2;
+
+	/**
+	 * The number of structural features of the '<em>Conduct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDUCT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Conduct</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDUCT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.AverageTimeImpl <em>Average Time</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.AverageTimeImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getAverageTime()
+	 * @generated
+	 */
+	int AVERAGE_TIME = 21;
+
+	/**
+	 * The feature id for the '<em><b>Average</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVERAGE_TIME__AVERAGE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVERAGE_TIME__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Average Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVERAGE_TIME_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Average Time</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AVERAGE_TIME_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.OccurrenceImpl <em>Occurrence</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.OccurrenceImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getOccurrence()
+	 * @generated
+	 */
+	int OCCURRENCE = 22;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCURRENCE__VALUE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCURRENCE__NAME = 1;
+
+	/**
+	 * The number of structural features of the '<em>Occurrence</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCURRENCE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Occurrence</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OCCURRENCE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1020,7 +1222,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 19;
+	int ORDER = 23;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Message <em>Message</em>}' enum.
@@ -1030,7 +1232,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 20;
+	int MESSAGE = 24;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Gender <em>Gender</em>}' enum.
@@ -1040,7 +1242,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getGender()
 	 * @generated
 	 */
-	int GENDER = 21;
+	int GENDER = 25;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}' enum.
@@ -1050,7 +1252,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getCarePathway()
 	 * @generated
 	 */
-	int CARE_PATHWAY = 22;
+	int CARE_PATHWAY = 26;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.EStep <em>EStep</em>}' enum.
@@ -1060,27 +1262,27 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEStep()
 	 * @generated
 	 */
-	int ESTEP = 23;
+	int ESTEP = 27;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.Conduct <em>Conduct</em>}' enum.
+	 * The meta object id for the '{@link QueryMetamodel.EConduct <em>EConduct</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.Conduct
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getConduct()
+	 * @see QueryMetamodel.EConduct
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEConduct()
 	 * @generated
 	 */
-	int CONDUCT = 24;
+	int ECONDUCT = 28;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.ComplementaryConduct <em>Complementary Conduct</em>}' enum.
+	 * The meta object id for the '{@link QueryMetamodel.BooleanConduct <em>Boolean Conduct</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.ComplementaryConduct
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getComplementaryConduct()
+	 * @see QueryMetamodel.BooleanConduct
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getBooleanConduct()
 	 * @generated
 	 */
-	int COMPLEMENTARY_CONDUCT = 25;
+	int BOOLEAN_CONDUCT = 29;
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EAttribute <em>EAttribute</em>}'.
@@ -1159,36 +1361,36 @@ public interface Query_metamodelPackage extends EPackage {
 	EReference getEAttribute_CarePathway();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.Range <em>Range</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.ARange <em>ARange</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Range</em>'.
-	 * @see QueryMetamodel.Range
+	 * @return the meta object for class '<em>ARange</em>'.
+	 * @see QueryMetamodel.ARange
 	 * @generated
 	 */
-	EClass getRange();
+	EClass getARange();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Range#getQuantity <em>Quantity</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ARange#getQuantity <em>Quantity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Quantity</em>'.
-	 * @see QueryMetamodel.Range#getQuantity()
-	 * @see #getRange()
+	 * @see QueryMetamodel.ARange#getQuantity()
+	 * @see #getARange()
 	 * @generated
 	 */
-	EAttribute getRange_Quantity();
+	EAttribute getARange_Quantity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Range#getOrder <em>Order</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ARange#getOrder <em>Order</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Order</em>'.
-	 * @see QueryMetamodel.Range#getOrder()
-	 * @see #getRange()
+	 * @see QueryMetamodel.ARange#getOrder()
+	 * @see #getARange()
 	 * @generated
 	 */
-	EAttribute getRange_Order();
+	EAttribute getARange_Order();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EQuery <em>EQuery</em>}'.
@@ -1223,207 +1425,185 @@ public interface Query_metamodelPackage extends EPackage {
 	EReference getEQuery_EMethod();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.Date <em>Date</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.ADate <em>ADate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Date</em>'.
-	 * @see QueryMetamodel.Date
+	 * @return the meta object for class '<em>ADate</em>'.
+	 * @see QueryMetamodel.ADate
 	 * @generated
 	 */
-	EClass getDate();
+	EClass getADate();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Date#getFrom <em>From</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ADate#getFrom <em>From</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>From</em>'.
-	 * @see QueryMetamodel.Date#getFrom()
-	 * @see #getDate()
+	 * @see QueryMetamodel.ADate#getFrom()
+	 * @see #getADate()
 	 * @generated
 	 */
-	EAttribute getDate_From();
+	EAttribute getADate_From();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Date#getTo <em>To</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ADate#getTo <em>To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>To</em>'.
-	 * @see QueryMetamodel.Date#getTo()
-	 * @see #getDate()
+	 * @see QueryMetamodel.ADate#getTo()
+	 * @see #getADate()
 	 * @generated
 	 */
-	EAttribute getDate_To();
+	EAttribute getADate_To();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.Status <em>Status</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.AStatus <em>AStatus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Status</em>'.
-	 * @see QueryMetamodel.Status
+	 * @return the meta object for class '<em>AStatus</em>'.
+	 * @see QueryMetamodel.AStatus
 	 * @generated
 	 */
-	EClass getStatus();
+	EClass getAStatus();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Status#getMessage <em>Message</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.AStatus#getMessage <em>Message</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Message</em>'.
-	 * @see QueryMetamodel.Status#getMessage()
-	 * @see #getStatus()
+	 * @see QueryMetamodel.AStatus#getMessage()
+	 * @see #getAStatus()
 	 * @generated
 	 */
-	EAttribute getStatus_Message();
+	EAttribute getAStatus_Message();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Status#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.AStatus#isValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see QueryMetamodel.Status#isValue()
-	 * @see #getStatus()
+	 * @see QueryMetamodel.AStatus#isValue()
+	 * @see #getAStatus()
 	 * @generated
 	 */
-	EAttribute getStatus_Value();
+	EAttribute getAStatus_Value();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.Age <em>Age</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.AAge <em>AAge</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Age</em>'.
-	 * @see QueryMetamodel.Age
+	 * @return the meta object for class '<em>AAge</em>'.
+	 * @see QueryMetamodel.AAge
 	 * @generated
 	 */
-	EClass getAge();
+	EClass getAAge();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Age#getFrom <em>From</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.AAge#getFrom <em>From</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>From</em>'.
-	 * @see QueryMetamodel.Age#getFrom()
-	 * @see #getAge()
+	 * @see QueryMetamodel.AAge#getFrom()
+	 * @see #getAAge()
 	 * @generated
 	 */
-	EAttribute getAge_From();
+	EAttribute getAAge_From();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Age#getTo <em>To</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.AAge#getTo <em>To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>To</em>'.
-	 * @see QueryMetamodel.Age#getTo()
-	 * @see #getAge()
+	 * @see QueryMetamodel.AAge#getTo()
+	 * @see #getAAge()
 	 * @generated
 	 */
-	EAttribute getAge_To();
+	EAttribute getAAge_To();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.Sex <em>Sex</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.ASex <em>ASex</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sex</em>'.
-	 * @see QueryMetamodel.Sex
+	 * @return the meta object for class '<em>ASex</em>'.
+	 * @see QueryMetamodel.ASex
 	 * @generated
 	 */
-	EClass getSex();
+	EClass getASex();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Sex#getSex <em>Sex</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ASex#getSex <em>Sex</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Sex</em>'.
-	 * @see QueryMetamodel.Sex#getSex()
-	 * @see #getSex()
+	 * @see QueryMetamodel.ASex#getSex()
+	 * @see #getASex()
 	 * @generated
 	 */
-	EAttribute getSex_Sex();
+	EAttribute getASex_Sex();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.ECarePathway <em>ECare Pathway</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.ACarePathway <em>ACare Pathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>ECare Pathway</em>'.
-	 * @see QueryMetamodel.ECarePathway
+	 * @return the meta object for class '<em>ACare Pathway</em>'.
+	 * @see QueryMetamodel.ACarePathway
 	 * @generated
 	 */
-	EClass getECarePathway();
+	EClass getACarePathway();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.ECarePathway#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ACarePathway#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.ECarePathway#getName()
-	 * @see #getECarePathway()
+	 * @see QueryMetamodel.ACarePathway#getName()
+	 * @see #getACarePathway()
 	 * @generated
 	 */
-	EAttribute getECarePathway_Name();
+	EAttribute getACarePathway_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.ECarePathway#getConduct <em>Conduct</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ACarePathway#getConduct <em>Conduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Conduct</em>'.
-	 * @see QueryMetamodel.ECarePathway#getConduct()
-	 * @see #getECarePathway()
+	 * @see QueryMetamodel.ACarePathway#getConduct()
+	 * @see #getACarePathway()
 	 * @generated
 	 */
-	EAttribute getECarePathway_Conduct();
+	EAttribute getACarePathway_Conduct();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.EStatus <em>EStatus</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.QStatus <em>QStatus</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EStatus</em>'.
-	 * @see QueryMetamodel.EStatus
+	 * @return the meta object for class '<em>QStatus</em>'.
+	 * @see QueryMetamodel.QStatus
 	 * @generated
 	 */
-	EClass getEStatus();
+	EClass getQStatus();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EStatus#getAborted <em>Aborted</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Aborted</em>'.
-	 * @see QueryMetamodel.EStatus#getAborted()
-	 * @see #getEStatus()
-	 * @generated
-	 */
-	EAttribute getEStatus_Aborted();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EStatus#getCompleted <em>Completed</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Completed</em>'.
-	 * @see QueryMetamodel.EStatus#getCompleted()
-	 * @see #getEStatus()
-	 * @generated
-	 */
-	EAttribute getEStatus_Completed();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EStatus#getInProgress <em>In Progress</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>In Progress</em>'.
-	 * @see QueryMetamodel.EStatus#getInProgress()
-	 * @see #getEStatus()
-	 * @generated
-	 */
-	EAttribute getEStatus_InProgress();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EStatus#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.QStatus#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.EStatus#getName()
-	 * @see #getEStatus()
+	 * @see QueryMetamodel.QStatus#getName()
+	 * @see #getQStatus()
 	 * @generated
 	 */
-	EAttribute getEStatus_Name();
+	EAttribute getQStatus_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.QStatus#getStatus <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Status</em>'.
+	 * @see QueryMetamodel.QStatus#getStatus()
+	 * @see #getQStatus()
+	 * @generated
+	 */
+	EReference getQStatus_Status();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EMethod <em>EMethod</em>}'.
@@ -1436,175 +1616,164 @@ public interface Query_metamodelPackage extends EPackage {
 	EClass getEMethod();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.EConduct <em>EConduct</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.QConduct <em>QConduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EConduct</em>'.
-	 * @see QueryMetamodel.EConduct
+	 * @return the meta object for class '<em>QConduct</em>'.
+	 * @see QueryMetamodel.QConduct
 	 * @generated
 	 */
-	EClass getEConduct();
+	EClass getQConduct();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EConduct#getWithConduct <em>With Conduct</em>}'.
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.QConduct#getConduct <em>Conduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>With Conduct</em>'.
-	 * @see QueryMetamodel.EConduct#getWithConduct()
-	 * @see #getEConduct()
+	 * @return the meta object for the containment reference list '<em>Conduct</em>'.
+	 * @see QueryMetamodel.QConduct#getConduct()
+	 * @see #getQConduct()
 	 * @generated
 	 */
-	EAttribute getEConduct_WithConduct();
+	EReference getQConduct_Conduct();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EConduct#getNoConduct <em>No Conduct</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>No Conduct</em>'.
-	 * @see QueryMetamodel.EConduct#getNoConduct()
-	 * @see #getEConduct()
-	 * @generated
-	 */
-	EAttribute getEConduct_NoConduct();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EConduct#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.QConduct#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.EConduct#getName()
-	 * @see #getEConduct()
+	 * @see QueryMetamodel.QConduct#getName()
+	 * @see #getQConduct()
 	 * @generated
 	 */
-	EAttribute getEConduct_Name();
+	EAttribute getQConduct_Name();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.ERecurrentFlow <em>ERecurrent Flow</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.QRecurrentFlow <em>QRecurrent Flow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>ERecurrent Flow</em>'.
-	 * @see QueryMetamodel.ERecurrentFlow
+	 * @return the meta object for class '<em>QRecurrent Flow</em>'.
+	 * @see QueryMetamodel.QRecurrentFlow
 	 * @generated
 	 */
-	EClass getERecurrentFlow();
+	EClass getQRecurrentFlow();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.ERecurrentFlow#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.QRecurrentFlow#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.ERecurrentFlow#getName()
-	 * @see #getERecurrentFlow()
+	 * @see QueryMetamodel.QRecurrentFlow#getName()
+	 * @see #getQRecurrentFlow()
 	 * @generated
 	 */
-	EAttribute getERecurrentFlow_Name();
+	EAttribute getQRecurrentFlow_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.ERecurrentFlow#getFlows <em>Flows</em>}'.
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.QRecurrentFlow#getFlows <em>Flows</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Flows</em>'.
-	 * @see QueryMetamodel.ERecurrentFlow#getFlows()
-	 * @see #getERecurrentFlow()
+	 * @see QueryMetamodel.QRecurrentFlow#getFlows()
+	 * @see #getQRecurrentFlow()
 	 * @generated
 	 */
-	EReference getERecurrentFlow_Flows();
+	EReference getQRecurrentFlow_Flows();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.EAverageTime <em>EAverage Time</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.QAverageTime <em>QAverage Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EAverage Time</em>'.
-	 * @see QueryMetamodel.EAverageTime
+	 * @return the meta object for class '<em>QAverage Time</em>'.
+	 * @see QueryMetamodel.QAverageTime
 	 * @generated
 	 */
-	EClass getEAverageTime();
+	EClass getQAverageTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EAverageTime#getAverage <em>Average</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Average</em>'.
-	 * @see QueryMetamodel.EAverageTime#getAverage()
-	 * @see #getEAverageTime()
-	 * @generated
-	 */
-	EAttribute getEAverageTime_Average();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EAverageTime#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.QAverageTime#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.EAverageTime#getName()
-	 * @see #getEAverageTime()
+	 * @see QueryMetamodel.QAverageTime#getName()
+	 * @see #getQAverageTime()
 	 * @generated
 	 */
-	EAttribute getEAverageTime_Name();
+	EAttribute getQAverageTime_Name();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.EMedication <em>EMedication</em>}'.
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.QAverageTime#getAverageTime <em>Average Time</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EMedication</em>'.
-	 * @see QueryMetamodel.EMedication
+	 * @return the meta object for the containment reference list '<em>Average Time</em>'.
+	 * @see QueryMetamodel.QAverageTime#getAverageTime()
+	 * @see #getQAverageTime()
 	 * @generated
 	 */
-	EClass getEMedication();
+	EReference getQAverageTime_AverageTime();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EMedication#getName <em>Name</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.QMedication <em>QMedication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>QMedication</em>'.
+	 * @see QueryMetamodel.QMedication
+	 * @generated
+	 */
+	EClass getQMedication();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.QMedication#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.EMedication#getName()
-	 * @see #getEMedication()
+	 * @see QueryMetamodel.QMedication#getName()
+	 * @see #getQMedication()
 	 * @generated
 	 */
-	EAttribute getEMedication_Name();
+	EAttribute getQMedication_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.EMedication#getMedications <em>Medications</em>}'.
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.QMedication#getMedications <em>Medications</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Medications</em>'.
-	 * @see QueryMetamodel.EMedication#getMedications()
-	 * @see #getEMedication()
+	 * @see QueryMetamodel.QMedication#getMedications()
+	 * @see #getQMedication()
 	 * @generated
 	 */
-	EReference getEMedication_Medications();
+	EReference getQMedication_Medications();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.EOccurrence <em>EOccurrence</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.QOccurrence <em>QOccurrence</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>EOccurrence</em>'.
-	 * @see QueryMetamodel.EOccurrence
+	 * @return the meta object for class '<em>QOccurrence</em>'.
+	 * @see QueryMetamodel.QOccurrence
 	 * @generated
 	 */
-	EClass getEOccurrence();
+	EClass getQOccurrence();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EOccurrence#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see QueryMetamodel.EOccurrence#getValue()
-	 * @see #getEOccurrence()
-	 * @generated
-	 */
-	EAttribute getEOccurrence_Value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.EOccurrence#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.QOccurrence#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.EOccurrence#getName()
-	 * @see #getEOccurrence()
+	 * @see QueryMetamodel.QOccurrence#getName()
+	 * @see #getQOccurrence()
 	 * @generated
 	 */
-	EAttribute getEOccurrence_Name();
+	EAttribute getQOccurrence_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.QOccurrence#getOccurrence <em>Occurrence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Occurrence</em>'.
+	 * @see QueryMetamodel.QOccurrence#getOccurrence()
+	 * @see #getQOccurrence()
+	 * @generated
+	 */
+	EReference getQOccurrence_Occurrence();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Flow <em>Flow</em>}'.
@@ -1736,6 +1905,17 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getSequence_Type();
 
 	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Sequence#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.Sequence#getName()
+	 * @see #getSequence()
+	 * @generated
+	 */
+	EAttribute getSequence_Name();
+
+	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Pathway <em>Pathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1790,6 +1970,178 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getPathway_Quantity();
 
 	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Pathway#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pathway</em>'.
+	 * @see QueryMetamodel.Pathway#getPathway()
+	 * @see #getPathway()
+	 * @generated
+	 */
+	EAttribute getPathway_Pathway();
+
+	/**
+	 * Returns the meta object for class '{@link QueryMetamodel.Status <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Status</em>'.
+	 * @see QueryMetamodel.Status
+	 * @generated
+	 */
+	EClass getStatus();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Status#getInProgress <em>In Progress</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>In Progress</em>'.
+	 * @see QueryMetamodel.Status#getInProgress()
+	 * @see #getStatus()
+	 * @generated
+	 */
+	EAttribute getStatus_InProgress();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Status#getCompleted <em>Completed</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Completed</em>'.
+	 * @see QueryMetamodel.Status#getCompleted()
+	 * @see #getStatus()
+	 * @generated
+	 */
+	EAttribute getStatus_Completed();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Status#getAborted <em>Aborted</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Aborted</em>'.
+	 * @see QueryMetamodel.Status#getAborted()
+	 * @see #getStatus()
+	 * @generated
+	 */
+	EAttribute getStatus_Aborted();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Status#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.Status#getName()
+	 * @see #getStatus()
+	 * @generated
+	 */
+	EAttribute getStatus_Name();
+
+	/**
+	 * Returns the meta object for class '{@link QueryMetamodel.Conduct <em>Conduct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Conduct</em>'.
+	 * @see QueryMetamodel.Conduct
+	 * @generated
+	 */
+	EClass getConduct();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Conduct#getNoConduct <em>No Conduct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>No Conduct</em>'.
+	 * @see QueryMetamodel.Conduct#getNoConduct()
+	 * @see #getConduct()
+	 * @generated
+	 */
+	EAttribute getConduct_NoConduct();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Conduct#getWithConduct <em>With Conduct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>With Conduct</em>'.
+	 * @see QueryMetamodel.Conduct#getWithConduct()
+	 * @see #getConduct()
+	 * @generated
+	 */
+	EAttribute getConduct_WithConduct();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Conduct#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.Conduct#getName()
+	 * @see #getConduct()
+	 * @generated
+	 */
+	EAttribute getConduct_Name();
+
+	/**
+	 * Returns the meta object for class '{@link QueryMetamodel.AverageTime <em>Average Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Average Time</em>'.
+	 * @see QueryMetamodel.AverageTime
+	 * @generated
+	 */
+	EClass getAverageTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.AverageTime#getAverage <em>Average</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Average</em>'.
+	 * @see QueryMetamodel.AverageTime#getAverage()
+	 * @see #getAverageTime()
+	 * @generated
+	 */
+	EAttribute getAverageTime_Average();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.AverageTime#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.AverageTime#getName()
+	 * @see #getAverageTime()
+	 * @generated
+	 */
+	EAttribute getAverageTime_Name();
+
+	/**
+	 * Returns the meta object for class '{@link QueryMetamodel.Occurrence <em>Occurrence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Occurrence</em>'.
+	 * @see QueryMetamodel.Occurrence
+	 * @generated
+	 */
+	EClass getOccurrence();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Occurrence#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see QueryMetamodel.Occurrence#getValue()
+	 * @see #getOccurrence()
+	 * @generated
+	 */
+	EAttribute getOccurrence_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Occurrence#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.Occurrence#getName()
+	 * @see #getOccurrence()
+	 * @generated
+	 */
+	EAttribute getOccurrence_Name();
+
+	/**
 	 * Returns the meta object for enum '{@link QueryMetamodel.Order <em>Order</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1840,24 +2192,24 @@ public interface Query_metamodelPackage extends EPackage {
 	EEnum getEStep();
 
 	/**
-	 * Returns the meta object for enum '{@link QueryMetamodel.Conduct <em>Conduct</em>}'.
+	 * Returns the meta object for enum '{@link QueryMetamodel.EConduct <em>EConduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Conduct</em>'.
-	 * @see QueryMetamodel.Conduct
+	 * @return the meta object for enum '<em>EConduct</em>'.
+	 * @see QueryMetamodel.EConduct
 	 * @generated
 	 */
-	EEnum getConduct();
+	EEnum getEConduct();
 
 	/**
-	 * Returns the meta object for enum '{@link QueryMetamodel.ComplementaryConduct <em>Complementary Conduct</em>}'.
+	 * Returns the meta object for enum '{@link QueryMetamodel.BooleanConduct <em>Boolean Conduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Complementary Conduct</em>'.
-	 * @see QueryMetamodel.ComplementaryConduct
+	 * @return the meta object for enum '<em>Boolean Conduct</em>'.
+	 * @see QueryMetamodel.BooleanConduct
 	 * @generated
 	 */
-	EEnum getComplementaryConduct();
+	EEnum getBooleanConduct();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1941,14 +2293,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EReference EATTRIBUTE__CARE_PATHWAY = eINSTANCE.getEAttribute_CarePathway();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.RangeImpl <em>Range</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.ARangeImpl <em>ARange</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.RangeImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getRange()
+		 * @see QueryMetamodel.impl.ARangeImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getARange()
 		 * @generated
 		 */
-		EClass RANGE = eINSTANCE.getRange();
+		EClass ARANGE = eINSTANCE.getARange();
 
 		/**
 		 * The meta object literal for the '<em><b>Quantity</b></em>' attribute feature.
@@ -1956,7 +2308,7 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RANGE__QUANTITY = eINSTANCE.getRange_Quantity();
+		EAttribute ARANGE__QUANTITY = eINSTANCE.getARange_Quantity();
 
 		/**
 		 * The meta object literal for the '<em><b>Order</b></em>' attribute feature.
@@ -1964,7 +2316,7 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RANGE__ORDER = eINSTANCE.getRange_Order();
+		EAttribute ARANGE__ORDER = eINSTANCE.getARange_Order();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.EQueryImpl <em>EQuery</em>}' class.
@@ -1993,14 +2345,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EReference EQUERY__EMETHOD = eINSTANCE.getEQuery_EMethod();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.DateImpl <em>Date</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.ADateImpl <em>ADate</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.DateImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getDate()
+		 * @see QueryMetamodel.impl.ADateImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getADate()
 		 * @generated
 		 */
-		EClass DATE = eINSTANCE.getDate();
+		EClass ADATE = eINSTANCE.getADate();
 
 		/**
 		 * The meta object literal for the '<em><b>From</b></em>' attribute feature.
@@ -2008,7 +2360,7 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATE__FROM = eINSTANCE.getDate_From();
+		EAttribute ADATE__FROM = eINSTANCE.getADate_From();
 
 		/**
 		 * The meta object literal for the '<em><b>To</b></em>' attribute feature.
@@ -2016,17 +2368,17 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATE__TO = eINSTANCE.getDate_To();
+		EAttribute ADATE__TO = eINSTANCE.getADate_To();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.StatusImpl <em>Status</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.AStatusImpl <em>AStatus</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.StatusImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getStatus()
+		 * @see QueryMetamodel.impl.AStatusImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getAStatus()
 		 * @generated
 		 */
-		EClass STATUS = eINSTANCE.getStatus();
+		EClass ASTATUS = eINSTANCE.getAStatus();
 
 		/**
 		 * The meta object literal for the '<em><b>Message</b></em>' attribute feature.
@@ -2034,7 +2386,7 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STATUS__MESSAGE = eINSTANCE.getStatus_Message();
+		EAttribute ASTATUS__MESSAGE = eINSTANCE.getAStatus_Message();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -2042,17 +2394,17 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STATUS__VALUE = eINSTANCE.getStatus_Value();
+		EAttribute ASTATUS__VALUE = eINSTANCE.getAStatus_Value();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.AgeImpl <em>Age</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.AAgeImpl <em>AAge</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.AgeImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getAge()
+		 * @see QueryMetamodel.impl.AAgeImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getAAge()
 		 * @generated
 		 */
-		EClass AGE = eINSTANCE.getAge();
+		EClass AAGE = eINSTANCE.getAAge();
 
 		/**
 		 * The meta object literal for the '<em><b>From</b></em>' attribute feature.
@@ -2060,7 +2412,7 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AGE__FROM = eINSTANCE.getAge_From();
+		EAttribute AAGE__FROM = eINSTANCE.getAAge_From();
 
 		/**
 		 * The meta object literal for the '<em><b>To</b></em>' attribute feature.
@@ -2068,17 +2420,17 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute AGE__TO = eINSTANCE.getAge_To();
+		EAttribute AAGE__TO = eINSTANCE.getAAge_To();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.SexImpl <em>Sex</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.ASexImpl <em>ASex</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.SexImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getSex()
+		 * @see QueryMetamodel.impl.ASexImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getASex()
 		 * @generated
 		 */
-		EClass SEX = eINSTANCE.getSex();
+		EClass ASEX = eINSTANCE.getASex();
 
 		/**
 		 * The meta object literal for the '<em><b>Sex</b></em>' attribute feature.
@@ -2086,17 +2438,17 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEX__SEX = eINSTANCE.getSex_Sex();
+		EAttribute ASEX__SEX = eINSTANCE.getASex_Sex();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.ECarePathwayImpl <em>ECare Pathway</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.ACarePathwayImpl <em>ACare Pathway</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.ECarePathwayImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getECarePathway()
+		 * @see QueryMetamodel.impl.ACarePathwayImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getACarePathway()
 		 * @generated
 		 */
-		EClass ECARE_PATHWAY = eINSTANCE.getECarePathway();
+		EClass ACARE_PATHWAY = eINSTANCE.getACarePathway();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2104,7 +2456,7 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ECARE_PATHWAY__NAME = eINSTANCE.getECarePathway_Name();
+		EAttribute ACARE_PATHWAY__NAME = eINSTANCE.getACarePathway_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Conduct</b></em>' attribute feature.
@@ -2112,41 +2464,17 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ECARE_PATHWAY__CONDUCT = eINSTANCE.getECarePathway_Conduct();
+		EAttribute ACARE_PATHWAY__CONDUCT = eINSTANCE.getACarePathway_Conduct();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.EStatusImpl <em>EStatus</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.QStatusImpl <em>QStatus</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.EStatusImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEStatus()
+		 * @see QueryMetamodel.impl.QStatusImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQStatus()
 		 * @generated
 		 */
-		EClass ESTATUS = eINSTANCE.getEStatus();
-
-		/**
-		 * The meta object literal for the '<em><b>Aborted</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTATUS__ABORTED = eINSTANCE.getEStatus_Aborted();
-
-		/**
-		 * The meta object literal for the '<em><b>Completed</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTATUS__COMPLETED = eINSTANCE.getEStatus_Completed();
-
-		/**
-		 * The meta object literal for the '<em><b>In Progress</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ESTATUS__IN_PROGRESS = eINSTANCE.getEStatus_InProgress();
+		EClass QSTATUS = eINSTANCE.getQStatus();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2154,7 +2482,15 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ESTATUS__NAME = eINSTANCE.getEStatus_Name();
+		EAttribute QSTATUS__NAME = eINSTANCE.getQStatus_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Status</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QSTATUS__STATUS = eINSTANCE.getQStatus_Status();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.EMethodImpl <em>EMethod</em>}' class.
@@ -2167,30 +2503,22 @@ public interface Query_metamodelPackage extends EPackage {
 		EClass EMETHOD = eINSTANCE.getEMethod();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.EConductImpl <em>EConduct</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.QConductImpl <em>QConduct</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.EConductImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEConduct()
+		 * @see QueryMetamodel.impl.QConductImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQConduct()
 		 * @generated
 		 */
-		EClass ECONDUCT = eINSTANCE.getEConduct();
+		EClass QCONDUCT = eINSTANCE.getQConduct();
 
 		/**
-		 * The meta object literal for the '<em><b>With Conduct</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Conduct</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ECONDUCT__WITH_CONDUCT = eINSTANCE.getEConduct_WithConduct();
-
-		/**
-		 * The meta object literal for the '<em><b>No Conduct</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ECONDUCT__NO_CONDUCT = eINSTANCE.getEConduct_NoConduct();
+		EReference QCONDUCT__CONDUCT = eINSTANCE.getQConduct_Conduct();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2198,17 +2526,17 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ECONDUCT__NAME = eINSTANCE.getEConduct_Name();
+		EAttribute QCONDUCT__NAME = eINSTANCE.getQConduct_Name();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.ERecurrentFlowImpl <em>ERecurrent Flow</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.QRecurrentFlowImpl <em>QRecurrent Flow</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.ERecurrentFlowImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getERecurrentFlow()
+		 * @see QueryMetamodel.impl.QRecurrentFlowImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQRecurrentFlow()
 		 * @generated
 		 */
-		EClass ERECURRENT_FLOW = eINSTANCE.getERecurrentFlow();
+		EClass QRECURRENT_FLOW = eINSTANCE.getQRecurrentFlow();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2216,7 +2544,7 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ERECURRENT_FLOW__NAME = eINSTANCE.getERecurrentFlow_Name();
+		EAttribute QRECURRENT_FLOW__NAME = eINSTANCE.getQRecurrentFlow_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Flows</b></em>' containment reference list feature.
@@ -2224,25 +2552,17 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ERECURRENT_FLOW__FLOWS = eINSTANCE.getERecurrentFlow_Flows();
+		EReference QRECURRENT_FLOW__FLOWS = eINSTANCE.getQRecurrentFlow_Flows();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.EAverageTimeImpl <em>EAverage Time</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.QAverageTimeImpl <em>QAverage Time</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.EAverageTimeImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEAverageTime()
+		 * @see QueryMetamodel.impl.QAverageTimeImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQAverageTime()
 		 * @generated
 		 */
-		EClass EAVERAGE_TIME = eINSTANCE.getEAverageTime();
-
-		/**
-		 * The meta object literal for the '<em><b>Average</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EAVERAGE_TIME__AVERAGE = eINSTANCE.getEAverageTime_Average();
+		EClass QAVERAGE_TIME = eINSTANCE.getQAverageTime();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2250,17 +2570,25 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EAVERAGE_TIME__NAME = eINSTANCE.getEAverageTime_Name();
+		EAttribute QAVERAGE_TIME__NAME = eINSTANCE.getQAverageTime_Name();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.EMedicationImpl <em>EMedication</em>}' class.
+		 * The meta object literal for the '<em><b>Average Time</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.EMedicationImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEMedication()
 		 * @generated
 		 */
-		EClass EMEDICATION = eINSTANCE.getEMedication();
+		EReference QAVERAGE_TIME__AVERAGE_TIME = eINSTANCE.getQAverageTime_AverageTime();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.impl.QMedicationImpl <em>QMedication</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.QMedicationImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQMedication()
+		 * @generated
+		 */
+		EClass QMEDICATION = eINSTANCE.getQMedication();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2268,7 +2596,7 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EMEDICATION__NAME = eINSTANCE.getEMedication_Name();
+		EAttribute QMEDICATION__NAME = eINSTANCE.getQMedication_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Medications</b></em>' containment reference list feature.
@@ -2276,25 +2604,17 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EMEDICATION__MEDICATIONS = eINSTANCE.getEMedication_Medications();
+		EReference QMEDICATION__MEDICATIONS = eINSTANCE.getQMedication_Medications();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.EOccurrenceImpl <em>EOccurrence</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.QOccurrenceImpl <em>QOccurrence</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.EOccurrenceImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEOccurrence()
+		 * @see QueryMetamodel.impl.QOccurrenceImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQOccurrence()
 		 * @generated
 		 */
-		EClass EOCCURRENCE = eINSTANCE.getEOccurrence();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EOCCURRENCE__VALUE = eINSTANCE.getEOccurrence_Value();
+		EClass QOCCURRENCE = eINSTANCE.getQOccurrence();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2302,7 +2622,15 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EOCCURRENCE__NAME = eINSTANCE.getEOccurrence_Name();
+		EAttribute QOCCURRENCE__NAME = eINSTANCE.getQOccurrence_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Occurrence</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QOCCURRENCE__OCCURRENCE = eINSTANCE.getQOccurrence_Occurrence();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.FlowImpl <em>Flow</em>}' class.
@@ -2407,6 +2735,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute SEQUENCE__TYPE = eINSTANCE.getSequence_Type();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SEQUENCE__NAME = eINSTANCE.getSequence_Name();
+
+		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.PathwayImpl <em>Pathway</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2447,6 +2783,142 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PATHWAY__QUANTITY = eINSTANCE.getPathway_Quantity();
+
+		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PATHWAY__PATHWAY = eINSTANCE.getPathway_Pathway();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.impl.StatusImpl <em>Status</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.StatusImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getStatus()
+		 * @generated
+		 */
+		EClass STATUS = eINSTANCE.getStatus();
+
+		/**
+		 * The meta object literal for the '<em><b>In Progress</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATUS__IN_PROGRESS = eINSTANCE.getStatus_InProgress();
+
+		/**
+		 * The meta object literal for the '<em><b>Completed</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATUS__COMPLETED = eINSTANCE.getStatus_Completed();
+
+		/**
+		 * The meta object literal for the '<em><b>Aborted</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATUS__ABORTED = eINSTANCE.getStatus_Aborted();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATUS__NAME = eINSTANCE.getStatus_Name();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.impl.ConductImpl <em>Conduct</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.ConductImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getConduct()
+		 * @generated
+		 */
+		EClass CONDUCT = eINSTANCE.getConduct();
+
+		/**
+		 * The meta object literal for the '<em><b>No Conduct</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONDUCT__NO_CONDUCT = eINSTANCE.getConduct_NoConduct();
+
+		/**
+		 * The meta object literal for the '<em><b>With Conduct</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONDUCT__WITH_CONDUCT = eINSTANCE.getConduct_WithConduct();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONDUCT__NAME = eINSTANCE.getConduct_Name();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.impl.AverageTimeImpl <em>Average Time</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.AverageTimeImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getAverageTime()
+		 * @generated
+		 */
+		EClass AVERAGE_TIME = eINSTANCE.getAverageTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Average</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AVERAGE_TIME__AVERAGE = eINSTANCE.getAverageTime_Average();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AVERAGE_TIME__NAME = eINSTANCE.getAverageTime_Name();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.impl.OccurrenceImpl <em>Occurrence</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.OccurrenceImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getOccurrence()
+		 * @generated
+		 */
+		EClass OCCURRENCE = eINSTANCE.getOccurrence();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OCCURRENCE__VALUE = eINSTANCE.getOccurrence_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute OCCURRENCE__NAME = eINSTANCE.getOccurrence_Name();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.
@@ -2499,24 +2971,24 @@ public interface Query_metamodelPackage extends EPackage {
 		EEnum ESTEP = eINSTANCE.getEStep();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.Conduct <em>Conduct</em>}' enum.
+		 * The meta object literal for the '{@link QueryMetamodel.EConduct <em>EConduct</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.Conduct
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getConduct()
+		 * @see QueryMetamodel.EConduct
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEConduct()
 		 * @generated
 		 */
-		EEnum CONDUCT = eINSTANCE.getConduct();
+		EEnum ECONDUCT = eINSTANCE.getEConduct();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.ComplementaryConduct <em>Complementary Conduct</em>}' enum.
+		 * The meta object literal for the '{@link QueryMetamodel.BooleanConduct <em>Boolean Conduct</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.ComplementaryConduct
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getComplementaryConduct()
+		 * @see QueryMetamodel.BooleanConduct
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getBooleanConduct()
 		 * @generated
 		 */
-		EEnum COMPLEMENTARY_CONDUCT = eINSTANCE.getComplementaryConduct();
+		EEnum BOOLEAN_CONDUCT = eINSTANCE.getBooleanConduct();
 
 	}
 

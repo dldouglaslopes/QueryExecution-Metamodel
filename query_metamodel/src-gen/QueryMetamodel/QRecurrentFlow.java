@@ -6,22 +6,22 @@ import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>ERecurrent Flow</b></em>'.
+ * A representation of the model object '<em><b>QRecurrent Flow</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.ERecurrentFlow#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.ERecurrentFlow#getFlows <em>Flows</em>}</li>
+ *   <li>{@link QueryMetamodel.QRecurrentFlow#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.QRecurrentFlow#getFlows <em>Flows</em>}</li>
  * </ul>
  *
- * @see QueryMetamodel.Query_metamodelPackage#getERecurrentFlow()
+ * @see QueryMetamodel.Query_metamodelPackage#getQRecurrentFlow()
  * @model
  * @generated
  */
-public interface ERecurrentFlow extends EMethod {
+public interface QRecurrentFlow extends EMethod {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * The default value is <code>"RecurrentFlow"</code>.
@@ -33,14 +33,14 @@ public interface ERecurrentFlow extends EMethod {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see QueryMetamodel.Query_metamodelPackage#getERecurrentFlow_Name()
+	 * @see QueryMetamodel.Query_metamodelPackage#getQRecurrentFlow_Name()
 	 * @model default="RecurrentFlow"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.ERecurrentFlow#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link QueryMetamodel.QRecurrentFlow#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -59,10 +59,10 @@ public interface ERecurrentFlow extends EMethod {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Flows</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getERecurrentFlow_Flows()
+	 * @see QueryMetamodel.Query_metamodelPackage#getQRecurrentFlow_Flows()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Flow> getFlows();
 
-} // ERecurrentFlow
+} // QRecurrentFlow

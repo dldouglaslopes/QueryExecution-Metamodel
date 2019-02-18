@@ -2,7 +2,7 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.EAverageTime;
+import QueryMetamodel.AverageTime;
 import QueryMetamodel.Query_metamodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -10,22 +10,23 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>EAverage Time</b></em>'.
+ * An implementation of the model object '<em><b>Average Time</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.EAverageTimeImpl#getAverage <em>Average</em>}</li>
- *   <li>{@link QueryMetamodel.impl.EAverageTimeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.AverageTimeImpl#getAverage <em>Average</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.AverageTimeImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
+public class AverageTimeImpl extends MinimalEObjectImpl.Container implements AverageTime {
 	/**
 	 * The default value of the '{@link #getAverage() <em>Average</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -54,7 +55,7 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "AverageTime";
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -71,7 +72,7 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EAverageTimeImpl() {
+	protected AverageTimeImpl() {
 		super();
 	}
 
@@ -82,7 +83,7 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.EAVERAGE_TIME;
+		return Query_metamodelPackage.Literals.AVERAGE_TIME;
 	}
 
 	/**
@@ -103,7 +104,7 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 		double oldAverage = average;
 		average = newAverage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EAVERAGE_TIME__AVERAGE,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.AVERAGE_TIME__AVERAGE,
 					oldAverage, average));
 	}
 
@@ -125,7 +126,7 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EAVERAGE_TIME__NAME, oldName,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.AVERAGE_TIME__NAME, oldName,
 					name));
 	}
 
@@ -137,9 +138,9 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
+		case Query_metamodelPackage.AVERAGE_TIME__AVERAGE:
 			return getAverage();
-		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
+		case Query_metamodelPackage.AVERAGE_TIME__NAME:
 			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -153,10 +154,10 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
+		case Query_metamodelPackage.AVERAGE_TIME__AVERAGE:
 			setAverage((Double) newValue);
 			return;
-		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
+		case Query_metamodelPackage.AVERAGE_TIME__NAME:
 			setName((String) newValue);
 			return;
 		}
@@ -171,10 +172,10 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
+		case Query_metamodelPackage.AVERAGE_TIME__AVERAGE:
 			setAverage(AVERAGE_EDEFAULT);
 			return;
-		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
+		case Query_metamodelPackage.AVERAGE_TIME__NAME:
 			setName(NAME_EDEFAULT);
 			return;
 		}
@@ -189,9 +190,9 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.EAVERAGE_TIME__AVERAGE:
+		case Query_metamodelPackage.AVERAGE_TIME__AVERAGE:
 			return average != AVERAGE_EDEFAULT;
-		case Query_metamodelPackage.EAVERAGE_TIME__NAME:
+		case Query_metamodelPackage.AVERAGE_TIME__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
@@ -216,4 +217,4 @@ public class EAverageTimeImpl extends EMethodImpl implements EAverageTime {
 		return result.toString();
 	}
 
-} //EAverageTimeImpl
+} //AverageTimeImpl

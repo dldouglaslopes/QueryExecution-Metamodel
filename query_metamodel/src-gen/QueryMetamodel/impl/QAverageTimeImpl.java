@@ -2,8 +2,8 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.EMedication;
-import QueryMetamodel.Medication;
+import QueryMetamodel.AverageTime;
+import QueryMetamodel.QAverageTime;
 import QueryMetamodel.Query_metamodelPackage;
 
 import java.util.Collection;
@@ -23,19 +23,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>EMedication</b></em>'.
+ * An implementation of the model object '<em><b>QAverage Time</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.EMedicationImpl#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.impl.EMedicationImpl#getMedications <em>Medications</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QAverageTimeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QAverageTimeImpl#getAverageTime <em>Average Time</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EMedicationImpl extends EMethodImpl implements EMedication {
+public class QAverageTimeImpl extends EMethodImpl implements QAverageTime {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public class EMedicationImpl extends EMethodImpl implements EMedication {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "PrescribedMedications";
+	protected static final String NAME_EDEFAULT = "AverageTime";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -57,21 +57,21 @@ public class EMedicationImpl extends EMethodImpl implements EMedication {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getMedications() <em>Medications</em>}' containment reference list.
+	 * The cached value of the '{@link #getAverageTime() <em>Average Time</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMedications()
+	 * @see #getAverageTime()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Medication> medications;
+	protected EList<AverageTime> averageTime;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EMedicationImpl() {
+	protected QAverageTimeImpl() {
 		super();
 	}
 
@@ -82,7 +82,7 @@ public class EMedicationImpl extends EMethodImpl implements EMedication {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.EMEDICATION;
+		return Query_metamodelPackage.Literals.QAVERAGE_TIME;
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class EMedicationImpl extends EMethodImpl implements EMedication {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EMEDICATION__NAME, oldName,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QAVERAGE_TIME__NAME, oldName,
 					name));
 	}
 
@@ -112,12 +112,12 @@ public class EMedicationImpl extends EMethodImpl implements EMedication {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Medication> getMedications() {
-		if (medications == null) {
-			medications = new EObjectContainmentEList<Medication>(Medication.class, this,
-					Query_metamodelPackage.EMEDICATION__MEDICATIONS);
+	public EList<AverageTime> getAverageTime() {
+		if (averageTime == null) {
+			averageTime = new EObjectContainmentEList<AverageTime>(AverageTime.class, this,
+					Query_metamodelPackage.QAVERAGE_TIME__AVERAGE_TIME);
 		}
-		return medications;
+		return averageTime;
 	}
 
 	/**
@@ -128,8 +128,8 @@ public class EMedicationImpl extends EMethodImpl implements EMedication {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.EMEDICATION__MEDICATIONS:
-			return ((InternalEList<?>) getMedications()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.QAVERAGE_TIME__AVERAGE_TIME:
+			return ((InternalEList<?>) getAverageTime()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -142,10 +142,10 @@ public class EMedicationImpl extends EMethodImpl implements EMedication {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.EMEDICATION__NAME:
+		case Query_metamodelPackage.QAVERAGE_TIME__NAME:
 			return getName();
-		case Query_metamodelPackage.EMEDICATION__MEDICATIONS:
-			return getMedications();
+		case Query_metamodelPackage.QAVERAGE_TIME__AVERAGE_TIME:
+			return getAverageTime();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,12 +159,12 @@ public class EMedicationImpl extends EMethodImpl implements EMedication {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.EMEDICATION__NAME:
+		case Query_metamodelPackage.QAVERAGE_TIME__NAME:
 			setName((String) newValue);
 			return;
-		case Query_metamodelPackage.EMEDICATION__MEDICATIONS:
-			getMedications().clear();
-			getMedications().addAll((Collection<? extends Medication>) newValue);
+		case Query_metamodelPackage.QAVERAGE_TIME__AVERAGE_TIME:
+			getAverageTime().clear();
+			getAverageTime().addAll((Collection<? extends AverageTime>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -178,11 +178,11 @@ public class EMedicationImpl extends EMethodImpl implements EMedication {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.EMEDICATION__NAME:
+		case Query_metamodelPackage.QAVERAGE_TIME__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Query_metamodelPackage.EMEDICATION__MEDICATIONS:
-			getMedications().clear();
+		case Query_metamodelPackage.QAVERAGE_TIME__AVERAGE_TIME:
+			getAverageTime().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -196,10 +196,10 @@ public class EMedicationImpl extends EMethodImpl implements EMedication {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.EMEDICATION__NAME:
+		case Query_metamodelPackage.QAVERAGE_TIME__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Query_metamodelPackage.EMEDICATION__MEDICATIONS:
-			return medications != null && !medications.isEmpty();
+		case Query_metamodelPackage.QAVERAGE_TIME__AVERAGE_TIME:
+			return averageTime != null && !averageTime.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -221,4 +221,4 @@ public class EMedicationImpl extends EMethodImpl implements EMedication {
 		return result.toString();
 	}
 
-} //EMedicationImpl
+} //QAverageTimeImpl

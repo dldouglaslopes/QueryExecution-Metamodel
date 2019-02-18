@@ -2,9 +2,9 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.Order;
+import QueryMetamodel.AStatus;
+import QueryMetamodel.Message;
 import QueryMetamodel.Query_metamodelPackage;
-import QueryMetamodel.Range;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -15,65 +15,65 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Range</b></em>'.
+ * An implementation of the model object '<em><b>AStatus</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.RangeImpl#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.impl.RangeImpl#getOrder <em>Order</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.AStatusImpl#getMessage <em>Message</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.AStatusImpl#isValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
+public class AStatusImpl extends MinimalEObjectImpl.Container implements AStatus {
 	/**
-	 * The default value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
+	 * The default value of the '{@link #getMessage() <em>Message</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuantity()
+	 * @see #getMessage()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int QUANTITY_EDEFAULT = 0;
+	protected static final Message MESSAGE_EDEFAULT = Message.ALL;
 
 	/**
-	 * The cached value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
+	 * The cached value of the '{@link #getMessage() <em>Message</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getQuantity()
+	 * @see #getMessage()
 	 * @generated
 	 * @ordered
 	 */
-	protected int quantity = QUANTITY_EDEFAULT;
+	protected Message message = MESSAGE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getOrder() <em>Order</em>}' attribute.
+	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOrder()
+	 * @see #isValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Order ORDER_EDEFAULT = Order.RANDOM;
+	protected static final boolean VALUE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getOrder() <em>Order</em>}' attribute.
+	 * The cached value of the '{@link #isValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOrder()
+	 * @see #isValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected Order order = ORDER_EDEFAULT;
+	protected boolean value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RangeImpl() {
+	protected AStatusImpl() {
 		super();
 	}
 
@@ -84,7 +84,7 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.RANGE;
+		return Query_metamodelPackage.Literals.ASTATUS;
 	}
 
 	/**
@@ -92,8 +92,8 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getQuantity() {
-		return quantity;
+	public Message getMessage() {
+		return message;
 	}
 
 	/**
@@ -101,12 +101,12 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setQuantity(int newQuantity) {
-		int oldQuantity = quantity;
-		quantity = newQuantity;
+	public void setMessage(Message newMessage) {
+		Message oldMessage = message;
+		message = newMessage == null ? MESSAGE_EDEFAULT : newMessage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.RANGE__QUANTITY, oldQuantity,
-					quantity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ASTATUS__MESSAGE, oldMessage,
+					message));
 	}
 
 	/**
@@ -114,8 +114,8 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Order getOrder() {
-		return order;
+	public boolean isValue() {
+		return value;
 	}
 
 	/**
@@ -123,12 +123,12 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOrder(Order newOrder) {
-		Order oldOrder = order;
-		order = newOrder == null ? ORDER_EDEFAULT : newOrder;
+	public void setValue(boolean newValue) {
+		boolean oldValue = value;
+		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.RANGE__ORDER, oldOrder,
-					order));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ASTATUS__VALUE, oldValue,
+					value));
 	}
 
 	/**
@@ -139,10 +139,10 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.RANGE__QUANTITY:
-			return getQuantity();
-		case Query_metamodelPackage.RANGE__ORDER:
-			return getOrder();
+		case Query_metamodelPackage.ASTATUS__MESSAGE:
+			return getMessage();
+		case Query_metamodelPackage.ASTATUS__VALUE:
+			return isValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -155,11 +155,11 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.RANGE__QUANTITY:
-			setQuantity((Integer) newValue);
+		case Query_metamodelPackage.ASTATUS__MESSAGE:
+			setMessage((Message) newValue);
 			return;
-		case Query_metamodelPackage.RANGE__ORDER:
-			setOrder((Order) newValue);
+		case Query_metamodelPackage.ASTATUS__VALUE:
+			setValue((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -173,11 +173,11 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.RANGE__QUANTITY:
-			setQuantity(QUANTITY_EDEFAULT);
+		case Query_metamodelPackage.ASTATUS__MESSAGE:
+			setMessage(MESSAGE_EDEFAULT);
 			return;
-		case Query_metamodelPackage.RANGE__ORDER:
-			setOrder(ORDER_EDEFAULT);
+		case Query_metamodelPackage.ASTATUS__VALUE:
+			setValue(VALUE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -191,10 +191,10 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.RANGE__QUANTITY:
-			return quantity != QUANTITY_EDEFAULT;
-		case Query_metamodelPackage.RANGE__ORDER:
-			return order != ORDER_EDEFAULT;
+		case Query_metamodelPackage.ASTATUS__MESSAGE:
+			return message != MESSAGE_EDEFAULT;
+		case Query_metamodelPackage.ASTATUS__VALUE:
+			return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -210,12 +210,12 @@ public class RangeImpl extends MinimalEObjectImpl.Container implements Range {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (quantity: ");
-		result.append(quantity);
-		result.append(", order: ");
-		result.append(order);
+		result.append(" (message: ");
+		result.append(message);
+		result.append(", value: ");
+		result.append(value);
 		result.append(')');
 		return result.toString();
 	}
 
-} //RangeImpl
+} //AStatusImpl

@@ -2,7 +2,6 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.Message;
 import QueryMetamodel.Query_metamodelPackage;
 import QueryMetamodel.Status;
 
@@ -21,52 +20,94 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.StatusImpl#getMessage <em>Message</em>}</li>
- *   <li>{@link QueryMetamodel.impl.StatusImpl#isValue <em>Value</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.StatusImpl#getInProgress <em>In Progress</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.StatusImpl#getCompleted <em>Completed</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.StatusImpl#getAborted <em>Aborted</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.StatusImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
 	/**
-	 * The default value of the '{@link #getMessage() <em>Message</em>}' attribute.
+	 * The default value of the '{@link #getInProgress() <em>In Progress</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMessage()
+	 * @see #getInProgress()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Message MESSAGE_EDEFAULT = Message.ALL;
+	protected static final int IN_PROGRESS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getMessage() <em>Message</em>}' attribute.
+	 * The cached value of the '{@link #getInProgress() <em>In Progress</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMessage()
+	 * @see #getInProgress()
 	 * @generated
 	 * @ordered
 	 */
-	protected Message message = MESSAGE_EDEFAULT;
+	protected int inProgress = IN_PROGRESS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
+	 * The default value of the '{@link #getCompleted() <em>Completed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isValue()
+	 * @see #getCompleted()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean VALUE_EDEFAULT = false;
+	protected static final int COMPLETED_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #isValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getCompleted() <em>Completed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isValue()
+	 * @see #getCompleted()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean value = VALUE_EDEFAULT;
+	protected int completed = COMPLETED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAborted() <em>Aborted</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAborted()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int ABORTED_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getAborted() <em>Aborted</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAborted()
+	 * @generated
+	 * @ordered
+	 */
+	protected int aborted = ABORTED_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -92,8 +133,8 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Message getMessage() {
-		return message;
+	public int getInProgress() {
+		return inProgress;
 	}
 
 	/**
@@ -101,12 +142,12 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMessage(Message newMessage) {
-		Message oldMessage = message;
-		message = newMessage == null ? MESSAGE_EDEFAULT : newMessage;
+	public void setInProgress(int newInProgress) {
+		int oldInProgress = inProgress;
+		inProgress = newInProgress;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.STATUS__MESSAGE, oldMessage,
-					message));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.STATUS__IN_PROGRESS,
+					oldInProgress, inProgress));
 	}
 
 	/**
@@ -114,8 +155,8 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isValue() {
-		return value;
+	public int getCompleted() {
+		return completed;
 	}
 
 	/**
@@ -123,12 +164,55 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(boolean newValue) {
-		boolean oldValue = value;
-		value = newValue;
+	public void setCompleted(int newCompleted) {
+		int oldCompleted = completed;
+		completed = newCompleted;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.STATUS__VALUE, oldValue,
-					value));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.STATUS__COMPLETED,
+					oldCompleted, completed));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getAborted() {
+		return aborted;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAborted(int newAborted) {
+		int oldAborted = aborted;
+		aborted = newAborted;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.STATUS__ABORTED, oldAborted,
+					aborted));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.STATUS__NAME, oldName, name));
 	}
 
 	/**
@@ -139,10 +223,14 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.STATUS__MESSAGE:
-			return getMessage();
-		case Query_metamodelPackage.STATUS__VALUE:
-			return isValue();
+		case Query_metamodelPackage.STATUS__IN_PROGRESS:
+			return getInProgress();
+		case Query_metamodelPackage.STATUS__COMPLETED:
+			return getCompleted();
+		case Query_metamodelPackage.STATUS__ABORTED:
+			return getAborted();
+		case Query_metamodelPackage.STATUS__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -155,11 +243,17 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.STATUS__MESSAGE:
-			setMessage((Message) newValue);
+		case Query_metamodelPackage.STATUS__IN_PROGRESS:
+			setInProgress((Integer) newValue);
 			return;
-		case Query_metamodelPackage.STATUS__VALUE:
-			setValue((Boolean) newValue);
+		case Query_metamodelPackage.STATUS__COMPLETED:
+			setCompleted((Integer) newValue);
+			return;
+		case Query_metamodelPackage.STATUS__ABORTED:
+			setAborted((Integer) newValue);
+			return;
+		case Query_metamodelPackage.STATUS__NAME:
+			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -173,11 +267,17 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.STATUS__MESSAGE:
-			setMessage(MESSAGE_EDEFAULT);
+		case Query_metamodelPackage.STATUS__IN_PROGRESS:
+			setInProgress(IN_PROGRESS_EDEFAULT);
 			return;
-		case Query_metamodelPackage.STATUS__VALUE:
-			setValue(VALUE_EDEFAULT);
+		case Query_metamodelPackage.STATUS__COMPLETED:
+			setCompleted(COMPLETED_EDEFAULT);
+			return;
+		case Query_metamodelPackage.STATUS__ABORTED:
+			setAborted(ABORTED_EDEFAULT);
+			return;
+		case Query_metamodelPackage.STATUS__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -191,10 +291,14 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.STATUS__MESSAGE:
-			return message != MESSAGE_EDEFAULT;
-		case Query_metamodelPackage.STATUS__VALUE:
-			return value != VALUE_EDEFAULT;
+		case Query_metamodelPackage.STATUS__IN_PROGRESS:
+			return inProgress != IN_PROGRESS_EDEFAULT;
+		case Query_metamodelPackage.STATUS__COMPLETED:
+			return completed != COMPLETED_EDEFAULT;
+		case Query_metamodelPackage.STATUS__ABORTED:
+			return aborted != ABORTED_EDEFAULT;
+		case Query_metamodelPackage.STATUS__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -210,10 +314,14 @@ public class StatusImpl extends MinimalEObjectImpl.Container implements Status {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (message: ");
-		result.append(message);
-		result.append(", value: ");
-		result.append(value);
+		result.append(" (inProgress: ");
+		result.append(inProgress);
+		result.append(", completed: ");
+		result.append(completed);
+		result.append(", aborted: ");
+		result.append(aborted);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

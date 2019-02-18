@@ -73,9 +73,9 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.RANGE: {
-			Range range = (Range) theEObject;
-			T result = caseRange(range);
+		case Query_metamodelPackage.ARANGE: {
+			ARange aRange = (ARange) theEObject;
+			T result = caseARange(aRange);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -87,46 +87,46 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.DATE: {
-			Date date = (Date) theEObject;
-			T result = caseDate(date);
+		case Query_metamodelPackage.ADATE: {
+			ADate aDate = (ADate) theEObject;
+			T result = caseADate(aDate);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.STATUS: {
-			Status status = (Status) theEObject;
-			T result = caseStatus(status);
+		case Query_metamodelPackage.ASTATUS: {
+			AStatus aStatus = (AStatus) theEObject;
+			T result = caseAStatus(aStatus);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.AGE: {
-			Age age = (Age) theEObject;
-			T result = caseAge(age);
+		case Query_metamodelPackage.AAGE: {
+			AAge aAge = (AAge) theEObject;
+			T result = caseAAge(aAge);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.SEX: {
-			Sex sex = (Sex) theEObject;
-			T result = caseSex(sex);
+		case Query_metamodelPackage.ASEX: {
+			ASex aSex = (ASex) theEObject;
+			T result = caseASex(aSex);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.ECARE_PATHWAY: {
-			ECarePathway eCarePathway = (ECarePathway) theEObject;
-			T result = caseECarePathway(eCarePathway);
+		case Query_metamodelPackage.ACARE_PATHWAY: {
+			ACarePathway aCarePathway = (ACarePathway) theEObject;
+			T result = caseACarePathway(aCarePathway);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.ESTATUS: {
-			EStatus eStatus = (EStatus) theEObject;
-			T result = caseEStatus(eStatus);
+		case Query_metamodelPackage.QSTATUS: {
+			QStatus qStatus = (QStatus) theEObject;
+			T result = caseQStatus(qStatus);
 			if (result == null)
-				result = caseEMethod(eStatus);
+				result = caseEMethod(qStatus);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -138,47 +138,47 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.ECONDUCT: {
-			EConduct eConduct = (EConduct) theEObject;
-			T result = caseEConduct(eConduct);
+		case Query_metamodelPackage.QCONDUCT: {
+			QConduct qConduct = (QConduct) theEObject;
+			T result = caseQConduct(qConduct);
 			if (result == null)
-				result = caseEMethod(eConduct);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Query_metamodelPackage.ERECURRENT_FLOW: {
-			ERecurrentFlow eRecurrentFlow = (ERecurrentFlow) theEObject;
-			T result = caseERecurrentFlow(eRecurrentFlow);
-			if (result == null)
-				result = caseEMethod(eRecurrentFlow);
+				result = caseEMethod(qConduct);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.EAVERAGE_TIME: {
-			EAverageTime eAverageTime = (EAverageTime) theEObject;
-			T result = caseEAverageTime(eAverageTime);
+		case Query_metamodelPackage.QRECURRENT_FLOW: {
+			QRecurrentFlow qRecurrentFlow = (QRecurrentFlow) theEObject;
+			T result = caseQRecurrentFlow(qRecurrentFlow);
 			if (result == null)
-				result = caseEMethod(eAverageTime);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Query_metamodelPackage.EMEDICATION: {
-			EMedication eMedication = (EMedication) theEObject;
-			T result = caseEMedication(eMedication);
-			if (result == null)
-				result = caseEMethod(eMedication);
+				result = caseEMethod(qRecurrentFlow);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.EOCCURRENCE: {
-			EOccurrence eOccurrence = (EOccurrence) theEObject;
-			T result = caseEOccurrence(eOccurrence);
+		case Query_metamodelPackage.QAVERAGE_TIME: {
+			QAverageTime qAverageTime = (QAverageTime) theEObject;
+			T result = caseQAverageTime(qAverageTime);
 			if (result == null)
-				result = caseEMethod(eOccurrence);
+				result = caseEMethod(qAverageTime);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.QMEDICATION: {
+			QMedication qMedication = (QMedication) theEObject;
+			T result = caseQMedication(qMedication);
+			if (result == null)
+				result = caseEMethod(qMedication);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.QOCCURRENCE: {
+			QOccurrence qOccurrence = (QOccurrence) theEObject;
+			T result = caseQOccurrence(qOccurrence);
+			if (result == null)
+				result = caseEMethod(qOccurrence);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -211,6 +211,34 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case Query_metamodelPackage.STATUS: {
+			Status status = (Status) theEObject;
+			T result = caseStatus(status);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.CONDUCT: {
+			Conduct conduct = (Conduct) theEObject;
+			T result = caseConduct(conduct);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.AVERAGE_TIME: {
+			AverageTime averageTime = (AverageTime) theEObject;
+			T result = caseAverageTime(averageTime);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.OCCURRENCE: {
+			Occurrence occurrence = (Occurrence) theEObject;
+			T result = caseOccurrence(occurrence);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -232,17 +260,17 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Range</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ARange</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Range</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ARange</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRange(Range object) {
+	public T caseARange(ARange object) {
 		return null;
 	}
 
@@ -262,92 +290,92 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Date</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ADate</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Date</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ADate</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDate(Date object) {
+	public T caseADate(ADate object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Status</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>AStatus</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Status</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>AStatus</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStatus(Status object) {
+	public T caseAStatus(AStatus object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Age</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>AAge</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Age</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>AAge</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAge(Age object) {
+	public T caseAAge(AAge object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sex</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ASex</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sex</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ASex</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSex(Sex object) {
+	public T caseASex(ASex object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ECare Pathway</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ACare Pathway</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ECare Pathway</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ACare Pathway</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseECarePathway(ECarePathway object) {
+	public T caseACarePathway(ACarePathway object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EStatus</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>QStatus</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EStatus</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>QStatus</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEStatus(EStatus object) {
+	public T caseQStatus(QStatus object) {
 		return null;
 	}
 
@@ -367,77 +395,77 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EConduct</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>QConduct</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EConduct</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>QConduct</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEConduct(EConduct object) {
+	public T caseQConduct(QConduct object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ERecurrent Flow</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>QRecurrent Flow</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ERecurrent Flow</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>QRecurrent Flow</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseERecurrentFlow(ERecurrentFlow object) {
+	public T caseQRecurrentFlow(QRecurrentFlow object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EAverage Time</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>QAverage Time</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EAverage Time</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>QAverage Time</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEAverageTime(EAverageTime object) {
+	public T caseQAverageTime(QAverageTime object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EMedication</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>QMedication</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EMedication</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>QMedication</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEMedication(EMedication object) {
+	public T caseQMedication(QMedication object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EOccurrence</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>QOccurrence</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EOccurrence</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>QOccurrence</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEOccurrence(EOccurrence object) {
+	public T caseQOccurrence(QOccurrence object) {
 		return null;
 	}
 
@@ -498,6 +526,66 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePathway(Pathway object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Status</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Status</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStatus(Status object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Conduct</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Conduct</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConduct(Conduct object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Average Time</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Average Time</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAverageTime(AverageTime object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Occurrence</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Occurrence</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOccurrence(Occurrence object) {
 		return null;
 	}
 

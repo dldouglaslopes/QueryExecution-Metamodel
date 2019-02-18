@@ -35,12 +35,12 @@ public interface EAttribute extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sex</em>' containment reference.
-	 * @see #setSex(Sex)
+	 * @see #setSex(ASex)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_Sex()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Sex getSex();
+	ASex getSex();
 
 	/**
 	 * Sets the value of the '{@link QueryMetamodel.EAttribute#getSex <em>Sex</em>}' containment reference.
@@ -50,7 +50,7 @@ public interface EAttribute extends EObject {
 	 * @see #getSex()
 	 * @generated
 	 */
-	void setSex(Sex value);
+	void setSex(ASex value);
 
 	/**
 	 * Returns the value of the '<em><b>Age</b></em>' containment reference.
@@ -61,12 +61,12 @@ public interface EAttribute extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Age</em>' containment reference.
-	 * @see #setAge(Age)
+	 * @see #setAge(AAge)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_Age()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Age getAge();
+	AAge getAge();
 
 	/**
 	 * Sets the value of the '{@link QueryMetamodel.EAttribute#getAge <em>Age</em>}' containment reference.
@@ -76,7 +76,7 @@ public interface EAttribute extends EObject {
 	 * @see #getAge()
 	 * @generated
 	 */
-	void setAge(Age value);
+	void setAge(AAge value);
 
 	/**
 	 * Returns the value of the '<em><b>Range</b></em>' containment reference.
@@ -87,12 +87,12 @@ public interface EAttribute extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Range</em>' containment reference.
-	 * @see #setRange(Range)
+	 * @see #setRange(ARange)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_Range()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Range getRange();
+	ARange getRange();
 
 	/**
 	 * Sets the value of the '{@link QueryMetamodel.EAttribute#getRange <em>Range</em>}' containment reference.
@@ -102,7 +102,7 @@ public interface EAttribute extends EObject {
 	 * @see #getRange()
 	 * @generated
 	 */
-	void setRange(Range value);
+	void setRange(ARange value);
 
 	/**
 	 * Returns the value of the '<em><b>Date</b></em>' containment reference.
@@ -113,12 +113,12 @@ public interface EAttribute extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Date</em>' containment reference.
-	 * @see #setDate(Date)
+	 * @see #setDate(ADate)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_Date()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Date getDate();
+	ADate getDate();
 
 	/**
 	 * Sets the value of the '{@link QueryMetamodel.EAttribute#getDate <em>Date</em>}' containment reference.
@@ -128,7 +128,7 @@ public interface EAttribute extends EObject {
 	 * @see #getDate()
 	 * @generated
 	 */
-	void setDate(Date value);
+	void setDate(ADate value);
 
 	/**
 	 * Returns the value of the '<em><b>Status</b></em>' containment reference.
@@ -139,12 +139,12 @@ public interface EAttribute extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Status</em>' containment reference.
-	 * @see #setStatus(Status)
+	 * @see #setStatus(AStatus)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_Status()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Status getStatus();
+	AStatus getStatus();
 
 	/**
 	 * Sets the value of the '{@link QueryMetamodel.EAttribute#getStatus <em>Status</em>}' containment reference.
@@ -154,7 +154,7 @@ public interface EAttribute extends EObject {
 	 * @see #getStatus()
 	 * @generated
 	 */
-	void setStatus(Status value);
+	void setStatus(AStatus value);
 
 	/**
 	 * Returns the value of the '<em><b>Care Pathway</b></em>' containment reference.
@@ -165,12 +165,12 @@ public interface EAttribute extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Care Pathway</em>' containment reference.
-	 * @see #setCarePathway(ECarePathway)
+	 * @see #setCarePathway(ACarePathway)
 	 * @see QueryMetamodel.Query_metamodelPackage#getEAttribute_CarePathway()
 	 * @model containment="true"
 	 * @generated
 	 */
-	ECarePathway getCarePathway();
+	ACarePathway getCarePathway();
 
 	/**
 	 * Sets the value of the '{@link QueryMetamodel.EAttribute#getCarePathway <em>Care Pathway</em>}' containment reference.
@@ -180,6 +180,6 @@ public interface EAttribute extends EObject {
 	 * @see #getCarePathway()
 	 * @generated
 	 */
-	void setCarePathway(ECarePathway value);
+	void setCarePathway(ACarePathway value);
 
 } // EAttribute
