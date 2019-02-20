@@ -2,40 +2,37 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.QStatus;
+import QueryMetamodel.QAnswer;
 import QueryMetamodel.Query_metamodelPackage;
-import QueryMetamodel.Status;
 
+import QueryMetamodel.Question;
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>QStatus</b></em>'.
+ * An implementation of the model object '<em><b>QAnswer</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.QStatusImpl#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.impl.QStatusImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QAnswerImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QAnswerImpl#getQuestion <em>Question</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class QStatusImpl extends EMethodImpl implements QStatus {
+public class QAnswerImpl extends EMethodImpl implements QAnswer {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -44,7 +41,7 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "Status";
+	protected static final String NAME_EDEFAULT = "Answer";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -57,21 +54,21 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getStatus() <em>Status</em>}' containment reference list.
+	 * The cached value of the '{@link #getQuestion() <em>Question</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStatus()
+	 * @see #getQuestion()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Status> status;
+	protected EList<Question> question;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QStatusImpl() {
+	protected QAnswerImpl() {
 		super();
 	}
 
@@ -82,7 +79,7 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.QSTATUS;
+		return Query_metamodelPackage.Literals.QANSWER;
 	}
 
 	/**
@@ -103,7 +100,7 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QSTATUS__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QANSWER__NAME, oldName, name));
 	}
 
 	/**
@@ -111,11 +108,12 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Status> getStatus() {
-		if (status == null) {
-			status = new EObjectContainmentEList<Status>(Status.class, this, Query_metamodelPackage.QSTATUS__STATUS);
+	public EList<Question> getQuestion() {
+		if (question == null) {
+			question = new EObjectContainmentEList<Question>(Question.class, this,
+					Query_metamodelPackage.QANSWER__QUESTION);
 		}
-		return status;
+		return question;
 	}
 
 	/**
@@ -126,8 +124,8 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.QSTATUS__STATUS:
-			return ((InternalEList<?>) getStatus()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.QANSWER__QUESTION:
+			return ((InternalEList<?>) getQuestion()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -140,10 +138,10 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.QSTATUS__NAME:
+		case Query_metamodelPackage.QANSWER__NAME:
 			return getName();
-		case Query_metamodelPackage.QSTATUS__STATUS:
-			return getStatus();
+		case Query_metamodelPackage.QANSWER__QUESTION:
+			return getQuestion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,12 +155,12 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.QSTATUS__NAME:
+		case Query_metamodelPackage.QANSWER__NAME:
 			setName((String) newValue);
 			return;
-		case Query_metamodelPackage.QSTATUS__STATUS:
-			getStatus().clear();
-			getStatus().addAll((Collection<? extends Status>) newValue);
+		case Query_metamodelPackage.QANSWER__QUESTION:
+			getQuestion().clear();
+			getQuestion().addAll((Collection<? extends Question>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,11 +174,11 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QSTATUS__NAME:
+		case Query_metamodelPackage.QANSWER__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Query_metamodelPackage.QSTATUS__STATUS:
-			getStatus().clear();
+		case Query_metamodelPackage.QANSWER__QUESTION:
+			getQuestion().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -194,10 +192,10 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QSTATUS__NAME:
+		case Query_metamodelPackage.QANSWER__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Query_metamodelPackage.QSTATUS__STATUS:
-			return status != null && !status.isEmpty();
+		case Query_metamodelPackage.QANSWER__QUESTION:
+			return question != null && !question.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -219,4 +217,4 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 		return result.toString();
 	}
 
-} //QStatusImpl
+} //QAnswerImpl

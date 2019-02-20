@@ -8,25 +8,25 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Pathway</b></em>'.
+ * A representation of the model object '<em><b>Question</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.Pathway#getIds <em>Ids</em>}</li>
- *   <li>{@link QueryMetamodel.Pathway#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.Pathway#getPercentage <em>Percentage</em>}</li>
- *   <li>{@link QueryMetamodel.Pathway#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.Pathway#getStep <em>Step</em>}</li>
+ *   <li>{@link QueryMetamodel.Question#getIds <em>Ids</em>}</li>
+ *   <li>{@link QueryMetamodel.Question#getPercentage <em>Percentage</em>}</li>
+ *   <li>{@link QueryMetamodel.Question#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link QueryMetamodel.Question#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.Question#getAnswer <em>Answer</em>}</li>
  * </ul>
  *
- * @see QueryMetamodel.Query_metamodelPackage#getPathway()
+ * @see QueryMetamodel.Query_metamodelPackage#getQuestion()
  * @model
  * @generated
  */
-public interface Pathway extends EObject {
+public interface Question extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Ids</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Integer}.
@@ -37,37 +37,11 @@ public interface Pathway extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ids</em>' attribute list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getPathway_Ids()
+	 * @see QueryMetamodel.Query_metamodelPackage#getQuestion_Ids()
 	 * @model
 	 * @generated
 	 */
 	EList<Integer> getIds();
-
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see QueryMetamodel.Query_metamodelPackage#getPathway_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link QueryMetamodel.Pathway#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Percentage</b></em>' attribute.
@@ -80,14 +54,14 @@ public interface Pathway extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Percentage</em>' attribute.
 	 * @see #setPercentage(String)
-	 * @see QueryMetamodel.Query_metamodelPackage#getPathway_Percentage()
+	 * @see QueryMetamodel.Query_metamodelPackage#getQuestion_Percentage()
 	 * @model default=""
 	 * @generated
 	 */
 	String getPercentage();
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.Pathway#getPercentage <em>Percentage</em>}' attribute.
+	 * Sets the value of the '{@link QueryMetamodel.Question#getPercentage <em>Percentage</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Percentage</em>' attribute.
@@ -106,14 +80,14 @@ public interface Pathway extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Quantity</em>' attribute.
 	 * @see #setQuantity(int)
-	 * @see QueryMetamodel.Query_metamodelPackage#getPathway_Quantity()
+	 * @see QueryMetamodel.Query_metamodelPackage#getQuestion_Quantity()
 	 * @model
 	 * @generated
 	 */
 	int getQuantity();
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.Pathway#getQuantity <em>Quantity</em>}' attribute.
+	 * Sets the value of the '{@link QueryMetamodel.Question#getQuantity <em>Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Quantity</em>' attribute.
@@ -123,19 +97,45 @@ public interface Pathway extends EObject {
 	void setQuantity(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Step</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.Step}.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Step</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Step</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getPathway_Step()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see QueryMetamodel.Query_metamodelPackage#getQuestion_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.Question#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Answer</b></em>' containment reference list.
+	 * The list contents are of type {@link QueryMetamodel.Answer}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Answer</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Answer</em>' containment reference list.
+	 * @see QueryMetamodel.Query_metamodelPackage#getQuestion_Answer()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Step> getStep();
+	EList<Answer> getAnswer();
 
-} // Pathway
+} // Question

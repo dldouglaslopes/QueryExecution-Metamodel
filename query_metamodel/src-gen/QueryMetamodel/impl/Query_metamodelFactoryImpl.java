@@ -101,6 +101,30 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createAverageTime();
 		case Query_metamodelPackage.OCCURRENCE:
 			return createOccurrence();
+		case Query_metamodelPackage.QANSWER:
+			return createQAnswer();
+		case Query_metamodelPackage.QSTEP:
+			return createQStep();
+		case Query_metamodelPackage.QRETURN:
+			return createQReturn();
+		case Query_metamodelPackage.QSTOP:
+			return createQStop();
+		case Query_metamodelPackage.QPRESCRIPTION:
+			return createQPrescription();
+		case Query_metamodelPackage.QEXAM:
+			return createQExam();
+		case Query_metamodelPackage.STEP:
+			return createStep();
+		case Query_metamodelPackage.PRESCRIPTION:
+			return createPrescription();
+		case Query_metamodelPackage.EXAM:
+			return createExam();
+		case Query_metamodelPackage.QUESTION:
+			return createQuestion();
+		case Query_metamodelPackage.ANSWER:
+			return createAnswer();
+		case Query_metamodelPackage.PATIENT:
+			return createPatient();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -378,6 +402,126 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public Occurrence createOccurrence() {
 		OccurrenceImpl occurrence = new OccurrenceImpl();
 		return occurrence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QAnswer createQAnswer() {
+		QAnswerImpl qAnswer = new QAnswerImpl();
+		return qAnswer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QStep createQStep() {
+		QStepImpl qStep = new QStepImpl();
+		return qStep;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QReturn createQReturn() {
+		QReturnImpl qReturn = new QReturnImpl();
+		return qReturn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QStop createQStop() {
+		QStopImpl qStop = new QStopImpl();
+		return qStop;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QPrescription createQPrescription() {
+		QPrescriptionImpl qPrescription = new QPrescriptionImpl();
+		return qPrescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QExam createQExam() {
+		QExamImpl qExam = new QExamImpl();
+		return qExam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Step createStep() {
+		StepImpl step = new StepImpl();
+		return step;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Prescription createPrescription() {
+		PrescriptionImpl prescription = new PrescriptionImpl();
+		return prescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Exam createExam() {
+		ExamImpl exam = new ExamImpl();
+		return exam;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Question createQuestion() {
+		QuestionImpl question = new QuestionImpl();
+		return question;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Answer createAnswer() {
+		AnswerImpl answer = new AnswerImpl();
+		return answer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Patient createPatient() {
+		PatientImpl patient = new PatientImpl();
+		return patient;
 	}
 
 	/**

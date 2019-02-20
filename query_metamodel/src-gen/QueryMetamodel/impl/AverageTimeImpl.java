@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link QueryMetamodel.impl.AverageTimeImpl#getAverage <em>Average</em>}</li>
  *   <li>{@link QueryMetamodel.impl.AverageTimeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.AverageTimeImpl#getQuantity <em>Quantity</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class AverageTimeImpl extends MinimalEObjectImpl.Container implements Ave
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuantity()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int QUANTITY_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuantity()
+	 * @generated
+	 * @ordered
+	 */
+	protected int quantity = QUANTITY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,6 +156,28 @@ public class AverageTimeImpl extends MinimalEObjectImpl.Container implements Ave
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getQuantity() {
+		return quantity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setQuantity(int newQuantity) {
+		int oldQuantity = quantity;
+		quantity = newQuantity;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.AVERAGE_TIME__QUANTITY,
+					oldQuantity, quantity));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -142,6 +185,8 @@ public class AverageTimeImpl extends MinimalEObjectImpl.Container implements Ave
 			return getAverage();
 		case Query_metamodelPackage.AVERAGE_TIME__NAME:
 			return getName();
+		case Query_metamodelPackage.AVERAGE_TIME__QUANTITY:
+			return getQuantity();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,6 +204,9 @@ public class AverageTimeImpl extends MinimalEObjectImpl.Container implements Ave
 			return;
 		case Query_metamodelPackage.AVERAGE_TIME__NAME:
 			setName((String) newValue);
+			return;
+		case Query_metamodelPackage.AVERAGE_TIME__QUANTITY:
+			setQuantity((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -178,6 +226,9 @@ public class AverageTimeImpl extends MinimalEObjectImpl.Container implements Ave
 		case Query_metamodelPackage.AVERAGE_TIME__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case Query_metamodelPackage.AVERAGE_TIME__QUANTITY:
+			setQuantity(QUANTITY_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -194,6 +245,8 @@ public class AverageTimeImpl extends MinimalEObjectImpl.Container implements Ave
 			return average != AVERAGE_EDEFAULT;
 		case Query_metamodelPackage.AVERAGE_TIME__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Query_metamodelPackage.AVERAGE_TIME__QUANTITY:
+			return quantity != QUANTITY_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -213,6 +266,8 @@ public class AverageTimeImpl extends MinimalEObjectImpl.Container implements Ave
 		result.append(average);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", quantity: ");
+		result.append(quantity);
 		result.append(')');
 		return result.toString();
 	}

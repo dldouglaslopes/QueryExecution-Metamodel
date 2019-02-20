@@ -2,9 +2,9 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.Pathway;
+import QueryMetamodel.Answer;
 import QueryMetamodel.Query_metamodelPackage;
-import QueryMetamodel.Step;
+import QueryMetamodel.Question;
 
 import java.util.Collection;
 
@@ -25,22 +25,22 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Pathway</b></em>'.
+ * An implementation of the model object '<em><b>Question</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.PathwayImpl#getIds <em>Ids</em>}</li>
- *   <li>{@link QueryMetamodel.impl.PathwayImpl#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.impl.PathwayImpl#getPercentage <em>Percentage</em>}</li>
- *   <li>{@link QueryMetamodel.impl.PathwayImpl#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.impl.PathwayImpl#getStep <em>Step</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QuestionImpl#getIds <em>Ids</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QuestionImpl#getPercentage <em>Percentage</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QuestionImpl#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QuestionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QuestionImpl#getAnswer <em>Answer</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway {
+public class QuestionImpl extends MinimalEObjectImpl.Container implements Question {
 	/**
 	 * The cached value of the '{@link #getIds() <em>Ids</em>}' attribute list.
 	 * <!-- begin-user-doc -->
@@ -50,26 +50,6 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 * @ordered
 	 */
 	protected EList<Integer> ids;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPercentage() <em>Percentage</em>}' attribute.
@@ -112,21 +92,41 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	protected int quantity = QUANTITY_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getStep() <em>Step</em>}' containment reference list.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStep()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Step> step;
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getAnswer() <em>Answer</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAnswer()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Answer> answer;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PathwayImpl() {
+	protected QuestionImpl() {
 		super();
 	}
 
@@ -137,7 +137,7 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.PATHWAY;
+		return Query_metamodelPackage.Literals.QUESTION;
 	}
 
 	/**
@@ -147,30 +147,9 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 */
 	public EList<Integer> getIds() {
 		if (ids == null) {
-			ids = new EDataTypeUniqueEList<Integer>(Integer.class, this, Query_metamodelPackage.PATHWAY__IDS);
+			ids = new EDataTypeUniqueEList<Integer>(Integer.class, this, Query_metamodelPackage.QUESTION__IDS);
 		}
 		return ids;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.PATHWAY__NAME, oldName, name));
 	}
 
 	/**
@@ -191,7 +170,7 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		String oldPercentage = percentage;
 		percentage = newPercentage;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.PATHWAY__PERCENTAGE,
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QUESTION__PERCENTAGE,
 					oldPercentage, percentage));
 	}
 
@@ -213,8 +192,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		int oldQuantity = quantity;
 		quantity = newQuantity;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.PATHWAY__QUANTITY, oldQuantity,
-					quantity));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QUESTION__QUANTITY,
+					oldQuantity, quantity));
 	}
 
 	/**
@@ -222,11 +201,33 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Step> getStep() {
-		if (step == null) {
-			step = new EObjectContainmentEList<Step>(Step.class, this, Query_metamodelPackage.PATHWAY__STEP);
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QUESTION__NAME, oldName,
+					name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Answer> getAnswer() {
+		if (answer == null) {
+			answer = new EObjectContainmentEList<Answer>(Answer.class, this, Query_metamodelPackage.QUESTION__ANSWER);
 		}
-		return step;
+		return answer;
 	}
 
 	/**
@@ -237,8 +238,8 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.PATHWAY__STEP:
-			return ((InternalEList<?>) getStep()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.QUESTION__ANSWER:
+			return ((InternalEList<?>) getAnswer()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -251,16 +252,16 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.PATHWAY__IDS:
+		case Query_metamodelPackage.QUESTION__IDS:
 			return getIds();
-		case Query_metamodelPackage.PATHWAY__NAME:
-			return getName();
-		case Query_metamodelPackage.PATHWAY__PERCENTAGE:
+		case Query_metamodelPackage.QUESTION__PERCENTAGE:
 			return getPercentage();
-		case Query_metamodelPackage.PATHWAY__QUANTITY:
+		case Query_metamodelPackage.QUESTION__QUANTITY:
 			return getQuantity();
-		case Query_metamodelPackage.PATHWAY__STEP:
-			return getStep();
+		case Query_metamodelPackage.QUESTION__NAME:
+			return getName();
+		case Query_metamodelPackage.QUESTION__ANSWER:
+			return getAnswer();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -274,22 +275,22 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.PATHWAY__IDS:
+		case Query_metamodelPackage.QUESTION__IDS:
 			getIds().clear();
 			getIds().addAll((Collection<? extends Integer>) newValue);
 			return;
-		case Query_metamodelPackage.PATHWAY__NAME:
-			setName((String) newValue);
-			return;
-		case Query_metamodelPackage.PATHWAY__PERCENTAGE:
+		case Query_metamodelPackage.QUESTION__PERCENTAGE:
 			setPercentage((String) newValue);
 			return;
-		case Query_metamodelPackage.PATHWAY__QUANTITY:
+		case Query_metamodelPackage.QUESTION__QUANTITY:
 			setQuantity((Integer) newValue);
 			return;
-		case Query_metamodelPackage.PATHWAY__STEP:
-			getStep().clear();
-			getStep().addAll((Collection<? extends Step>) newValue);
+		case Query_metamodelPackage.QUESTION__NAME:
+			setName((String) newValue);
+			return;
+		case Query_metamodelPackage.QUESTION__ANSWER:
+			getAnswer().clear();
+			getAnswer().addAll((Collection<? extends Answer>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -303,20 +304,20 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.PATHWAY__IDS:
+		case Query_metamodelPackage.QUESTION__IDS:
 			getIds().clear();
 			return;
-		case Query_metamodelPackage.PATHWAY__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case Query_metamodelPackage.PATHWAY__PERCENTAGE:
+		case Query_metamodelPackage.QUESTION__PERCENTAGE:
 			setPercentage(PERCENTAGE_EDEFAULT);
 			return;
-		case Query_metamodelPackage.PATHWAY__QUANTITY:
+		case Query_metamodelPackage.QUESTION__QUANTITY:
 			setQuantity(QUANTITY_EDEFAULT);
 			return;
-		case Query_metamodelPackage.PATHWAY__STEP:
-			getStep().clear();
+		case Query_metamodelPackage.QUESTION__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case Query_metamodelPackage.QUESTION__ANSWER:
+			getAnswer().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -330,16 +331,16 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.PATHWAY__IDS:
+		case Query_metamodelPackage.QUESTION__IDS:
 			return ids != null && !ids.isEmpty();
-		case Query_metamodelPackage.PATHWAY__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Query_metamodelPackage.PATHWAY__PERCENTAGE:
+		case Query_metamodelPackage.QUESTION__PERCENTAGE:
 			return PERCENTAGE_EDEFAULT == null ? percentage != null : !PERCENTAGE_EDEFAULT.equals(percentage);
-		case Query_metamodelPackage.PATHWAY__QUANTITY:
+		case Query_metamodelPackage.QUESTION__QUANTITY:
 			return quantity != QUANTITY_EDEFAULT;
-		case Query_metamodelPackage.PATHWAY__STEP:
-			return step != null && !step.isEmpty();
+		case Query_metamodelPackage.QUESTION__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Query_metamodelPackage.QUESTION__ANSWER:
+			return answer != null && !answer.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -357,14 +358,14 @@ public class PathwayImpl extends MinimalEObjectImpl.Container implements Pathway
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (ids: ");
 		result.append(ids);
-		result.append(", name: ");
-		result.append(name);
 		result.append(", percentage: ");
 		result.append(percentage);
 		result.append(", quantity: ");
 		result.append(quantity);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}
 
-} //PathwayImpl
+} //QuestionImpl

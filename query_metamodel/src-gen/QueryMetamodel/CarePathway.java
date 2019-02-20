@@ -541,7 +541,17 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NONE(0, "None", "None");
+	NONE(0, "None", "None"),
+
+	/**
+	 * The '<em><b>Asthma</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ASTHMA_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ASTHMA(52, "Asthma", "Asma");
 
 	/**
 	 * The '<em><b>Dm Treatment</b></em>' literal value.
@@ -1324,6 +1334,21 @@ public enum CarePathway implements Enumerator {
 	public static final int NONE_VALUE = 0;
 
 	/**
+	 * The '<em><b>Asthma</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Asthma</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ASTHMA
+	 * @model name="Asthma" literal="Asma"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ASTHMA_VALUE = 52;
+
+	/**
 	 * An array of all the '<em><b>Care Pathway</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1338,7 +1363,7 @@ public enum CarePathway implements Enumerator {
 			DOUBLE_THERAPY_BAR, MONOTHERAPY_BAR, TREATMENT_DYSLIPIDEMIA_HIGH_RISK,
 			TREATMENT_DYSLIPIDEMIA_INTERMEDIATE_RISK, TREATMENT_DYSLIPIDEMIA_VERY_HIGH_RISK, MENINGITIS, SYPHILIS,
 			ACEI_LINE_DOUBLE_THERAPY, TRIPLOTERAPIA_BAR, UTI, BAR_BBC_BETABLOCKER, UTI_DIABETES, UTI_PYELONEPHRITIS,
-			AFRICAN_AMERICAN_PHARMACOLOGICAL, EXPOSED_FRACTURE, ACEIBBC_BETABLOCKER, LOW_BACK_PAIN, NONE, };
+			AFRICAN_AMERICAN_PHARMACOLOGICAL, EXPOSED_FRACTURE, ACEIBBC_BETABLOCKER, LOW_BACK_PAIN, NONE, ASTHMA, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Care Pathway</b></em>' enumerators.
@@ -1498,6 +1523,8 @@ public enum CarePathway implements Enumerator {
 			return LOW_BACK_PAIN;
 		case NONE_VALUE:
 			return NONE;
+		case ASTHMA_VALUE:
+			return ASTHMA;
 		}
 		return null;
 	}

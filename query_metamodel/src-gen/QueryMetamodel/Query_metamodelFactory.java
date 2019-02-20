@@ -220,6 +220,114 @@ public interface Query_metamodelFactory extends EFactory {
 	Occurrence createOccurrence();
 
 	/**
+	 * Returns a new object of class '<em>QAnswer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>QAnswer</em>'.
+	 * @generated
+	 */
+	QAnswer createQAnswer();
+
+	/**
+	 * Returns a new object of class '<em>QStep</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>QStep</em>'.
+	 * @generated
+	 */
+	QStep createQStep();
+
+	/**
+	 * Returns a new object of class '<em>QReturn</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>QReturn</em>'.
+	 * @generated
+	 */
+	QReturn createQReturn();
+
+	/**
+	 * Returns a new object of class '<em>QStop</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>QStop</em>'.
+	 * @generated
+	 */
+	QStop createQStop();
+
+	/**
+	 * Returns a new object of class '<em>QPrescription</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>QPrescription</em>'.
+	 * @generated
+	 */
+	QPrescription createQPrescription();
+
+	/**
+	 * Returns a new object of class '<em>QExam</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>QExam</em>'.
+	 * @generated
+	 */
+	QExam createQExam();
+
+	/**
+	 * Returns a new object of class '<em>Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Step</em>'.
+	 * @generated
+	 */
+	Step createStep();
+
+	/**
+	 * Returns a new object of class '<em>Prescription</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Prescription</em>'.
+	 * @generated
+	 */
+	Prescription createPrescription();
+
+	/**
+	 * Returns a new object of class '<em>Exam</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Exam</em>'.
+	 * @generated
+	 */
+	Exam createExam();
+
+	/**
+	 * Returns a new object of class '<em>Question</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Question</em>'.
+	 * @generated
+	 */
+	Question createQuestion();
+
+	/**
+	 * Returns a new object of class '<em>Answer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Answer</em>'.
+	 * @generated
+	 */
+	Answer createAnswer();
+
+	/**
+	 * Returns a new object of class '<em>Patient</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Patient</em>'.
+	 * @generated
+	 */
+	Patient createPatient();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
