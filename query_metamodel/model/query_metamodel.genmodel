@@ -260,9 +260,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Question/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Question/answer"/>
     </genClasses>
-    <genClasses ecoreClass="query_metamodel.ecore#//Answer">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Answer/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Answer/type"/>
+    <genClasses ecoreClass="query_metamodel.ecore#//ABoolean">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ABoolean/value"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//Patient">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Patient/pathway"/>
@@ -270,6 +269,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Patient/age"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Patient/sex"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Patient/quantity"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//ANumeric">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ANumeric/value"/>
+    </genClasses>
+    <genClasses ecoreClass="query_metamodel.ecore#//Answer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Answer/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Answer/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
