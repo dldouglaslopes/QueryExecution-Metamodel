@@ -135,8 +135,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="QRecurrentFlow" eSuperTypes="#//EMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="RecurrentFlow"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="flows" upperBound="-1"
-        eType="#//Flow" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pathway" upperBound="-1"
+        eType="#//Pathway" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QAverageTime" eSuperTypes="#//EMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -206,6 +206,8 @@
         defaultValueLiteral=""/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="step" upperBound="-1" eType="#//Step"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="flow" upperBound="-1" eType="#//Flow"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Status">

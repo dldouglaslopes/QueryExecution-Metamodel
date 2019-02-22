@@ -321,9 +321,11 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.ANSWER: {
-			Answer answer = (Answer) theEObject;
-			T result = caseAnswer(answer);
+		case Query_metamodelPackage.ABOOLEAN: {
+			ABoolean aBoolean = (ABoolean) theEObject;
+			T result = caseABoolean(aBoolean);
+			if (result == null)
+				result = caseAnswer(aBoolean);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -331,6 +333,22 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 		case Query_metamodelPackage.PATIENT: {
 			Patient patient = (Patient) theEObject;
 			T result = casePatient(patient);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.ANUMERIC: {
+			ANumeric aNumeric = (ANumeric) theEObject;
+			T result = caseANumeric(aNumeric);
+			if (result == null)
+				result = caseAnswer(aNumeric);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Query_metamodelPackage.ANSWER: {
+			Answer answer = (Answer) theEObject;
+			T result = caseAnswer(answer);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -836,6 +854,21 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ABoolean</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ABoolean</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseABoolean(ABoolean object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Answer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -862,6 +895,21 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePatient(Patient object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ANumeric</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ANumeric</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseANumeric(ANumeric object) {
 		return null;
 	}
 

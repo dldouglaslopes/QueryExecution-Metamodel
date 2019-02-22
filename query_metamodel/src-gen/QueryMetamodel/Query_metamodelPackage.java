@@ -592,13 +592,13 @@ public interface Query_metamodelPackage extends EPackage {
 	int QRECURRENT_FLOW__NAME = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Flows</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QRECURRENT_FLOW__FLOWS = EMETHOD_FEATURE_COUNT + 1;
+	int QRECURRENT_FLOW__PATHWAY = EMETHOD_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>QRecurrent Flow</em>' class.
@@ -1004,13 +1004,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int PATHWAY__STEP = 4;
 
 	/**
+	 * The feature id for the '<em><b>Flow</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATHWAY__FLOW = 5;
+
+	/**
 	 * The number of structural features of the '<em>Pathway</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATHWAY_FEATURE_COUNT = 5;
+	int PATHWAY_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Pathway</em>' class.
@@ -1844,16 +1853,16 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getAnswer()
 	 * @generated
 	 */
-	int ANSWER = 33;
+	int ANSWER = 36;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANSWER__VALUE = 0;
+	int ANSWER__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1881,6 +1890,61 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ANSWER_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.ABooleanImpl <em>ABoolean</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.ABooleanImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getABoolean()
+	 * @generated
+	 */
+	int ABOOLEAN = 33;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABOOLEAN__NAME = ANSWER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABOOLEAN__TYPE = ANSWER__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABOOLEAN__VALUE = ANSWER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>ABoolean</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABOOLEAN_FEATURE_COUNT = ANSWER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>ABoolean</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABOOLEAN_OPERATION_COUNT = ANSWER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.impl.PatientImpl <em>Patient</em>}' class.
@@ -1956,6 +2020,61 @@ public interface Query_metamodelPackage extends EPackage {
 	int PATIENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link QueryMetamodel.impl.ANumericImpl <em>ANumeric</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.impl.ANumericImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getANumeric()
+	 * @generated
+	 */
+	int ANUMERIC = 35;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANUMERIC__NAME = ANSWER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANUMERIC__TYPE = ANSWER__TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANUMERIC__VALUE = ANSWER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>ANumeric</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANUMERIC_FEATURE_COUNT = ANSWER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>ANumeric</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANUMERIC_OPERATION_COUNT = ANSWER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1963,7 +2082,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 35;
+	int ORDER = 37;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Message <em>Message</em>}' enum.
@@ -1973,7 +2092,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 36;
+	int MESSAGE = 38;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Gender <em>Gender</em>}' enum.
@@ -1983,7 +2102,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getGender()
 	 * @generated
 	 */
-	int GENDER = 37;
+	int GENDER = 39;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}' enum.
@@ -1993,7 +2112,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getCarePathway()
 	 * @generated
 	 */
-	int CARE_PATHWAY = 38;
+	int CARE_PATHWAY = 40;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.EStep <em>EStep</em>}' enum.
@@ -2003,7 +2122,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEStep()
 	 * @generated
 	 */
-	int ESTEP = 39;
+	int ESTEP = 41;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.EConduct <em>EConduct</em>}' enum.
@@ -2013,7 +2132,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEConduct()
 	 * @generated
 	 */
-	int ECONDUCT = 40;
+	int ECONDUCT = 42;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.BooleanConduct <em>Boolean Conduct</em>}' enum.
@@ -2023,7 +2142,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getBooleanConduct()
 	 * @generated
 	 */
-	int BOOLEAN_CONDUCT = 41;
+	int BOOLEAN_CONDUCT = 43;
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EAttribute <em>EAttribute</em>}'.
@@ -2410,15 +2529,15 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getQRecurrentFlow_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.QRecurrentFlow#getFlows <em>Flows</em>}'.
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.QRecurrentFlow#getPathway <em>Pathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Flows</em>'.
-	 * @see QueryMetamodel.QRecurrentFlow#getFlows()
+	 * @return the meta object for the containment reference list '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QRecurrentFlow#getPathway()
 	 * @see #getQRecurrentFlow()
 	 * @generated
 	 */
-	EReference getQRecurrentFlow_Flows();
+	EReference getQRecurrentFlow_Pathway();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.QAverageTime <em>QAverage Time</em>}'.
@@ -2742,6 +2861,17 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPathway_Step();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.Pathway#getFlow <em>Flow</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Flow</em>'.
+	 * @see QueryMetamodel.Pathway#getFlow()
+	 * @see #getPathway()
+	 * @generated
+	 */
+	EReference getPathway_Flow();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Status <em>Status</em>}'.
@@ -3401,6 +3531,27 @@ public interface Query_metamodelPackage extends EPackage {
 	EReference getQuestion_Answer();
 
 	/**
+	 * Returns the meta object for class '{@link QueryMetamodel.ABoolean <em>ABoolean</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ABoolean</em>'.
+	 * @see QueryMetamodel.ABoolean
+	 * @generated
+	 */
+	EClass getABoolean();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ABoolean#isValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see QueryMetamodel.ABoolean#isValue()
+	 * @see #getABoolean()
+	 * @generated
+	 */
+	EAttribute getABoolean_Value();
+
+	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Answer <em>Answer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3411,15 +3562,15 @@ public interface Query_metamodelPackage extends EPackage {
 	EClass getAnswer();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Answer#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Answer#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see QueryMetamodel.Answer#isValue()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.Answer#getName()
 	 * @see #getAnswer()
 	 * @generated
 	 */
-	EAttribute getAnswer_Value();
+	EAttribute getAnswer_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link QueryMetamodel.Answer#getType <em>Type</em>}'.
@@ -3496,6 +3647,27 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPatient_Quantity();
+
+	/**
+	 * Returns the meta object for class '{@link QueryMetamodel.ANumeric <em>ANumeric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ANumeric</em>'.
+	 * @see QueryMetamodel.ANumeric
+	 * @generated
+	 */
+	EClass getANumeric();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ANumeric#isValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see QueryMetamodel.ANumeric#isValue()
+	 * @see #getANumeric()
+	 * @generated
+	 */
+	EAttribute getANumeric_Value();
 
 	/**
 	 * Returns the meta object for enum '{@link QueryMetamodel.Order <em>Order</em>}'.
@@ -3903,12 +4075,12 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute QRECURRENT_FLOW__NAME = eINSTANCE.getQRecurrentFlow_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Flows</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference QRECURRENT_FLOW__FLOWS = eINSTANCE.getQRecurrentFlow_Flows();
+		EReference QRECURRENT_FLOW__PATHWAY = eINSTANCE.getQRecurrentFlow_Pathway();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QAverageTimeImpl <em>QAverage Time</em>}' class.
@@ -4163,6 +4335,14 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PATHWAY__STEP = eINSTANCE.getPathway_Step();
+
+		/**
+		 * The meta object literal for the '<em><b>Flow</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATHWAY__FLOW = eINSTANCE.getPathway_Flow();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.StatusImpl <em>Status</em>}' class.
@@ -4681,6 +4861,24 @@ public interface Query_metamodelPackage extends EPackage {
 		EReference QUESTION__ANSWER = eINSTANCE.getQuestion_Answer();
 
 		/**
+		 * The meta object literal for the '{@link QueryMetamodel.impl.ABooleanImpl <em>ABoolean</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.ABooleanImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getABoolean()
+		 * @generated
+		 */
+		EClass ABOOLEAN = eINSTANCE.getABoolean();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABOOLEAN__VALUE = eINSTANCE.getABoolean_Value();
+
+		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.AnswerImpl <em>Answer</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4691,12 +4889,12 @@ public interface Query_metamodelPackage extends EPackage {
 		EClass ANSWER = eINSTANCE.getAnswer();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ANSWER__VALUE = eINSTANCE.getAnswer_Value();
+		EAttribute ANSWER__NAME = eINSTANCE.getAnswer_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -4755,6 +4953,24 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PATIENT__QUANTITY = eINSTANCE.getPatient_Quantity();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.impl.ANumericImpl <em>ANumeric</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.impl.ANumericImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getANumeric()
+		 * @generated
+		 */
+		EClass ANUMERIC = eINSTANCE.getANumeric();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANUMERIC__VALUE = eINSTANCE.getANumeric_Value();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.

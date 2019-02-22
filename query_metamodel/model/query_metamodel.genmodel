@@ -146,7 +146,7 @@
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//QRecurrentFlow">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//QRecurrentFlow/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//QRecurrentFlow/flows"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//QRecurrentFlow/pathway"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//QAverageTime">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//QAverageTime/name"/>
@@ -184,6 +184,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/percentage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/quantity"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Pathway/step"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Pathway/flow"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//Status">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Status/inProgress"/>

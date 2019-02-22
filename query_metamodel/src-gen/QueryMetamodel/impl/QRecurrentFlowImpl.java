@@ -2,7 +2,7 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.Flow;
+import QueryMetamodel.Pathway;
 import QueryMetamodel.QRecurrentFlow;
 import QueryMetamodel.Query_metamodelPackage;
 
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.impl.QRecurrentFlowImpl#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.impl.QRecurrentFlowImpl#getFlows <em>Flows</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QRecurrentFlowImpl#getPathway <em>Pathway</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,14 +57,14 @@ public class QRecurrentFlowImpl extends EMethodImpl implements QRecurrentFlow {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getFlows() <em>Flows</em>}' containment reference list.
+	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFlows()
+	 * @see #getPathway()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Flow> flows;
+	protected EList<Pathway> pathway;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,11 +112,12 @@ public class QRecurrentFlowImpl extends EMethodImpl implements QRecurrentFlow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Flow> getFlows() {
-		if (flows == null) {
-			flows = new EObjectContainmentEList<Flow>(Flow.class, this, Query_metamodelPackage.QRECURRENT_FLOW__FLOWS);
+	public EList<Pathway> getPathway() {
+		if (pathway == null) {
+			pathway = new EObjectContainmentEList<Pathway>(Pathway.class, this,
+					Query_metamodelPackage.QRECURRENT_FLOW__PATHWAY);
 		}
-		return flows;
+		return pathway;
 	}
 
 	/**
@@ -127,8 +128,8 @@ public class QRecurrentFlowImpl extends EMethodImpl implements QRecurrentFlow {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.QRECURRENT_FLOW__FLOWS:
-			return ((InternalEList<?>) getFlows()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.QRECURRENT_FLOW__PATHWAY:
+			return ((InternalEList<?>) getPathway()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -143,8 +144,8 @@ public class QRecurrentFlowImpl extends EMethodImpl implements QRecurrentFlow {
 		switch (featureID) {
 		case Query_metamodelPackage.QRECURRENT_FLOW__NAME:
 			return getName();
-		case Query_metamodelPackage.QRECURRENT_FLOW__FLOWS:
-			return getFlows();
+		case Query_metamodelPackage.QRECURRENT_FLOW__PATHWAY:
+			return getPathway();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,9 +162,9 @@ public class QRecurrentFlowImpl extends EMethodImpl implements QRecurrentFlow {
 		case Query_metamodelPackage.QRECURRENT_FLOW__NAME:
 			setName((String) newValue);
 			return;
-		case Query_metamodelPackage.QRECURRENT_FLOW__FLOWS:
-			getFlows().clear();
-			getFlows().addAll((Collection<? extends Flow>) newValue);
+		case Query_metamodelPackage.QRECURRENT_FLOW__PATHWAY:
+			getPathway().clear();
+			getPathway().addAll((Collection<? extends Pathway>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,8 +181,8 @@ public class QRecurrentFlowImpl extends EMethodImpl implements QRecurrentFlow {
 		case Query_metamodelPackage.QRECURRENT_FLOW__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Query_metamodelPackage.QRECURRENT_FLOW__FLOWS:
-			getFlows().clear();
+		case Query_metamodelPackage.QRECURRENT_FLOW__PATHWAY:
+			getPathway().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -197,8 +198,8 @@ public class QRecurrentFlowImpl extends EMethodImpl implements QRecurrentFlow {
 		switch (featureID) {
 		case Query_metamodelPackage.QRECURRENT_FLOW__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Query_metamodelPackage.QRECURRENT_FLOW__FLOWS:
-			return flows != null && !flows.isEmpty();
+		case Query_metamodelPackage.QRECURRENT_FLOW__PATHWAY:
+			return pathway != null && !pathway.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -310,13 +310,13 @@ public interface Query_metamodelFactory extends EFactory {
 	Question createQuestion();
 
 	/**
-	 * Returns a new object of class '<em>Answer</em>'.
+	 * Returns a new object of class '<em>ABoolean</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Answer</em>'.
+	 * @return a new object of class '<em>ABoolean</em>'.
 	 * @generated
 	 */
-	Answer createAnswer();
+	ABoolean createABoolean();
 
 	/**
 	 * Returns a new object of class '<em>Patient</em>'.
@@ -326,6 +326,15 @@ public interface Query_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Patient createPatient();
+
+	/**
+	 * Returns a new object of class '<em>ANumeric</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ANumeric</em>'.
+	 * @generated
+	 */
+	ANumeric createANumeric();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -121,10 +121,12 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createExam();
 		case Query_metamodelPackage.QUESTION:
 			return createQuestion();
-		case Query_metamodelPackage.ANSWER:
-			return createAnswer();
+		case Query_metamodelPackage.ABOOLEAN:
+			return createABoolean();
 		case Query_metamodelPackage.PATIENT:
 			return createPatient();
+		case Query_metamodelPackage.ANUMERIC:
+			return createANumeric();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -509,9 +511,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Answer createAnswer() {
-		AnswerImpl answer = new AnswerImpl();
-		return answer;
+	public ABoolean createABoolean() {
+		ABooleanImpl aBoolean = new ABooleanImpl();
+		return aBoolean;
 	}
 
 	/**
@@ -522,6 +524,16 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public Patient createPatient() {
 		PatientImpl patient = new PatientImpl();
 		return patient;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ANumeric createANumeric() {
+		ANumericImpl aNumeric = new ANumericImpl();
+		return aNumeric;
 	}
 
 	/**

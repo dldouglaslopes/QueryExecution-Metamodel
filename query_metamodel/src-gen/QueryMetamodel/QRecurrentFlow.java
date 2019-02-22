@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.QRecurrentFlow#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.QRecurrentFlow#getFlows <em>Flows</em>}</li>
+ *   <li>{@link QueryMetamodel.QRecurrentFlow#getPathway <em>Pathway</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getQRecurrentFlow()
@@ -50,19 +50,19 @@ public interface QRecurrentFlow extends EMethod {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Flows</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.Flow}.
+	 * Returns the value of the '<em><b>Pathway</b></em>' containment reference list.
+	 * The list contents are of type {@link QueryMetamodel.Pathway}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Flows</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Pathway</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flows</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getQRecurrentFlow_Flows()
+	 * @return the value of the '<em>Pathway</em>' containment reference list.
+	 * @see QueryMetamodel.Query_metamodelPackage#getQRecurrentFlow_Pathway()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Flow> getFlows();
+	EList<Pathway> getPathway();
 
 } // QRecurrentFlow

@@ -232,13 +232,23 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseAnswer(Answer object) {
-			return createAnswerAdapter();
+		public Adapter caseABoolean(ABoolean object) {
+			return createABooleanAdapter();
 		}
 
 		@Override
 		public Adapter casePatient(Patient object) {
 			return createPatientAdapter();
+		}
+
+		@Override
+		public Adapter caseANumeric(ANumeric object) {
+			return createANumericAdapter();
+		}
+
+		@Override
+		public Adapter caseAnswer(Answer object) {
+			return createAnswerAdapter();
 		}
 
 		@Override
@@ -723,6 +733,20 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.ABoolean <em>ABoolean</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.ABoolean
+	 * @generated
+	 */
+	public Adapter createABooleanAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Answer <em>Answer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -747,6 +771,20 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPatientAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.ANumeric <em>ANumeric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.ANumeric
+	 * @generated
+	 */
+	public Adapter createANumericAdapter() {
 		return null;
 	}
 
