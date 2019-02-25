@@ -1828,13 +1828,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int QUESTION__ANSWER = 4;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QUESTION__TYPE = 5;
+
+	/**
 	 * The number of structural features of the '<em>Question</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_FEATURE_COUNT = 5;
+	int QUESTION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Question</em>' class.
@@ -1856,31 +1865,13 @@ public interface Query_metamodelPackage extends EPackage {
 	int ANSWER = 36;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANSWER__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANSWER__TYPE = 1;
-
-	/**
 	 * The number of structural features of the '<em>Answer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANSWER_FEATURE_COUNT = 2;
+	int ANSWER_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>Answer</em>' class.
@@ -1900,24 +1891,6 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	int ABOOLEAN = 33;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABOOLEAN__NAME = ANSWER__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ABOOLEAN__TYPE = ANSWER__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -2028,24 +2001,6 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	int ANUMERIC = 35;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANUMERIC__NAME = ANSWER__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ANUMERIC__TYPE = ANSWER__TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -3531,6 +3486,17 @@ public interface Query_metamodelPackage extends EPackage {
 	EReference getQuestion_Answer();
 
 	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Question#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see QueryMetamodel.Question#getType()
+	 * @see #getQuestion()
+	 * @generated
+	 */
+	EAttribute getQuestion_Type();
+
+	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.ABoolean <em>ABoolean</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3560,28 +3526,6 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAnswer();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Answer#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.Answer#getName()
-	 * @see #getAnswer()
-	 * @generated
-	 */
-	EAttribute getAnswer_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Answer#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see QueryMetamodel.Answer#getType()
-	 * @see #getAnswer()
-	 * @generated
-	 */
-	EAttribute getAnswer_Type();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Patient <em>Patient</em>}'.
@@ -3659,11 +3603,11 @@ public interface Query_metamodelPackage extends EPackage {
 	EClass getANumeric();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.ANumeric#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ANumeric#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see QueryMetamodel.ANumeric#isValue()
+	 * @see QueryMetamodel.ANumeric#getValue()
 	 * @see #getANumeric()
 	 * @generated
 	 */
@@ -4861,6 +4805,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EReference QUESTION__ANSWER = eINSTANCE.getQuestion_Answer();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute QUESTION__TYPE = eINSTANCE.getQuestion_Type();
+
+		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.ABooleanImpl <em>ABoolean</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4887,22 +4839,6 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ANSWER = eINSTANCE.getAnswer();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANSWER__NAME = eINSTANCE.getAnswer_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ANSWER__TYPE = eINSTANCE.getAnswer_Type();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.PatientImpl <em>Patient</em>}' class.

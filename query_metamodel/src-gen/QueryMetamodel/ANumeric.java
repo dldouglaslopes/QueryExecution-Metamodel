@@ -11,7 +11,7 @@ package QueryMetamodel;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.ANumeric#isValue <em>Value</em>}</li>
+ *   <li>{@link QueryMetamodel.ANumeric#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getANumeric()
@@ -28,21 +28,21 @@ public interface ANumeric extends Answer {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(boolean)
+	 * @see #setValue(double)
 	 * @see QueryMetamodel.Query_metamodelPackage#getANumeric_Value()
 	 * @model
 	 * @generated
 	 */
-	boolean isValue();
+	double getValue();
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.ANumeric#isValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link QueryMetamodel.ANumeric#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #isValue()
+	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(boolean value);
+	void setValue(double value);
 
 } // ANumeric

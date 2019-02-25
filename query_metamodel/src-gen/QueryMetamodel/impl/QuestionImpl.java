@@ -36,6 +36,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link QueryMetamodel.impl.QuestionImpl#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link QueryMetamodel.impl.QuestionImpl#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.impl.QuestionImpl#getAnswer <em>Answer</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QuestionImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -120,6 +121,26 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * @ordered
 	 */
 	protected EList<Answer> answer;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String TYPE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected String type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,6 +256,28 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(String newType) {
+		String oldType = type;
+		type = newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QUESTION__TYPE, oldType,
+					type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -262,6 +305,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			return getName();
 		case Query_metamodelPackage.QUESTION__ANSWER:
 			return getAnswer();
+		case Query_metamodelPackage.QUESTION__TYPE:
+			return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -292,6 +337,9 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			getAnswer().clear();
 			getAnswer().addAll((Collection<? extends Answer>) newValue);
 			return;
+		case Query_metamodelPackage.QUESTION__TYPE:
+			setType((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -319,6 +367,9 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		case Query_metamodelPackage.QUESTION__ANSWER:
 			getAnswer().clear();
 			return;
+		case Query_metamodelPackage.QUESTION__TYPE:
+			setType(TYPE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -341,6 +392,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Query_metamodelPackage.QUESTION__ANSWER:
 			return answer != null && !answer.isEmpty();
+		case Query_metamodelPackage.QUESTION__TYPE:
+			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -364,6 +417,8 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 		result.append(quantity);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

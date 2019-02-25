@@ -19,31 +19,31 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.ANumericImpl#isValue <em>Value</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.ANumericImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ANumericImpl extends AnswerImpl implements ANumeric {
 	/**
-	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
+	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isValue()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean VALUE_EDEFAULT = false;
+	protected static final double VALUE_EDEFAULT = 0.0;
 
 	/**
-	 * The cached value of the '{@link #isValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isValue()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean value = VALUE_EDEFAULT;
+	protected double value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,7 +69,7 @@ public class ANumericImpl extends AnswerImpl implements ANumeric {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isValue() {
+	public double getValue() {
 		return value;
 	}
 
@@ -78,8 +78,8 @@ public class ANumericImpl extends AnswerImpl implements ANumeric {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(boolean newValue) {
-		boolean oldValue = value;
+	public void setValue(double newValue) {
+		double oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ANUMERIC__VALUE, oldValue,
@@ -95,7 +95,7 @@ public class ANumericImpl extends AnswerImpl implements ANumeric {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case Query_metamodelPackage.ANUMERIC__VALUE:
-			return isValue();
+			return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -109,7 +109,7 @@ public class ANumericImpl extends AnswerImpl implements ANumeric {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Query_metamodelPackage.ANUMERIC__VALUE:
-			setValue((Boolean) newValue);
+			setValue((Double) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

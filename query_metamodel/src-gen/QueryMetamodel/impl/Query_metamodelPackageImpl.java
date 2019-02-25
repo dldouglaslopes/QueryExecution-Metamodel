@@ -1600,6 +1600,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getQuestion_Type() {
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getABoolean() {
 		return aBooleanEClass;
 	}
@@ -1620,24 +1629,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EClass getAnswer() {
 		return answerEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAnswer_Name() {
-		return (EAttribute) answerEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getAnswer_Type() {
-		return (EAttribute) answerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1965,6 +1956,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(questionEClass, QUESTION__QUANTITY);
 		createEAttribute(questionEClass, QUESTION__NAME);
 		createEReference(questionEClass, QUESTION__ANSWER);
+		createEAttribute(questionEClass, QUESTION__TYPE);
 
 		aBooleanEClass = createEClass(ABOOLEAN);
 		createEAttribute(aBooleanEClass, ABOOLEAN__VALUE);
@@ -1980,8 +1972,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(aNumericEClass, ANUMERIC__VALUE);
 
 		answerEClass = createEClass(ANSWER);
-		createEAttribute(answerEClass, ANSWER__NAME);
-		createEAttribute(answerEClass, ANSWER__TYPE);
 
 		// Create enums
 		orderEEnum = createEEnum(ORDER);
@@ -2342,6 +2332,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		initEReference(getQuestion_Answer(), this.getAnswer(), null, "answer", null, 0, -1, Question.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getQuestion_Type(), ecorePackage.getEString(), "type", null, 0, 1, Question.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(aBooleanEClass, ABoolean.class, "ABoolean", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2363,14 +2355,10 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		initEClass(aNumericEClass, ANumeric.class, "ANumeric", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getANumeric_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, ANumeric.class,
+		initEAttribute(getANumeric_Value(), ecorePackage.getEDouble(), "value", null, 0, 1, ANumeric.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(answerEClass, Answer.class, "Answer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAnswer_Name(), ecorePackage.getEString(), "name", null, 0, 1, Answer.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAnswer_Type(), ecorePackage.getEString(), "type", null, 0, 1, Answer.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(orderEEnum, Order.class, "Order");

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link QueryMetamodel.Question#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link QueryMetamodel.Question#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.Question#getAnswer <em>Answer</em>}</li>
+ *   <li>{@link QueryMetamodel.Question#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getQuestion()
@@ -137,5 +138,31 @@ public interface Question extends EObject {
 	 * @generated
 	 */
 	EList<Answer> getAnswer();
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' attribute.
+	 * @see #setType(String)
+	 * @see QueryMetamodel.Query_metamodelPackage#getQuestion_Type()
+	 * @model
+	 * @generated
+	 */
+	String getType();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.Question#getType <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Type</em>' attribute.
+	 * @see #getType()
+	 * @generated
+	 */
+	void setType(String value);
 
 } // Question
