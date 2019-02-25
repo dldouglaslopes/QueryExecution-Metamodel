@@ -2,6 +2,7 @@
  */
 package QueryMetamodel;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -49,29 +50,19 @@ public interface EQuery extends EObject {
 	void setEAttribute(EAttribute value);
 
 	/**
-	 * Returns the value of the '<em><b>EMethod</b></em>' containment reference.
+	 * Returns the value of the '<em><b>EMethod</b></em>' containment reference list.
+	 * The list contents are of type {@link QueryMetamodel.EMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>EMethod</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>EMethod</em>' containment reference.
-	 * @see #setEMethod(EMethod)
+	 * @return the value of the '<em>EMethod</em>' containment reference list.
 	 * @see QueryMetamodel.Query_metamodelPackage#getEQuery_EMethod()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
-	EMethod getEMethod();
-
-	/**
-	 * Sets the value of the '{@link QueryMetamodel.EQuery#getEMethod <em>EMethod</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>EMethod</em>' containment reference.
-	 * @see #getEMethod()
-	 * @generated
-	 */
-	void setEMethod(EMethod value);
+	EList<EMethod> getEMethod();
 
 } // EQuery

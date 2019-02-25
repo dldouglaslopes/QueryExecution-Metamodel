@@ -7,14 +7,18 @@ import QueryMetamodel.EMethod;
 import QueryMetamodel.EQuery;
 import QueryMetamodel.Query_metamodelPackage;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -42,14 +46,14 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	protected EAttribute eAttribute;
 
 	/**
-	 * The cached value of the '{@link #getEMethod() <em>EMethod</em>}' containment reference.
+	 * The cached value of the '{@link #getEMethod() <em>EMethod</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEMethod()
 	 * @generated
 	 * @ordered
 	 */
-	protected EMethod eMethod;
+	protected EList<EMethod> eMethod;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,49 +129,11 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EMethod getEMethod() {
-		return eMethod;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEMethod(EMethod newEMethod, NotificationChain msgs) {
-		EMethod oldEMethod = eMethod;
-		eMethod = newEMethod;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Query_metamodelPackage.EQUERY__EMETHOD, oldEMethod, newEMethod);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+	public EList<EMethod> getEMethod() {
+		if (eMethod == null) {
+			eMethod = new EObjectContainmentEList<EMethod>(EMethod.class, this, Query_metamodelPackage.EQUERY__EMETHOD);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEMethod(EMethod newEMethod) {
-		if (newEMethod != eMethod) {
-			NotificationChain msgs = null;
-			if (eMethod != null)
-				msgs = ((InternalEObject) eMethod).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EQUERY__EMETHOD, null, msgs);
-			if (newEMethod != null)
-				msgs = ((InternalEObject) newEMethod).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.EQUERY__EMETHOD, null, msgs);
-			msgs = basicSetEMethod(newEMethod, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EQUERY__EMETHOD, newEMethod,
-					newEMethod));
+		return eMethod;
 	}
 
 	/**
@@ -181,7 +147,7 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 		case Query_metamodelPackage.EQUERY__EATTRIBUTE:
 			return basicSetEAttribute(null, msgs);
 		case Query_metamodelPackage.EQUERY__EMETHOD:
-			return basicSetEMethod(null, msgs);
+			return ((InternalEList<?>) getEMethod()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -207,6 +173,7 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -214,7 +181,8 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 			setEAttribute((EAttribute) newValue);
 			return;
 		case Query_metamodelPackage.EQUERY__EMETHOD:
-			setEMethod((EMethod) newValue);
+			getEMethod().clear();
+			getEMethod().addAll((Collection<? extends EMethod>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -232,7 +200,7 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 			setEAttribute((EAttribute) null);
 			return;
 		case Query_metamodelPackage.EQUERY__EMETHOD:
-			setEMethod((EMethod) null);
+			getEMethod().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -249,7 +217,7 @@ public class EQueryImpl extends MinimalEObjectImpl.Container implements EQuery {
 		case Query_metamodelPackage.EQUERY__EATTRIBUTE:
 			return eAttribute != null;
 		case Query_metamodelPackage.EQUERY__EMETHOD:
-			return eMethod != null;
+			return eMethod != null && !eMethod.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -2,6 +2,7 @@
  */
 package QueryMetamodel.impl;
 
+import QueryMetamodel.Pathway;
 import QueryMetamodel.QAnswer;
 import QueryMetamodel.Query_metamodelPackage;
 
@@ -27,6 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.impl.QAnswerImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QAnswerImpl#getPathway <em>Pathway</em>}</li>
  *   <li>{@link QueryMetamodel.impl.QAnswerImpl#getQuestion <em>Question</em>}</li>
  * </ul>
  *
@@ -52,6 +54,16 @@ public class QAnswerImpl extends EMethodImpl implements QAnswer {
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected Pathway pathway;
 
 	/**
 	 * The cached value of the '{@link #getQuestion() <em>Question</em>}' containment reference list.
@@ -108,6 +120,56 @@ public class QAnswerImpl extends EMethodImpl implements QAnswer {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Pathway getPathway() {
+		return pathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPathway(Pathway newPathway, NotificationChain msgs) {
+		Pathway oldPathway = pathway;
+		pathway = newPathway;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Query_metamodelPackage.QANSWER__PATHWAY, oldPathway, newPathway);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPathway(Pathway newPathway) {
+		if (newPathway != pathway) {
+			NotificationChain msgs = null;
+			if (pathway != null)
+				msgs = ((InternalEObject) pathway).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.QANSWER__PATHWAY, null, msgs);
+			if (newPathway != null)
+				msgs = ((InternalEObject) newPathway).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.QANSWER__PATHWAY, null, msgs);
+			msgs = basicSetPathway(newPathway, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QANSWER__PATHWAY, newPathway,
+					newPathway));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<Question> getQuestion() {
 		if (question == null) {
 			question = new EObjectContainmentEList<Question>(Question.class, this,
@@ -124,6 +186,8 @@ public class QAnswerImpl extends EMethodImpl implements QAnswer {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+		case Query_metamodelPackage.QANSWER__PATHWAY:
+			return basicSetPathway(null, msgs);
 		case Query_metamodelPackage.QANSWER__QUESTION:
 			return ((InternalEList<?>) getQuestion()).basicRemove(otherEnd, msgs);
 		}
@@ -140,6 +204,8 @@ public class QAnswerImpl extends EMethodImpl implements QAnswer {
 		switch (featureID) {
 		case Query_metamodelPackage.QANSWER__NAME:
 			return getName();
+		case Query_metamodelPackage.QANSWER__PATHWAY:
+			return getPathway();
 		case Query_metamodelPackage.QANSWER__QUESTION:
 			return getQuestion();
 		}
@@ -157,6 +223,9 @@ public class QAnswerImpl extends EMethodImpl implements QAnswer {
 		switch (featureID) {
 		case Query_metamodelPackage.QANSWER__NAME:
 			setName((String) newValue);
+			return;
+		case Query_metamodelPackage.QANSWER__PATHWAY:
+			setPathway((Pathway) newValue);
 			return;
 		case Query_metamodelPackage.QANSWER__QUESTION:
 			getQuestion().clear();
@@ -177,6 +246,9 @@ public class QAnswerImpl extends EMethodImpl implements QAnswer {
 		case Query_metamodelPackage.QANSWER__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case Query_metamodelPackage.QANSWER__PATHWAY:
+			setPathway((Pathway) null);
+			return;
 		case Query_metamodelPackage.QANSWER__QUESTION:
 			getQuestion().clear();
 			return;
@@ -194,6 +266,8 @@ public class QAnswerImpl extends EMethodImpl implements QAnswer {
 		switch (featureID) {
 		case Query_metamodelPackage.QANSWER__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Query_metamodelPackage.QANSWER__PATHWAY:
+			return pathway != null;
 		case Query_metamodelPackage.QANSWER__QUESTION:
 			return question != null && !question.isEmpty();
 		}

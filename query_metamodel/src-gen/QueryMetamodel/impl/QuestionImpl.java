@@ -18,8 +18,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -31,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.QuestionImpl#getIds <em>Ids</em>}</li>
  *   <li>{@link QueryMetamodel.impl.QuestionImpl#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.impl.QuestionImpl#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link QueryMetamodel.impl.QuestionImpl#getName <em>Name</em>}</li>
@@ -42,16 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class QuestionImpl extends MinimalEObjectImpl.Container implements Question {
-	/**
-	 * The cached value of the '{@link #getIds() <em>Ids</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIds()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Integer> ids;
-
 	/**
 	 * The default value of the '{@link #getPercentage() <em>Percentage</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -159,18 +146,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	@Override
 	protected EClass eStaticClass() {
 		return Query_metamodelPackage.Literals.QUESTION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Integer> getIds() {
-		if (ids == null) {
-			ids = new EDataTypeUniqueEList<Integer>(Integer.class, this, Query_metamodelPackage.QUESTION__IDS);
-		}
-		return ids;
 	}
 
 	/**
@@ -295,8 +270,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.QUESTION__IDS:
-			return getIds();
 		case Query_metamodelPackage.QUESTION__PERCENTAGE:
 			return getPercentage();
 		case Query_metamodelPackage.QUESTION__QUANTITY:
@@ -320,10 +293,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.QUESTION__IDS:
-			getIds().clear();
-			getIds().addAll((Collection<? extends Integer>) newValue);
-			return;
 		case Query_metamodelPackage.QUESTION__PERCENTAGE:
 			setPercentage((String) newValue);
 			return;
@@ -352,9 +321,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QUESTION__IDS:
-			getIds().clear();
-			return;
 		case Query_metamodelPackage.QUESTION__PERCENTAGE:
 			setPercentage(PERCENTAGE_EDEFAULT);
 			return;
@@ -382,8 +348,6 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QUESTION__IDS:
-			return ids != null && !ids.isEmpty();
 		case Query_metamodelPackage.QUESTION__PERCENTAGE:
 			return PERCENTAGE_EDEFAULT == null ? percentage != null : !PERCENTAGE_EDEFAULT.equals(percentage);
 		case Query_metamodelPackage.QUESTION__QUANTITY:
@@ -409,9 +373,7 @@ public class QuestionImpl extends MinimalEObjectImpl.Container implements Questi
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (ids: ");
-		result.append(ids);
-		result.append(", percentage: ");
+		result.append(" (percentage: ");
 		result.append(percentage);
 		result.append(", quantity: ");
 		result.append(quantity);

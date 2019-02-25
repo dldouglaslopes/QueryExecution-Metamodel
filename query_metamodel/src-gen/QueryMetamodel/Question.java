@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.Question#getIds <em>Ids</em>}</li>
  *   <li>{@link QueryMetamodel.Question#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.Question#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link QueryMetamodel.Question#getName <em>Name</em>}</li>
@@ -28,22 +27,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Question extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Ids</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Integer}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ids</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ids</em>' attribute list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getQuestion_Ids()
-	 * @model
-	 * @generated
-	 */
-	EList<Integer> getIds();
-
 	/**
 	 * Returns the value of the '<em><b>Percentage</b></em>' attribute.
 	 * The default value is <code>""</code>.

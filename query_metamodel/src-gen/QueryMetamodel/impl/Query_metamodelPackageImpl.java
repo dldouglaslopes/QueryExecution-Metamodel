@@ -1213,8 +1213,17 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getQAnswer_Question() {
+	public EReference getQAnswer_Pathway() {
 		return (EReference) qAnswerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQAnswer_Question() {
+		return (EReference) qAnswerEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1555,7 +1564,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getQuestion_Ids() {
+	public EAttribute getQuestion_Percentage() {
 		return (EAttribute) questionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1564,7 +1573,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getQuestion_Percentage() {
+	public EAttribute getQuestion_Quantity() {
 		return (EAttribute) questionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1573,7 +1582,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getQuestion_Quantity() {
+	public EAttribute getQuestion_Name() {
 		return (EAttribute) questionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1582,17 +1591,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getQuestion_Name() {
-		return (EAttribute) questionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getQuestion_Answer() {
-		return (EReference) questionEClass.getEStructuralFeatures().get(4);
+		return (EReference) questionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1601,7 +1601,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	public EAttribute getQuestion_Type() {
-		return (EAttribute) questionEClass.getEStructuralFeatures().get(5);
+		return (EAttribute) questionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1618,8 +1618,17 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getABoolean_Value() {
+	public EAttribute getABoolean_FalseQuantity() {
 		return (EAttribute) aBooleanEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getABoolean_TrueQuantity() {
+		return (EAttribute) aBooleanEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1701,6 +1710,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EAttribute getANumeric_Value() {
 		return (EAttribute) aNumericEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getANumeric_Quantity() {
+		return (EAttribute) aNumericEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1904,6 +1922,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		qAnswerEClass = createEClass(QANSWER);
 		createEAttribute(qAnswerEClass, QANSWER__NAME);
+		createEReference(qAnswerEClass, QANSWER__PATHWAY);
 		createEReference(qAnswerEClass, QANSWER__QUESTION);
 
 		qStepEClass = createEClass(QSTEP);
@@ -1951,7 +1970,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(examEClass, EXAM__IDS);
 
 		questionEClass = createEClass(QUESTION);
-		createEAttribute(questionEClass, QUESTION__IDS);
 		createEAttribute(questionEClass, QUESTION__PERCENTAGE);
 		createEAttribute(questionEClass, QUESTION__QUANTITY);
 		createEAttribute(questionEClass, QUESTION__NAME);
@@ -1959,7 +1977,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(questionEClass, QUESTION__TYPE);
 
 		aBooleanEClass = createEClass(ABOOLEAN);
-		createEAttribute(aBooleanEClass, ABOOLEAN__VALUE);
+		createEAttribute(aBooleanEClass, ABOOLEAN__FALSE_QUANTITY);
+		createEAttribute(aBooleanEClass, ABOOLEAN__TRUE_QUANTITY);
 
 		patientEClass = createEClass(PATIENT);
 		createEReference(patientEClass, PATIENT__PATHWAY);
@@ -1970,6 +1989,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		aNumericEClass = createEClass(ANUMERIC);
 		createEAttribute(aNumericEClass, ANUMERIC__VALUE);
+		createEAttribute(aNumericEClass, ANUMERIC__QUANTITY);
 
 		answerEClass = createEClass(ANSWER);
 
@@ -2059,9 +2079,9 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		initEReference(getEQuery_EAttribute(), this.getEAttribute(), null, "eAttribute", null, 1, 1, EQuery.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEQuery_EMethod(), this.getEMethod(), null, "eMethod", null, 1, 1, EQuery.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+		initEReference(getEQuery_EMethod(), this.getEMethod(), null, "eMethod", null, 0, -1, EQuery.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(aDateEClass, ADate.class, "ADate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getADate_From(), ecorePackage.getEDate(), "from", null, 0, 1, ADate.class, !IS_TRANSIENT,
@@ -2232,6 +2252,9 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		initEClass(qAnswerEClass, QAnswer.class, "QAnswer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQAnswer_Name(), ecorePackage.getEString(), "name", "Answer", 0, 1, QAnswer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQAnswer_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QAnswer.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getQAnswer_Question(), this.getQuestion(), null, "question", null, 0, -1, QAnswer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2321,8 +2344,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		initEClass(questionEClass, Question.class, "Question", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getQuestion_Ids(), ecorePackage.getEInt(), "ids", null, 0, -1, Question.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestion_Percentage(), ecorePackage.getEString(), "percentage", "", 0, 1, Question.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQuestion_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Question.class,
@@ -2337,7 +2358,9 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		initEClass(aBooleanEClass, ABoolean.class, "ABoolean", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getABoolean_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1, ABoolean.class,
+		initEAttribute(getABoolean_FalseQuantity(), ecorePackage.getEInt(), "falseQuantity", null, 0, 1, ABoolean.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getABoolean_TrueQuantity(), ecorePackage.getEInt(), "trueQuantity", null, 0, 1, ABoolean.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(patientEClass, Patient.class, "Patient", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2356,6 +2379,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		initEClass(aNumericEClass, ANumeric.class, "ANumeric", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getANumeric_Value(), ecorePackage.getEDouble(), "value", null, 0, 1, ANumeric.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getANumeric_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, ANumeric.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(answerEClass, Answer.class, "Answer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

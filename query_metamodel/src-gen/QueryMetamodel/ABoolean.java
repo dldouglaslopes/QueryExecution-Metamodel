@@ -11,7 +11,8 @@ package QueryMetamodel;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.ABoolean#isValue <em>Value</em>}</li>
+ *   <li>{@link QueryMetamodel.ABoolean#getFalseQuantity <em>False Quantity</em>}</li>
+ *   <li>{@link QueryMetamodel.ABoolean#getTrueQuantity <em>True Quantity</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getABoolean()
@@ -20,29 +21,55 @@ package QueryMetamodel;
  */
 public interface ABoolean extends Answer {
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>False Quantity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Value</em>' attribute isn't clear,
+	 * If the meaning of the '<em>False Quantity</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(boolean)
-	 * @see QueryMetamodel.Query_metamodelPackage#getABoolean_Value()
+	 * @return the value of the '<em>False Quantity</em>' attribute.
+	 * @see #setFalseQuantity(int)
+	 * @see QueryMetamodel.Query_metamodelPackage#getABoolean_FalseQuantity()
 	 * @model
 	 * @generated
 	 */
-	boolean isValue();
+	int getFalseQuantity();
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.ABoolean#isValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link QueryMetamodel.ABoolean#getFalseQuantity <em>False Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #isValue()
+	 * @param value the new value of the '<em>False Quantity</em>' attribute.
+	 * @see #getFalseQuantity()
 	 * @generated
 	 */
-	void setValue(boolean value);
+	void setFalseQuantity(int value);
+
+	/**
+	 * Returns the value of the '<em><b>True Quantity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>True Quantity</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>True Quantity</em>' attribute.
+	 * @see #setTrueQuantity(int)
+	 * @see QueryMetamodel.Query_metamodelPackage#getABoolean_TrueQuantity()
+	 * @model
+	 * @generated
+	 */
+	int getTrueQuantity();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.ABoolean#getTrueQuantity <em>True Quantity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>True Quantity</em>' attribute.
+	 * @see #getTrueQuantity()
+	 * @generated
+	 */
+	void setTrueQuantity(int value);
 
 } // ABoolean

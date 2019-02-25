@@ -205,7 +205,7 @@ public interface Query_metamodelPackage extends EPackage {
 	int EQUERY__EATTRIBUTE = 0;
 
 	/**
-	 * The feature id for the '<em><b>EMethod</b></em>' containment reference.
+	 * The feature id for the '<em><b>EMethod</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1270,13 +1270,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int QANSWER__NAME = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QANSWER__PATHWAY = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Question</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QANSWER__QUESTION = EMETHOD_FEATURE_COUNT + 1;
+	int QANSWER__QUESTION = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>QAnswer</em>' class.
@@ -1285,7 +1294,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QANSWER_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
+	int QANSWER_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>QAnswer</em>' class.
@@ -1783,22 +1792,13 @@ public interface Query_metamodelPackage extends EPackage {
 	int QUESTION = 32;
 
 	/**
-	 * The feature id for the '<em><b>Ids</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QUESTION__IDS = 0;
-
-	/**
 	 * The feature id for the '<em><b>Percentage</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION__PERCENTAGE = 1;
+	int QUESTION__PERCENTAGE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
@@ -1807,7 +1807,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION__QUANTITY = 2;
+	int QUESTION__QUANTITY = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1816,7 +1816,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION__NAME = 3;
+	int QUESTION__NAME = 2;
 
 	/**
 	 * The feature id for the '<em><b>Answer</b></em>' containment reference list.
@@ -1825,7 +1825,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION__ANSWER = 4;
+	int QUESTION__ANSWER = 3;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -1834,7 +1834,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION__TYPE = 5;
+	int QUESTION__TYPE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Question</em>' class.
@@ -1843,7 +1843,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QUESTION_FEATURE_COUNT = 6;
+	int QUESTION_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Question</em>' class.
@@ -1893,13 +1893,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int ABOOLEAN = 33;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The feature id for the '<em><b>False Quantity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ABOOLEAN__VALUE = ANSWER_FEATURE_COUNT + 0;
+	int ABOOLEAN__FALSE_QUANTITY = ANSWER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>True Quantity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ABOOLEAN__TRUE_QUANTITY = ANSWER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>ABoolean</em>' class.
@@ -1908,7 +1917,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ABOOLEAN_FEATURE_COUNT = ANSWER_FEATURE_COUNT + 1;
+	int ABOOLEAN_FEATURE_COUNT = ANSWER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>ABoolean</em>' class.
@@ -2012,13 +2021,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int ANUMERIC__VALUE = ANSWER_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANUMERIC__QUANTITY = ANSWER_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>ANumeric</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANUMERIC_FEATURE_COUNT = ANSWER_FEATURE_COUNT + 1;
+	int ANUMERIC_FEATURE_COUNT = ANSWER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>ANumeric</em>' class.
@@ -2229,10 +2247,10 @@ public interface Query_metamodelPackage extends EPackage {
 	EReference getEQuery_EAttribute();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link QueryMetamodel.EQuery#getEMethod <em>EMethod</em>}'.
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.EQuery#getEMethod <em>EMethod</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>EMethod</em>'.
+	 * @return the meta object for the containment reference list '<em>EMethod</em>'.
 	 * @see QueryMetamodel.EQuery#getEMethod()
 	 * @see #getEQuery()
 	 * @generated
@@ -3022,6 +3040,17 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getQAnswer_Name();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QAnswer#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QAnswer#getPathway()
+	 * @see #getQAnswer()
+	 * @generated
+	 */
+	EReference getQAnswer_Pathway();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.QAnswer#getQuestion <em>Question</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3431,17 +3460,6 @@ public interface Query_metamodelPackage extends EPackage {
 	EClass getQuestion();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link QueryMetamodel.Question#getIds <em>Ids</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Ids</em>'.
-	 * @see QueryMetamodel.Question#getIds()
-	 * @see #getQuestion()
-	 * @generated
-	 */
-	EAttribute getQuestion_Ids();
-
-	/**
 	 * Returns the meta object for the attribute '{@link QueryMetamodel.Question#getPercentage <em>Percentage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3507,15 +3525,26 @@ public interface Query_metamodelPackage extends EPackage {
 	EClass getABoolean();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.ABoolean#isValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ABoolean#getFalseQuantity <em>False Quantity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see QueryMetamodel.ABoolean#isValue()
+	 * @return the meta object for the attribute '<em>False Quantity</em>'.
+	 * @see QueryMetamodel.ABoolean#getFalseQuantity()
 	 * @see #getABoolean()
 	 * @generated
 	 */
-	EAttribute getABoolean_Value();
+	EAttribute getABoolean_FalseQuantity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ABoolean#getTrueQuantity <em>True Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>True Quantity</em>'.
+	 * @see QueryMetamodel.ABoolean#getTrueQuantity()
+	 * @see #getABoolean()
+	 * @generated
+	 */
+	EAttribute getABoolean_TrueQuantity();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Answer <em>Answer</em>}'.
@@ -3612,6 +3641,17 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getANumeric_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ANumeric#getQuantity <em>Quantity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Quantity</em>'.
+	 * @see QueryMetamodel.ANumeric#getQuantity()
+	 * @see #getANumeric()
+	 * @generated
+	 */
+	EAttribute getANumeric_Quantity();
 
 	/**
 	 * Returns the meta object for enum '{@link QueryMetamodel.Order <em>Order</em>}'.
@@ -3809,7 +3849,7 @@ public interface Query_metamodelPackage extends EPackage {
 		EReference EQUERY__EATTRIBUTE = eINSTANCE.getEQuery_EAttribute();
 
 		/**
-		 * The meta object literal for the '<em><b>EMethod</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>EMethod</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4443,6 +4483,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute QANSWER__NAME = eINSTANCE.getQAnswer_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QANSWER__PATHWAY = eINSTANCE.getQAnswer_Pathway();
+
+		/**
 		 * The meta object literal for the '<em><b>Question</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4765,14 +4813,6 @@ public interface Query_metamodelPackage extends EPackage {
 		EClass QUESTION = eINSTANCE.getQuestion();
 
 		/**
-		 * The meta object literal for the '<em><b>Ids</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute QUESTION__IDS = eINSTANCE.getQuestion_Ids();
-
-		/**
 		 * The meta object literal for the '<em><b>Percentage</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4823,12 +4863,20 @@ public interface Query_metamodelPackage extends EPackage {
 		EClass ABOOLEAN = eINSTANCE.getABoolean();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>False Quantity</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ABOOLEAN__VALUE = eINSTANCE.getABoolean_Value();
+		EAttribute ABOOLEAN__FALSE_QUANTITY = eINSTANCE.getABoolean_FalseQuantity();
+
+		/**
+		 * The meta object literal for the '<em><b>True Quantity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ABOOLEAN__TRUE_QUANTITY = eINSTANCE.getABoolean_TrueQuantity();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.AnswerImpl <em>Answer</em>}' class.
@@ -4907,6 +4955,14 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ANUMERIC__VALUE = eINSTANCE.getANumeric_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Quantity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ANUMERIC__QUANTITY = eINSTANCE.getANumeric_Quantity();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.
