@@ -2,22 +2,21 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.Pathway;
 import QueryMetamodel.Prescription;
 import QueryMetamodel.Query_metamodelPackage;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.PrescriptionImpl#getPathway <em>Pathway</em>}</li>
  *   <li>{@link QueryMetamodel.impl.PrescriptionImpl#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.impl.PrescriptionImpl#getCode <em>Code</em>}</li>
  *   <li>{@link QueryMetamodel.impl.PrescriptionImpl#getIds <em>Ids</em>}</li>
@@ -39,15 +37,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Prescription {
 	/**
-	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPathway()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Pathway> pathway;
-	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,6 +45,7 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -65,6 +55,7 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -74,6 +65,7 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @ordered
 	 */
 	protected static final String CODE_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -83,6 +75,7 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @ordered
 	 */
 	protected String code = CODE_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getIds() <em>Ids</em>}' attribute list.
 	 * <!-- begin-user-doc -->
@@ -92,6 +85,7 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @ordered
 	 */
 	protected EList<Integer> ids;
+
 	/**
 	 * The default value of the '{@link #getPercentage() <em>Percentage</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -101,6 +95,7 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @ordered
 	 */
 	protected static final String PERCENTAGE_EDEFAULT = "";
+
 	/**
 	 * The cached value of the '{@link #getPercentage() <em>Percentage</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -110,6 +105,7 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @ordered
 	 */
 	protected String percentage = PERCENTAGE_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -119,6 +115,7 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @ordered
 	 */
 	protected static final int QUANTITY_EDEFAULT = 0;
+
 	/**
 	 * The cached value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -146,19 +143,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	protected EClass eStaticClass() {
 		return Query_metamodelPackage.Literals.PRESCRIPTION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Pathway> getPathway() {
-		if (pathway == null) {
-			pathway = new EObjectContainmentEList<Pathway>(Pathway.class, this,
-					Query_metamodelPackage.PRESCRIPTION__PATHWAY);
-		}
-		return pathway;
 	}
 
 	/**
@@ -267,24 +251,8 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Query_metamodelPackage.PRESCRIPTION__PATHWAY:
-			return ((InternalEList<?>) getPathway()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.PRESCRIPTION__PATHWAY:
-			return getPathway();
 		case Query_metamodelPackage.PRESCRIPTION__NAME:
 			return getName();
 		case Query_metamodelPackage.PRESCRIPTION__CODE:
@@ -308,10 +276,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.PRESCRIPTION__PATHWAY:
-			getPathway().clear();
-			getPathway().addAll((Collection<? extends Pathway>) newValue);
-			return;
 		case Query_metamodelPackage.PRESCRIPTION__NAME:
 			setName((String) newValue);
 			return;
@@ -340,9 +304,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.PRESCRIPTION__PATHWAY:
-			getPathway().clear();
-			return;
 		case Query_metamodelPackage.PRESCRIPTION__NAME:
 			setName(NAME_EDEFAULT);
 			return;
@@ -370,8 +331,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.PRESCRIPTION__PATHWAY:
-			return pathway != null && !pathway.isEmpty();
 		case Query_metamodelPackage.PRESCRIPTION__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Query_metamodelPackage.PRESCRIPTION__CODE:

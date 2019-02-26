@@ -112,13 +112,13 @@ public interface Query_metamodelFactory extends EFactory {
 	QConduct createQConduct();
 
 	/**
-	 * Returns a new object of class '<em>QRecurrent Flow</em>'.
+	 * Returns a new object of class '<em>QFlow</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>QRecurrent Flow</em>'.
+	 * @return a new object of class '<em>QFlow</em>'.
 	 * @generated
 	 */
-	QRecurrentFlow createQRecurrentFlow();
+	QFlow createQFlow();
 
 	/**
 	 * Returns a new object of class '<em>QAverage Time</em>'.
@@ -137,15 +137,6 @@ public interface Query_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	QMedication createQMedication();
-
-	/**
-	 * Returns a new object of class '<em>QOccurrence</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>QOccurrence</em>'.
-	 * @generated
-	 */
-	QOccurrence createQOccurrence();
 
 	/**
 	 * Returns a new object of class '<em>Flow</em>'.
@@ -182,42 +173,6 @@ public interface Query_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	Pathway createPathway();
-
-	/**
-	 * Returns a new object of class '<em>Status</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Status</em>'.
-	 * @generated
-	 */
-	Status createStatus();
-
-	/**
-	 * Returns a new object of class '<em>Conduct</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Conduct</em>'.
-	 * @generated
-	 */
-	Conduct createConduct();
-
-	/**
-	 * Returns a new object of class '<em>Average Time</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Average Time</em>'.
-	 * @generated
-	 */
-	AverageTime createAverageTime();
-
-	/**
-	 * Returns a new object of class '<em>Occurrence</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Occurrence</em>'.
-	 * @generated
-	 */
-	Occurrence createOccurrence();
 
 	/**
 	 * Returns a new object of class '<em>QAnswer</em>'.
@@ -335,6 +290,15 @@ public interface Query_metamodelFactory extends EFactory {
 	 * @generated
 	 */
 	ANumeric createANumeric();
+
+	/**
+	 * Returns a new object of class '<em>QOccurrence</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>QOccurrence</em>'.
+	 * @generated
+	 */
+	QOccurrence createQOccurrence();
 
 	/**
 	 * Returns the package supported by this factory.

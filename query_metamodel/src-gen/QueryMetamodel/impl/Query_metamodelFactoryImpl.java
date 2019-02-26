@@ -77,14 +77,12 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createQStatus();
 		case Query_metamodelPackage.QCONDUCT:
 			return createQConduct();
-		case Query_metamodelPackage.QRECURRENT_FLOW:
-			return createQRecurrentFlow();
+		case Query_metamodelPackage.QFLOW:
+			return createQFlow();
 		case Query_metamodelPackage.QAVERAGE_TIME:
 			return createQAverageTime();
 		case Query_metamodelPackage.QMEDICATION:
 			return createQMedication();
-		case Query_metamodelPackage.QOCCURRENCE:
-			return createQOccurrence();
 		case Query_metamodelPackage.FLOW:
 			return createFlow();
 		case Query_metamodelPackage.MEDICATION:
@@ -93,14 +91,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createSequence();
 		case Query_metamodelPackage.PATHWAY:
 			return createPathway();
-		case Query_metamodelPackage.STATUS:
-			return createStatus();
-		case Query_metamodelPackage.CONDUCT:
-			return createConduct();
-		case Query_metamodelPackage.AVERAGE_TIME:
-			return createAverageTime();
-		case Query_metamodelPackage.OCCURRENCE:
-			return createOccurrence();
 		case Query_metamodelPackage.QANSWER:
 			return createQAnswer();
 		case Query_metamodelPackage.QSTEP:
@@ -127,6 +117,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createPatient();
 		case Query_metamodelPackage.ANUMERIC:
 			return createANumeric();
+		case Query_metamodelPackage.QOCCURRENCE:
+			return createQOccurrence();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -291,9 +283,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QRecurrentFlow createQRecurrentFlow() {
-		QRecurrentFlowImpl qRecurrentFlow = new QRecurrentFlowImpl();
-		return qRecurrentFlow;
+	public QFlow createQFlow() {
+		QFlowImpl qFlow = new QFlowImpl();
+		return qFlow;
 	}
 
 	/**
@@ -314,16 +306,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public QMedication createQMedication() {
 		QMedicationImpl qMedication = new QMedicationImpl();
 		return qMedication;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public QOccurrence createQOccurrence() {
-		QOccurrenceImpl qOccurrence = new QOccurrenceImpl();
-		return qOccurrence;
 	}
 
 	/**
@@ -364,46 +346,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public Pathway createPathway() {
 		PathwayImpl pathway = new PathwayImpl();
 		return pathway;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Status createStatus() {
-		StatusImpl status = new StatusImpl();
-		return status;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Conduct createConduct() {
-		ConductImpl conduct = new ConductImpl();
-		return conduct;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AverageTime createAverageTime() {
-		AverageTimeImpl averageTime = new AverageTimeImpl();
-		return averageTime;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Occurrence createOccurrence() {
-		OccurrenceImpl occurrence = new OccurrenceImpl();
-		return occurrence;
 	}
 
 	/**
@@ -534,6 +476,16 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public ANumeric createANumeric() {
 		ANumericImpl aNumeric = new ANumericImpl();
 		return aNumeric;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QOccurrence createQOccurrence() {
+		QOccurrenceImpl qOccurrence = new QOccurrenceImpl();
+		return qOccurrence;
 	}
 
 	/**

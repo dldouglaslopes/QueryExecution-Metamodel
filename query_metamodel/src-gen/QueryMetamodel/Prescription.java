@@ -3,6 +3,7 @@
 package QueryMetamodel;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.Prescription#getPathway <em>Pathway</em>}</li>
  *   <li>{@link QueryMetamodel.Prescription#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.Prescription#getCode <em>Code</em>}</li>
  *   <li>{@link QueryMetamodel.Prescription#getIds <em>Ids</em>}</li>
@@ -27,23 +27,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Prescription extends EObject {
-
-	/**
-	 * Returns the value of the '<em><b>Pathway</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.Pathway}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Pathway</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pathway</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getPrescription_Pathway()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Pathway> getPathway();
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -164,4 +147,5 @@ public interface Prescription extends EObject {
 	 * @generated
 	 */
 	void setQuantity(int value);
+
 } // Prescription

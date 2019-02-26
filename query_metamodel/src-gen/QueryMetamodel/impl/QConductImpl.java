@@ -2,24 +2,14 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.Conduct;
 import QueryMetamodel.QConduct;
 import QueryMetamodel.Query_metamodelPackage;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,42 +19,52 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.QConductImpl#getConduct <em>Conduct</em>}</li>
- *   <li>{@link QueryMetamodel.impl.QConductImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QConductImpl#getWithConduct <em>With Conduct</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QConductImpl#getNoConduct <em>No Conduct</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class QConductImpl extends EMethodImpl implements QConduct {
 	/**
-	 * The cached value of the '{@link #getConduct() <em>Conduct</em>}' containment reference list.
+	 * The default value of the '{@link #getWithConduct() <em>With Conduct</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConduct()
+	 * @see #getWithConduct()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Conduct> conduct;
+	protected static final int WITH_CONDUCT_EDEFAULT = 0;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getWithConduct() <em>With Conduct</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getWithConduct()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "CountConduct";
+	protected int withConduct = WITH_CONDUCT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getNoConduct() <em>No Conduct</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getNoConduct()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected static final int NO_CONDUCT_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNoConduct() <em>No Conduct</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNoConduct()
+	 * @generated
+	 * @ordered
+	 */
+	protected int noConduct = NO_CONDUCT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,12 +90,8 @@ public class QConductImpl extends EMethodImpl implements QConduct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Conduct> getConduct() {
-		if (conduct == null) {
-			conduct = new EObjectContainmentEList<Conduct>(Conduct.class, this,
-					Query_metamodelPackage.QCONDUCT__CONDUCT);
-		}
-		return conduct;
+	public int getWithConduct() {
+		return withConduct;
 	}
 
 	/**
@@ -103,21 +99,12 @@ public class QConductImpl extends EMethodImpl implements QConduct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setWithConduct(int newWithConduct) {
+		int oldWithConduct = withConduct;
+		withConduct = newWithConduct;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QCONDUCT__NAME, oldName,
-					name));
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QCONDUCT__WITH_CONDUCT,
+					oldWithConduct, withConduct));
 	}
 
 	/**
@@ -125,13 +112,21 @@ public class QConductImpl extends EMethodImpl implements QConduct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Query_metamodelPackage.QCONDUCT__CONDUCT:
-			return ((InternalEList<?>) getConduct()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public int getNoConduct() {
+		return noConduct;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNoConduct(int newNoConduct) {
+		int oldNoConduct = noConduct;
+		noConduct = newNoConduct;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QCONDUCT__NO_CONDUCT,
+					oldNoConduct, noConduct));
 	}
 
 	/**
@@ -142,10 +137,10 @@ public class QConductImpl extends EMethodImpl implements QConduct {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.QCONDUCT__CONDUCT:
-			return getConduct();
-		case Query_metamodelPackage.QCONDUCT__NAME:
-			return getName();
+		case Query_metamodelPackage.QCONDUCT__WITH_CONDUCT:
+			return getWithConduct();
+		case Query_metamodelPackage.QCONDUCT__NO_CONDUCT:
+			return getNoConduct();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -155,16 +150,14 @@ public class QConductImpl extends EMethodImpl implements QConduct {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.QCONDUCT__CONDUCT:
-			getConduct().clear();
-			getConduct().addAll((Collection<? extends Conduct>) newValue);
+		case Query_metamodelPackage.QCONDUCT__WITH_CONDUCT:
+			setWithConduct((Integer) newValue);
 			return;
-		case Query_metamodelPackage.QCONDUCT__NAME:
-			setName((String) newValue);
+		case Query_metamodelPackage.QCONDUCT__NO_CONDUCT:
+			setNoConduct((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -178,11 +171,11 @@ public class QConductImpl extends EMethodImpl implements QConduct {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QCONDUCT__CONDUCT:
-			getConduct().clear();
+		case Query_metamodelPackage.QCONDUCT__WITH_CONDUCT:
+			setWithConduct(WITH_CONDUCT_EDEFAULT);
 			return;
-		case Query_metamodelPackage.QCONDUCT__NAME:
-			setName(NAME_EDEFAULT);
+		case Query_metamodelPackage.QCONDUCT__NO_CONDUCT:
+			setNoConduct(NO_CONDUCT_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -196,10 +189,10 @@ public class QConductImpl extends EMethodImpl implements QConduct {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QCONDUCT__CONDUCT:
-			return conduct != null && !conduct.isEmpty();
-		case Query_metamodelPackage.QCONDUCT__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Query_metamodelPackage.QCONDUCT__WITH_CONDUCT:
+			return withConduct != WITH_CONDUCT_EDEFAULT;
+		case Query_metamodelPackage.QCONDUCT__NO_CONDUCT:
+			return noConduct != NO_CONDUCT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -215,8 +208,10 @@ public class QConductImpl extends EMethodImpl implements QConduct {
 			return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (withConduct: ");
+		result.append(withConduct);
+		result.append(", noConduct: ");
+		result.append(noConduct);
 		result.append(')');
 		return result.toString();
 	}

@@ -2,8 +2,6 @@
  */
 package QueryMetamodel;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>QConduct</b></em>'.
@@ -13,8 +11,8 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.QConduct#getConduct <em>Conduct</em>}</li>
- *   <li>{@link QueryMetamodel.QConduct#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.QConduct#getWithConduct <em>With Conduct</em>}</li>
+ *   <li>{@link QueryMetamodel.QConduct#getNoConduct <em>No Conduct</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getQConduct()
@@ -23,46 +21,55 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface QConduct extends EMethod {
 	/**
-	 * Returns the value of the '<em><b>Conduct</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.Conduct}.
+	 * Returns the value of the '<em><b>With Conduct</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Conduct</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>With Conduct</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conduct</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getQConduct_Conduct()
-	 * @model containment="true"
+	 * @return the value of the '<em>With Conduct</em>' attribute.
+	 * @see #setWithConduct(int)
+	 * @see QueryMetamodel.Query_metamodelPackage#getQConduct_WithConduct()
+	 * @model
 	 * @generated
 	 */
-	EList<Conduct> getConduct();
+	int getWithConduct();
 
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>"CountConduct"</code>.
+	 * Sets the value of the '{@link QueryMetamodel.QConduct#getWithConduct <em>With Conduct</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>With Conduct</em>' attribute.
+	 * @see #getWithConduct()
+	 * @generated
+	 */
+	void setWithConduct(int value);
+
+	/**
+	 * Returns the value of the '<em><b>No Conduct</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>No Conduct</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see QueryMetamodel.Query_metamodelPackage#getQConduct_Name()
-	 * @model default="CountConduct"
+	 * @return the value of the '<em>No Conduct</em>' attribute.
+	 * @see #setNoConduct(int)
+	 * @see QueryMetamodel.Query_metamodelPackage#getQConduct_NoConduct()
+	 * @model
 	 * @generated
 	 */
-	String getName();
+	int getNoConduct();
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.QConduct#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link QueryMetamodel.QConduct#getNoConduct <em>No Conduct</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>No Conduct</em>' attribute.
+	 * @see #getNoConduct()
 	 * @generated
 	 */
-	void setName(String value);
+	void setNoConduct(int value);
 
 } // QConduct

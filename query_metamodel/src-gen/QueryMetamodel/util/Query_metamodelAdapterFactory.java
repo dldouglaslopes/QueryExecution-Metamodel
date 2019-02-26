@@ -122,8 +122,8 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseQRecurrentFlow(QRecurrentFlow object) {
-			return createQRecurrentFlowAdapter();
+		public Adapter caseQFlow(QFlow object) {
+			return createQFlowAdapter();
 		}
 
 		@Override
@@ -134,11 +134,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseQMedication(QMedication object) {
 			return createQMedicationAdapter();
-		}
-
-		@Override
-		public Adapter caseQOccurrence(QOccurrence object) {
-			return createQOccurrenceAdapter();
 		}
 
 		@Override
@@ -159,26 +154,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter casePathway(Pathway object) {
 			return createPathwayAdapter();
-		}
-
-		@Override
-		public Adapter caseStatus(Status object) {
-			return createStatusAdapter();
-		}
-
-		@Override
-		public Adapter caseConduct(Conduct object) {
-			return createConductAdapter();
-		}
-
-		@Override
-		public Adapter caseAverageTime(AverageTime object) {
-			return createAverageTimeAdapter();
-		}
-
-		@Override
-		public Adapter caseOccurrence(Occurrence object) {
-			return createOccurrenceAdapter();
 		}
 
 		@Override
@@ -249,6 +224,11 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseAnswer(Answer object) {
 			return createAnswerAdapter();
+		}
+
+		@Override
+		public Adapter caseQOccurrence(QOccurrence object) {
+			return createQOccurrenceAdapter();
 		}
 
 		@Override
@@ -425,16 +405,16 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QRecurrentFlow <em>QRecurrent Flow</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QFlow <em>QFlow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.QRecurrentFlow
+	 * @see QueryMetamodel.QFlow
 	 * @generated
 	 */
-	public Adapter createQRecurrentFlowAdapter() {
+	public Adapter createQFlowAdapter() {
 		return null;
 	}
 
@@ -463,20 +443,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createQMedicationAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QOccurrence <em>QOccurrence</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.QOccurrence
-	 * @generated
-	 */
-	public Adapter createQOccurrenceAdapter() {
 		return null;
 	}
 
@@ -533,62 +499,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPathwayAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Status <em>Status</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.Status
-	 * @generated
-	 */
-	public Adapter createStatusAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Conduct <em>Conduct</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.Conduct
-	 * @generated
-	 */
-	public Adapter createConductAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.AverageTime <em>Average Time</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.AverageTime
-	 * @generated
-	 */
-	public Adapter createAverageTimeAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Occurrence <em>Occurrence</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.Occurrence
-	 * @generated
-	 */
-	public Adapter createOccurrenceAdapter() {
 		return null;
 	}
 
@@ -747,20 +657,6 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Answer <em>Answer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see QueryMetamodel.Answer
-	 * @generated
-	 */
-	public Adapter createAnswerAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Patient <em>Patient</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -785,6 +681,34 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createANumericAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.Answer <em>Answer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.Answer
+	 * @generated
+	 */
+	public Adapter createAnswerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QOccurrence <em>QOccurrence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see QueryMetamodel.QOccurrence
+	 * @generated
+	 */
+	public Adapter createQOccurrenceAdapter() {
 		return null;
 	}
 

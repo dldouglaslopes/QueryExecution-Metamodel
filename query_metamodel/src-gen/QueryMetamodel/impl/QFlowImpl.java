@@ -2,8 +2,8 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.Patient;
-import QueryMetamodel.QReturn;
+import QueryMetamodel.Flow;
+import QueryMetamodel.QFlow;
 import QueryMetamodel.Query_metamodelPackage;
 
 import java.util.Collection;
@@ -20,34 +20,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>QReturn</b></em>'.
+ * An implementation of the model object '<em><b>QFlow</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.QReturnImpl#getPatient <em>Patient</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QFlowImpl#getFlow <em>Flow</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class QReturnImpl extends EMethodImpl implements QReturn {
+public class QFlowImpl extends EMethodImpl implements QFlow {
 	/**
-	 * The cached value of the '{@link #getPatient() <em>Patient</em>}' containment reference list.
+	 * The cached value of the '{@link #getFlow() <em>Flow</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPatient()
+	 * @see #getFlow()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Patient> patient;
+	protected EList<Flow> flow;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected QReturnImpl() {
+	protected QFlowImpl() {
 		super();
 	}
 
@@ -58,7 +58,7 @@ public class QReturnImpl extends EMethodImpl implements QReturn {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Query_metamodelPackage.Literals.QRETURN;
+		return Query_metamodelPackage.Literals.QFLOW;
 	}
 
 	/**
@@ -66,12 +66,11 @@ public class QReturnImpl extends EMethodImpl implements QReturn {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Patient> getPatient() {
-		if (patient == null) {
-			patient = new EObjectContainmentEList<Patient>(Patient.class, this,
-					Query_metamodelPackage.QRETURN__PATIENT);
+	public EList<Flow> getFlow() {
+		if (flow == null) {
+			flow = new EObjectContainmentEList<Flow>(Flow.class, this, Query_metamodelPackage.QFLOW__FLOW);
 		}
-		return patient;
+		return flow;
 	}
 
 	/**
@@ -82,8 +81,8 @@ public class QReturnImpl extends EMethodImpl implements QReturn {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.QRETURN__PATIENT:
-			return ((InternalEList<?>) getPatient()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.QFLOW__FLOW:
+			return ((InternalEList<?>) getFlow()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -96,8 +95,8 @@ public class QReturnImpl extends EMethodImpl implements QReturn {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.QRETURN__PATIENT:
-			return getPatient();
+		case Query_metamodelPackage.QFLOW__FLOW:
+			return getFlow();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -111,9 +110,9 @@ public class QReturnImpl extends EMethodImpl implements QReturn {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.QRETURN__PATIENT:
-			getPatient().clear();
-			getPatient().addAll((Collection<? extends Patient>) newValue);
+		case Query_metamodelPackage.QFLOW__FLOW:
+			getFlow().clear();
+			getFlow().addAll((Collection<? extends Flow>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -127,8 +126,8 @@ public class QReturnImpl extends EMethodImpl implements QReturn {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QRETURN__PATIENT:
-			getPatient().clear();
+		case Query_metamodelPackage.QFLOW__FLOW:
+			getFlow().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -142,10 +141,10 @@ public class QReturnImpl extends EMethodImpl implements QReturn {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QRETURN__PATIENT:
-			return patient != null && !patient.isEmpty();
+		case Query_metamodelPackage.QFLOW__FLOW:
+			return flow != null && !flow.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //QReturnImpl
+} //QFlowImpl

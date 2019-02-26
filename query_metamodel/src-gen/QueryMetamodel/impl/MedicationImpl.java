@@ -3,25 +3,14 @@
 package QueryMetamodel.impl;
 
 import QueryMetamodel.Medication;
-import QueryMetamodel.Pathway;
 import QueryMetamodel.Query_metamodelPackage;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,9 +23,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link QueryMetamodel.impl.MedicationImpl#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.impl.MedicationImpl#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.impl.MedicationImpl#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.impl.MedicationImpl#getPathway <em>Pathway</em>}</li>
- *   <li>{@link QueryMetamodel.impl.MedicationImpl#getCode <em>Code</em>}</li>
- *   <li>{@link QueryMetamodel.impl.MedicationImpl#getIds <em>Ids</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,46 +87,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * @ordered
 	 */
 	protected int quantity = QUANTITY_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPathway()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Pathway> pathway;
-
-	/**
-	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCode()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CODE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCode()
-	 * @generated
-	 * @ordered
-	 */
-	protected String code = CODE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getIds() <em>Ids</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIds()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Integer> ids;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -232,67 +178,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Pathway> getPathway() {
-		if (pathway == null) {
-			pathway = new EObjectContainmentEList<Pathway>(Pathway.class, this,
-					Query_metamodelPackage.MEDICATION__PATHWAY);
-		}
-		return pathway;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getCode() {
-		return code;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCode(String newCode) {
-		String oldCode = code;
-		code = newCode;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.MEDICATION__CODE, oldCode,
-					code));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Integer> getIds() {
-		if (ids == null) {
-			ids = new EDataTypeUniqueEList<Integer>(Integer.class, this, Query_metamodelPackage.MEDICATION__IDS);
-		}
-		return ids;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case Query_metamodelPackage.MEDICATION__PATHWAY:
-			return ((InternalEList<?>) getPathway()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -302,12 +187,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return getName();
 		case Query_metamodelPackage.MEDICATION__QUANTITY:
 			return getQuantity();
-		case Query_metamodelPackage.MEDICATION__PATHWAY:
-			return getPathway();
-		case Query_metamodelPackage.MEDICATION__CODE:
-			return getCode();
-		case Query_metamodelPackage.MEDICATION__IDS:
-			return getIds();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -317,7 +196,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -329,17 +207,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return;
 		case Query_metamodelPackage.MEDICATION__QUANTITY:
 			setQuantity((Integer) newValue);
-			return;
-		case Query_metamodelPackage.MEDICATION__PATHWAY:
-			getPathway().clear();
-			getPathway().addAll((Collection<? extends Pathway>) newValue);
-			return;
-		case Query_metamodelPackage.MEDICATION__CODE:
-			setCode((String) newValue);
-			return;
-		case Query_metamodelPackage.MEDICATION__IDS:
-			getIds().clear();
-			getIds().addAll((Collection<? extends Integer>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -362,15 +229,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Query_metamodelPackage.MEDICATION__QUANTITY:
 			setQuantity(QUANTITY_EDEFAULT);
 			return;
-		case Query_metamodelPackage.MEDICATION__PATHWAY:
-			getPathway().clear();
-			return;
-		case Query_metamodelPackage.MEDICATION__CODE:
-			setCode(CODE_EDEFAULT);
-			return;
-		case Query_metamodelPackage.MEDICATION__IDS:
-			getIds().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -389,12 +247,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Query_metamodelPackage.MEDICATION__QUANTITY:
 			return quantity != QUANTITY_EDEFAULT;
-		case Query_metamodelPackage.MEDICATION__PATHWAY:
-			return pathway != null && !pathway.isEmpty();
-		case Query_metamodelPackage.MEDICATION__CODE:
-			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
-		case Query_metamodelPackage.MEDICATION__IDS:
-			return ids != null && !ids.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -416,10 +268,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		result.append(name);
 		result.append(", quantity: ");
 		result.append(quantity);
-		result.append(", code: ");
-		result.append(code);
-		result.append(", ids: ");
-		result.append(ids);
 		result.append(')');
 		return result.toString();
 	}

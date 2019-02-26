@@ -8,15 +8,12 @@ import QueryMetamodel.Query_metamodelPackage;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -29,33 +26,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.QMedicationImpl#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.impl.QMedicationImpl#getMedications <em>Medications</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class QMedicationImpl extends EMethodImpl implements QMedication {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = "PrescribedMedications";
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getMedications() <em>Medications</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -83,28 +59,6 @@ public class QMedicationImpl extends EMethodImpl implements QMedication {
 	@Override
 	protected EClass eStaticClass() {
 		return Query_metamodelPackage.Literals.QMEDICATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QMEDICATION__NAME, oldName,
-					name));
 	}
 
 	/**
@@ -142,8 +96,6 @@ public class QMedicationImpl extends EMethodImpl implements QMedication {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.QMEDICATION__NAME:
-			return getName();
 		case Query_metamodelPackage.QMEDICATION__MEDICATIONS:
 			return getMedications();
 		}
@@ -159,9 +111,6 @@ public class QMedicationImpl extends EMethodImpl implements QMedication {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.QMEDICATION__NAME:
-			setName((String) newValue);
-			return;
 		case Query_metamodelPackage.QMEDICATION__MEDICATIONS:
 			getMedications().clear();
 			getMedications().addAll((Collection<? extends Medication>) newValue);
@@ -178,9 +127,6 @@ public class QMedicationImpl extends EMethodImpl implements QMedication {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QMEDICATION__NAME:
-			setName(NAME_EDEFAULT);
-			return;
 		case Query_metamodelPackage.QMEDICATION__MEDICATIONS:
 			getMedications().clear();
 			return;
@@ -196,29 +142,10 @@ public class QMedicationImpl extends EMethodImpl implements QMedication {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QMEDICATION__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Query_metamodelPackage.QMEDICATION__MEDICATIONS:
 			return medications != null && !medications.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //QMedicationImpl

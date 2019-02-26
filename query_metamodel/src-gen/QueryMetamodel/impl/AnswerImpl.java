@@ -4,7 +4,9 @@ package QueryMetamodel.impl;
 
 import QueryMetamodel.Answer;
 import QueryMetamodel.Query_metamodelPackage;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**

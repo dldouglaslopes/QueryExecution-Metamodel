@@ -19,8 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link QueryMetamodel.Pathway#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.Pathway#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.Pathway#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.Pathway#getStep <em>Step</em>}</li>
- *   <li>{@link QueryMetamodel.Pathway#getFlow <em>Flow</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getPathway()
@@ -122,37 +120,5 @@ public interface Pathway extends EObject {
 	 * @generated
 	 */
 	void setQuantity(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Step</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.Step}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Step</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Step</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getPathway_Step()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Step> getStep();
-
-	/**
-	 * Returns the value of the '<em><b>Flow</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.Flow}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Flow</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Flow</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getPathway_Flow()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Flow> getFlow();
 
 } // Pathway

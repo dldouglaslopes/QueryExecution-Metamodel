@@ -2,21 +2,18 @@
  */
 package QueryMetamodel.impl;
 
-import QueryMetamodel.Pathway;
 import QueryMetamodel.QStep;
 import QueryMetamodel.Query_metamodelPackage;
+import QueryMetamodel.Step;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -29,42 +26,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.impl.QStepImpl#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.impl.QStepImpl#getPathway <em>Pathway</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QStepImpl#getStep <em>Step</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class QStepImpl extends EMethodImpl implements QStep {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getStep() <em>Step</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getStep()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = "Step";
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPathway()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Pathway> pathway;
+	protected EList<Step> step;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,32 +66,11 @@ public class QStepImpl extends EMethodImpl implements QStep {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QSTEP__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Pathway> getPathway() {
-		if (pathway == null) {
-			pathway = new EObjectContainmentEList<Pathway>(Pathway.class, this, Query_metamodelPackage.QSTEP__PATHWAY);
+	public EList<Step> getStep() {
+		if (step == null) {
+			step = new EObjectContainmentEList<Step>(Step.class, this, Query_metamodelPackage.QSTEP__STEP);
 		}
-		return pathway;
+		return step;
 	}
 
 	/**
@@ -126,8 +81,8 @@ public class QStepImpl extends EMethodImpl implements QStep {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.QSTEP__PATHWAY:
-			return ((InternalEList<?>) getPathway()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.QSTEP__STEP:
+			return ((InternalEList<?>) getStep()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -140,10 +95,8 @@ public class QStepImpl extends EMethodImpl implements QStep {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Query_metamodelPackage.QSTEP__NAME:
-			return getName();
-		case Query_metamodelPackage.QSTEP__PATHWAY:
-			return getPathway();
+		case Query_metamodelPackage.QSTEP__STEP:
+			return getStep();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,12 +110,9 @@ public class QStepImpl extends EMethodImpl implements QStep {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Query_metamodelPackage.QSTEP__NAME:
-			setName((String) newValue);
-			return;
-		case Query_metamodelPackage.QSTEP__PATHWAY:
-			getPathway().clear();
-			getPathway().addAll((Collection<? extends Pathway>) newValue);
+		case Query_metamodelPackage.QSTEP__STEP:
+			getStep().clear();
+			getStep().addAll((Collection<? extends Step>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -176,11 +126,8 @@ public class QStepImpl extends EMethodImpl implements QStep {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QSTEP__NAME:
-			setName(NAME_EDEFAULT);
-			return;
-		case Query_metamodelPackage.QSTEP__PATHWAY:
-			getPathway().clear();
+		case Query_metamodelPackage.QSTEP__STEP:
+			getStep().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -194,29 +141,10 @@ public class QStepImpl extends EMethodImpl implements QStep {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Query_metamodelPackage.QSTEP__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Query_metamodelPackage.QSTEP__PATHWAY:
-			return pathway != null && !pathway.isEmpty();
+		case Query_metamodelPackage.QSTEP__STEP:
+			return step != null && !step.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //QStepImpl

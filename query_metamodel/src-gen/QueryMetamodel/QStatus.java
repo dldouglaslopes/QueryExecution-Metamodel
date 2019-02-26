@@ -2,8 +2,6 @@
  */
 package QueryMetamodel;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>QStatus</b></em>'.
@@ -13,8 +11,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.QStatus#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.QStatus#getStatus <em>Status</em>}</li>
+ *   <li>{@link QueryMetamodel.QStatus#getCompleted <em>Completed</em>}</li>
+ *   <li>{@link QueryMetamodel.QStatus#getInProgress <em>In Progress</em>}</li>
+ *   <li>{@link QueryMetamodel.QStatus#getAborted <em>Aborted</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getQStatus()
@@ -23,46 +22,81 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface QStatus extends EMethod {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>"Status"</code>.
+	 * Returns the value of the '<em><b>Completed</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Completed</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see QueryMetamodel.Query_metamodelPackage#getQStatus_Name()
-	 * @model default="Status"
+	 * @return the value of the '<em>Completed</em>' attribute.
+	 * @see #setCompleted(int)
+	 * @see QueryMetamodel.Query_metamodelPackage#getQStatus_Completed()
+	 * @model
 	 * @generated
 	 */
-	String getName();
+	int getCompleted();
 
 	/**
-	 * Sets the value of the '{@link QueryMetamodel.QStatus#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link QueryMetamodel.QStatus#getCompleted <em>Completed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Completed</em>' attribute.
+	 * @see #getCompleted()
 	 * @generated
 	 */
-	void setName(String value);
+	void setCompleted(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Status</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.Status}.
+	 * Returns the value of the '<em><b>In Progress</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Status</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>In Progress</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Status</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getQStatus_Status()
-	 * @model containment="true"
+	 * @return the value of the '<em>In Progress</em>' attribute.
+	 * @see #setInProgress(int)
+	 * @see QueryMetamodel.Query_metamodelPackage#getQStatus_InProgress()
+	 * @model
 	 * @generated
 	 */
-	EList<Status> getStatus();
+	int getInProgress();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.QStatus#getInProgress <em>In Progress</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>In Progress</em>' attribute.
+	 * @see #getInProgress()
+	 * @generated
+	 */
+	void setInProgress(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Aborted</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Aborted</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Aborted</em>' attribute.
+	 * @see #setAborted(int)
+	 * @see QueryMetamodel.Query_metamodelPackage#getQStatus_Aborted()
+	 * @model
+	 * @generated
+	 */
+	int getAborted();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.QStatus#getAborted <em>Aborted</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Aborted</em>' attribute.
+	 * @see #getAborted()
+	 * @generated
+	 */
+	void setAborted(int value);
 
 } // QStatus
