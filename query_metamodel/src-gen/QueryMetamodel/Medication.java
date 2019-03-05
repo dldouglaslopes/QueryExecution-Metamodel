@@ -2,6 +2,8 @@
  */
 package QueryMetamodel;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,6 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link QueryMetamodel.Medication#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.Medication#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.Medication#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link QueryMetamodel.Medication#getId <em>Id</em>}</li>
+ *   <li>{@link QueryMetamodel.Medication#getStep <em>Step</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getMedication()
@@ -101,5 +105,47 @@ public interface Medication extends EObject {
 	 * @generated
 	 */
 	void setQuantity(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see QueryMetamodel.Query_metamodelPackage#getMedication_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.Medication#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Step</b></em>' containment reference list.
+	 * The list contents are of type {@link QueryMetamodel.Step}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Step</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Step</em>' containment reference list.
+	 * @see QueryMetamodel.Query_metamodelPackage#getMedication_Step()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Step> getStep();
 
 } // Medication

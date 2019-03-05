@@ -51,7 +51,7 @@ public interface ARange extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Order</b></em>' attribute.
-	 * The default value is <code>"random"</code>.
+	 * The default value is <code>"bottom"</code>.
 	 * The literals are from the enumeration {@link QueryMetamodel.Order}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -63,7 +63,7 @@ public interface ARange extends EObject {
 	 * @see QueryMetamodel.Order
 	 * @see #setOrder(Order)
 	 * @see QueryMetamodel.Query_metamodelPackage#getARange_Order()
-	 * @model default="random"
+	 * @model default="bottom"
 	 * @generated
 	 */
 	Order getOrder();

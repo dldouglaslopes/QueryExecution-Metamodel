@@ -56,7 +56,7 @@ public class ARangeImpl extends MinimalEObjectImpl.Container implements ARange {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Order ORDER_EDEFAULT = Order.RANDOM;
+	protected static final Order ORDER_EDEFAULT = Order.BOTTOM;
 
 	/**
 	 * The cached value of the '{@link #getOrder() <em>Order</em>}' attribute.

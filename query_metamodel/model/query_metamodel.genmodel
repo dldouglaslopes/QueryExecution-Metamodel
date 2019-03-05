@@ -10,7 +10,6 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Query_metamodel" disposableProviderFactory="true" ecorePackage="query_metamodel.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Order">
-      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Order/random"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Order/bottom"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Order/top"/>
     </genEnums>
@@ -165,17 +164,20 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Medication/percentage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Medication/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Medication/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Medication/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Medication/step"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//Sequence">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Sequence/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Sequence/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Sequence/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Sequence/description"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//Pathway">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/ids"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/percentage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Pathway/id"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//QAnswer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//QAnswer/question"/>
@@ -186,7 +188,9 @@
     <genClasses ecoreClass="query_metamodel.ecore#//QReturn">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//QReturn/patient"/>
     </genClasses>
-    <genClasses ecoreClass="query_metamodel.ecore#//QStop"/>
+    <genClasses ecoreClass="query_metamodel.ecore#//QStop">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//QStop/step"/>
+    </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//QPrescription">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//QPrescription/prescription"/>
     </genClasses>
@@ -194,12 +198,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//QExam/exam"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//Step">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Step/id"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Step/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Step/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Step/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Step/percentage"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Step/quantity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Step/id"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//Prescription">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Prescription/name"/>
@@ -221,6 +225,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Question/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Question/answer"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Question/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//Question/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//Question/step"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//ABoolean">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ABoolean/falseQuantity"/>

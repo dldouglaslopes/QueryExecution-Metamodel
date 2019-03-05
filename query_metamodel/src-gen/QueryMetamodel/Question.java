@@ -20,6 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link QueryMetamodel.Question#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.Question#getAnswer <em>Answer</em>}</li>
  *   <li>{@link QueryMetamodel.Question#getType <em>Type</em>}</li>
+ *   <li>{@link QueryMetamodel.Question#getId <em>Id</em>}</li>
+ *   <li>{@link QueryMetamodel.Question#getStep <em>Step</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getQuestion()
@@ -147,5 +149,47 @@ public interface Question extends EObject {
 	 * @generated
 	 */
 	void setType(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see QueryMetamodel.Query_metamodelPackage#getQuestion_Id()
+	 * @model
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.Question#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Step</b></em>' containment reference list.
+	 * The list contents are of type {@link QueryMetamodel.Step}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Step</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Step</em>' containment reference list.
+	 * @see QueryMetamodel.Query_metamodelPackage#getQuestion_Step()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Step> getStep();
 
 } // Question

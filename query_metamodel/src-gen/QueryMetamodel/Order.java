@@ -19,16 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum Order implements Enumerator {
 	/**
-	 * The '<em><b>Random</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #RANDOM_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	RANDOM(0, "random", "random"),
-
-	/**
 	 * The '<em><b>Bottom</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,21 +37,6 @@ public enum Order implements Enumerator {
 	 * @ordered
 	 */
 	TOP(2, "top", "top");
-
-	/**
-	 * The '<em><b>Random</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Random</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #RANDOM
-	 * @model name="random"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int RANDOM_VALUE = 0;
 
 	/**
 	 * The '<em><b>Bottom</b></em>' literal value.
@@ -99,7 +74,7 @@ public enum Order implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final Order[] VALUES_ARRAY = new Order[] { RANDOM, BOTTOM, TOP, };
+	private static final Order[] VALUES_ARRAY = new Order[] { BOTTOM, TOP, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Order</b></em>' enumerators.
@@ -155,8 +130,6 @@ public enum Order implements Enumerator {
 	 */
 	public static Order get(int value) {
 		switch (value) {
-		case RANDOM_VALUE:
-			return RANDOM;
 		case BOTTOM_VALUE:
 			return BOTTOM;
 		case TOP_VALUE:

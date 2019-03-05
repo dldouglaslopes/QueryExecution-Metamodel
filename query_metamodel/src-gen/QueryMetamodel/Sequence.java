@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link QueryMetamodel.Sequence#getId <em>Id</em>}</li>
  *   <li>{@link QueryMetamodel.Sequence#getType <em>Type</em>}</li>
  *   <li>{@link QueryMetamodel.Sequence#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.Sequence#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getSequence()
@@ -100,5 +101,31 @@ public interface Sequence extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see QueryMetamodel.Query_metamodelPackage#getSequence_Description()
+	 * @model
+	 * @generated
+	 */
+	String getDescription();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.Sequence#getDescription <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
+	 * @generated
+	 */
+	void setDescription(String value);
 
 } // Sequence

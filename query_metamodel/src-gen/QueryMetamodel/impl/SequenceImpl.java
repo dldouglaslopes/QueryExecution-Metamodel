@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link QueryMetamodel.impl.SequenceImpl#getId <em>Id</em>}</li>
  *   <li>{@link QueryMetamodel.impl.SequenceImpl#getType <em>Type</em>}</li>
  *   <li>{@link QueryMetamodel.impl.SequenceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.SequenceImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +88,26 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,6 +198,28 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.SEQUENCE__DESCRIPTION,
+					oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -186,6 +229,8 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 			return getType();
 		case Query_metamodelPackage.SEQUENCE__NAME:
 			return getName();
+		case Query_metamodelPackage.SEQUENCE__DESCRIPTION:
+			return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -206,6 +251,9 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 			return;
 		case Query_metamodelPackage.SEQUENCE__NAME:
 			setName((String) newValue);
+			return;
+		case Query_metamodelPackage.SEQUENCE__DESCRIPTION:
+			setDescription((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -228,6 +276,9 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 		case Query_metamodelPackage.SEQUENCE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case Query_metamodelPackage.SEQUENCE__DESCRIPTION:
+			setDescription(DESCRIPTION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -246,6 +297,8 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 			return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
 		case Query_metamodelPackage.SEQUENCE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Query_metamodelPackage.SEQUENCE__DESCRIPTION:
+			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -267,6 +320,8 @@ public class SequenceImpl extends MinimalEObjectImpl.Container implements Sequen
 		result.append(type);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}
