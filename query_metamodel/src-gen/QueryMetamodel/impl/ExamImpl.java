@@ -5,18 +5,21 @@ package QueryMetamodel.impl;
 import QueryMetamodel.Exam;
 import QueryMetamodel.Query_metamodelPackage;
 
+import QueryMetamodel.Step;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,9 +31,9 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * <ul>
  *   <li>{@link QueryMetamodel.impl.ExamImpl#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.impl.ExamImpl#getPercentage <em>Percentage</em>}</li>
- *   <li>{@link QueryMetamodel.impl.ExamImpl#getCode <em>Code</em>}</li>
  *   <li>{@link QueryMetamodel.impl.ExamImpl#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.impl.ExamImpl#getIds <em>Ids</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.ExamImpl#getStep <em>Step</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.ExamImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,26 +80,6 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 	protected String percentage = PERCENTAGE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCode()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CODE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCode()
-	 * @generated
-	 * @ordered
-	 */
-	protected String code = CODE_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -117,14 +100,34 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 	protected int quantity = QUANTITY_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getIds() <em>Ids</em>}' attribute list.
+	 * The cached value of the '{@link #getStep() <em>Step</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIds()
+	 * @see #getStep()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Integer> ids;
+	protected EList<Step> step;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -193,27 +196,6 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCode() {
-		return code;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCode(String newCode) {
-		String oldCode = code;
-		code = newCode;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EXAM__CODE, oldCode, code));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getQuantity() {
 		return quantity;
 	}
@@ -236,11 +218,46 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Integer> getIds() {
-		if (ids == null) {
-			ids = new EDataTypeUniqueEList<Integer>(Integer.class, this, Query_metamodelPackage.EXAM__IDS);
+	public EList<Step> getStep() {
+		if (step == null) {
+			step = new EObjectContainmentEList<Step>(Step.class, this, Query_metamodelPackage.EXAM__STEP);
 		}
-		return ids;
+		return step;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.EXAM__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Query_metamodelPackage.EXAM__STEP:
+			return ((InternalEList<?>) getStep()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -255,12 +272,12 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 			return getName();
 		case Query_metamodelPackage.EXAM__PERCENTAGE:
 			return getPercentage();
-		case Query_metamodelPackage.EXAM__CODE:
-			return getCode();
 		case Query_metamodelPackage.EXAM__QUANTITY:
 			return getQuantity();
-		case Query_metamodelPackage.EXAM__IDS:
-			return getIds();
+		case Query_metamodelPackage.EXAM__STEP:
+			return getStep();
+		case Query_metamodelPackage.EXAM__ID:
+			return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -280,15 +297,15 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 		case Query_metamodelPackage.EXAM__PERCENTAGE:
 			setPercentage((String) newValue);
 			return;
-		case Query_metamodelPackage.EXAM__CODE:
-			setCode((String) newValue);
-			return;
 		case Query_metamodelPackage.EXAM__QUANTITY:
 			setQuantity((Integer) newValue);
 			return;
-		case Query_metamodelPackage.EXAM__IDS:
-			getIds().clear();
-			getIds().addAll((Collection<? extends Integer>) newValue);
+		case Query_metamodelPackage.EXAM__STEP:
+			getStep().clear();
+			getStep().addAll((Collection<? extends Step>) newValue);
+			return;
+		case Query_metamodelPackage.EXAM__ID:
+			setId((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -308,14 +325,14 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 		case Query_metamodelPackage.EXAM__PERCENTAGE:
 			setPercentage(PERCENTAGE_EDEFAULT);
 			return;
-		case Query_metamodelPackage.EXAM__CODE:
-			setCode(CODE_EDEFAULT);
-			return;
 		case Query_metamodelPackage.EXAM__QUANTITY:
 			setQuantity(QUANTITY_EDEFAULT);
 			return;
-		case Query_metamodelPackage.EXAM__IDS:
-			getIds().clear();
+		case Query_metamodelPackage.EXAM__STEP:
+			getStep().clear();
+			return;
+		case Query_metamodelPackage.EXAM__ID:
+			setId(ID_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -333,12 +350,12 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Query_metamodelPackage.EXAM__PERCENTAGE:
 			return PERCENTAGE_EDEFAULT == null ? percentage != null : !PERCENTAGE_EDEFAULT.equals(percentage);
-		case Query_metamodelPackage.EXAM__CODE:
-			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		case Query_metamodelPackage.EXAM__QUANTITY:
 			return quantity != QUANTITY_EDEFAULT;
-		case Query_metamodelPackage.EXAM__IDS:
-			return ids != null && !ids.isEmpty();
+		case Query_metamodelPackage.EXAM__STEP:
+			return step != null && !step.isEmpty();
+		case Query_metamodelPackage.EXAM__ID:
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -358,12 +375,10 @@ public class ExamImpl extends MinimalEObjectImpl.Container implements Exam {
 		result.append(name);
 		result.append(", percentage: ");
 		result.append(percentage);
-		result.append(", code: ");
-		result.append(code);
 		result.append(", quantity: ");
 		result.append(quantity);
-		result.append(", ids: ");
-		result.append(ids);
+		result.append(", id: ");
+		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

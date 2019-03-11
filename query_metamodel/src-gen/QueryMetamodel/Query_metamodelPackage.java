@@ -1462,31 +1462,31 @@ public interface Query_metamodelPackage extends EPackage {
 	int EXAM__PERCENTAGE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXAM__CODE = 2;
-
-	/**
 	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXAM__QUANTITY = 3;
+	int EXAM__QUANTITY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Ids</b></em>' attribute list.
+	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXAM__IDS = 4;
+	int EXAM__STEP = 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXAM__ID = 4;
 
 	/**
 	 * The number of structural features of the '<em>Exam</em>' class.
@@ -2852,17 +2852,6 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getExam_Percentage();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Exam#getCode <em>Code</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see QueryMetamodel.Exam#getCode()
-	 * @see #getExam()
-	 * @generated
-	 */
-	EAttribute getExam_Code();
-
-	/**
 	 * Returns the meta object for the attribute '{@link QueryMetamodel.Exam#getQuantity <em>Quantity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2874,15 +2863,26 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getExam_Quantity();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link QueryMetamodel.Exam#getIds <em>Ids</em>}'.
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.Exam#getStep <em>Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Ids</em>'.
-	 * @see QueryMetamodel.Exam#getIds()
+	 * @return the meta object for the containment reference list '<em>Step</em>'.
+	 * @see QueryMetamodel.Exam#getStep()
 	 * @see #getExam()
 	 * @generated
 	 */
-	EAttribute getExam_Ids();
+	EReference getExam_Step();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Exam#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see QueryMetamodel.Exam#getId()
+	 * @see #getExam()
+	 * @generated
+	 */
+	EAttribute getExam_Id();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Question <em>Question</em>}'.
@@ -3977,14 +3977,6 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute EXAM__PERCENTAGE = eINSTANCE.getExam_Percentage();
 
 		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute EXAM__CODE = eINSTANCE.getExam_Code();
-
-		/**
 		 * The meta object literal for the '<em><b>Quantity</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3993,12 +3985,20 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute EXAM__QUANTITY = eINSTANCE.getExam_Quantity();
 
 		/**
-		 * The meta object literal for the '<em><b>Ids</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Step</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXAM__IDS = eINSTANCE.getExam_Ids();
+		EReference EXAM__STEP = eINSTANCE.getExam_Step();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXAM__ID = eINSTANCE.getExam_Id();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QuestionImpl <em>Question</em>}' class.

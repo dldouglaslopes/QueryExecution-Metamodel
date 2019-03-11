@@ -17,9 +17,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link QueryMetamodel.Exam#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.Exam#getPercentage <em>Percentage</em>}</li>
- *   <li>{@link QueryMetamodel.Exam#getCode <em>Code</em>}</li>
  *   <li>{@link QueryMetamodel.Exam#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.Exam#getIds <em>Ids</em>}</li>
+ *   <li>{@link QueryMetamodel.Exam#getStep <em>Step</em>}</li>
+ *   <li>{@link QueryMetamodel.Exam#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getExam()
@@ -81,32 +81,6 @@ public interface Exam extends EObject {
 	void setPercentage(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(String)
-	 * @see QueryMetamodel.Query_metamodelPackage#getExam_Code()
-	 * @model
-	 * @generated
-	 */
-	String getCode();
-
-	/**
-	 * Sets the value of the '{@link QueryMetamodel.Exam#getCode <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code</em>' attribute.
-	 * @see #getCode()
-	 * @generated
-	 */
-	void setCode(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Quantity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -133,19 +107,45 @@ public interface Exam extends EObject {
 	void setQuantity(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Ids</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Integer}.
+	 * Returns the value of the '<em><b>Step</b></em>' containment reference list.
+	 * The list contents are of type {@link QueryMetamodel.Step}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Ids</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Step</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ids</em>' attribute list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getExam_Ids()
+	 * @return the value of the '<em>Step</em>' containment reference list.
+	 * @see QueryMetamodel.Query_metamodelPackage#getExam_Step()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Step> getStep();
+
+	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see QueryMetamodel.Query_metamodelPackage#getExam_Id()
 	 * @model
 	 * @generated
 	 */
-	EList<Integer> getIds();
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.Exam#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
 
 } // Exam

@@ -1217,7 +1217,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExam_Code() {
+	public EAttribute getExam_Quantity() {
 		return (EAttribute) examEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1226,8 +1226,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExam_Quantity() {
-		return (EAttribute) examEClass.getEStructuralFeatures().get(3);
+	public EReference getExam_Step() {
+		return (EReference) examEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1235,7 +1235,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExam_Ids() {
+	public EAttribute getExam_Id() {
 		return (EAttribute) examEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1636,9 +1636,9 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		examEClass = createEClass(EXAM);
 		createEAttribute(examEClass, EXAM__NAME);
 		createEAttribute(examEClass, EXAM__PERCENTAGE);
-		createEAttribute(examEClass, EXAM__CODE);
 		createEAttribute(examEClass, EXAM__QUANTITY);
-		createEAttribute(examEClass, EXAM__IDS);
+		createEReference(examEClass, EXAM__STEP);
+		createEAttribute(examEClass, EXAM__ID);
 
 		questionEClass = createEClass(QUESTION);
 		createEAttribute(questionEClass, QUESTION__PERCENTAGE);
@@ -1930,11 +1930,12 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExam_Percentage(), ecorePackage.getEString(), "percentage", "", 0, 1, Exam.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExam_Code(), ecorePackage.getEString(), "code", null, 0, 1, Exam.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExam_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Exam.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getExam_Ids(), ecorePackage.getEInt(), "ids", null, 0, -1, Exam.class, !IS_TRANSIENT,
+		initEReference(getExam_Step(), this.getStep(), null, "step", null, 0, -1, Exam.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getExam_Id(), ecorePackage.getEString(), "id", null, 0, 1, Exam.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(questionEClass, Question.class, "Question", !IS_ABSTRACT, !IS_INTERFACE,

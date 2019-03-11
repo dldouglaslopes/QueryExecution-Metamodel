@@ -236,9 +236,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral=""/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="code" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ids" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="step" upperBound="-1" eType="#//Step"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Question">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="percentage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
