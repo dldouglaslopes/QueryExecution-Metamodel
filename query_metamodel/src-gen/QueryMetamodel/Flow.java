@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link QueryMetamodel.Flow#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.Flow#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.Flow#getSequences <em>Sequences</em>}</li>
+ *   <li>{@link QueryMetamodel.Flow#getStep <em>Step</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getFlow()
@@ -79,19 +79,19 @@ public interface Flow extends EObject {
 	void setQuantity(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Sequences</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.Sequence}.
+	 * Returns the value of the '<em><b>Step</b></em>' containment reference list.
+	 * The list contents are of type {@link QueryMetamodel.Step}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sequences</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Step</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sequences</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getFlow_Sequences()
+	 * @return the value of the '<em>Step</em>' containment reference list.
+	 * @see QueryMetamodel.Query_metamodelPackage#getFlow_Step()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Sequence> getSequences();
+	EList<Step> getStep();
 
 } // Flow

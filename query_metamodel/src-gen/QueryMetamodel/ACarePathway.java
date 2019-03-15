@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link QueryMetamodel.ACarePathway#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.ACarePathway#getConduct <em>Conduct</em>}</li>
+ *   <li>{@link QueryMetamodel.ACarePathway#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getACarePathway()
@@ -23,8 +23,36 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ACarePathway extends EObject {
 	/**
+	 * Returns the value of the '<em><b>Conduct</b></em>' attribute.
+	 * The literals are from the enumeration {@link QueryMetamodel.Conduct}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Conduct</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Conduct</em>' attribute.
+	 * @see QueryMetamodel.Conduct
+	 * @see #setConduct(Conduct)
+	 * @see QueryMetamodel.Query_metamodelPackage#getACarePathway_Conduct()
+	 * @model
+	 * @generated
+	 */
+	Conduct getConduct();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.ACarePathway#getConduct <em>Conduct</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Conduct</em>' attribute.
+	 * @see QueryMetamodel.Conduct
+	 * @see #getConduct()
+	 * @generated
+	 */
+	void setConduct(Conduct value);
+
+	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * The default value is <code>"None"</code>.
 	 * The literals are from the enumeration {@link QueryMetamodel.CarePathway}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -36,7 +64,7 @@ public interface ACarePathway extends EObject {
 	 * @see QueryMetamodel.CarePathway
 	 * @see #setName(CarePathway)
 	 * @see QueryMetamodel.Query_metamodelPackage#getACarePathway_Name()
-	 * @model default="None"
+	 * @model
 	 * @generated
 	 */
 	CarePathway getName();
@@ -51,34 +79,5 @@ public interface ACarePathway extends EObject {
 	 * @generated
 	 */
 	void setName(CarePathway value);
-
-	/**
-	 * Returns the value of the '<em><b>Conduct</b></em>' attribute.
-	 * The literals are from the enumeration {@link QueryMetamodel.BooleanConduct}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Conduct</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Conduct</em>' attribute.
-	 * @see QueryMetamodel.BooleanConduct
-	 * @see #setConduct(BooleanConduct)
-	 * @see QueryMetamodel.Query_metamodelPackage#getACarePathway_Conduct()
-	 * @model
-	 * @generated
-	 */
-	BooleanConduct getConduct();
-
-	/**
-	 * Sets the value of the '{@link QueryMetamodel.ACarePathway#getConduct <em>Conduct</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Conduct</em>' attribute.
-	 * @see QueryMetamodel.BooleanConduct
-	 * @see #getConduct()
-	 * @generated
-	 */
-	void setConduct(BooleanConduct value);
 
 } // ACarePathway

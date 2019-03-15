@@ -33,8 +33,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link QueryMetamodel.impl.MedicationImpl#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.impl.MedicationImpl#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.impl.MedicationImpl#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.impl.MedicationImpl#getId <em>Id</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.MedicationImpl#getBrand <em>Brand</em>}</li>
  *   <li>{@link QueryMetamodel.impl.MedicationImpl#getStep <em>Step</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.MedicationImpl#getId <em>Id</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.MedicationImpl#isOutpatient <em>Outpatient</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,6 +103,36 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	protected int quantity = QUANTITY_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getBrand() <em>Brand</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBrand()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String BRAND_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getBrand() <em>Brand</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBrand()
+	 * @generated
+	 * @ordered
+	 */
+	protected String brand = BRAND_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getStep() <em>Step</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStep()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Step> step;
+
+	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,14 +153,24 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	protected String id = ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getStep() <em>Step</em>}' containment reference list.
+	 * The default value of the '{@link #isOutpatient() <em>Outpatient</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStep()
+	 * @see #isOutpatient()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Step> step;
+	protected static final boolean OUTPATIENT_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isOutpatient() <em>Outpatient</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isOutpatient()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean outpatient = OUTPATIENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -220,6 +262,40 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getBrand() {
+		return brand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBrand(String newBrand) {
+		String oldBrand = brand;
+		brand = newBrand;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.MEDICATION__BRAND, oldBrand,
+					brand));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Step> getStep() {
+		if (step == null) {
+			step = new EObjectContainmentEList<Step>(Step.class, this, Query_metamodelPackage.MEDICATION__STEP);
+		}
+		return step;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getId() {
 		return id;
 	}
@@ -241,11 +317,21 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Step> getStep() {
-		if (step == null) {
-			step = new EObjectContainmentEList<Step>(Step.class, this, Query_metamodelPackage.MEDICATION__STEP);
-		}
-		return step;
+	public boolean isOutpatient() {
+		return outpatient;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOutpatient(boolean newOutpatient) {
+		boolean oldOutpatient = outpatient;
+		outpatient = newOutpatient;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.MEDICATION__OUTPATIENT,
+					oldOutpatient, outpatient));
 	}
 
 	/**
@@ -276,10 +362,14 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return getName();
 		case Query_metamodelPackage.MEDICATION__QUANTITY:
 			return getQuantity();
-		case Query_metamodelPackage.MEDICATION__ID:
-			return getId();
+		case Query_metamodelPackage.MEDICATION__BRAND:
+			return getBrand();
 		case Query_metamodelPackage.MEDICATION__STEP:
 			return getStep();
+		case Query_metamodelPackage.MEDICATION__ID:
+			return getId();
+		case Query_metamodelPackage.MEDICATION__OUTPATIENT:
+			return isOutpatient();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -302,12 +392,18 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Query_metamodelPackage.MEDICATION__QUANTITY:
 			setQuantity((Integer) newValue);
 			return;
-		case Query_metamodelPackage.MEDICATION__ID:
-			setId((String) newValue);
+		case Query_metamodelPackage.MEDICATION__BRAND:
+			setBrand((String) newValue);
 			return;
 		case Query_metamodelPackage.MEDICATION__STEP:
 			getStep().clear();
 			getStep().addAll((Collection<? extends Step>) newValue);
+			return;
+		case Query_metamodelPackage.MEDICATION__ID:
+			setId((String) newValue);
+			return;
+		case Query_metamodelPackage.MEDICATION__OUTPATIENT:
+			setOutpatient((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -330,11 +426,17 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Query_metamodelPackage.MEDICATION__QUANTITY:
 			setQuantity(QUANTITY_EDEFAULT);
 			return;
-		case Query_metamodelPackage.MEDICATION__ID:
-			setId(ID_EDEFAULT);
+		case Query_metamodelPackage.MEDICATION__BRAND:
+			setBrand(BRAND_EDEFAULT);
 			return;
 		case Query_metamodelPackage.MEDICATION__STEP:
 			getStep().clear();
+			return;
+		case Query_metamodelPackage.MEDICATION__ID:
+			setId(ID_EDEFAULT);
+			return;
+		case Query_metamodelPackage.MEDICATION__OUTPATIENT:
+			setOutpatient(OUTPATIENT_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -354,10 +456,14 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case Query_metamodelPackage.MEDICATION__QUANTITY:
 			return quantity != QUANTITY_EDEFAULT;
-		case Query_metamodelPackage.MEDICATION__ID:
-			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+		case Query_metamodelPackage.MEDICATION__BRAND:
+			return BRAND_EDEFAULT == null ? brand != null : !BRAND_EDEFAULT.equals(brand);
 		case Query_metamodelPackage.MEDICATION__STEP:
 			return step != null && !step.isEmpty();
+		case Query_metamodelPackage.MEDICATION__ID:
+			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+		case Query_metamodelPackage.MEDICATION__OUTPATIENT:
+			return outpatient != OUTPATIENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -379,8 +485,12 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		result.append(name);
 		result.append(", quantity: ");
 		result.append(quantity);
+		result.append(", brand: ");
+		result.append(brand);
 		result.append(", id: ");
 		result.append(id);
+		result.append(", outpatient: ");
+		result.append(outpatient);
 		result.append(')');
 		return result.toString();
 	}

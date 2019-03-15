@@ -18,8 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link QueryMetamodel.Medication#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.Medication#getName <em>Name</em>}</li>
  *   <li>{@link QueryMetamodel.Medication#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.Medication#getId <em>Id</em>}</li>
+ *   <li>{@link QueryMetamodel.Medication#getBrand <em>Brand</em>}</li>
  *   <li>{@link QueryMetamodel.Medication#getStep <em>Step</em>}</li>
+ *   <li>{@link QueryMetamodel.Medication#getId <em>Id</em>}</li>
+ *   <li>{@link QueryMetamodel.Medication#isOutpatient <em>Outpatient</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getMedication()
@@ -107,6 +109,48 @@ public interface Medication extends EObject {
 	void setQuantity(int value);
 
 	/**
+	 * Returns the value of the '<em><b>Brand</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Brand</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Brand</em>' attribute.
+	 * @see #setBrand(String)
+	 * @see QueryMetamodel.Query_metamodelPackage#getMedication_Brand()
+	 * @model
+	 * @generated
+	 */
+	String getBrand();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.Medication#getBrand <em>Brand</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Brand</em>' attribute.
+	 * @see #getBrand()
+	 * @generated
+	 */
+	void setBrand(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Step</b></em>' containment reference list.
+	 * The list contents are of type {@link QueryMetamodel.Step}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Step</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Step</em>' containment reference list.
+	 * @see QueryMetamodel.Query_metamodelPackage#getMedication_Step()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Step> getStep();
+
+	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -133,19 +177,29 @@ public interface Medication extends EObject {
 	void setId(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Step</b></em>' containment reference list.
-	 * The list contents are of type {@link QueryMetamodel.Step}.
+	 * Returns the value of the '<em><b>Outpatient</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Step</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Outpatient</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Step</em>' containment reference list.
-	 * @see QueryMetamodel.Query_metamodelPackage#getMedication_Step()
-	 * @model containment="true"
+	 * @return the value of the '<em>Outpatient</em>' attribute.
+	 * @see #setOutpatient(boolean)
+	 * @see QueryMetamodel.Query_metamodelPackage#getMedication_Outpatient()
+	 * @model
 	 * @generated
 	 */
-	EList<Step> getStep();
+	boolean isOutpatient();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.Medication#isOutpatient <em>Outpatient</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Outpatient</em>' attribute.
+	 * @see #isOutpatient()
+	 * @generated
+	 */
+	void setOutpatient(boolean value);
 
 } // Medication

@@ -11,12 +11,10 @@ import QueryMetamodel.ARange;
 import QueryMetamodel.ASex;
 import QueryMetamodel.AStatus;
 import QueryMetamodel.Answer;
-import QueryMetamodel.BooleanConduct;
 import QueryMetamodel.CarePathway;
-import QueryMetamodel.EConduct;
+import QueryMetamodel.Conduct;
 import QueryMetamodel.EMethod;
 import QueryMetamodel.EQuery;
-import QueryMetamodel.EStep;
 import QueryMetamodel.Exam;
 import QueryMetamodel.Flow;
 import QueryMetamodel.Gender;
@@ -41,7 +39,6 @@ import QueryMetamodel.QStop;
 import QueryMetamodel.Query_metamodelFactory;
 import QueryMetamodel.Query_metamodelPackage;
 import QueryMetamodel.Question;
-import QueryMetamodel.Sequence;
 import QueryMetamodel.Step;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -170,13 +167,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	private EClass medicationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sequenceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -316,28 +306,14 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum conductEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum carePathwayEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum eStepEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum eConductEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum booleanConductEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -632,7 +608,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getACarePathway_Name() {
+	public EAttribute getACarePathway_Conduct() {
 		return (EAttribute) aCarePathwayEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -641,7 +617,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getACarePathway_Conduct() {
+	public EAttribute getACarePathway_Name() {
 		return (EAttribute) aCarePathwayEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -812,7 +788,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFlow_Sequences() {
+	public EReference getFlow_Step() {
 		return (EReference) flowEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -857,7 +833,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMedication_Id() {
+	public EAttribute getMedication_Brand() {
 		return (EAttribute) medicationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -875,8 +851,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSequence() {
-		return sequenceEClass;
+	public EAttribute getMedication_Id() {
+		return (EAttribute) medicationEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -884,35 +860,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSequence_Id() {
-		return (EAttribute) sequenceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSequence_Type() {
-		return (EAttribute) sequenceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSequence_Name() {
-		return (EAttribute) sequenceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getSequence_Description() {
-		return (EAttribute) sequenceEClass.getEStructuralFeatures().get(3);
+	public EAttribute getMedication_Outpatient() {
+		return (EAttribute) medicationEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -1163,7 +1112,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrescription_Ids() {
+	public EAttribute getPrescription_Percentage() {
 		return (EAttribute) prescriptionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1172,7 +1121,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrescription_Percentage() {
+	public EAttribute getPrescription_Quantity() {
 		return (EAttribute) prescriptionEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1181,8 +1130,17 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrescription_Quantity() {
-		return (EAttribute) prescriptionEClass.getEStructuralFeatures().get(4);
+	public EReference getPrescription_Medication() {
+		return (EReference) prescriptionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPrescription_Id() {
+		return (EAttribute) prescriptionEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1460,35 +1418,17 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getConduct() {
+		return conductEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getCarePathway() {
 		return carePathwayEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getEStep() {
-		return eStepEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getEConduct() {
-		return eConductEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getBooleanConduct() {
-		return booleanConductEEnum;
 	}
 
 	/**
@@ -1552,8 +1492,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(aSexEClass, ASEX__SEX);
 
 		aCarePathwayEClass = createEClass(ACARE_PATHWAY);
-		createEAttribute(aCarePathwayEClass, ACARE_PATHWAY__NAME);
 		createEAttribute(aCarePathwayEClass, ACARE_PATHWAY__CONDUCT);
+		createEAttribute(aCarePathwayEClass, ACARE_PATHWAY__NAME);
 
 		qStatusEClass = createEClass(QSTATUS);
 		createEAttribute(qStatusEClass, QSTATUS__COMPLETED);
@@ -1579,20 +1519,16 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		flowEClass = createEClass(FLOW);
 		createEAttribute(flowEClass, FLOW__PERCENTAGE);
 		createEAttribute(flowEClass, FLOW__QUANTITY);
-		createEReference(flowEClass, FLOW__SEQUENCES);
+		createEReference(flowEClass, FLOW__STEP);
 
 		medicationEClass = createEClass(MEDICATION);
 		createEAttribute(medicationEClass, MEDICATION__PERCENTAGE);
 		createEAttribute(medicationEClass, MEDICATION__NAME);
 		createEAttribute(medicationEClass, MEDICATION__QUANTITY);
-		createEAttribute(medicationEClass, MEDICATION__ID);
+		createEAttribute(medicationEClass, MEDICATION__BRAND);
 		createEReference(medicationEClass, MEDICATION__STEP);
-
-		sequenceEClass = createEClass(SEQUENCE);
-		createEAttribute(sequenceEClass, SEQUENCE__ID);
-		createEAttribute(sequenceEClass, SEQUENCE__TYPE);
-		createEAttribute(sequenceEClass, SEQUENCE__NAME);
-		createEAttribute(sequenceEClass, SEQUENCE__DESCRIPTION);
+		createEAttribute(medicationEClass, MEDICATION__ID);
+		createEAttribute(medicationEClass, MEDICATION__OUTPATIENT);
 
 		pathwayEClass = createEClass(PATHWAY);
 		createEAttribute(pathwayEClass, PATHWAY__NAME);
@@ -1629,9 +1565,10 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		prescriptionEClass = createEClass(PRESCRIPTION);
 		createEAttribute(prescriptionEClass, PRESCRIPTION__NAME);
 		createEAttribute(prescriptionEClass, PRESCRIPTION__CODE);
-		createEAttribute(prescriptionEClass, PRESCRIPTION__IDS);
 		createEAttribute(prescriptionEClass, PRESCRIPTION__PERCENTAGE);
 		createEAttribute(prescriptionEClass, PRESCRIPTION__QUANTITY);
+		createEReference(prescriptionEClass, PRESCRIPTION__MEDICATION);
+		createEAttribute(prescriptionEClass, PRESCRIPTION__ID);
 
 		examEClass = createEClass(EXAM);
 		createEAttribute(examEClass, EXAM__NAME);
@@ -1671,10 +1608,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		orderEEnum = createEEnum(ORDER);
 		messageEEnum = createEEnum(MESSAGE);
 		genderEEnum = createEEnum(GENDER);
+		conductEEnum = createEEnum(CONDUCT);
 		carePathwayEEnum = createEEnum(CARE_PATHWAY);
-		eStepEEnum = createEEnum(ESTEP);
-		eConductEEnum = createEEnum(ECONDUCT);
-		booleanConductEEnum = createEEnum(BOOLEAN_CONDUCT);
 	}
 
 	/**
@@ -1781,9 +1716,9 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		initEClass(aCarePathwayEClass, ACarePathway.class, "ACarePathway", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getACarePathway_Name(), this.getCarePathway(), "name", "None", 0, 1, ACarePathway.class,
+		initEAttribute(getACarePathway_Conduct(), this.getConduct(), "conduct", null, 0, 1, ACarePathway.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getACarePathway_Conduct(), this.getBooleanConduct(), "conduct", null, 0, 1, ACarePathway.class,
+		initEAttribute(getACarePathway_Name(), this.getCarePathway(), "name", null, 0, 1, ACarePathway.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qStatusEClass, QStatus.class, "QStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1827,9 +1762,9 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFlow_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Flow.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFlow_Sequences(), this.getSequence(), null, "sequences", null, 0, -1, Flow.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFlow_Step(), this.getStep(), null, "step", null, 0, -1, Flow.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(medicationEClass, Medication.class, "Medication", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1839,22 +1774,16 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getMedication_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Medication.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMedication_Id(), ecorePackage.getEString(), "id", null, 0, 1, Medication.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMedication_Brand(), ecorePackage.getEString(), "brand", null, 0, 1, Medication.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMedication_Step(), this.getStep(), null, "step", null, 0, -1, Medication.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-
-		initEClass(sequenceEClass, Sequence.class, "Sequence", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSequence_Id(), ecorePackage.getEString(), "id", null, 0, 1, Sequence.class, !IS_TRANSIENT,
+		initEAttribute(getMedication_Id(), ecorePackage.getEString(), "id", null, 0, 1, Medication.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSequence_Type(), ecorePackage.getEString(), "type", null, 0, 1, Sequence.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSequence_Name(), ecorePackage.getEString(), "name", null, 0, 1, Sequence.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSequence_Description(), ecorePackage.getEString(), "description", null, 0, 1, Sequence.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMedication_Outpatient(), ecorePackage.getEBoolean(), "outpatient", null, 0, 1,
+				Medication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(pathwayEClass, Pathway.class, "Pathway", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPathway_Name(), ecorePackage.getEString(), "name", null, 0, 1, Pathway.class, !IS_TRANSIENT,
@@ -1917,12 +1846,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPrescription_Code(), ecorePackage.getEString(), "code", null, 0, 1, Prescription.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPrescription_Ids(), ecorePackage.getEInt(), "ids", null, 0, -1, Prescription.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPrescription_Percentage(), ecorePackage.getEString(), "percentage", "", 0, 1,
 				Prescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPrescription_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Prescription.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPrescription_Medication(), this.getMedication(), null, "medication", null, 0, -1,
+				Prescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPrescription_Id(), ecorePackage.getEString(), "id", null, 0, 1, Prescription.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(examEClass, Exam.class, "Exam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2001,81 +1933,52 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		addEEnumLiteral(genderEEnum, Gender.F);
 		addEEnumLiteral(genderEEnum, Gender.M);
 
+		initEEnum(conductEEnum, Conduct.class, "Conduct");
+		addEEnumLiteral(conductEEnum, Conduct.ALL);
+		addEEnumLiteral(conductEEnum, Conduct.FALSE);
+		addEEnumLiteral(conductEEnum, Conduct.TRUE);
+
 		initEEnum(carePathwayEEnum, CarePathway.class, "CarePathway");
-		addEEnumLiteral(carePathwayEEnum, CarePathway.DM_TREATMENT);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.DM_ADJUSTMENTS);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.ABDOMINAL_PAIN);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.CHEST_PAIN);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.HDP);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.DIARRHEA);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.COPD);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.URTI);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.PNEUMONIA_INFLUENZA);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.PREMATURE_AMNIORREXIS);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.TOXOPLASMOSIS);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.HEADACHE);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.PARASITE);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.AFRICA_LINE_MONOTHERAPY);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.GESTATIONAL_DIABETES);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.LUMBAR_PAIN);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.AFRO_LINE_TETRATHERAPY);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.VULVOVAGINITIS);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.FEBRILE_NEUTROPENIA);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.PHARYNGITIS);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.ACUTE_OTITIS_MEDIA);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.TETRATHERAPY_BAR);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.UTI_CYSTITIS);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.SEPSIS_TREATMENT);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.JOINT_PAIN);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.ACEI_LINE_MONOTHERAPY);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.ACNE);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.DYSPEPSIA);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.VERTIGO);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.ACEI_LINE_TETRA_THERAPY);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.DOUBLE_THERAPY_AFRO_LINE);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.TREATMENT_LOW_RISK_DYSLIPIDEMIA);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.TRIPLE_AFRO_LINE_THERAPY);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.DIABETES_DYSLIPIDEMIA);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.DOUBLE_THERAPY_BAR);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.MONOTHERAPY_BAR);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.TREATMENT_DYSLIPIDEMIA_HIGH_RISK);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.TREATMENT_DYSLIPIDEMIA_INTERMEDIATE_RISK);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.TREATMENT_DYSLIPIDEMIA_VERY_HIGH_RISK);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.MENINGITIS);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.SYPHILIS);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.ACEI_LINE_DOUBLE_THERAPY);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.TRIPLOTERAPIA_BAR);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.UTI);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.BAR_BBC_BETABLOCKER);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.UTI_DIABETES);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.UTI_PYELONEPHRITIS);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.AFRICAN_AMERICAN_PHARMACOLOGICAL);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.EXPOSED_FRACTURE);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.ACEIBBC_BETABLOCKER);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.LOW_BACK_PAIN);
 		addEEnumLiteral(carePathwayEEnum, CarePathway.NONE);
-		addEEnumLiteral(carePathwayEEnum, CarePathway.ASTHMA);
-
-		initEEnum(eStepEEnum, EStep.class, "EStep");
-		addEEnumLiteral(eStepEEnum, EStep.AUXILIARY_CONDUCT);
-		addEEnumLiteral(eStepEEnum, EStep.TREATMENT);
-		addEEnumLiteral(eStepEEnum, EStep.ACTION);
-		addEEnumLiteral(eStepEEnum, EStep.DISCHARGE);
-		addEEnumLiteral(eStepEEnum, EStep.REFERRAL);
-		addEEnumLiteral(eStepEEnum, EStep.PROCEDURE);
-		addEEnumLiteral(eStepEEnum, EStep.PRESCRIPTION);
-		addEEnumLiteral(eStepEEnum, EStep.PAUSE);
-		addEEnumLiteral(eStepEEnum, EStep.INFORMATION);
-
-		initEEnum(eConductEEnum, EConduct.class, "EConduct");
-		addEEnumLiteral(eConductEEnum, EConduct.PROCEDURE);
-		addEEnumLiteral(eConductEEnum, EConduct.MEDICATION);
-		addEEnumLiteral(eConductEEnum, EConduct.PRESCRIPTION);
-
-		initEEnum(booleanConductEEnum, BooleanConduct.class, "BooleanConduct");
-		addEEnumLiteral(booleanConductEEnum, BooleanConduct.ALL);
-		addEEnumLiteral(booleanConductEEnum, BooleanConduct.FALSE);
-		addEEnumLiteral(booleanConductEEnum, BooleanConduct.TRUE);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.FRATURA_EXPOSTA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.PNEUMONIA_INFLUENZA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.MENINGITE);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.AMNIORREXE_PREMATURA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.ITU_CISTITE);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.VERIFICA_SEPSE);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.TRATAMENTO_SEPSE);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.TRATAMENTO_SIRS);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.ITU_PIELONEFRITE);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.NEUTROPENIA_FEBRIL);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.IVAS);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.DIARRÉIA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.CEFALÉIA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.LOMBALGIA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.DOR_TORÁCICA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.DOR_ABDOMINAL);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.TONTURA_VERTIGEM);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.IVAS_PEDIÁTRICO);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.OTALGIA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.NÁUSEAS_VÔMITOS);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.DIARREIA_AGUDA_PEDIÁTRICO);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.TRABALHO_PARTO_PREMATURO);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.DHEG);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.DISPEPSIA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.TCE_PEDIÁTRICO);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.AMINIORREXE_PREMATURA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.DOR_ARTICULAR_TENDINOPATIA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.FEBRE_SEM_SINAIS_LOCALIZAÇÃO);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.INFECÇÃO_PARTES_MOLES);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.ASMA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.PNEUMONIA_ADQUIRIDA_COMUNIDADE);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.URTICÁRIA_PEDIÁTRICO);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.ENDOMETRITE_PUERPERAL);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.HEMORRAGIA_PÓS_PARTO);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.POSDATISMO);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.HIPERTENSÃO_ARTERIAL_SISTÊMICA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.INSUFICIÊNCIA_CARDÍACA);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.DPOC);
+		addEEnumLiteral(carePathwayEEnum, CarePathway.CURATIVO);
 
 		// Create resource
 		createResource(eNS_URI);

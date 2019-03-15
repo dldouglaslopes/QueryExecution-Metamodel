@@ -157,15 +157,6 @@ public interface Query_metamodelFactory extends EFactory {
 	Medication createMedication();
 
 	/**
-	 * Returns a new object of class '<em>Sequence</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sequence</em>'.
-	 * @generated
-	 */
-	Sequence createSequence();
-
-	/**
 	 * Returns a new object of class '<em>Pathway</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

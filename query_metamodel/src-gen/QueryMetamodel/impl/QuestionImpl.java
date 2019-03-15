@@ -5,8 +5,8 @@ package QueryMetamodel.impl;
 import QueryMetamodel.Answer;
 import QueryMetamodel.Query_metamodelPackage;
 import QueryMetamodel.Question;
-
 import QueryMetamodel.Step;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

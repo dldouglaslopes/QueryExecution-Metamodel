@@ -19,521 +19,6 @@ import org.eclipse.emf.common.util.Enumerator;
  */
 public enum CarePathway implements Enumerator {
 	/**
-	 * The '<em><b>Dm Treatment</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #DM_TREATMENT_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	DM_TREATMENT(1, "DmTreatment", "Viver Bem Diabetes - Tratamento DM"),
-
-	/**
-	 * The '<em><b>Dm Adjustments</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #DM_ADJUSTMENTS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	DM_ADJUSTMENTS(2, "DmAdjustments", "Viver Bem Dm Ajustes"),
-
-	/**
-	 * The '<em><b>Abdominal Pain</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ABDOMINAL_PAIN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ABDOMINAL_PAIN(3, "AbdominalPain", "Dor Abdominal"),
-
-	/**
-	 * The '<em><b>Chest Pain</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #CHEST_PAIN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	CHEST_PAIN(4, "ChestPain", "Dor Tor\u00e1cica"),
-
-	/**
-	 * The '<em><b>HDP</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #HDP_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	HDP(5, "HDP", "DHEG"),
-
-	/**
-	 * The '<em><b>Diarrhea</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #DIARRHEA_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	DIARRHEA(6, "Diarrhea", "Diarr\u00e9ia"),
-
-	/**
-	 * The '<em><b>COPD</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #COPD_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	COPD(7, "COPD", "DCOP"),
-
-	/**
-	 * The '<em><b>URTI</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #URTI_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	URTI(8, "URTI", "IVAS"),
-
-	/**
-	 * The '<em><b>Pneumonia Influenza</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #PNEUMONIA_INFLUENZA_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	PNEUMONIA_INFLUENZA(9, "PneumoniaInfluenza", "Pneumonia & Influenza"),
-
-	/**
-	 * The '<em><b>Premature Amniorrexis</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #PREMATURE_AMNIORREXIS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	PREMATURE_AMNIORREXIS(10, "PrematureAmniorrexis", "Aminiorrexe Prematura"),
-
-	/**
-	 * The '<em><b>Toxoplasmosis</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TOXOPLASMOSIS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TOXOPLASMOSIS(11, "Toxoplasmosis", "Nascer Bem Toxoplasmose"),
-
-	/**
-	 * The '<em><b>Headache</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #HEADACHE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	HEADACHE(12, "Headache", "Cefal\u00e9ia"),
-
-	/**
-	 * The '<em><b>Parasite</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #PARASITE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	PARASITE(13, "Parasite", "Parasitose"),
-
-	/**
-	 * The '<em><b>Africa Line Monotherapy</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #AFRICA_LINE_MONOTHERAPY_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	AFRICA_LINE_MONOTHERAPY(14, "AfricaLineMonotherapy", "Viver Bem Monoterapia Linha Afro"),
-
-	/**
-	 * The '<em><b>Gestational Diabetes</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #GESTATIONAL_DIABETES_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	GESTATIONAL_DIABETES(15, "GestationalDiabetes", "Diabetes Gestational"),
-
-	/**
-	 * The '<em><b>Lumbar Pain</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #LUMBAR_PAIN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	LUMBAR_PAIN(16, "LumbarPain", "M\u00e9dico da Fam\u00edlia Dor Lombar"),
-
-	/**
-	 * The '<em><b>Afro Line Tetratherapy</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #AFRO_LINE_TETRATHERAPY_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	AFRO_LINE_TETRATHERAPY(17, "AfroLineTetratherapy", "Viver Bem Tetraterapia Linha Afro"),
-
-	/**
-	 * The '<em><b>Vulvovaginitis</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #VULVOVAGINITIS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	VULVOVAGINITIS(18, "Vulvovaginitis", "Vulvovaginite"),
-
-	/**
-	 * The '<em><b>Febrile Neutropenia</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #FEBRILE_NEUTROPENIA_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	FEBRILE_NEUTROPENIA(19, "FebrileNeutropenia", "Neutropenia Febril"),
-
-	/**
-	 * The '<em><b>Pharyngitis</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #PHARYNGITIS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	PHARYNGITIS(20, "Pharyngitis", "Faringite"),
-
-	/**
-	 * The '<em><b>Acute Otitis Media</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ACUTE_OTITIS_MEDIA_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ACUTE_OTITIS_MEDIA(21, "AcuteOtitisMedia", "Otite M\u00e9dia Aguda"),
-
-	/**
-	 * The '<em><b>Tetratherapy Bar</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TETRATHERAPY_BAR_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TETRATHERAPY_BAR(22, "TetratherapyBar", "Viver Bem Tetraterapia Bar"),
-
-	/**
-	 * The '<em><b>UTI Cystitis</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #UTI_CYSTITIS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	UTI_CYSTITIS(23, "UTICystitis", "ITU - Cistite"),
-
-	/**
-	 * The '<em><b>Sepsis Treatment</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #SEPSIS_TREATMENT_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	SEPSIS_TREATMENT(24, "SepsisTreatment", "Tratamento de SEPSE"),
-
-	/**
-	 * The '<em><b>Joint Pain</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #JOINT_PAIN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	JOINT_PAIN(25, "JointPain", "Dor Articular"),
-
-	/**
-	 * The '<em><b>ACEI Line Monotherapy</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ACEI_LINE_MONOTHERAPY_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ACEI_LINE_MONOTHERAPY(26, "ACEILineMonotherapy", "Viver Bem Monoterapia Linha IECA"),
-
-	/**
-	 * The '<em><b>Acne</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ACNE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ACNE(27, "Acne", "Acne"),
-
-	/**
-	 * The '<em><b>Dyspepsia</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #DYSPEPSIA_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	DYSPEPSIA(28, "Dyspepsia", "DIspepsia"),
-
-	/**
-	 * The '<em><b>Vertigo</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #VERTIGO_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	VERTIGO(29, "Vertigo", "Tontura e Vertigem"),
-
-	/**
-	 * The '<em><b>ACEI Line Tetra Therapy</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ACEI_LINE_TETRA_THERAPY_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ACEI_LINE_TETRA_THERAPY(30, "ACEILineTetraTherapy", "Viver Bem Tetraterapia Linha IECA"),
-
-	/**
-	 * The '<em><b>Double Therapy Afro Line</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #DOUBLE_THERAPY_AFRO_LINE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	DOUBLE_THERAPY_AFRO_LINE(31, "DoubleTherapyAfroLine", "Viver Bem DuploTerapia Linha Afro"),
-
-	/**
-	 * The '<em><b>Treatment Low Risk Dyslipidemia</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TREATMENT_LOW_RISK_DYSLIPIDEMIA_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TREATMENT_LOW_RISK_DYSLIPIDEMIA(32, "TreatmentLowRiskDyslipidemia",
-			"Viver Bem Tratamento Dislipidemia - Risco Baixo"),
-
-	/**
-	 * The '<em><b>Triple Afro Line Therapy</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TRIPLE_AFRO_LINE_THERAPY_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TRIPLE_AFRO_LINE_THERAPY(33, "TripleAfroLineTherapy", "Viver Bem Triploterapia Linha Afro"),
-
-	/**
-	 * The '<em><b>Diabetes Dyslipidemia</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #DIABETES_DYSLIPIDEMIA_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	DIABETES_DYSLIPIDEMIA(34, "DiabetesDyslipidemia", "Viver Bem Diabetes - Dislipidemia"),
-
-	/**
-	 * The '<em><b>Double Therapy Bar</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #DOUBLE_THERAPY_BAR_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	DOUBLE_THERAPY_BAR(35, "DoubleTherapyBar", "Viver Bem Duploterapia Bar"),
-
-	/**
-	 * The '<em><b>Monotherapy Bar</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #MONOTHERAPY_BAR_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	MONOTHERAPY_BAR(36, "MonotherapyBar", "Viver Bem Monoterapia Bar"),
-
-	/**
-	 * The '<em><b>Treatment Dyslipidemia High Risk</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TREATMENT_DYSLIPIDEMIA_HIGH_RISK_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TREATMENT_DYSLIPIDEMIA_HIGH_RISK(37, "TreatmentDyslipidemiaHighRisk",
-			"Viver Bem Tratamento Dislipidemia - Risco Alto"),
-
-	/**
-	 * The '<em><b>Treatment Dyslipidemia Intermediate Risk</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TREATMENT_DYSLIPIDEMIA_INTERMEDIATE_RISK_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TREATMENT_DYSLIPIDEMIA_INTERMEDIATE_RISK(38, "TreatmentDyslipidemiaIntermediateRisk",
-			"Viver Bem Tratamento Dislipidemia - Risco Intermedi\u00e1rio"),
-
-	/**
-	 * The '<em><b>Treatment Dyslipidemia Very High Risk</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TREATMENT_DYSLIPIDEMIA_VERY_HIGH_RISK_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TREATMENT_DYSLIPIDEMIA_VERY_HIGH_RISK(39, "TreatmentDyslipidemiaVeryHighRisk",
-			"Viver Bem Tratamento Dislipidemia - Risco Muito Alto"),
-
-	/**
-	 * The '<em><b>Meningitis</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #MENINGITIS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	MENINGITIS(40, "Meningitis", "Meningite"),
-
-	/**
-	 * The '<em><b>Syphilis</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #SYPHILIS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	SYPHILIS(41, "Syphilis", "S\u00edfilis"),
-
-	/**
-	 * The '<em><b>ACEI Line Double Therapy</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ACEI_LINE_DOUBLE_THERAPY_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ACEI_LINE_DOUBLE_THERAPY(42, "ACEILineDoubleTherapy", "Viver Bem Duploterapia Linha IECA"),
-
-	/**
-	 * The '<em><b>Triploterapia BAR</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #TRIPLOTERAPIA_BAR_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	TRIPLOTERAPIA_BAR(43, "TriploterapiaBAR", "Viver Bem Triploterapia Bar"),
-
-	/**
-	 * The '<em><b>UTI</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #UTI_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	UTI(44, "UTI", "ITU"),
-
-	/**
-	 * The '<em><b>Bar BBC Betablocker</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #BAR_BBC_BETABLOCKER_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	BAR_BBC_BETABLOCKER(45, "BarBBCBetablocker", "Viver Bem Bar & BCC - Betabloqueador"),
-
-	/**
-	 * The '<em><b>UTI Diabetes</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #UTI_DIABETES_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	UTI_DIABETES(46, "UTIDiabetes", "Viver Bem Diabetes - ITU"),
-
-	/**
-	 * The '<em><b>UTI Pyelonephritis</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #UTI_PYELONEPHRITIS_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	UTI_PYELONEPHRITIS(47, "UTIPyelonephritis", "ITU - Pielonefrite"),
-
-	/**
-	 * The '<em><b>African American Pharmacological</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #AFRICAN_AMERICAN_PHARMACOLOGICAL_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	AFRICAN_AMERICAN_PHARMACOLOGICAL(48, "AfricanAmericanPharmacological",
-			"Viver Bem Protocolo Farmacol\u00f3gico Afroamericano"),
-
-	/**
-	 * The '<em><b>Exposed Fracture</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #EXPOSED_FRACTURE_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	EXPOSED_FRACTURE(49, "ExposedFracture", "Fratura Exposta"),
-
-	/**
-	 * The '<em><b>ACEIBBC Betablocker</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #ACEIBBC_BETABLOCKER_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	ACEIBBC_BETABLOCKER(50, "ACEIBBCBetablocker", "Viver Bem IECA & BBC - Betabloqueador"),
-
-	/**
-	 * The '<em><b>Low Back Pain</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #LOW_BACK_PAIN_VALUE
-	 * @generated
-	 * @ordered
-	 */
-	LOW_BACK_PAIN(51, "LowBackPain", "Lombalgia"),
-
-	/**
 	 * The '<em><b>None</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -544,779 +29,394 @@ public enum CarePathway implements Enumerator {
 	NONE(0, "None", "None"),
 
 	/**
-	 * The '<em><b>Asthma</b></em>' literal object.
+	 * The '<em><b>Fratura Exposta</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #ASTHMA_VALUE
+	 * @see #FRATURA_EXPOSTA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	ASTHMA(52, "Asthma", "Asma");
+	FRATURA_EXPOSTA(1, "FraturaExposta", "Fratura Exposta"),
 
 	/**
-	 * The '<em><b>Dm Treatment</b></em>' literal value.
+	 * The '<em><b>Pneumonia Influenza</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Dm Treatment</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #DM_TREATMENT
-	 * @model name="DmTreatment" literal="Viver Bem Diabetes - Tratamento DM"
+	 * @see #PNEUMONIA_INFLUENZA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DM_TREATMENT_VALUE = 1;
+	PNEUMONIA_INFLUENZA(2, "PneumoniaInfluenza", "Pneumonia & Influenza"),
 
 	/**
-	 * The '<em><b>Dm Adjustments</b></em>' literal value.
+	 * The '<em><b>Meningite</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Dm Adjustments</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #DM_ADJUSTMENTS
-	 * @model name="DmAdjustments" literal="Viver Bem Dm Ajustes"
+	 * @see #MENINGITE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DM_ADJUSTMENTS_VALUE = 2;
+	MENINGITE(3, "Meningite", "Meningite"),
 
 	/**
-	 * The '<em><b>Abdominal Pain</b></em>' literal value.
+	 * The '<em><b>Amniorrexe Prematura</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Abdominal Pain</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ABDOMINAL_PAIN
-	 * @model name="AbdominalPain" literal="Dor Abdominal"
+	 * @see #AMNIORREXE_PREMATURA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ABDOMINAL_PAIN_VALUE = 3;
+	AMNIORREXE_PREMATURA(4, "AmniorrexePrematura", "Amniorrexe Prematura"),
 
 	/**
-	 * The '<em><b>Chest Pain</b></em>' literal value.
+	 * The '<em><b>ITU Cistite</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Chest Pain</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #CHEST_PAIN
-	 * @model name="ChestPain" literal="Dor Tor\341cica"
+	 * @see #ITU_CISTITE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int CHEST_PAIN_VALUE = 4;
+	ITU_CISTITE(61, "ITUCistite", "ITU - Cistite"),
 
 	/**
-	 * The '<em><b>HDP</b></em>' literal value.
+	 * The '<em><b>Verifica SEPSE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>HDP</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #HDP
-	 * @model literal="DHEG"
+	 * @see #VERIFICA_SEPSE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int HDP_VALUE = 5;
+	VERIFICA_SEPSE(64, "VerificaSEPSE", "Verifica SEPSE"),
 
 	/**
-	 * The '<em><b>Diarrhea</b></em>' literal value.
+	 * The '<em><b>Tratamento SEPSE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Diarrhea</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #DIARRHEA
-	 * @model name="Diarrhea" literal="Diarr\351ia"
+	 * @see #TRATAMENTO_SEPSE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DIARRHEA_VALUE = 6;
+	TRATAMENTO_SEPSE(65, "TratamentoSEPSE", "Tratamento de SEPSE"),
 
 	/**
-	 * The '<em><b>COPD</b></em>' literal value.
+	 * The '<em><b>Tratamento SIRS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>COPD</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #COPD
-	 * @model literal="DCOP"
+	 * @see #TRATAMENTO_SIRS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int COPD_VALUE = 7;
+	TRATAMENTO_SIRS(8, "TratamentoSIRS", "Tratamento de SIRS"),
 
 	/**
-	 * The '<em><b>URTI</b></em>' literal value.
+	 * The '<em><b>ITU Pielonefrite</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>URTI</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #URTI
-	 * @model literal="IVAS"
+	 * @see #ITU_PIELONEFRITE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int URTI_VALUE = 8;
+	ITU_PIELONEFRITE(81, "ITUPielonefrite", "ITU - Pielonefrite"),
 
 	/**
-	 * The '<em><b>Pneumonia Influenza</b></em>' literal value.
+	 * The '<em><b>Neutropenia Febril</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Pneumonia Influenza</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PNEUMONIA_INFLUENZA
-	 * @model name="PneumoniaInfluenza" literal="Pneumonia &amp; Influenza"
+	 * @see #NEUTROPENIA_FEBRIL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PNEUMONIA_INFLUENZA_VALUE = 9;
+	NEUTROPENIA_FEBRIL(82, "NeutropeniaFebril", "Neutropenia Febril"),
 
 	/**
-	 * The '<em><b>Premature Amniorrexis</b></em>' literal value.
+	 * The '<em><b>IVAS</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Premature Amniorrexis</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PREMATURE_AMNIORREXIS
-	 * @model name="PrematureAmniorrexis" literal="Aminiorrexe Prematura"
+	 * @see #IVAS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PREMATURE_AMNIORREXIS_VALUE = 10;
+	IVAS(83, "IVAS", "IVAS"),
 
 	/**
-	 * The '<em><b>Toxoplasmosis</b></em>' literal value.
+	 * The '<em><b>Diarréia</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Toxoplasmosis</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #TOXOPLASMOSIS
-	 * @model name="Toxoplasmosis" literal="Nascer Bem Toxoplasmose"
+	 * @see #DIARRÉIA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TOXOPLASMOSIS_VALUE = 11;
+	DIARRÉIA(101, "Diarréia", "Diarr\u00e9ia"),
 
 	/**
-	 * The '<em><b>Headache</b></em>' literal value.
+	 * The '<em><b>Cefaléia</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Headache</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #HEADACHE
-	 * @model name="Headache" literal="Cefal\351ia"
+	 * @see #CEFALÉIA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int HEADACHE_VALUE = 12;
+	CEFALÉIA(121, "Cefaléia", "Cefal\u00e9ia"),
 
 	/**
-	 * The '<em><b>Parasite</b></em>' literal value.
+	 * The '<em><b>Lombalgia</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Parasite</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PARASITE
-	 * @model name="Parasite" literal="Parasitose"
+	 * @see #LOMBALGIA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PARASITE_VALUE = 13;
+	LOMBALGIA(161, "Lombalgia", "Lombalgia"),
 
 	/**
-	 * The '<em><b>Africa Line Monotherapy</b></em>' literal value.
+	 * The '<em><b>Dor Torácica</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Africa Line Monotherapy</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #AFRICA_LINE_MONOTHERAPY
-	 * @model name="AfricaLineMonotherapy" literal="Viver Bem Monoterapia Linha Afro"
+	 * @see #DOR_TORÁCICA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AFRICA_LINE_MONOTHERAPY_VALUE = 14;
+	DOR_TORÁCICA(181, "DorTorácica", "Dor Tor\u00e1cica"),
 
 	/**
-	 * The '<em><b>Gestational Diabetes</b></em>' literal value.
+	 * The '<em><b>Dor Abdominal</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Gestational Diabetes</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #GESTATIONAL_DIABETES
-	 * @model name="GestationalDiabetes" literal="Diabetes Gestational"
+	 * @see #DOR_ABDOMINAL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int GESTATIONAL_DIABETES_VALUE = 15;
+	DOR_ABDOMINAL(201, "DorAbdominal", "Dor Abdominal"),
 
 	/**
-	 * The '<em><b>Lumbar Pain</b></em>' literal value.
+	 * The '<em><b>Tontura Vertigem</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Lumbar Pain</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #LUMBAR_PAIN
-	 * @model name="LumbarPain" literal="M\351dico da Fam\355lia Dor Lombar"
+	 * @see #TONTURA_VERTIGEM_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LUMBAR_PAIN_VALUE = 16;
+	TONTURA_VERTIGEM(221, "TonturaVertigem", "Tontura e Vertigem"),
 
 	/**
-	 * The '<em><b>Afro Line Tetratherapy</b></em>' literal value.
+	 * The '<em><b>IVAS Pediátrico</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Afro Line Tetratherapy</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #AFRO_LINE_TETRATHERAPY
-	 * @model name="AfroLineTetratherapy" literal="Viver Bem Tetraterapia Linha Afro"
+	 * @see #IVAS_PEDIÁTRICO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AFRO_LINE_TETRATHERAPY_VALUE = 17;
+	IVAS_PEDIÁTRICO(261, "IVASPediátrico", "IVAS Pedi\u00e1trico"),
 
 	/**
-	 * The '<em><b>Vulvovaginitis</b></em>' literal value.
+	 * The '<em><b>Otalgia</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Vulvovaginitis</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #VULVOVAGINITIS
-	 * @model name="Vulvovaginitis" literal="Vulvovaginite"
+	 * @see #OTALGIA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int VULVOVAGINITIS_VALUE = 18;
+	OTALGIA(281, "Otalgia", "Otalgia"),
 
 	/**
-	 * The '<em><b>Febrile Neutropenia</b></em>' literal value.
+	 * The '<em><b>Náuseas Vômitos</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Febrile Neutropenia</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #FEBRILE_NEUTROPENIA
-	 * @model name="FebrileNeutropenia" literal="Neutropenia Febril"
+	 * @see #NÁUSEAS_VÔMITOS_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int FEBRILE_NEUTROPENIA_VALUE = 19;
+	NÁUSEAS_VÔMITOS(282, "NáuseasVômitos", "N\u00e1useas e V\u00f4mitos"),
 
 	/**
-	 * The '<em><b>Pharyngitis</b></em>' literal value.
+	 * The '<em><b>Diarreia Aguda Pediátrico</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Pharyngitis</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PHARYNGITIS
-	 * @model name="Pharyngitis" literal="Faringite"
+	 * @see #DIARREIA_AGUDA_PEDIÁTRICO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PHARYNGITIS_VALUE = 20;
+	DIARREIA_AGUDA_PEDIÁTRICO(301, "DiarreiaAgudaPediátrico", "Diarreia aguda Pedi\u00e1trico"),
 
 	/**
-	 * The '<em><b>Acute Otitis Media</b></em>' literal value.
+	 * The '<em><b>Trabalho Parto Prematuro</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Acute Otitis Media</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ACUTE_OTITIS_MEDIA
-	 * @model name="AcuteOtitisMedia" literal="Otite M\351dia Aguda"
+	 * @see #TRABALHO_PARTO_PREMATURO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ACUTE_OTITIS_MEDIA_VALUE = 21;
+	TRABALHO_PARTO_PREMATURO(321, "TrabalhoPartoPrematuro", "Trabalho de Parto Prematuro"),
 
 	/**
-	 * The '<em><b>Tetratherapy Bar</b></em>' literal value.
+	 * The '<em><b>DHEG</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Tetratherapy Bar</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #TETRATHERAPY_BAR
-	 * @model name="TetratherapyBar" literal="Viver Bem Tetraterapia Bar"
+	 * @see #DHEG_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TETRATHERAPY_BAR_VALUE = 22;
+	DHEG(341, "DHEG", "DHEG"),
 
 	/**
-	 * The '<em><b>UTI Cystitis</b></em>' literal value.
+	 * The '<em><b>Dispepsia</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>UTI Cystitis</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #UTI_CYSTITIS
-	 * @model name="UTICystitis" literal="ITU - Cistite"
+	 * @see #DISPEPSIA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int UTI_CYSTITIS_VALUE = 23;
+	DISPEPSIA(361, "Dispepsia", "Dispepsia"),
 
 	/**
-	 * The '<em><b>Sepsis Treatment</b></em>' literal value.
+	 * The '<em><b>TCE Pediátrico</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Sepsis Treatment</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #SEPSIS_TREATMENT
-	 * @model name="SepsisTreatment" literal="Tratamento de SEPSE"
+	 * @see #TCE_PEDIÁTRICO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int SEPSIS_TREATMENT_VALUE = 24;
+	TCE_PEDIÁTRICO(362, "TCEPediátrico", "TCE Pedi\u00e1trico"),
 
 	/**
-	 * The '<em><b>Joint Pain</b></em>' literal value.
+	 * The '<em><b>Aminiorrexe Prematura</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Joint Pain</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #JOINT_PAIN
-	 * @model name="JointPain" literal="Dor Articular"
+	 * @see #AMINIORREXE_PREMATURA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int JOINT_PAIN_VALUE = 25;
+	AMINIORREXE_PREMATURA(365, "AminiorrexePrematura", "Aminiorrexe Prematura"),
 
 	/**
-	 * The '<em><b>ACEI Line Monotherapy</b></em>' literal value.
+	 * The '<em><b>Dor Articular Tendinopatia</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>ACEI Line Monotherapy</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ACEI_LINE_MONOTHERAPY
-	 * @model name="ACEILineMonotherapy" literal="Viver Bem Monoterapia Linha IECA"
+	 * @see #DOR_ARTICULAR_TENDINOPATIA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ACEI_LINE_MONOTHERAPY_VALUE = 26;
+	DOR_ARTICULAR_TENDINOPATIA(381, "DorArticularTendinopatia", "Dor Articular/Tendinopatia"),
 
 	/**
-	 * The '<em><b>Acne</b></em>' literal value.
+	 * The '<em><b>Febre Sem Sinais Localização</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Acne</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ACNE
-	 * @model name="Acne"
+	 * @see #FEBRE_SEM_SINAIS_LOCALIZAÇÃO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ACNE_VALUE = 27;
+	FEBRE_SEM_SINAIS_LOCALIZAÇÃO(403, "FebreSemSinaisLocalização", "Febre Sem Sinais de Localiza\u00e7\u00e3o"),
 
 	/**
-	 * The '<em><b>Dyspepsia</b></em>' literal value.
+	 * The '<em><b>Infecção Partes Moles</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Dyspepsia</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #DYSPEPSIA
-	 * @model name="Dyspepsia" literal="DIspepsia"
+	 * @see #INFECÇÃO_PARTES_MOLES_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DYSPEPSIA_VALUE = 28;
+	INFECÇÃO_PARTES_MOLES(424, "InfecçãoPartesMoles", "Infec\u00e7\u00e3o das Partes Moles"),
 
 	/**
-	 * The '<em><b>Vertigo</b></em>' literal value.
+	 * The '<em><b>Asma</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Vertigo</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #VERTIGO
-	 * @model name="Vertigo" literal="Tontura e Vertigem"
+	 * @see #ASMA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int VERTIGO_VALUE = 29;
+	ASMA(441, "Asma", "Asma"),
 
 	/**
-	 * The '<em><b>ACEI Line Tetra Therapy</b></em>' literal value.
+	 * The '<em><b>Pneumonia Adquirida Comunidade</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>ACEI Line Tetra Therapy</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ACEI_LINE_TETRA_THERAPY
-	 * @model name="ACEILineTetraTherapy" literal="Viver Bem Tetraterapia Linha IECA"
+	 * @see #PNEUMONIA_ADQUIRIDA_COMUNIDADE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ACEI_LINE_TETRA_THERAPY_VALUE = 30;
+	PNEUMONIA_ADQUIRIDA_COMUNIDADE(461, "PneumoniaAdquiridaComunidade", "Pneumonia Adquirida na Comunidade"),
 
 	/**
-	 * The '<em><b>Double Therapy Afro Line</b></em>' literal value.
+	 * The '<em><b>Urticária Pediátrico</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Double Therapy Afro Line</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #DOUBLE_THERAPY_AFRO_LINE
-	 * @model name="DoubleTherapyAfroLine" literal="Viver Bem DuploTerapia Linha Afro"
+	 * @see #URTICÁRIA_PEDIÁTRICO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DOUBLE_THERAPY_AFRO_LINE_VALUE = 31;
+	URTICÁRIA_PEDIÁTRICO(462, "UrticáriaPediátrico", "Urtic\u00e1ria Pedi\u00e1trico"),
 
 	/**
-	 * The '<em><b>Treatment Low Risk Dyslipidemia</b></em>' literal value.
+	 * The '<em><b>Endometrite Puerperal</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Treatment Low Risk Dyslipidemia</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #TREATMENT_LOW_RISK_DYSLIPIDEMIA
-	 * @model name="TreatmentLowRiskDyslipidemia" literal="Viver Bem Tratamento Dislipidemia - Risco Baixo"
+	 * @see #ENDOMETRITE_PUERPERAL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TREATMENT_LOW_RISK_DYSLIPIDEMIA_VALUE = 32;
+	ENDOMETRITE_PUERPERAL(481, "EndometritePuerperal", "Endometrite Puerperal"),
 
 	/**
-	 * The '<em><b>Triple Afro Line Therapy</b></em>' literal value.
+	 * The '<em><b>Hemorragia Pós Parto</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Triple Afro Line Therapy</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #TRIPLE_AFRO_LINE_THERAPY
-	 * @model name="TripleAfroLineTherapy" literal="Viver Bem Triploterapia Linha Afro"
+	 * @see #HEMORRAGIA_PÓS_PARTO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TRIPLE_AFRO_LINE_THERAPY_VALUE = 33;
+	HEMORRAGIA_PÓS_PARTO(501, "HemorragiaPósParto", "Hemorragia P\u00f3s-Parto"),
 
 	/**
-	 * The '<em><b>Diabetes Dyslipidemia</b></em>' literal value.
+	 * The '<em><b>Posdatismo</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Diabetes Dyslipidemia</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #DIABETES_DYSLIPIDEMIA
-	 * @model name="DiabetesDyslipidemia" literal="Viver Bem Diabetes - Dislipidemia"
+	 * @see #POSDATISMO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DIABETES_DYSLIPIDEMIA_VALUE = 34;
+	POSDATISMO(502, "Posdatismo", "Posdatismo"),
 
 	/**
-	 * The '<em><b>Double Therapy Bar</b></em>' literal value.
+	 * The '<em><b>Hipertensão Arterial Sistêmica</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Double Therapy Bar</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #DOUBLE_THERAPY_BAR
-	 * @model name="DoubleTherapyBar" literal="Viver Bem Duploterapia Bar"
+	 * @see #HIPERTENSÃO_ARTERIAL_SISTÊMICA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DOUBLE_THERAPY_BAR_VALUE = 35;
+	HIPERTENSÃO_ARTERIAL_SISTÊMICA(521, "HipertensãoArterialSistêmica", "Hipertens\u00e3o Arterial Sist\u00eamica"),
 
 	/**
-	 * The '<em><b>Monotherapy Bar</b></em>' literal value.
+	 * The '<em><b>Insuficiência Cardíaca</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Monotherapy Bar</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #MONOTHERAPY_BAR
-	 * @model name="MonotherapyBar" literal="Viver Bem Monoterapia Bar"
+	 * @see #INSUFICIÊNCIA_CARDÍACA_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MONOTHERAPY_BAR_VALUE = 36;
+	INSUFICIÊNCIA_CARDÍACA(522, "InsuficiênciaCardíaca", "Insufici\u00eancia Card\u00edaca"),
 
 	/**
-	 * The '<em><b>Treatment Dyslipidemia High Risk</b></em>' literal value.
+	 * The '<em><b>DPOC</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Treatment Dyslipidemia High Risk</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #TREATMENT_DYSLIPIDEMIA_HIGH_RISK
-	 * @model name="TreatmentDyslipidemiaHighRisk" literal="Viver Bem Tratamento Dislipidemia - Risco Alto"
+	 * @see #DPOC_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TREATMENT_DYSLIPIDEMIA_HIGH_RISK_VALUE = 37;
+	DPOC(541, "DPOC", "DPOC"),
 
 	/**
-	 * The '<em><b>Treatment Dyslipidemia Intermediate Risk</b></em>' literal value.
+	 * The '<em><b>Curativo</b></em>' literal object.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Treatment Dyslipidemia Intermediate Risk</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #TREATMENT_DYSLIPIDEMIA_INTERMEDIATE_RISK
-	 * @model name="TreatmentDyslipidemiaIntermediateRisk" literal="Viver Bem Tratamento Dislipidemia - Risco Intermedi\341rio"
+	 * @see #CURATIVO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TREATMENT_DYSLIPIDEMIA_INTERMEDIATE_RISK_VALUE = 38;
-
-	/**
-	 * The '<em><b>Treatment Dyslipidemia Very High Risk</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Treatment Dyslipidemia Very High Risk</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #TREATMENT_DYSLIPIDEMIA_VERY_HIGH_RISK
-	 * @model name="TreatmentDyslipidemiaVeryHighRisk" literal="Viver Bem Tratamento Dislipidemia - Risco Muito Alto"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int TREATMENT_DYSLIPIDEMIA_VERY_HIGH_RISK_VALUE = 39;
-
-	/**
-	 * The '<em><b>Meningitis</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Meningitis</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #MENINGITIS
-	 * @model name="Meningitis" literal="Meningite"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int MENINGITIS_VALUE = 40;
-
-	/**
-	 * The '<em><b>Syphilis</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Syphilis</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #SYPHILIS
-	 * @model name="Syphilis" literal="S\355filis"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int SYPHILIS_VALUE = 41;
-
-	/**
-	 * The '<em><b>ACEI Line Double Therapy</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>ACEI Line Double Therapy</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #ACEI_LINE_DOUBLE_THERAPY
-	 * @model name="ACEILineDoubleTherapy" literal="Viver Bem Duploterapia Linha IECA"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ACEI_LINE_DOUBLE_THERAPY_VALUE = 42;
-
-	/**
-	 * The '<em><b>Triploterapia BAR</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Triploterapia BAR</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #TRIPLOTERAPIA_BAR
-	 * @model name="TriploterapiaBAR" literal="Viver Bem Triploterapia Bar"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int TRIPLOTERAPIA_BAR_VALUE = 43;
-
-	/**
-	 * The '<em><b>UTI</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>UTI</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #UTI
-	 * @model literal="ITU"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int UTI_VALUE = 44;
-
-	/**
-	 * The '<em><b>Bar BBC Betablocker</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Bar BBC Betablocker</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #BAR_BBC_BETABLOCKER
-	 * @model name="BarBBCBetablocker" literal="Viver Bem Bar &amp; BCC - Betabloqueador"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int BAR_BBC_BETABLOCKER_VALUE = 45;
-
-	/**
-	 * The '<em><b>UTI Diabetes</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>UTI Diabetes</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #UTI_DIABETES
-	 * @model name="UTIDiabetes" literal="Viver Bem Diabetes - ITU"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int UTI_DIABETES_VALUE = 46;
-
-	/**
-	 * The '<em><b>UTI Pyelonephritis</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>UTI Pyelonephritis</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #UTI_PYELONEPHRITIS
-	 * @model name="UTIPyelonephritis" literal="ITU - Pielonefrite"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int UTI_PYELONEPHRITIS_VALUE = 47;
-
-	/**
-	 * The '<em><b>African American Pharmacological</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>African American Pharmacological</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #AFRICAN_AMERICAN_PHARMACOLOGICAL
-	 * @model name="AfricanAmericanPharmacological" literal="Viver Bem Protocolo Farmacol\363gico Afroamericano"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int AFRICAN_AMERICAN_PHARMACOLOGICAL_VALUE = 48;
-
-	/**
-	 * The '<em><b>Exposed Fracture</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Exposed Fracture</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #EXPOSED_FRACTURE
-	 * @model name="ExposedFracture" literal="Fratura Exposta"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int EXPOSED_FRACTURE_VALUE = 49;
-
-	/**
-	 * The '<em><b>ACEIBBC Betablocker</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>ACEIBBC Betablocker</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #ACEIBBC_BETABLOCKER
-	 * @model name="ACEIBBCBetablocker" literal="Viver Bem IECA &amp; BBC - Betabloqueador"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int ACEIBBC_BETABLOCKER_VALUE = 50;
-
-	/**
-	 * The '<em><b>Low Back Pain</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Low Back Pain</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @see #LOW_BACK_PAIN
-	 * @model name="LowBackPain" literal="Lombalgia"
-	 * @generated
-	 * @ordered
-	 */
-	public static final int LOW_BACK_PAIN_VALUE = 51;
+	CURATIVO(561, "Curativo", "Curativo");
 
 	/**
 	 * The '<em><b>None</b></em>' literal value.
@@ -1334,19 +434,589 @@ public enum CarePathway implements Enumerator {
 	public static final int NONE_VALUE = 0;
 
 	/**
-	 * The '<em><b>Asthma</b></em>' literal value.
+	 * The '<em><b>Fratura Exposta</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Asthma</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Fratura Exposta</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #ASTHMA
-	 * @model name="Asthma" literal="Asma"
+	 * @see #FRATURA_EXPOSTA
+	 * @model name="FraturaExposta" literal="Fratura Exposta"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ASTHMA_VALUE = 52;
+	public static final int FRATURA_EXPOSTA_VALUE = 1;
+
+	/**
+	 * The '<em><b>Pneumonia Influenza</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Pneumonia Influenza</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #PNEUMONIA_INFLUENZA
+	 * @model name="PneumoniaInfluenza" literal="Pneumonia &amp; Influenza"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PNEUMONIA_INFLUENZA_VALUE = 2;
+
+	/**
+	 * The '<em><b>Meningite</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Meningite</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #MENINGITE
+	 * @model name="Meningite"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int MENINGITE_VALUE = 3;
+
+	/**
+	 * The '<em><b>Amniorrexe Prematura</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Amniorrexe Prematura</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #AMNIORREXE_PREMATURA
+	 * @model name="AmniorrexePrematura" literal="Amniorrexe Prematura"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int AMNIORREXE_PREMATURA_VALUE = 4;
+
+	/**
+	 * The '<em><b>ITU Cistite</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>ITU Cistite</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ITU_CISTITE
+	 * @model name="ITUCistite" literal="ITU - Cistite"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ITU_CISTITE_VALUE = 61;
+
+	/**
+	 * The '<em><b>Verifica SEPSE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Verifica SEPSE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #VERIFICA_SEPSE
+	 * @model name="VerificaSEPSE" literal="Verifica SEPSE"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int VERIFICA_SEPSE_VALUE = 64;
+
+	/**
+	 * The '<em><b>Tratamento SEPSE</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Tratamento SEPSE</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #TRATAMENTO_SEPSE
+	 * @model name="TratamentoSEPSE" literal="Tratamento de SEPSE"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TRATAMENTO_SEPSE_VALUE = 65;
+
+	/**
+	 * The '<em><b>Tratamento SIRS</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Tratamento SIRS</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #TRATAMENTO_SIRS
+	 * @model name="TratamentoSIRS" literal="Tratamento de SIRS"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TRATAMENTO_SIRS_VALUE = 8;
+
+	/**
+	 * The '<em><b>ITU Pielonefrite</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>ITU Pielonefrite</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ITU_PIELONEFRITE
+	 * @model name="ITUPielonefrite" literal="ITU - Pielonefrite"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ITU_PIELONEFRITE_VALUE = 81;
+
+	/**
+	 * The '<em><b>Neutropenia Febril</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Neutropenia Febril</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #NEUTROPENIA_FEBRIL
+	 * @model name="NeutropeniaFebril" literal="Neutropenia Febril"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NEUTROPENIA_FEBRIL_VALUE = 82;
+
+	/**
+	 * The '<em><b>IVAS</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>IVAS</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #IVAS
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int IVAS_VALUE = 83;
+
+	/**
+	 * The '<em><b>Diarréia</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Diarréia</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DIARRÉIA
+	 * @model name="Diarréia"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DIARRÉIA_VALUE = 101;
+
+	/**
+	 * The '<em><b>Cefaléia</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Cefaléia</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #CEFALÉIA
+	 * @model name="Cefaléia"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int CEFALÉIA_VALUE = 121;
+
+	/**
+	 * The '<em><b>Lombalgia</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Lombalgia</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #LOMBALGIA
+	 * @model name="Lombalgia"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int LOMBALGIA_VALUE = 161;
+
+	/**
+	 * The '<em><b>Dor Torácica</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Dor Torácica</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DOR_TORÁCICA
+	 * @model name="DorTorácica" literal="Dor Tor\341cica"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DOR_TORÁCICA_VALUE = 181;
+
+	/**
+	 * The '<em><b>Dor Abdominal</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Dor Abdominal</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DOR_ABDOMINAL
+	 * @model name="DorAbdominal" literal="Dor Abdominal"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DOR_ABDOMINAL_VALUE = 201;
+
+	/**
+	 * The '<em><b>Tontura Vertigem</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Tontura Vertigem</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #TONTURA_VERTIGEM
+	 * @model name="TonturaVertigem" literal="Tontura e Vertigem"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TONTURA_VERTIGEM_VALUE = 221;
+
+	/**
+	 * The '<em><b>IVAS Pediátrico</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>IVAS Pediátrico</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #IVAS_PEDIÁTRICO
+	 * @model name="IVASPediátrico" literal="IVAS Pedi\341trico"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int IVAS_PEDIÁTRICO_VALUE = 261;
+
+	/**
+	 * The '<em><b>Otalgia</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Otalgia</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #OTALGIA
+	 * @model name="Otalgia"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int OTALGIA_VALUE = 281;
+
+	/**
+	 * The '<em><b>Náuseas Vômitos</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Náuseas Vômitos</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #NÁUSEAS_VÔMITOS
+	 * @model name="NáuseasVômitos" literal="N\341useas e V\364mitos"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int NÁUSEAS_VÔMITOS_VALUE = 282;
+
+	/**
+	 * The '<em><b>Diarreia Aguda Pediátrico</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Diarreia Aguda Pediátrico</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DIARREIA_AGUDA_PEDIÁTRICO
+	 * @model name="DiarreiaAgudaPediátrico" literal="Diarreia aguda Pedi\341trico"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DIARREIA_AGUDA_PEDIÁTRICO_VALUE = 301;
+
+	/**
+	 * The '<em><b>Trabalho Parto Prematuro</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Trabalho Parto Prematuro</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #TRABALHO_PARTO_PREMATURO
+	 * @model name="TrabalhoPartoPrematuro" literal="Trabalho de Parto Prematuro"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TRABALHO_PARTO_PREMATURO_VALUE = 321;
+
+	/**
+	 * The '<em><b>DHEG</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>DHEG</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DHEG
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DHEG_VALUE = 341;
+
+	/**
+	 * The '<em><b>Dispepsia</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Dispepsia</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DISPEPSIA
+	 * @model name="Dispepsia"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DISPEPSIA_VALUE = 361;
+
+	/**
+	 * The '<em><b>TCE Pediátrico</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>TCE Pediátrico</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #TCE_PEDIÁTRICO
+	 * @model name="TCEPediátrico" literal="TCE Pedi\341trico"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TCE_PEDIÁTRICO_VALUE = 362;
+
+	/**
+	 * The '<em><b>Aminiorrexe Prematura</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Aminiorrexe Prematura</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #AMINIORREXE_PREMATURA
+	 * @model name="AminiorrexePrematura" literal="Aminiorrexe Prematura"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int AMINIORREXE_PREMATURA_VALUE = 365;
+
+	/**
+	 * The '<em><b>Dor Articular Tendinopatia</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Dor Articular Tendinopatia</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DOR_ARTICULAR_TENDINOPATIA
+	 * @model name="DorArticularTendinopatia" literal="Dor Articular/Tendinopatia"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DOR_ARTICULAR_TENDINOPATIA_VALUE = 381;
+
+	/**
+	 * The '<em><b>Febre Sem Sinais Localização</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Febre Sem Sinais Localização</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #FEBRE_SEM_SINAIS_LOCALIZAÇÃO
+	 * @model name="FebreSemSinaisLocalização" literal="Febre Sem Sinais de Localiza\347\343o"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int FEBRE_SEM_SINAIS_LOCALIZAÇÃO_VALUE = 403;
+
+	/**
+	 * The '<em><b>Infecção Partes Moles</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Infecção Partes Moles</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #INFECÇÃO_PARTES_MOLES
+	 * @model name="InfecçãoPartesMoles" literal="Infec\347\343o das Partes Moles"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int INFECÇÃO_PARTES_MOLES_VALUE = 424;
+
+	/**
+	 * The '<em><b>Asma</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Asma</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ASMA
+	 * @model name="Asma"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ASMA_VALUE = 441;
+
+	/**
+	 * The '<em><b>Pneumonia Adquirida Comunidade</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Pneumonia Adquirida Comunidade</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #PNEUMONIA_ADQUIRIDA_COMUNIDADE
+	 * @model name="PneumoniaAdquiridaComunidade" literal="Pneumonia Adquirida na Comunidade"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PNEUMONIA_ADQUIRIDA_COMUNIDADE_VALUE = 461;
+
+	/**
+	 * The '<em><b>Urticária Pediátrico</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Urticária Pediátrico</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #URTICÁRIA_PEDIÁTRICO
+	 * @model name="UrticáriaPediátrico" literal="Urtic\341ria Pedi\341trico"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int URTICÁRIA_PEDIÁTRICO_VALUE = 462;
+
+	/**
+	 * The '<em><b>Endometrite Puerperal</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Endometrite Puerperal</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ENDOMETRITE_PUERPERAL
+	 * @model name="EndometritePuerperal" literal="Endometrite Puerperal"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ENDOMETRITE_PUERPERAL_VALUE = 481;
+
+	/**
+	 * The '<em><b>Hemorragia Pós Parto</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Hemorragia Pós Parto</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #HEMORRAGIA_PÓS_PARTO
+	 * @model name="HemorragiaPósParto" literal="Hemorragia P\363s-Parto"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int HEMORRAGIA_PÓS_PARTO_VALUE = 501;
+
+	/**
+	 * The '<em><b>Posdatismo</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Posdatismo</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #POSDATISMO
+	 * @model name="Posdatismo"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int POSDATISMO_VALUE = 502;
+
+	/**
+	 * The '<em><b>Hipertensão Arterial Sistêmica</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Hipertensão Arterial Sistêmica</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #HIPERTENSÃO_ARTERIAL_SISTÊMICA
+	 * @model name="HipertensãoArterialSistêmica" literal="Hipertens\343o Arterial Sist\352mica"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int HIPERTENSÃO_ARTERIAL_SISTÊMICA_VALUE = 521;
+
+	/**
+	 * The '<em><b>Insuficiência Cardíaca</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Insuficiência Cardíaca</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #INSUFICIÊNCIA_CARDÍACA
+	 * @model name="InsuficiênciaCardíaca" literal="Insufici\352ncia Card\355aca"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int INSUFICIÊNCIA_CARDÍACA_VALUE = 522;
+
+	/**
+	 * The '<em><b>DPOC</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>DPOC</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #DPOC
+	 * @model
+	 * @generated
+	 * @ordered
+	 */
+	public static final int DPOC_VALUE = 541;
+
+	/**
+	 * The '<em><b>Curativo</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Curativo</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #CURATIVO
+	 * @model name="Curativo"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int CURATIVO_VALUE = 561;
 
 	/**
 	 * An array of all the '<em><b>Care Pathway</b></em>' enumerators.
@@ -1354,16 +1024,14 @@ public enum CarePathway implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final CarePathway[] VALUES_ARRAY = new CarePathway[] { DM_TREATMENT, DM_ADJUSTMENTS, ABDOMINAL_PAIN,
-			CHEST_PAIN, HDP, DIARRHEA, COPD, URTI, PNEUMONIA_INFLUENZA, PREMATURE_AMNIORREXIS, TOXOPLASMOSIS, HEADACHE,
-			PARASITE, AFRICA_LINE_MONOTHERAPY, GESTATIONAL_DIABETES, LUMBAR_PAIN, AFRO_LINE_TETRATHERAPY,
-			VULVOVAGINITIS, FEBRILE_NEUTROPENIA, PHARYNGITIS, ACUTE_OTITIS_MEDIA, TETRATHERAPY_BAR, UTI_CYSTITIS,
-			SEPSIS_TREATMENT, JOINT_PAIN, ACEI_LINE_MONOTHERAPY, ACNE, DYSPEPSIA, VERTIGO, ACEI_LINE_TETRA_THERAPY,
-			DOUBLE_THERAPY_AFRO_LINE, TREATMENT_LOW_RISK_DYSLIPIDEMIA, TRIPLE_AFRO_LINE_THERAPY, DIABETES_DYSLIPIDEMIA,
-			DOUBLE_THERAPY_BAR, MONOTHERAPY_BAR, TREATMENT_DYSLIPIDEMIA_HIGH_RISK,
-			TREATMENT_DYSLIPIDEMIA_INTERMEDIATE_RISK, TREATMENT_DYSLIPIDEMIA_VERY_HIGH_RISK, MENINGITIS, SYPHILIS,
-			ACEI_LINE_DOUBLE_THERAPY, TRIPLOTERAPIA_BAR, UTI, BAR_BBC_BETABLOCKER, UTI_DIABETES, UTI_PYELONEPHRITIS,
-			AFRICAN_AMERICAN_PHARMACOLOGICAL, EXPOSED_FRACTURE, ACEIBBC_BETABLOCKER, LOW_BACK_PAIN, NONE, ASTHMA, };
+	private static final CarePathway[] VALUES_ARRAY = new CarePathway[] { NONE, FRATURA_EXPOSTA, PNEUMONIA_INFLUENZA,
+			MENINGITE, AMNIORREXE_PREMATURA, ITU_CISTITE, VERIFICA_SEPSE, TRATAMENTO_SEPSE, TRATAMENTO_SIRS,
+			ITU_PIELONEFRITE, NEUTROPENIA_FEBRIL, IVAS, DIARRÉIA, CEFALÉIA, LOMBALGIA, DOR_TORÁCICA, DOR_ABDOMINAL,
+			TONTURA_VERTIGEM, IVAS_PEDIÁTRICO, OTALGIA, NÁUSEAS_VÔMITOS, DIARREIA_AGUDA_PEDIÁTRICO,
+			TRABALHO_PARTO_PREMATURO, DHEG, DISPEPSIA, TCE_PEDIÁTRICO, AMINIORREXE_PREMATURA,
+			DOR_ARTICULAR_TENDINOPATIA, FEBRE_SEM_SINAIS_LOCALIZAÇÃO, INFECÇÃO_PARTES_MOLES, ASMA,
+			PNEUMONIA_ADQUIRIDA_COMUNIDADE, URTICÁRIA_PEDIÁTRICO, ENDOMETRITE_PUERPERAL, HEMORRAGIA_PÓS_PARTO,
+			POSDATISMO, HIPERTENSÃO_ARTERIAL_SISTÊMICA, INSUFICIÊNCIA_CARDÍACA, DPOC, CURATIVO, };
 
 	/**
 	 * A public read-only list of all the '<em><b>Care Pathway</b></em>' enumerators.
@@ -1419,112 +1087,86 @@ public enum CarePathway implements Enumerator {
 	 */
 	public static CarePathway get(int value) {
 		switch (value) {
-		case DM_TREATMENT_VALUE:
-			return DM_TREATMENT;
-		case DM_ADJUSTMENTS_VALUE:
-			return DM_ADJUSTMENTS;
-		case ABDOMINAL_PAIN_VALUE:
-			return ABDOMINAL_PAIN;
-		case CHEST_PAIN_VALUE:
-			return CHEST_PAIN;
-		case HDP_VALUE:
-			return HDP;
-		case DIARRHEA_VALUE:
-			return DIARRHEA;
-		case COPD_VALUE:
-			return COPD;
-		case URTI_VALUE:
-			return URTI;
-		case PNEUMONIA_INFLUENZA_VALUE:
-			return PNEUMONIA_INFLUENZA;
-		case PREMATURE_AMNIORREXIS_VALUE:
-			return PREMATURE_AMNIORREXIS;
-		case TOXOPLASMOSIS_VALUE:
-			return TOXOPLASMOSIS;
-		case HEADACHE_VALUE:
-			return HEADACHE;
-		case PARASITE_VALUE:
-			return PARASITE;
-		case AFRICA_LINE_MONOTHERAPY_VALUE:
-			return AFRICA_LINE_MONOTHERAPY;
-		case GESTATIONAL_DIABETES_VALUE:
-			return GESTATIONAL_DIABETES;
-		case LUMBAR_PAIN_VALUE:
-			return LUMBAR_PAIN;
-		case AFRO_LINE_TETRATHERAPY_VALUE:
-			return AFRO_LINE_TETRATHERAPY;
-		case VULVOVAGINITIS_VALUE:
-			return VULVOVAGINITIS;
-		case FEBRILE_NEUTROPENIA_VALUE:
-			return FEBRILE_NEUTROPENIA;
-		case PHARYNGITIS_VALUE:
-			return PHARYNGITIS;
-		case ACUTE_OTITIS_MEDIA_VALUE:
-			return ACUTE_OTITIS_MEDIA;
-		case TETRATHERAPY_BAR_VALUE:
-			return TETRATHERAPY_BAR;
-		case UTI_CYSTITIS_VALUE:
-			return UTI_CYSTITIS;
-		case SEPSIS_TREATMENT_VALUE:
-			return SEPSIS_TREATMENT;
-		case JOINT_PAIN_VALUE:
-			return JOINT_PAIN;
-		case ACEI_LINE_MONOTHERAPY_VALUE:
-			return ACEI_LINE_MONOTHERAPY;
-		case ACNE_VALUE:
-			return ACNE;
-		case DYSPEPSIA_VALUE:
-			return DYSPEPSIA;
-		case VERTIGO_VALUE:
-			return VERTIGO;
-		case ACEI_LINE_TETRA_THERAPY_VALUE:
-			return ACEI_LINE_TETRA_THERAPY;
-		case DOUBLE_THERAPY_AFRO_LINE_VALUE:
-			return DOUBLE_THERAPY_AFRO_LINE;
-		case TREATMENT_LOW_RISK_DYSLIPIDEMIA_VALUE:
-			return TREATMENT_LOW_RISK_DYSLIPIDEMIA;
-		case TRIPLE_AFRO_LINE_THERAPY_VALUE:
-			return TRIPLE_AFRO_LINE_THERAPY;
-		case DIABETES_DYSLIPIDEMIA_VALUE:
-			return DIABETES_DYSLIPIDEMIA;
-		case DOUBLE_THERAPY_BAR_VALUE:
-			return DOUBLE_THERAPY_BAR;
-		case MONOTHERAPY_BAR_VALUE:
-			return MONOTHERAPY_BAR;
-		case TREATMENT_DYSLIPIDEMIA_HIGH_RISK_VALUE:
-			return TREATMENT_DYSLIPIDEMIA_HIGH_RISK;
-		case TREATMENT_DYSLIPIDEMIA_INTERMEDIATE_RISK_VALUE:
-			return TREATMENT_DYSLIPIDEMIA_INTERMEDIATE_RISK;
-		case TREATMENT_DYSLIPIDEMIA_VERY_HIGH_RISK_VALUE:
-			return TREATMENT_DYSLIPIDEMIA_VERY_HIGH_RISK;
-		case MENINGITIS_VALUE:
-			return MENINGITIS;
-		case SYPHILIS_VALUE:
-			return SYPHILIS;
-		case ACEI_LINE_DOUBLE_THERAPY_VALUE:
-			return ACEI_LINE_DOUBLE_THERAPY;
-		case TRIPLOTERAPIA_BAR_VALUE:
-			return TRIPLOTERAPIA_BAR;
-		case UTI_VALUE:
-			return UTI;
-		case BAR_BBC_BETABLOCKER_VALUE:
-			return BAR_BBC_BETABLOCKER;
-		case UTI_DIABETES_VALUE:
-			return UTI_DIABETES;
-		case UTI_PYELONEPHRITIS_VALUE:
-			return UTI_PYELONEPHRITIS;
-		case AFRICAN_AMERICAN_PHARMACOLOGICAL_VALUE:
-			return AFRICAN_AMERICAN_PHARMACOLOGICAL;
-		case EXPOSED_FRACTURE_VALUE:
-			return EXPOSED_FRACTURE;
-		case ACEIBBC_BETABLOCKER_VALUE:
-			return ACEIBBC_BETABLOCKER;
-		case LOW_BACK_PAIN_VALUE:
-			return LOW_BACK_PAIN;
 		case NONE_VALUE:
 			return NONE;
-		case ASTHMA_VALUE:
-			return ASTHMA;
+		case FRATURA_EXPOSTA_VALUE:
+			return FRATURA_EXPOSTA;
+		case PNEUMONIA_INFLUENZA_VALUE:
+			return PNEUMONIA_INFLUENZA;
+		case MENINGITE_VALUE:
+			return MENINGITE;
+		case AMNIORREXE_PREMATURA_VALUE:
+			return AMNIORREXE_PREMATURA;
+		case ITU_CISTITE_VALUE:
+			return ITU_CISTITE;
+		case VERIFICA_SEPSE_VALUE:
+			return VERIFICA_SEPSE;
+		case TRATAMENTO_SEPSE_VALUE:
+			return TRATAMENTO_SEPSE;
+		case TRATAMENTO_SIRS_VALUE:
+			return TRATAMENTO_SIRS;
+		case ITU_PIELONEFRITE_VALUE:
+			return ITU_PIELONEFRITE;
+		case NEUTROPENIA_FEBRIL_VALUE:
+			return NEUTROPENIA_FEBRIL;
+		case IVAS_VALUE:
+			return IVAS;
+		case DIARRÉIA_VALUE:
+			return DIARRÉIA;
+		case CEFALÉIA_VALUE:
+			return CEFALÉIA;
+		case LOMBALGIA_VALUE:
+			return LOMBALGIA;
+		case DOR_TORÁCICA_VALUE:
+			return DOR_TORÁCICA;
+		case DOR_ABDOMINAL_VALUE:
+			return DOR_ABDOMINAL;
+		case TONTURA_VERTIGEM_VALUE:
+			return TONTURA_VERTIGEM;
+		case IVAS_PEDIÁTRICO_VALUE:
+			return IVAS_PEDIÁTRICO;
+		case OTALGIA_VALUE:
+			return OTALGIA;
+		case NÁUSEAS_VÔMITOS_VALUE:
+			return NÁUSEAS_VÔMITOS;
+		case DIARREIA_AGUDA_PEDIÁTRICO_VALUE:
+			return DIARREIA_AGUDA_PEDIÁTRICO;
+		case TRABALHO_PARTO_PREMATURO_VALUE:
+			return TRABALHO_PARTO_PREMATURO;
+		case DHEG_VALUE:
+			return DHEG;
+		case DISPEPSIA_VALUE:
+			return DISPEPSIA;
+		case TCE_PEDIÁTRICO_VALUE:
+			return TCE_PEDIÁTRICO;
+		case AMINIORREXE_PREMATURA_VALUE:
+			return AMINIORREXE_PREMATURA;
+		case DOR_ARTICULAR_TENDINOPATIA_VALUE:
+			return DOR_ARTICULAR_TENDINOPATIA;
+		case FEBRE_SEM_SINAIS_LOCALIZAÇÃO_VALUE:
+			return FEBRE_SEM_SINAIS_LOCALIZAÇÃO;
+		case INFECÇÃO_PARTES_MOLES_VALUE:
+			return INFECÇÃO_PARTES_MOLES;
+		case ASMA_VALUE:
+			return ASMA;
+		case PNEUMONIA_ADQUIRIDA_COMUNIDADE_VALUE:
+			return PNEUMONIA_ADQUIRIDA_COMUNIDADE;
+		case URTICÁRIA_PEDIÁTRICO_VALUE:
+			return URTICÁRIA_PEDIÁTRICO;
+		case ENDOMETRITE_PUERPERAL_VALUE:
+			return ENDOMETRITE_PUERPERAL;
+		case HEMORRAGIA_PÓS_PARTO_VALUE:
+			return HEMORRAGIA_PÓS_PARTO;
+		case POSDATISMO_VALUE:
+			return POSDATISMO;
+		case HIPERTENSÃO_ARTERIAL_SISTÊMICA_VALUE:
+			return HIPERTENSÃO_ARTERIAL_SISTÊMICA;
+		case INSUFICIÊNCIA_CARDÍACA_VALUE:
+			return INSUFICIÊNCIA_CARDÍACA;
+		case DPOC_VALUE:
+			return DPOC;
+		case CURATIVO_VALUE:
+			return CURATIVO;
 		}
 		return null;
 	}

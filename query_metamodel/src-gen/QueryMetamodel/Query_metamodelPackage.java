@@ -417,22 +417,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int ACARE_PATHWAY = 7;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACARE_PATHWAY__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>Conduct</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACARE_PATHWAY__CONDUCT = 1;
+	int ACARE_PATHWAY__CONDUCT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACARE_PATHWAY__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>ACare Pathway</em>' class.
@@ -775,13 +775,13 @@ public interface Query_metamodelPackage extends EPackage {
 	int FLOW__QUANTITY = 1;
 
 	/**
-	 * The feature id for the '<em><b>Sequences</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FLOW__SEQUENCES = 2;
+	int FLOW__STEP = 2;
 
 	/**
 	 * The number of structural features of the '<em>Flow</em>' class.
@@ -839,13 +839,13 @@ public interface Query_metamodelPackage extends EPackage {
 	int MEDICATION__QUANTITY = 2;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Brand</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION__ID = 3;
+	int MEDICATION__BRAND = 3;
 
 	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
@@ -857,13 +857,31 @@ public interface Query_metamodelPackage extends EPackage {
 	int MEDICATION__STEP = 4;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICATION__ID = 5;
+
+	/**
+	 * The feature id for the '<em><b>Outpatient</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDICATION__OUTPATIENT = 6;
+
+	/**
 	 * The number of structural features of the '<em>Medication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_FEATURE_COUNT = 5;
+	int MEDICATION_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Medication</em>' class.
@@ -875,70 +893,6 @@ public interface Query_metamodelPackage extends EPackage {
 	int MEDICATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.SequenceImpl <em>Sequence</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.SequenceImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getSequence()
-	 * @generated
-	 */
-	int SEQUENCE = 16;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEQUENCE__ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEQUENCE__TYPE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEQUENCE__NAME = 2;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEQUENCE__DESCRIPTION = 3;
-
-	/**
-	 * The number of structural features of the '<em>Sequence</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEQUENCE_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Sequence</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SEQUENCE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link QueryMetamodel.impl.PathwayImpl <em>Pathway</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -946,7 +900,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getPathway()
 	 * @generated
 	 */
-	int PATHWAY = 17;
+	int PATHWAY = 16;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1010,7 +964,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQAnswer()
 	 * @generated
 	 */
-	int QANSWER = 18;
+	int QANSWER = 17;
 
 	/**
 	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
@@ -1056,7 +1010,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQStep()
 	 * @generated
 	 */
-	int QSTEP = 19;
+	int QSTEP = 18;
 
 	/**
 	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
@@ -1102,7 +1056,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQReturn()
 	 * @generated
 	 */
-	int QRETURN = 20;
+	int QRETURN = 19;
 
 	/**
 	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
@@ -1148,7 +1102,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQStop()
 	 * @generated
 	 */
-	int QSTOP = 21;
+	int QSTOP = 20;
 
 	/**
 	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
@@ -1194,7 +1148,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQPrescription()
 	 * @generated
 	 */
-	int QPRESCRIPTION = 22;
+	int QPRESCRIPTION = 21;
 
 	/**
 	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
@@ -1240,7 +1194,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQExam()
 	 * @generated
 	 */
-	int QEXAM = 23;
+	int QEXAM = 22;
 
 	/**
 	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
@@ -1286,7 +1240,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getStep()
 	 * @generated
 	 */
-	int STEP = 24;
+	int STEP = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1368,7 +1322,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getPrescription()
 	 * @generated
 	 */
-	int PRESCRIPTION = 25;
+	int PRESCRIPTION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1389,22 +1343,13 @@ public interface Query_metamodelPackage extends EPackage {
 	int PRESCRIPTION__CODE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Ids</b></em>' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__IDS = 2;
-
-	/**
 	 * The feature id for the '<em><b>Percentage</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__PERCENTAGE = 3;
+	int PRESCRIPTION__PERCENTAGE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
@@ -1413,7 +1358,25 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__QUANTITY = 4;
+	int PRESCRIPTION__QUANTITY = 3;
+
+	/**
+	 * The feature id for the '<em><b>Medication</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__MEDICATION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTION__ID = 5;
 
 	/**
 	 * The number of structural features of the '<em>Prescription</em>' class.
@@ -1422,7 +1385,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION_FEATURE_COUNT = 5;
+	int PRESCRIPTION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Prescription</em>' class.
@@ -1441,7 +1404,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getExam()
 	 * @generated
 	 */
-	int EXAM = 26;
+	int EXAM = 25;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1514,7 +1477,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQuestion()
 	 * @generated
 	 */
-	int QUESTION = 27;
+	int QUESTION = 26;
 
 	/**
 	 * The feature id for the '<em><b>Percentage</b></em>' attribute.
@@ -1605,7 +1568,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getAnswer()
 	 * @generated
 	 */
-	int ANSWER = 31;
+	int ANSWER = 30;
 
 	/**
 	 * The number of structural features of the '<em>Answer</em>' class.
@@ -1633,7 +1596,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getABoolean()
 	 * @generated
 	 */
-	int ABOOLEAN = 28;
+	int ABOOLEAN = 27;
 
 	/**
 	 * The feature id for the '<em><b>False Quantity</b></em>' attribute.
@@ -1679,7 +1642,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getPatient()
 	 * @generated
 	 */
-	int PATIENT = 29;
+	int PATIENT = 28;
 
 	/**
 	 * The feature id for the '<em><b>Code</b></em>' attribute.
@@ -1743,7 +1706,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getANumeric()
 	 * @generated
 	 */
-	int ANUMERIC = 30;
+	int ANUMERIC = 29;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1789,7 +1752,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQOccurrence()
 	 * @generated
 	 */
-	int QOCCURRENCE = 32;
+	int QOCCURRENCE = 31;
 
 	/**
 	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
@@ -1826,7 +1789,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getOrder()
 	 * @generated
 	 */
-	int ORDER = 33;
+	int ORDER = 32;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Message <em>Message</em>}' enum.
@@ -1836,7 +1799,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getMessage()
 	 * @generated
 	 */
-	int MESSAGE = 34;
+	int MESSAGE = 33;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.Gender <em>Gender</em>}' enum.
@@ -1846,7 +1809,17 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getGender()
 	 * @generated
 	 */
-	int GENDER = 35;
+	int GENDER = 34;
+
+	/**
+	 * The meta object id for the '{@link QueryMetamodel.Conduct <em>Conduct</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.Conduct
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getConduct()
+	 * @generated
+	 */
+	int CONDUCT = 35;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}' enum.
@@ -1857,36 +1830,6 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	int CARE_PATHWAY = 36;
-
-	/**
-	 * The meta object id for the '{@link QueryMetamodel.EStep <em>EStep</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.EStep
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEStep()
-	 * @generated
-	 */
-	int ESTEP = 37;
-
-	/**
-	 * The meta object id for the '{@link QueryMetamodel.EConduct <em>EConduct</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.EConduct
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEConduct()
-	 * @generated
-	 */
-	int ECONDUCT = 38;
-
-	/**
-	 * The meta object id for the '{@link QueryMetamodel.BooleanConduct <em>Boolean Conduct</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.BooleanConduct
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getBooleanConduct()
-	 * @generated
-	 */
-	int BOOLEAN_CONDUCT = 39;
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EAttribute <em>EAttribute</em>}'.
@@ -2156,17 +2099,6 @@ public interface Query_metamodelPackage extends EPackage {
 	EClass getACarePathway();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.ACarePathway#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.ACarePathway#getName()
-	 * @see #getACarePathway()
-	 * @generated
-	 */
-	EAttribute getACarePathway_Name();
-
-	/**
 	 * Returns the meta object for the attribute '{@link QueryMetamodel.ACarePathway#getConduct <em>Conduct</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2176,6 +2108,17 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getACarePathway_Conduct();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ACarePathway#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see QueryMetamodel.ACarePathway#getName()
+	 * @see #getACarePathway()
+	 * @generated
+	 */
+	EAttribute getACarePathway_Name();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.QStatus <em>QStatus</em>}'.
@@ -2369,15 +2312,15 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getFlow_Quantity();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.Flow#getSequences <em>Sequences</em>}'.
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.Flow#getStep <em>Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sequences</em>'.
-	 * @see QueryMetamodel.Flow#getSequences()
+	 * @return the meta object for the containment reference list '<em>Step</em>'.
+	 * @see QueryMetamodel.Flow#getStep()
 	 * @see #getFlow()
 	 * @generated
 	 */
-	EReference getFlow_Sequences();
+	EReference getFlow_Step();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Medication <em>Medication</em>}'.
@@ -2423,15 +2366,15 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getMedication_Quantity();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Medication#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Medication#getBrand <em>Brand</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see QueryMetamodel.Medication#getId()
+	 * @return the meta object for the attribute '<em>Brand</em>'.
+	 * @see QueryMetamodel.Medication#getBrand()
 	 * @see #getMedication()
 	 * @generated
 	 */
-	EAttribute getMedication_Id();
+	EAttribute getMedication_Brand();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.Medication#getStep <em>Step</em>}'.
@@ -2445,58 +2388,26 @@ public interface Query_metamodelPackage extends EPackage {
 	EReference getMedication_Step();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.Sequence <em>Sequence</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sequence</em>'.
-	 * @see QueryMetamodel.Sequence
-	 * @generated
-	 */
-	EClass getSequence();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Sequence#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Medication#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see QueryMetamodel.Sequence#getId()
-	 * @see #getSequence()
+	 * @see QueryMetamodel.Medication#getId()
+	 * @see #getMedication()
 	 * @generated
 	 */
-	EAttribute getSequence_Id();
+	EAttribute getMedication_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Sequence#getType <em>Type</em>}'.
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Medication#isOutpatient <em>Outpatient</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see QueryMetamodel.Sequence#getType()
-	 * @see #getSequence()
+	 * @return the meta object for the attribute '<em>Outpatient</em>'.
+	 * @see QueryMetamodel.Medication#isOutpatient()
+	 * @see #getMedication()
 	 * @generated
 	 */
-	EAttribute getSequence_Type();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Sequence#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see QueryMetamodel.Sequence#getName()
-	 * @see #getSequence()
-	 * @generated
-	 */
-	EAttribute getSequence_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Sequence#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see QueryMetamodel.Sequence#getDescription()
-	 * @see #getSequence()
-	 * @generated
-	 */
-	EAttribute getSequence_Description();
+	EAttribute getMedication_Outpatient();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Pathway <em>Pathway</em>}'.
@@ -2787,17 +2698,6 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getPrescription_Code();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link QueryMetamodel.Prescription#getIds <em>Ids</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Ids</em>'.
-	 * @see QueryMetamodel.Prescription#getIds()
-	 * @see #getPrescription()
-	 * @generated
-	 */
-	EAttribute getPrescription_Ids();
-
-	/**
 	 * Returns the meta object for the attribute '{@link QueryMetamodel.Prescription#getPercentage <em>Percentage</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2818,6 +2718,28 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPrescription_Quantity();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.Prescription#getMedication <em>Medication</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Medication</em>'.
+	 * @see QueryMetamodel.Prescription#getMedication()
+	 * @see #getPrescription()
+	 * @generated
+	 */
+	EReference getPrescription_Medication();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.Prescription#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see QueryMetamodel.Prescription#getId()
+	 * @see #getPrescription()
+	 * @generated
+	 */
+	EAttribute getPrescription_Id();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Exam <em>Exam</em>}'.
@@ -3140,6 +3062,16 @@ public interface Query_metamodelPackage extends EPackage {
 	EEnum getGender();
 
 	/**
+	 * Returns the meta object for enum '{@link QueryMetamodel.Conduct <em>Conduct</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Conduct</em>'.
+	 * @see QueryMetamodel.Conduct
+	 * @generated
+	 */
+	EEnum getConduct();
+
+	/**
 	 * Returns the meta object for enum '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3148,36 +3080,6 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getCarePathway();
-
-	/**
-	 * Returns the meta object for enum '{@link QueryMetamodel.EStep <em>EStep</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>EStep</em>'.
-	 * @see QueryMetamodel.EStep
-	 * @generated
-	 */
-	EEnum getEStep();
-
-	/**
-	 * Returns the meta object for enum '{@link QueryMetamodel.EConduct <em>EConduct</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>EConduct</em>'.
-	 * @see QueryMetamodel.EConduct
-	 * @generated
-	 */
-	EEnum getEConduct();
-
-	/**
-	 * Returns the meta object for enum '{@link QueryMetamodel.BooleanConduct <em>Boolean Conduct</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Boolean Conduct</em>'.
-	 * @see QueryMetamodel.BooleanConduct
-	 * @generated
-	 */
-	EEnum getBooleanConduct();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3419,20 +3321,20 @@ public interface Query_metamodelPackage extends EPackage {
 		EClass ACARE_PATHWAY = eINSTANCE.getACarePathway();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ACARE_PATHWAY__NAME = eINSTANCE.getACarePathway_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Conduct</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EAttribute ACARE_PATHWAY__CONDUCT = eINSTANCE.getACarePathway_Conduct();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACARE_PATHWAY__NAME = eINSTANCE.getACarePathway_Name();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QStatusImpl <em>QStatus</em>}' class.
@@ -3593,12 +3495,12 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute FLOW__QUANTITY = eINSTANCE.getFlow_Quantity();
 
 		/**
-		 * The meta object literal for the '<em><b>Sequences</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Step</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FLOW__SEQUENCES = eINSTANCE.getFlow_Sequences();
+		EReference FLOW__STEP = eINSTANCE.getFlow_Step();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.MedicationImpl <em>Medication</em>}' class.
@@ -3635,12 +3537,12 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute MEDICATION__QUANTITY = eINSTANCE.getMedication_Quantity();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Brand</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MEDICATION__ID = eINSTANCE.getMedication_Id();
+		EAttribute MEDICATION__BRAND = eINSTANCE.getMedication_Brand();
 
 		/**
 		 * The meta object literal for the '<em><b>Step</b></em>' containment reference list feature.
@@ -3651,46 +3553,20 @@ public interface Query_metamodelPackage extends EPackage {
 		EReference MEDICATION__STEP = eINSTANCE.getMedication_Step();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.SequenceImpl <em>Sequence</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.SequenceImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getSequence()
-		 * @generated
-		 */
-		EClass SEQUENCE = eINSTANCE.getSequence();
-
-		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEQUENCE__ID = eINSTANCE.getSequence_Id();
+		EAttribute MEDICATION__ID = eINSTANCE.getMedication_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Outpatient</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SEQUENCE__TYPE = eINSTANCE.getSequence_Type();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SEQUENCE__NAME = eINSTANCE.getSequence_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SEQUENCE__DESCRIPTION = eINSTANCE.getSequence_Description();
+		EAttribute MEDICATION__OUTPATIENT = eINSTANCE.getMedication_Outpatient();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.PathwayImpl <em>Pathway</em>}' class.
@@ -3927,14 +3803,6 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute PRESCRIPTION__CODE = eINSTANCE.getPrescription_Code();
 
 		/**
-		 * The meta object literal for the '<em><b>Ids</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PRESCRIPTION__IDS = eINSTANCE.getPrescription_Ids();
-
-		/**
 		 * The meta object literal for the '<em><b>Percentage</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3949,6 +3817,22 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PRESCRIPTION__QUANTITY = eINSTANCE.getPrescription_Quantity();
+
+		/**
+		 * The meta object literal for the '<em><b>Medication</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRESCRIPTION__MEDICATION = eINSTANCE.getPrescription_Medication();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRESCRIPTION__ID = eINSTANCE.getPrescription_Id();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.ExamImpl <em>Exam</em>}' class.
@@ -4211,6 +4095,16 @@ public interface Query_metamodelPackage extends EPackage {
 		EEnum GENDER = eINSTANCE.getGender();
 
 		/**
+		 * The meta object literal for the '{@link QueryMetamodel.Conduct <em>Conduct</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.Conduct
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getConduct()
+		 * @generated
+		 */
+		EEnum CONDUCT = eINSTANCE.getConduct();
+
+		/**
 		 * The meta object literal for the '{@link QueryMetamodel.CarePathway <em>Care Pathway</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4219,36 +4113,6 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum CARE_PATHWAY = eINSTANCE.getCarePathway();
-
-		/**
-		 * The meta object literal for the '{@link QueryMetamodel.EStep <em>EStep</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.EStep
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEStep()
-		 * @generated
-		 */
-		EEnum ESTEP = eINSTANCE.getEStep();
-
-		/**
-		 * The meta object literal for the '{@link QueryMetamodel.EConduct <em>EConduct</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.EConduct
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getEConduct()
-		 * @generated
-		 */
-		EEnum ECONDUCT = eINSTANCE.getEConduct();
-
-		/**
-		 * The meta object literal for the '{@link QueryMetamodel.BooleanConduct <em>Boolean Conduct</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.BooleanConduct
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getBooleanConduct()
-		 * @generated
-		 */
-		EEnum BOOLEAN_CONDUCT = eINSTANCE.getBooleanConduct();
 
 	}
 

@@ -4,7 +4,7 @@ package QueryMetamodel.impl;
 
 import QueryMetamodel.Flow;
 import QueryMetamodel.Query_metamodelPackage;
-import QueryMetamodel.Sequence;
+import QueryMetamodel.Step;
 
 import java.util.Collection;
 
@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link QueryMetamodel.impl.FlowImpl#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.impl.FlowImpl#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link QueryMetamodel.impl.FlowImpl#getSequences <em>Sequences</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.FlowImpl#getStep <em>Step</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,14 +79,14 @@ public class FlowImpl extends MinimalEObjectImpl.Container implements Flow {
 	protected int quantity = QUANTITY_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSequences() <em>Sequences</em>}' containment reference list.
+	 * The cached value of the '{@link #getStep() <em>Step</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSequences()
+	 * @see #getStep()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Sequence> sequences;
+	protected EList<Step> step;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -156,12 +156,11 @@ public class FlowImpl extends MinimalEObjectImpl.Container implements Flow {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Sequence> getSequences() {
-		if (sequences == null) {
-			sequences = new EObjectContainmentEList<Sequence>(Sequence.class, this,
-					Query_metamodelPackage.FLOW__SEQUENCES);
+	public EList<Step> getStep() {
+		if (step == null) {
+			step = new EObjectContainmentEList<Step>(Step.class, this, Query_metamodelPackage.FLOW__STEP);
 		}
-		return sequences;
+		return step;
 	}
 
 	/**
@@ -172,8 +171,8 @@ public class FlowImpl extends MinimalEObjectImpl.Container implements Flow {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Query_metamodelPackage.FLOW__SEQUENCES:
-			return ((InternalEList<?>) getSequences()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.FLOW__STEP:
+			return ((InternalEList<?>) getStep()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -190,8 +189,8 @@ public class FlowImpl extends MinimalEObjectImpl.Container implements Flow {
 			return getPercentage();
 		case Query_metamodelPackage.FLOW__QUANTITY:
 			return getQuantity();
-		case Query_metamodelPackage.FLOW__SEQUENCES:
-			return getSequences();
+		case Query_metamodelPackage.FLOW__STEP:
+			return getStep();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -211,9 +210,9 @@ public class FlowImpl extends MinimalEObjectImpl.Container implements Flow {
 		case Query_metamodelPackage.FLOW__QUANTITY:
 			setQuantity((Integer) newValue);
 			return;
-		case Query_metamodelPackage.FLOW__SEQUENCES:
-			getSequences().clear();
-			getSequences().addAll((Collection<? extends Sequence>) newValue);
+		case Query_metamodelPackage.FLOW__STEP:
+			getStep().clear();
+			getStep().addAll((Collection<? extends Step>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -233,8 +232,8 @@ public class FlowImpl extends MinimalEObjectImpl.Container implements Flow {
 		case Query_metamodelPackage.FLOW__QUANTITY:
 			setQuantity(QUANTITY_EDEFAULT);
 			return;
-		case Query_metamodelPackage.FLOW__SEQUENCES:
-			getSequences().clear();
+		case Query_metamodelPackage.FLOW__STEP:
+			getStep().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -252,8 +251,8 @@ public class FlowImpl extends MinimalEObjectImpl.Container implements Flow {
 			return PERCENTAGE_EDEFAULT == null ? percentage != null : !PERCENTAGE_EDEFAULT.equals(percentage);
 		case Query_metamodelPackage.FLOW__QUANTITY:
 			return quantity != QUANTITY_EDEFAULT;
-		case Query_metamodelPackage.FLOW__SEQUENCES:
-			return sequences != null && !sequences.isEmpty();
+		case Query_metamodelPackage.FLOW__STEP:
+			return step != null && !step.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

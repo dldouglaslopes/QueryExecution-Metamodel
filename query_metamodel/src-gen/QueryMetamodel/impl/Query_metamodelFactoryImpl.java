@@ -87,8 +87,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createFlow();
 		case Query_metamodelPackage.MEDICATION:
 			return createMedication();
-		case Query_metamodelPackage.SEQUENCE:
-			return createSequence();
 		case Query_metamodelPackage.PATHWAY:
 			return createPathway();
 		case Query_metamodelPackage.QANSWER:
@@ -138,14 +136,10 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createMessageFromString(eDataType, initialValue);
 		case Query_metamodelPackage.GENDER:
 			return createGenderFromString(eDataType, initialValue);
+		case Query_metamodelPackage.CONDUCT:
+			return createConductFromString(eDataType, initialValue);
 		case Query_metamodelPackage.CARE_PATHWAY:
 			return createCarePathwayFromString(eDataType, initialValue);
-		case Query_metamodelPackage.ESTEP:
-			return createEStepFromString(eDataType, initialValue);
-		case Query_metamodelPackage.ECONDUCT:
-			return createEConductFromString(eDataType, initialValue);
-		case Query_metamodelPackage.BOOLEAN_CONDUCT:
-			return createBooleanConductFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -165,14 +159,10 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return convertMessageToString(eDataType, instanceValue);
 		case Query_metamodelPackage.GENDER:
 			return convertGenderToString(eDataType, instanceValue);
+		case Query_metamodelPackage.CONDUCT:
+			return convertConductToString(eDataType, instanceValue);
 		case Query_metamodelPackage.CARE_PATHWAY:
 			return convertCarePathwayToString(eDataType, instanceValue);
-		case Query_metamodelPackage.ESTEP:
-			return convertEStepToString(eDataType, instanceValue);
-		case Query_metamodelPackage.ECONDUCT:
-			return convertEConductToString(eDataType, instanceValue);
-		case Query_metamodelPackage.BOOLEAN_CONDUCT:
-			return convertBooleanConductToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -326,16 +316,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	public Medication createMedication() {
 		MedicationImpl medication = new MedicationImpl();
 		return medication;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Sequence createSequence() {
-		SequenceImpl sequence = new SequenceImpl();
-		return sequence;
 	}
 
 	/**
@@ -559,6 +539,28 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Conduct createConductFromString(EDataType eDataType, String initialValue) {
+		Conduct result = Conduct.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertConductToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public CarePathway createCarePathwayFromString(EDataType eDataType, String initialValue) {
 		CarePathway result = CarePathway.get(initialValue);
 		if (result == null)
@@ -573,72 +575,6 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * @generated
 	 */
 	public String convertCarePathwayToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EStep createEStepFromString(EDataType eDataType, String initialValue) {
-		EStep result = EStep.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertEStepToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EConduct createEConductFromString(EDataType eDataType, String initialValue) {
-		EConduct result = EConduct.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertEConductToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public BooleanConduct createBooleanConductFromString(EDataType eDataType, String initialValue) {
-		BooleanConduct result = BooleanConduct.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertBooleanConductToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 
