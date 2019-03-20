@@ -463,22 +463,13 @@ public interface Query_metamodelPackage extends EPackage {
 	int EMETHOD = 9;
 
 	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EMETHOD__PATHWAY = 0;
-
-	/**
 	 * The number of structural features of the '<em>EMethod</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EMETHOD_FEATURE_COUNT = 1;
+	int EMETHOD_FEATURE_COUNT = 0;
 
 	/**
 	 * The number of operations of the '<em>EMethod</em>' class.
@@ -498,15 +489,6 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	int QSTATUS = 8;
-
-	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QSTATUS__PATHWAY = EMETHOD__PATHWAY;
 
 	/**
 	 * The feature id for the '<em><b>Completed</b></em>' attribute.
@@ -536,13 +518,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int QSTATUS__ABORTED = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QSTATUS__PATHWAY = EMETHOD_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>QStatus</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QSTATUS_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 3;
+	int QSTATUS_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>QStatus</em>' class.
@@ -564,15 +555,6 @@ public interface Query_metamodelPackage extends EPackage {
 	int QCONDUCT = 10;
 
 	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QCONDUCT__PATHWAY = EMETHOD__PATHWAY;
-
-	/**
 	 * The feature id for the '<em><b>With Conduct</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -591,13 +573,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int QCONDUCT__NO_CONDUCT = EMETHOD_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QCONDUCT__PATHWAY = EMETHOD_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>QConduct</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QCONDUCT_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
+	int QCONDUCT_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>QConduct</em>' class.
@@ -619,15 +610,6 @@ public interface Query_metamodelPackage extends EPackage {
 	int QFLOW = 11;
 
 	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QFLOW__PATHWAY = EMETHOD__PATHWAY;
-
-	/**
 	 * The feature id for the '<em><b>Flow</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -637,13 +619,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int QFLOW__FLOW = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QFLOW__PATHWAY = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>QFlow</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QFLOW_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 1;
+	int QFLOW_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>QFlow</em>' class.
@@ -665,15 +656,6 @@ public interface Query_metamodelPackage extends EPackage {
 	int QAVERAGE_TIME = 12;
 
 	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QAVERAGE_TIME__PATHWAY = EMETHOD__PATHWAY;
-
-	/**
 	 * The feature id for the '<em><b>Average</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -683,13 +665,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int QAVERAGE_TIME__AVERAGE = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QAVERAGE_TIME__PATHWAY = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>QAverage Time</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QAVERAGE_TIME_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 1;
+	int QAVERAGE_TIME_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>QAverage Time</em>' class.
@@ -711,15 +702,6 @@ public interface Query_metamodelPackage extends EPackage {
 	int QMEDICATION = 13;
 
 	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QMEDICATION__PATHWAY = EMETHOD__PATHWAY;
-
-	/**
 	 * The feature id for the '<em><b>Medications</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -729,13 +711,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int QMEDICATION__MEDICATIONS = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QMEDICATION__PATHWAY = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>QMedication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QMEDICATION_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 1;
+	int QMEDICATION_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>QMedication</em>' class.
@@ -866,22 +857,13 @@ public interface Query_metamodelPackage extends EPackage {
 	int MEDICATION__ID = 5;
 
 	/**
-	 * The feature id for the '<em><b>Outpatient</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDICATION__OUTPATIENT = 6;
-
-	/**
 	 * The number of structural features of the '<em>Medication</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEDICATION_FEATURE_COUNT = 7;
+	int MEDICATION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Medication</em>' class.
@@ -967,15 +949,6 @@ public interface Query_metamodelPackage extends EPackage {
 	int QANSWER = 17;
 
 	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QANSWER__PATHWAY = EMETHOD__PATHWAY;
-
-	/**
 	 * The feature id for the '<em><b>Question</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -985,13 +958,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int QANSWER__QUESTION = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QANSWER__PATHWAY = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>QAnswer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QANSWER_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 1;
+	int QANSWER_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>QAnswer</em>' class.
@@ -1013,15 +995,6 @@ public interface Query_metamodelPackage extends EPackage {
 	int QSTEP = 18;
 
 	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QSTEP__PATHWAY = EMETHOD__PATHWAY;
-
-	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1031,13 +1004,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int QSTEP__STEP = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QSTEP__PATHWAY = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>QStep</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QSTEP_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 1;
+	int QSTEP_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>QStep</em>' class.
@@ -1057,15 +1039,6 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	int QRETURN = 19;
-
-	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QRETURN__PATHWAY = EMETHOD__PATHWAY;
 
 	/**
 	 * The feature id for the '<em><b>Patient</b></em>' containment reference list.
@@ -1095,14 +1068,14 @@ public interface Query_metamodelPackage extends EPackage {
 	int QRETURN_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link QueryMetamodel.impl.QStopImpl <em>QStop</em>}' class.
+	 * The meta object id for the '{@link QueryMetamodel.impl.QAbortedStepImpl <em>QAborted Step</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see QueryMetamodel.impl.QStopImpl
-	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQStop()
+	 * @see QueryMetamodel.impl.QAbortedStepImpl
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQAbortedStep()
 	 * @generated
 	 */
-	int QSTOP = 20;
+	int QABORTED_STEP = 20;
 
 	/**
 	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
@@ -1111,7 +1084,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QSTOP__PATHWAY = EMETHOD__PATHWAY;
+	int QABORTED_STEP__PATHWAY = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
@@ -1120,25 +1093,25 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QSTOP__STEP = EMETHOD_FEATURE_COUNT + 0;
+	int QABORTED_STEP__STEP = EMETHOD_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>QStop</em>' class.
+	 * The number of structural features of the '<em>QAborted Step</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QSTOP_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 1;
+	int QABORTED_STEP_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>QStop</em>' class.
+	 * The number of operations of the '<em>QAborted Step</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QSTOP_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
+	int QABORTED_STEP_OPERATION_COUNT = EMETHOD_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link QueryMetamodel.impl.QPrescriptionImpl <em>QPrescription</em>}' class.
@@ -1151,15 +1124,6 @@ public interface Query_metamodelPackage extends EPackage {
 	int QPRESCRIPTION = 21;
 
 	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QPRESCRIPTION__PATHWAY = EMETHOD__PATHWAY;
-
-	/**
 	 * The feature id for the '<em><b>Prescription</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1169,13 +1133,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int QPRESCRIPTION__PRESCRIPTION = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QPRESCRIPTION__PATHWAY = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>QPrescription</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QPRESCRIPTION_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 1;
+	int QPRESCRIPTION_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>QPrescription</em>' class.
@@ -1197,15 +1170,6 @@ public interface Query_metamodelPackage extends EPackage {
 	int QEXAM = 22;
 
 	/**
-	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int QEXAM__PATHWAY = EMETHOD__PATHWAY;
-
-	/**
 	 * The feature id for the '<em><b>Exam</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1215,13 +1179,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int QEXAM__EXAM = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QEXAM__PATHWAY = EMETHOD_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>QExam</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int QEXAM_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 1;
+	int QEXAM_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>QExam</em>' class.
@@ -1334,22 +1307,13 @@ public interface Query_metamodelPackage extends EPackage {
 	int PRESCRIPTION__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTION__CODE = 1;
-
-	/**
 	 * The feature id for the '<em><b>Percentage</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__PERCENTAGE = 2;
+	int PRESCRIPTION__PERCENTAGE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
@@ -1358,7 +1322,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__QUANTITY = 3;
+	int PRESCRIPTION__QUANTITY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Medication</b></em>' containment reference list.
@@ -1367,7 +1331,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__MEDICATION = 4;
+	int PRESCRIPTION__MEDICATION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1376,7 +1340,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION__ID = 5;
+	int PRESCRIPTION__ID = 4;
 
 	/**
 	 * The number of structural features of the '<em>Prescription</em>' class.
@@ -1385,7 +1349,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PRESCRIPTION_FEATURE_COUNT = 6;
+	int PRESCRIPTION_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Prescription</em>' class.
@@ -1681,13 +1645,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int PATIENT__QUANTITY = 3;
 
 	/**
+	 * The feature id for the '<em><b>Pathway</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATIENT__PATHWAY = 4;
+
+	/**
 	 * The number of structural features of the '<em>Patient</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATIENT_FEATURE_COUNT = 4;
+	int PATIENT_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Patient</em>' class.
@@ -1761,7 +1734,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QOCCURRENCE__PATHWAY = EMETHOD__PATHWAY;
+	int QOCCURRENCE__PATHWAY = EMETHOD_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>QOccurrence</em>' class.
@@ -1770,7 +1743,7 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int QOCCURRENCE_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 0;
+	int QOCCURRENCE_FEATURE_COUNT = EMETHOD_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>QOccurrence</em>' class.
@@ -2164,6 +2137,17 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getQStatus_Aborted();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QStatus#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QStatus#getPathway()
+	 * @see #getQStatus()
+	 * @generated
+	 */
+	EReference getQStatus_Pathway();
+
+	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EMethod <em>EMethod</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2172,17 +2156,6 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEMethod();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link QueryMetamodel.EMethod#getPathway <em>Pathway</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Pathway</em>'.
-	 * @see QueryMetamodel.EMethod#getPathway()
-	 * @see #getEMethod()
-	 * @generated
-	 */
-	EReference getEMethod_Pathway();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.QConduct <em>QConduct</em>}'.
@@ -2217,6 +2190,17 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getQConduct_NoConduct();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QConduct#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QConduct#getPathway()
+	 * @see #getQConduct()
+	 * @generated
+	 */
+	EReference getQConduct_Pathway();
+
+	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.QFlow <em>QFlow</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2236,6 +2220,17 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getQFlow_Flow();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QFlow#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QFlow#getPathway()
+	 * @see #getQFlow()
+	 * @generated
+	 */
+	EReference getQFlow_Pathway();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.QAverageTime <em>QAverage Time</em>}'.
@@ -2259,6 +2254,17 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getQAverageTime_Average();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QAverageTime#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QAverageTime#getPathway()
+	 * @see #getQAverageTime()
+	 * @generated
+	 */
+	EReference getQAverageTime_Pathway();
+
+	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.QMedication <em>QMedication</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2278,6 +2284,17 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getQMedication_Medications();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QMedication#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QMedication#getPathway()
+	 * @see #getQMedication()
+	 * @generated
+	 */
+	EReference getQMedication_Pathway();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Flow <em>Flow</em>}'.
@@ -2399,17 +2416,6 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getMedication_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Medication#isOutpatient <em>Outpatient</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Outpatient</em>'.
-	 * @see QueryMetamodel.Medication#isOutpatient()
-	 * @see #getMedication()
-	 * @generated
-	 */
-	EAttribute getMedication_Outpatient();
-
-	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Pathway <em>Pathway</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2485,6 +2491,17 @@ public interface Query_metamodelPackage extends EPackage {
 	EReference getQAnswer_Question();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QAnswer#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QAnswer#getPathway()
+	 * @see #getQAnswer()
+	 * @generated
+	 */
+	EReference getQAnswer_Pathway();
+
+	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.QStep <em>QStep</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2504,6 +2521,17 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getQStep_Step();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QStep#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QStep#getPathway()
+	 * @see #getQStep()
+	 * @generated
+	 */
+	EReference getQStep_Pathway();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.QReturn <em>QReturn</em>}'.
@@ -2527,25 +2555,36 @@ public interface Query_metamodelPackage extends EPackage {
 	EReference getQReturn_Patient();
 
 	/**
-	 * Returns the meta object for class '{@link QueryMetamodel.QStop <em>QStop</em>}'.
+	 * Returns the meta object for class '{@link QueryMetamodel.QAbortedStep <em>QAborted Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>QStop</em>'.
-	 * @see QueryMetamodel.QStop
+	 * @return the meta object for class '<em>QAborted Step</em>'.
+	 * @see QueryMetamodel.QAbortedStep
 	 * @generated
 	 */
-	EClass getQStop();
+	EClass getQAbortedStep();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.QStop#getStep <em>Step</em>}'.
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QAbortedStep#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QAbortedStep#getPathway()
+	 * @see #getQAbortedStep()
+	 * @generated
+	 */
+	EReference getQAbortedStep_Pathway();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.QAbortedStep#getStep <em>Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Step</em>'.
-	 * @see QueryMetamodel.QStop#getStep()
-	 * @see #getQStop()
+	 * @see QueryMetamodel.QAbortedStep#getStep()
+	 * @see #getQAbortedStep()
 	 * @generated
 	 */
-	EReference getQStop_Step();
+	EReference getQAbortedStep_Step();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.QPrescription <em>QPrescription</em>}'.
@@ -2569,6 +2608,17 @@ public interface Query_metamodelPackage extends EPackage {
 	EReference getQPrescription_Prescription();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QPrescription#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QPrescription#getPathway()
+	 * @see #getQPrescription()
+	 * @generated
+	 */
+	EReference getQPrescription_Pathway();
+
+	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.QExam <em>QExam</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2588,6 +2638,17 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getQExam_Exam();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QExam#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QExam#getPathway()
+	 * @see #getQExam()
+	 * @generated
+	 */
+	EReference getQExam_Pathway();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.Step <em>Step</em>}'.
@@ -2685,17 +2746,6 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPrescription_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link QueryMetamodel.Prescription#getCode <em>Code</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Code</em>'.
-	 * @see QueryMetamodel.Prescription#getCode()
-	 * @see #getPrescription()
-	 * @generated
-	 */
-	EAttribute getPrescription_Code();
 
 	/**
 	 * Returns the meta object for the attribute '{@link QueryMetamodel.Prescription#getPercentage <em>Percentage</em>}'.
@@ -2980,6 +3030,17 @@ public interface Query_metamodelPackage extends EPackage {
 	EAttribute getPatient_Quantity();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link QueryMetamodel.Patient#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pathway</em>'.
+	 * @see QueryMetamodel.Patient#getPathway()
+	 * @see #getPatient()
+	 * @generated
+	 */
+	EReference getPatient_Pathway();
+
+	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.ANumeric <em>ANumeric</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3030,6 +3091,17 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getQOccurrence();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link QueryMetamodel.QOccurrence#getPathway <em>Pathway</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Pathway</em>'.
+	 * @see QueryMetamodel.QOccurrence#getPathway()
+	 * @see #getQOccurrence()
+	 * @generated
+	 */
+	EReference getQOccurrence_Pathway();
 
 	/**
 	 * Returns the meta object for enum '{@link QueryMetamodel.Order <em>Order</em>}'.
@@ -3371,6 +3443,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute QSTATUS__ABORTED = eINSTANCE.getQStatus_Aborted();
 
 		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QSTATUS__PATHWAY = eINSTANCE.getQStatus_Pathway();
+
+		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.EMethodImpl <em>EMethod</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3379,14 +3459,6 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass EMETHOD = eINSTANCE.getEMethod();
-
-		/**
-		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EMETHOD__PATHWAY = eINSTANCE.getEMethod_Pathway();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QConductImpl <em>QConduct</em>}' class.
@@ -3415,6 +3487,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute QCONDUCT__NO_CONDUCT = eINSTANCE.getQConduct_NoConduct();
 
 		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QCONDUCT__PATHWAY = eINSTANCE.getQConduct_Pathway();
+
+		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QFlowImpl <em>QFlow</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3431,6 +3511,14 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference QFLOW__FLOW = eINSTANCE.getQFlow_Flow();
+
+		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QFLOW__PATHWAY = eINSTANCE.getQFlow_Pathway();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QAverageTimeImpl <em>QAverage Time</em>}' class.
@@ -3451,6 +3539,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute QAVERAGE_TIME__AVERAGE = eINSTANCE.getQAverageTime_Average();
 
 		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QAVERAGE_TIME__PATHWAY = eINSTANCE.getQAverageTime_Pathway();
+
+		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QMedicationImpl <em>QMedication</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3467,6 +3563,14 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference QMEDICATION__MEDICATIONS = eINSTANCE.getQMedication_Medications();
+
+		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QMEDICATION__PATHWAY = eINSTANCE.getQMedication_Pathway();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.FlowImpl <em>Flow</em>}' class.
@@ -3561,14 +3665,6 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute MEDICATION__ID = eINSTANCE.getMedication_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Outpatient</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MEDICATION__OUTPATIENT = eINSTANCE.getMedication_Outpatient();
-
-		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.PathwayImpl <em>Pathway</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3629,6 +3725,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EReference QANSWER__QUESTION = eINSTANCE.getQAnswer_Question();
 
 		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QANSWER__PATHWAY = eINSTANCE.getQAnswer_Pathway();
+
+		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QStepImpl <em>QStep</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3645,6 +3749,14 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference QSTEP__STEP = eINSTANCE.getQStep_Step();
+
+		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QSTEP__PATHWAY = eINSTANCE.getQStep_Pathway();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QReturnImpl <em>QReturn</em>}' class.
@@ -3665,14 +3777,22 @@ public interface Query_metamodelPackage extends EPackage {
 		EReference QRETURN__PATIENT = eINSTANCE.getQReturn_Patient();
 
 		/**
-		 * The meta object literal for the '{@link QueryMetamodel.impl.QStopImpl <em>QStop</em>}' class.
+		 * The meta object literal for the '{@link QueryMetamodel.impl.QAbortedStepImpl <em>QAborted Step</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see QueryMetamodel.impl.QStopImpl
-		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQStop()
+		 * @see QueryMetamodel.impl.QAbortedStepImpl
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getQAbortedStep()
 		 * @generated
 		 */
-		EClass QSTOP = eINSTANCE.getQStop();
+		EClass QABORTED_STEP = eINSTANCE.getQAbortedStep();
+
+		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QABORTED_STEP__PATHWAY = eINSTANCE.getQAbortedStep_Pathway();
 
 		/**
 		 * The meta object literal for the '<em><b>Step</b></em>' containment reference list feature.
@@ -3680,7 +3800,7 @@ public interface Query_metamodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference QSTOP__STEP = eINSTANCE.getQStop_Step();
+		EReference QABORTED_STEP__STEP = eINSTANCE.getQAbortedStep_Step();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QPrescriptionImpl <em>QPrescription</em>}' class.
@@ -3701,6 +3821,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EReference QPRESCRIPTION__PRESCRIPTION = eINSTANCE.getQPrescription_Prescription();
 
 		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QPRESCRIPTION__PATHWAY = eINSTANCE.getQPrescription_Pathway();
+
+		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QExamImpl <em>QExam</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3717,6 +3845,14 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference QEXAM__EXAM = eINSTANCE.getQExam_Exam();
+
+		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QEXAM__PATHWAY = eINSTANCE.getQExam_Pathway();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.StepImpl <em>Step</em>}' class.
@@ -3793,14 +3929,6 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PRESCRIPTION__NAME = eINSTANCE.getPrescription_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Code</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PRESCRIPTION__CODE = eINSTANCE.getPrescription_Code();
 
 		/**
 		 * The meta object literal for the '<em><b>Percentage</b></em>' attribute feature.
@@ -4019,6 +4147,14 @@ public interface Query_metamodelPackage extends EPackage {
 		EAttribute PATIENT__QUANTITY = eINSTANCE.getPatient_Quantity();
 
 		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATIENT__PATHWAY = eINSTANCE.getPatient_Pathway();
+
+		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.ANumericImpl <em>ANumeric</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4063,6 +4199,14 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass QOCCURRENCE = eINSTANCE.getQOccurrence();
+
+		/**
+		 * The meta object literal for the '<em><b>Pathway</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QOCCURRENCE__PATHWAY = eINSTANCE.getQOccurrence_Pathway();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.Order <em>Order</em>}' enum.

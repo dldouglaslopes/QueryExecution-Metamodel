@@ -24,6 +24,7 @@ import QueryMetamodel.Order;
 import QueryMetamodel.Pathway;
 import QueryMetamodel.Patient;
 import QueryMetamodel.Prescription;
+import QueryMetamodel.QAbortedStep;
 import QueryMetamodel.QAnswer;
 import QueryMetamodel.QAverageTime;
 import QueryMetamodel.QConduct;
@@ -35,7 +36,6 @@ import QueryMetamodel.QPrescription;
 import QueryMetamodel.QReturn;
 import QueryMetamodel.QStatus;
 import QueryMetamodel.QStep;
-import QueryMetamodel.QStop;
 import QueryMetamodel.Query_metamodelFactory;
 import QueryMetamodel.Query_metamodelPackage;
 import QueryMetamodel.Question;
@@ -201,7 +201,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass qStopEClass = null;
+	private EClass qAbortedStepEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -662,8 +662,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEMethod() {
-		return eMethodEClass;
+	public EReference getQStatus_Pathway() {
+		return (EReference) qStatusEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -671,8 +671,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEMethod_Pathway() {
-		return (EReference) eMethodEClass.getEStructuralFeatures().get(0);
+	public EClass getEMethod() {
+		return eMethodEClass;
 	}
 
 	/**
@@ -707,6 +707,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getQConduct_Pathway() {
+		return (EReference) qConductEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getQFlow() {
 		return qFlowEClass;
 	}
@@ -718,6 +727,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EReference getQFlow_Flow() {
 		return (EReference) qFlowEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQFlow_Pathway() {
+		return (EReference) qFlowEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -743,6 +761,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getQAverageTime_Pathway() {
+		return (EReference) qAverageTimeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getQMedication() {
 		return qMedicationEClass;
 	}
@@ -754,6 +781,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EReference getQMedication_Medications() {
 		return (EReference) qMedicationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQMedication_Pathway() {
+		return (EReference) qMedicationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -860,15 +896,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getMedication_Outpatient() {
-		return (EAttribute) medicationEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPathway() {
 		return pathwayEClass;
 	}
@@ -932,6 +959,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getQAnswer_Pathway() {
+		return (EReference) qAnswerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getQStep() {
 		return qStepEClass;
 	}
@@ -943,6 +979,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EReference getQStep_Step() {
 		return (EReference) qStepEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQStep_Pathway() {
+		return (EReference) qStepEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -968,8 +1013,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getQStop() {
-		return qStopEClass;
+	public EClass getQAbortedStep() {
+		return qAbortedStepEClass;
 	}
 
 	/**
@@ -977,8 +1022,17 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getQStop_Step() {
-		return (EReference) qStopEClass.getEStructuralFeatures().get(0);
+	public EReference getQAbortedStep_Pathway() {
+		return (EReference) qAbortedStepEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQAbortedStep_Step() {
+		return (EReference) qAbortedStepEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1004,6 +1058,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getQPrescription_Pathway() {
+		return (EReference) qPrescriptionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getQExam() {
 		return qExamEClass;
 	}
@@ -1015,6 +1078,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EReference getQExam_Exam() {
 		return (EReference) qExamEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQExam_Pathway() {
+		return (EReference) qExamEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1103,7 +1175,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrescription_Code() {
+	public EAttribute getPrescription_Percentage() {
 		return (EAttribute) prescriptionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1112,7 +1184,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrescription_Percentage() {
+	public EAttribute getPrescription_Quantity() {
 		return (EAttribute) prescriptionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -1121,17 +1193,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPrescription_Quantity() {
-		return (EAttribute) prescriptionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getPrescription_Medication() {
-		return (EReference) prescriptionEClass.getEStructuralFeatures().get(4);
+		return (EReference) prescriptionEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1140,7 +1203,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	public EAttribute getPrescription_Id() {
-		return (EAttribute) prescriptionEClass.getEStructuralFeatures().get(5);
+		return (EAttribute) prescriptionEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1346,6 +1409,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPatient_Pathway() {
+		return (EReference) patientEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getANumeric() {
 		return aNumericEClass;
 	}
@@ -1384,6 +1456,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EClass getQOccurrence() {
 		return qOccurrenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getQOccurrence_Pathway() {
+		return (EReference) qOccurrenceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1499,22 +1580,26 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(qStatusEClass, QSTATUS__COMPLETED);
 		createEAttribute(qStatusEClass, QSTATUS__IN_PROGRESS);
 		createEAttribute(qStatusEClass, QSTATUS__ABORTED);
+		createEReference(qStatusEClass, QSTATUS__PATHWAY);
 
 		eMethodEClass = createEClass(EMETHOD);
-		createEReference(eMethodEClass, EMETHOD__PATHWAY);
 
 		qConductEClass = createEClass(QCONDUCT);
 		createEAttribute(qConductEClass, QCONDUCT__WITH_CONDUCT);
 		createEAttribute(qConductEClass, QCONDUCT__NO_CONDUCT);
+		createEReference(qConductEClass, QCONDUCT__PATHWAY);
 
 		qFlowEClass = createEClass(QFLOW);
 		createEReference(qFlowEClass, QFLOW__FLOW);
+		createEReference(qFlowEClass, QFLOW__PATHWAY);
 
 		qAverageTimeEClass = createEClass(QAVERAGE_TIME);
 		createEAttribute(qAverageTimeEClass, QAVERAGE_TIME__AVERAGE);
+		createEReference(qAverageTimeEClass, QAVERAGE_TIME__PATHWAY);
 
 		qMedicationEClass = createEClass(QMEDICATION);
 		createEReference(qMedicationEClass, QMEDICATION__MEDICATIONS);
+		createEReference(qMedicationEClass, QMEDICATION__PATHWAY);
 
 		flowEClass = createEClass(FLOW);
 		createEAttribute(flowEClass, FLOW__PERCENTAGE);
@@ -1528,7 +1613,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(medicationEClass, MEDICATION__BRAND);
 		createEReference(medicationEClass, MEDICATION__STEP);
 		createEAttribute(medicationEClass, MEDICATION__ID);
-		createEAttribute(medicationEClass, MEDICATION__OUTPATIENT);
 
 		pathwayEClass = createEClass(PATHWAY);
 		createEAttribute(pathwayEClass, PATHWAY__NAME);
@@ -1538,21 +1622,26 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		qAnswerEClass = createEClass(QANSWER);
 		createEReference(qAnswerEClass, QANSWER__QUESTION);
+		createEReference(qAnswerEClass, QANSWER__PATHWAY);
 
 		qStepEClass = createEClass(QSTEP);
 		createEReference(qStepEClass, QSTEP__STEP);
+		createEReference(qStepEClass, QSTEP__PATHWAY);
 
 		qReturnEClass = createEClass(QRETURN);
 		createEReference(qReturnEClass, QRETURN__PATIENT);
 
-		qStopEClass = createEClass(QSTOP);
-		createEReference(qStopEClass, QSTOP__STEP);
+		qAbortedStepEClass = createEClass(QABORTED_STEP);
+		createEReference(qAbortedStepEClass, QABORTED_STEP__PATHWAY);
+		createEReference(qAbortedStepEClass, QABORTED_STEP__STEP);
 
 		qPrescriptionEClass = createEClass(QPRESCRIPTION);
 		createEReference(qPrescriptionEClass, QPRESCRIPTION__PRESCRIPTION);
+		createEReference(qPrescriptionEClass, QPRESCRIPTION__PATHWAY);
 
 		qExamEClass = createEClass(QEXAM);
 		createEReference(qExamEClass, QEXAM__EXAM);
+		createEReference(qExamEClass, QEXAM__PATHWAY);
 
 		stepEClass = createEClass(STEP);
 		createEAttribute(stepEClass, STEP__NAME);
@@ -1564,7 +1653,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		prescriptionEClass = createEClass(PRESCRIPTION);
 		createEAttribute(prescriptionEClass, PRESCRIPTION__NAME);
-		createEAttribute(prescriptionEClass, PRESCRIPTION__CODE);
 		createEAttribute(prescriptionEClass, PRESCRIPTION__PERCENTAGE);
 		createEAttribute(prescriptionEClass, PRESCRIPTION__QUANTITY);
 		createEReference(prescriptionEClass, PRESCRIPTION__MEDICATION);
@@ -1595,6 +1683,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		createEAttribute(patientEClass, PATIENT__AGE);
 		createEAttribute(patientEClass, PATIENT__SEX);
 		createEAttribute(patientEClass, PATIENT__QUANTITY);
+		createEReference(patientEClass, PATIENT__PATHWAY);
 
 		aNumericEClass = createEClass(ANUMERIC);
 		createEAttribute(aNumericEClass, ANUMERIC__VALUE);
@@ -1603,6 +1692,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		answerEClass = createEClass(ANSWER);
 
 		qOccurrenceEClass = createEClass(QOCCURRENCE);
+		createEReference(qOccurrenceEClass, QOCCURRENCE__PATHWAY);
 
 		// Create enums
 		orderEEnum = createEEnum(ORDER);
@@ -1649,7 +1739,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		qAnswerEClass.getESuperTypes().add(this.getEMethod());
 		qStepEClass.getESuperTypes().add(this.getEMethod());
 		qReturnEClass.getESuperTypes().add(this.getEMethod());
-		qStopEClass.getESuperTypes().add(this.getEMethod());
+		qAbortedStepEClass.getESuperTypes().add(this.getEMethod());
 		qPrescriptionEClass.getESuperTypes().add(this.getEMethod());
 		qExamEClass.getESuperTypes().add(this.getEMethod());
 		aBooleanEClass.getESuperTypes().add(this.getAnswer());
@@ -1728,11 +1818,11 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQStatus_Aborted(), ecorePackage.getEInt(), "aborted", null, 0, 1, QStatus.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(eMethodEClass, EMethod.class, "EMethod", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEMethod_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, EMethod.class,
+		initEReference(getQStatus_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QStatus.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(eMethodEClass, EMethod.class, "EMethod", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(qConductEClass, QConduct.class, "QConduct", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1740,9 +1830,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getQConduct_NoConduct(), ecorePackage.getEInt(), "noConduct", null, 0, 1, QConduct.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQConduct_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QConduct.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qFlowEClass, QFlow.class, "QFlow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQFlow_Flow(), this.getFlow(), null, "flow", null, 0, -1, QFlow.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getQFlow_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QFlow.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
@@ -1750,12 +1846,18 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getQAverageTime_Average(), ecorePackage.getEDouble(), "average", null, 0, 1, QAverageTime.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQAverageTime_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QAverageTime.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qMedicationEClass, QMedication.class, "QMedication", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQMedication_Medications(), this.getMedication(), null, "medications", null, 0, -1,
 				QMedication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQMedication_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QMedication.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(flowEClass, Flow.class, "Flow", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getFlow_Percentage(), ecorePackage.getEString(), "percentage", "", 0, 1, Flow.class,
@@ -1781,9 +1883,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				IS_ORDERED);
 		initEAttribute(getMedication_Id(), ecorePackage.getEString(), "id", null, 0, 1, Medication.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMedication_Outpatient(), ecorePackage.getEBoolean(), "outpatient", null, 0, 1,
-				Medication.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(pathwayEClass, Pathway.class, "Pathway", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPathway_Name(), ecorePackage.getEString(), "name", null, 0, 1, Pathway.class, !IS_TRANSIENT,
@@ -1799,9 +1898,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		initEReference(getQAnswer_Question(), this.getQuestion(), null, "question", null, 0, -1, QAnswer.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQAnswer_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QAnswer.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qStepEClass, QStep.class, "QStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQStep_Step(), this.getStep(), null, "step", null, 0, -1, QStep.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getQStep_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QStep.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
@@ -1810,19 +1915,29 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(qStopEClass, QStop.class, "QStop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getQStop_Step(), this.getStep(), null, "step", null, 0, -1, QStop.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+		initEClass(qAbortedStepEClass, QAbortedStep.class, "QAbortedStep", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getQAbortedStep_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QAbortedStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQAbortedStep_Step(), this.getStep(), null, "step", null, 0, -1, QAbortedStep.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qPrescriptionEClass, QPrescription.class, "QPrescription", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQPrescription_Prescription(), this.getPrescription(), null, "prescription", null, 0, -1,
 				QPrescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQPrescription_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QPrescription.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qExamEClass, QExam.class, "QExam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getQExam_Exam(), this.getExam(), null, "exam", null, 0, -1, QExam.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getQExam_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QExam.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
@@ -1843,8 +1958,6 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		initEClass(prescriptionEClass, Prescription.class, "Prescription", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPrescription_Name(), ecorePackage.getEString(), "name", null, 0, 1, Prescription.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPrescription_Code(), ecorePackage.getEString(), "code", null, 0, 1, Prescription.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPrescription_Percentage(), ecorePackage.getEString(), "percentage", "", 0, 1,
 				Prescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
@@ -1905,6 +2018,9 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPatient_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, Patient.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPatient_Pathway(), this.getPathway(), null, "pathway", null, 0, -1, Patient.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(aNumericEClass, ANumeric.class, "ANumeric", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1917,6 +2033,9 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 
 		initEClass(qOccurrenceEClass, QOccurrence.class, "QOccurrence", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getQOccurrence_Pathway(), this.getPathway(), null, "pathway", null, 1, 1, QOccurrence.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(orderEEnum, Order.class, "Order");

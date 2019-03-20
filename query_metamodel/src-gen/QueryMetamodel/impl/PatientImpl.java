@@ -2,15 +2,25 @@
  */
 package QueryMetamodel.impl;
 
+import QueryMetamodel.Pathway;
 import QueryMetamodel.Patient;
 import QueryMetamodel.Query_metamodelPackage;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link QueryMetamodel.impl.PatientImpl#getAge <em>Age</em>}</li>
  *   <li>{@link QueryMetamodel.impl.PatientImpl#getSex <em>Sex</em>}</li>
  *   <li>{@link QueryMetamodel.impl.PatientImpl#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.PatientImpl#getPathway <em>Pathway</em>}</li>
  * </ul>
  *
  * @generated
@@ -108,6 +119,16 @@ public class PatientImpl extends MinimalEObjectImpl.Container implements Patient
 	 * @ordered
 	 */
 	protected int quantity = QUANTITY_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Pathway> pathway;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -218,6 +239,33 @@ public class PatientImpl extends MinimalEObjectImpl.Container implements Patient
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Pathway> getPathway() {
+		if (pathway == null) {
+			pathway = new EObjectContainmentEList<Pathway>(Pathway.class, this,
+					Query_metamodelPackage.PATIENT__PATHWAY);
+		}
+		return pathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Query_metamodelPackage.PATIENT__PATHWAY:
+			return ((InternalEList<?>) getPathway()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -229,6 +277,8 @@ public class PatientImpl extends MinimalEObjectImpl.Container implements Patient
 			return getSex();
 		case Query_metamodelPackage.PATIENT__QUANTITY:
 			return getQuantity();
+		case Query_metamodelPackage.PATIENT__PATHWAY:
+			return getPathway();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -238,6 +288,7 @@ public class PatientImpl extends MinimalEObjectImpl.Container implements Patient
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -252,6 +303,10 @@ public class PatientImpl extends MinimalEObjectImpl.Container implements Patient
 			return;
 		case Query_metamodelPackage.PATIENT__QUANTITY:
 			setQuantity((Integer) newValue);
+			return;
+		case Query_metamodelPackage.PATIENT__PATHWAY:
+			getPathway().clear();
+			getPathway().addAll((Collection<? extends Pathway>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -277,6 +332,9 @@ public class PatientImpl extends MinimalEObjectImpl.Container implements Patient
 		case Query_metamodelPackage.PATIENT__QUANTITY:
 			setQuantity(QUANTITY_EDEFAULT);
 			return;
+		case Query_metamodelPackage.PATIENT__PATHWAY:
+			getPathway().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -297,6 +355,8 @@ public class PatientImpl extends MinimalEObjectImpl.Container implements Patient
 			return SEX_EDEFAULT == null ? sex != null : !SEX_EDEFAULT.equals(sex);
 		case Query_metamodelPackage.PATIENT__QUANTITY:
 			return quantity != QUANTITY_EDEFAULT;
+		case Query_metamodelPackage.PATIENT__PATHWAY:
+			return pathway != null && !pathway.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

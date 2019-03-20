@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.Prescription#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.Prescription#getCode <em>Code</em>}</li>
  *   <li>{@link QueryMetamodel.Prescription#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.Prescription#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link QueryMetamodel.Prescription#getMedication <em>Medication</em>}</li>
@@ -53,32 +52,6 @@ public interface Prescription extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Code</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Code</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Code</em>' attribute.
-	 * @see #setCode(String)
-	 * @see QueryMetamodel.Query_metamodelPackage#getPrescription_Code()
-	 * @model
-	 * @generated
-	 */
-	String getCode();
-
-	/**
-	 * Sets the value of the '{@link QueryMetamodel.Prescription#getCode <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Code</em>' attribute.
-	 * @see #getCode()
-	 * @generated
-	 */
-	void setCode(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Percentage</b></em>' attribute.

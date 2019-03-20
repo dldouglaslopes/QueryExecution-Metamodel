@@ -2,6 +2,8 @@
  */
 package QueryMetamodel;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link QueryMetamodel.Patient#getAge <em>Age</em>}</li>
  *   <li>{@link QueryMetamodel.Patient#getSex <em>Sex</em>}</li>
  *   <li>{@link QueryMetamodel.Patient#getQuantity <em>Quantity</em>}</li>
+ *   <li>{@link QueryMetamodel.Patient#getPathway <em>Pathway</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getPatient()
@@ -127,5 +130,21 @@ public interface Patient extends EObject {
 	 * @generated
 	 */
 	void setQuantity(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Pathway</b></em>' containment reference list.
+	 * The list contents are of type {@link QueryMetamodel.Pathway}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pathway</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pathway</em>' containment reference list.
+	 * @see QueryMetamodel.Query_metamodelPackage#getPatient_Pathway()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Pathway> getPathway();
 
 } // Patient

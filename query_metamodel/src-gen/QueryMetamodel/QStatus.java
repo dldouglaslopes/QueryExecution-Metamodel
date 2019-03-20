@@ -14,6 +14,7 @@ package QueryMetamodel;
  *   <li>{@link QueryMetamodel.QStatus#getCompleted <em>Completed</em>}</li>
  *   <li>{@link QueryMetamodel.QStatus#getInProgress <em>In Progress</em>}</li>
  *   <li>{@link QueryMetamodel.QStatus#getAborted <em>Aborted</em>}</li>
+ *   <li>{@link QueryMetamodel.QStatus#getPathway <em>Pathway</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getQStatus()
@@ -98,5 +99,31 @@ public interface QStatus extends EMethod {
 	 * @generated
 	 */
 	void setAborted(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Pathway</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Pathway</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Pathway</em>' containment reference.
+	 * @see #setPathway(Pathway)
+	 * @see QueryMetamodel.Query_metamodelPackage#getQStatus_Pathway()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Pathway getPathway();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.QStatus#getPathway <em>Pathway</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Pathway</em>' containment reference.
+	 * @see #getPathway()
+	 * @generated
+	 */
+	void setPathway(Pathway value);
 
 } // QStatus

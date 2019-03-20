@@ -31,7 +31,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.impl.PrescriptionImpl#getName <em>Name</em>}</li>
- *   <li>{@link QueryMetamodel.impl.PrescriptionImpl#getCode <em>Code</em>}</li>
  *   <li>{@link QueryMetamodel.impl.PrescriptionImpl#getPercentage <em>Percentage</em>}</li>
  *   <li>{@link QueryMetamodel.impl.PrescriptionImpl#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link QueryMetamodel.impl.PrescriptionImpl#getMedication <em>Medication</em>}</li>
@@ -60,26 +59,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getCode() <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCode()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String CODE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getCode() <em>Code</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCode()
-	 * @generated
-	 * @ordered
-	 */
-	protected String code = CODE_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPercentage() <em>Percentage</em>}' attribute.
@@ -197,28 +176,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCode() {
-		return code;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCode(String newCode) {
-		String oldCode = code;
-		code = newCode;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.PRESCRIPTION__CODE, oldCode,
-					code));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getPercentage() {
 		return percentage;
 	}
@@ -316,8 +273,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 		switch (featureID) {
 		case Query_metamodelPackage.PRESCRIPTION__NAME:
 			return getName();
-		case Query_metamodelPackage.PRESCRIPTION__CODE:
-			return getCode();
 		case Query_metamodelPackage.PRESCRIPTION__PERCENTAGE:
 			return getPercentage();
 		case Query_metamodelPackage.PRESCRIPTION__QUANTITY:
@@ -341,9 +296,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 		switch (featureID) {
 		case Query_metamodelPackage.PRESCRIPTION__NAME:
 			setName((String) newValue);
-			return;
-		case Query_metamodelPackage.PRESCRIPTION__CODE:
-			setCode((String) newValue);
 			return;
 		case Query_metamodelPackage.PRESCRIPTION__PERCENTAGE:
 			setPercentage((String) newValue);
@@ -373,9 +325,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 		case Query_metamodelPackage.PRESCRIPTION__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case Query_metamodelPackage.PRESCRIPTION__CODE:
-			setCode(CODE_EDEFAULT);
-			return;
 		case Query_metamodelPackage.PRESCRIPTION__PERCENTAGE:
 			setPercentage(PERCENTAGE_EDEFAULT);
 			return;
@@ -402,8 +351,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 		switch (featureID) {
 		case Query_metamodelPackage.PRESCRIPTION__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Query_metamodelPackage.PRESCRIPTION__CODE:
-			return CODE_EDEFAULT == null ? code != null : !CODE_EDEFAULT.equals(code);
 		case Query_metamodelPackage.PRESCRIPTION__PERCENTAGE:
 			return PERCENTAGE_EDEFAULT == null ? percentage != null : !PERCENTAGE_EDEFAULT.equals(percentage);
 		case Query_metamodelPackage.PRESCRIPTION__QUANTITY:
@@ -429,8 +376,6 @@ public class PrescriptionImpl extends MinimalEObjectImpl.Container implements Pr
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", code: ");
-		result.append(code);
 		result.append(", percentage: ");
 		result.append(percentage);
 		result.append(", quantity: ");

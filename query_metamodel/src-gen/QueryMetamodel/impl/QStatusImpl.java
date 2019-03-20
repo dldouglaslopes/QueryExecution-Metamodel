@@ -2,12 +2,15 @@
  */
 package QueryMetamodel.impl;
 
+import QueryMetamodel.Pathway;
 import QueryMetamodel.QStatus;
 import QueryMetamodel.Query_metamodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -22,6 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link QueryMetamodel.impl.QStatusImpl#getCompleted <em>Completed</em>}</li>
  *   <li>{@link QueryMetamodel.impl.QStatusImpl#getInProgress <em>In Progress</em>}</li>
  *   <li>{@link QueryMetamodel.impl.QStatusImpl#getAborted <em>Aborted</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QStatusImpl#getPathway <em>Pathway</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,6 +90,16 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 	 * @ordered
 	 */
 	protected int aborted = ABORTED_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected Pathway pathway;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -177,6 +191,70 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Pathway getPathway() {
+		return pathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPathway(Pathway newPathway, NotificationChain msgs) {
+		Pathway oldPathway = pathway;
+		pathway = newPathway;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Query_metamodelPackage.QSTATUS__PATHWAY, oldPathway, newPathway);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPathway(Pathway newPathway) {
+		if (newPathway != pathway) {
+			NotificationChain msgs = null;
+			if (pathway != null)
+				msgs = ((InternalEObject) pathway).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.QSTATUS__PATHWAY, null, msgs);
+			if (newPathway != null)
+				msgs = ((InternalEObject) newPathway).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.QSTATUS__PATHWAY, null, msgs);
+			msgs = basicSetPathway(newPathway, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QSTATUS__PATHWAY, newPathway,
+					newPathway));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Query_metamodelPackage.QSTATUS__PATHWAY:
+			return basicSetPathway(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -186,6 +264,8 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 			return getInProgress();
 		case Query_metamodelPackage.QSTATUS__ABORTED:
 			return getAborted();
+		case Query_metamodelPackage.QSTATUS__PATHWAY:
+			return getPathway();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -206,6 +286,9 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 			return;
 		case Query_metamodelPackage.QSTATUS__ABORTED:
 			setAborted((Integer) newValue);
+			return;
+		case Query_metamodelPackage.QSTATUS__PATHWAY:
+			setPathway((Pathway) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -228,6 +311,9 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 		case Query_metamodelPackage.QSTATUS__ABORTED:
 			setAborted(ABORTED_EDEFAULT);
 			return;
+		case Query_metamodelPackage.QSTATUS__PATHWAY:
+			setPathway((Pathway) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -246,6 +332,8 @@ public class QStatusImpl extends EMethodImpl implements QStatus {
 			return inProgress != IN_PROGRESS_EDEFAULT;
 		case Query_metamodelPackage.QSTATUS__ABORTED:
 			return aborted != ABORTED_EDEFAULT;
+		case Query_metamodelPackage.QSTATUS__PATHWAY:
+			return pathway != null;
 		}
 		return super.eIsSet(featureID);
 	}

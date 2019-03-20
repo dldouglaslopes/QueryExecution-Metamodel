@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link QueryMetamodel.Medication#getBrand <em>Brand</em>}</li>
  *   <li>{@link QueryMetamodel.Medication#getStep <em>Step</em>}</li>
  *   <li>{@link QueryMetamodel.Medication#getId <em>Id</em>}</li>
- *   <li>{@link QueryMetamodel.Medication#isOutpatient <em>Outpatient</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getMedication()
@@ -175,31 +174,5 @@ public interface Medication extends EObject {
 	 * @generated
 	 */
 	void setId(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Outpatient</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Outpatient</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Outpatient</em>' attribute.
-	 * @see #setOutpatient(boolean)
-	 * @see QueryMetamodel.Query_metamodelPackage#getMedication_Outpatient()
-	 * @model
-	 * @generated
-	 */
-	boolean isOutpatient();
-
-	/**
-	 * Sets the value of the '{@link QueryMetamodel.Medication#isOutpatient <em>Outpatient</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Outpatient</em>' attribute.
-	 * @see #isOutpatient()
-	 * @generated
-	 */
-	void setOutpatient(boolean value);
 
 } // Medication

@@ -36,7 +36,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link QueryMetamodel.impl.MedicationImpl#getBrand <em>Brand</em>}</li>
  *   <li>{@link QueryMetamodel.impl.MedicationImpl#getStep <em>Step</em>}</li>
  *   <li>{@link QueryMetamodel.impl.MedicationImpl#getId <em>Id</em>}</li>
- *   <li>{@link QueryMetamodel.impl.MedicationImpl#isOutpatient <em>Outpatient</em>}</li>
  * </ul>
  *
  * @generated
@@ -151,26 +150,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isOutpatient() <em>Outpatient</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOutpatient()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean OUTPATIENT_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isOutpatient() <em>Outpatient</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isOutpatient()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean outpatient = OUTPATIENT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -317,28 +296,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isOutpatient() {
-		return outpatient;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOutpatient(boolean newOutpatient) {
-		boolean oldOutpatient = outpatient;
-		outpatient = newOutpatient;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.MEDICATION__OUTPATIENT,
-					oldOutpatient, outpatient));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -368,8 +325,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return getStep();
 		case Query_metamodelPackage.MEDICATION__ID:
 			return getId();
-		case Query_metamodelPackage.MEDICATION__OUTPATIENT:
-			return isOutpatient();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -402,9 +357,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Query_metamodelPackage.MEDICATION__ID:
 			setId((String) newValue);
 			return;
-		case Query_metamodelPackage.MEDICATION__OUTPATIENT:
-			setOutpatient((Boolean) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -435,9 +387,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		case Query_metamodelPackage.MEDICATION__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case Query_metamodelPackage.MEDICATION__OUTPATIENT:
-			setOutpatient(OUTPATIENT_EDEFAULT);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -462,8 +411,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 			return step != null && !step.isEmpty();
 		case Query_metamodelPackage.MEDICATION__ID:
 			return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-		case Query_metamodelPackage.MEDICATION__OUTPATIENT:
-			return outpatient != OUTPATIENT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -489,8 +436,6 @@ public class MedicationImpl extends MinimalEObjectImpl.Container implements Medi
 		result.append(brand);
 		result.append(", id: ");
 		result.append(id);
-		result.append(", outpatient: ");
-		result.append(outpatient);
 		result.append(')');
 		return result.toString();
 	}

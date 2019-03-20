@@ -222,11 +222,11 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Query_metamodelPackage.QSTOP: {
-			QStop qStop = (QStop) theEObject;
-			T result = caseQStop(qStop);
+		case Query_metamodelPackage.QABORTED_STEP: {
+			QAbortedStep qAbortedStep = (QAbortedStep) theEObject;
+			T result = caseQAbortedStep(qAbortedStep);
 			if (result == null)
-				result = caseEMethod(qStop);
+				result = caseEMethod(qAbortedStep);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -624,17 +624,17 @@ public class Query_metamodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>QStop</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>QAborted Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>QStop</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>QAborted Step</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseQStop(QStop object) {
+	public T caseQAbortedStep(QAbortedStep object) {
 		return null;
 	}
 

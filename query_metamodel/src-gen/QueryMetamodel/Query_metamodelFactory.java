@@ -193,13 +193,13 @@ public interface Query_metamodelFactory extends EFactory {
 	QReturn createQReturn();
 
 	/**
-	 * Returns a new object of class '<em>QStop</em>'.
+	 * Returns a new object of class '<em>QAborted Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>QStop</em>'.
+	 * @return a new object of class '<em>QAborted Step</em>'.
 	 * @generated
 	 */
-	QStop createQStop();
+	QAbortedStep createQAbortedStep();
 
 	/**
 	 * Returns a new object of class '<em>QPrescription</em>'.

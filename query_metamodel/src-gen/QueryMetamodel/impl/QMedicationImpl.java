@@ -3,17 +3,21 @@
 package QueryMetamodel.impl;
 
 import QueryMetamodel.Medication;
+import QueryMetamodel.Pathway;
 import QueryMetamodel.QMedication;
 import QueryMetamodel.Query_metamodelPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -27,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.impl.QMedicationImpl#getMedications <em>Medications</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QMedicationImpl#getPathway <em>Pathway</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,6 +46,16 @@ public class QMedicationImpl extends EMethodImpl implements QMedication {
 	 * @ordered
 	 */
 	protected EList<Medication> medications;
+
+	/**
+	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected Pathway pathway;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,11 +94,63 @@ public class QMedicationImpl extends EMethodImpl implements QMedication {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Pathway getPathway() {
+		return pathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPathway(Pathway newPathway, NotificationChain msgs) {
+		Pathway oldPathway = pathway;
+		pathway = newPathway;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Query_metamodelPackage.QMEDICATION__PATHWAY, oldPathway, newPathway);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPathway(Pathway newPathway) {
+		if (newPathway != pathway) {
+			NotificationChain msgs = null;
+			if (pathway != null)
+				msgs = ((InternalEObject) pathway).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.QMEDICATION__PATHWAY, null, msgs);
+			if (newPathway != null)
+				msgs = ((InternalEObject) newPathway).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.QMEDICATION__PATHWAY, null, msgs);
+			msgs = basicSetPathway(newPathway, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QMEDICATION__PATHWAY,
+					newPathway, newPathway));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Query_metamodelPackage.QMEDICATION__MEDICATIONS:
 			return ((InternalEList<?>) getMedications()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.QMEDICATION__PATHWAY:
+			return basicSetPathway(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -98,6 +165,8 @@ public class QMedicationImpl extends EMethodImpl implements QMedication {
 		switch (featureID) {
 		case Query_metamodelPackage.QMEDICATION__MEDICATIONS:
 			return getMedications();
+		case Query_metamodelPackage.QMEDICATION__PATHWAY:
+			return getPathway();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -115,6 +184,9 @@ public class QMedicationImpl extends EMethodImpl implements QMedication {
 			getMedications().clear();
 			getMedications().addAll((Collection<? extends Medication>) newValue);
 			return;
+		case Query_metamodelPackage.QMEDICATION__PATHWAY:
+			setPathway((Pathway) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -130,6 +202,9 @@ public class QMedicationImpl extends EMethodImpl implements QMedication {
 		case Query_metamodelPackage.QMEDICATION__MEDICATIONS:
 			getMedications().clear();
 			return;
+		case Query_metamodelPackage.QMEDICATION__PATHWAY:
+			setPathway((Pathway) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -144,6 +219,8 @@ public class QMedicationImpl extends EMethodImpl implements QMedication {
 		switch (featureID) {
 		case Query_metamodelPackage.QMEDICATION__MEDICATIONS:
 			return medications != null && !medications.isEmpty();
+		case Query_metamodelPackage.QMEDICATION__PATHWAY:
+			return pathway != null;
 		}
 		return super.eIsSet(featureID);
 	}

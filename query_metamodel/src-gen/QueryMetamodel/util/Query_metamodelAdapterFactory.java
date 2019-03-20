@@ -167,8 +167,8 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseQStop(QStop object) {
-			return createQStopAdapter();
+		public Adapter caseQAbortedStep(QAbortedStep object) {
+			return createQAbortedStepAdapter();
 		}
 
 		@Override
@@ -526,16 +526,16 @@ public class Query_metamodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QStop <em>QStop</em>}'.
+	 * Creates a new adapter for an object of class '{@link QueryMetamodel.QAbortedStep <em>QAborted Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see QueryMetamodel.QStop
+	 * @see QueryMetamodel.QAbortedStep
 	 * @generated
 	 */
-	public Adapter createQStopAdapter() {
+	public Adapter createQAbortedStepAdapter() {
 		return null;
 	}
 

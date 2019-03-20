@@ -95,8 +95,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createQStep();
 		case Query_metamodelPackage.QRETURN:
 			return createQReturn();
-		case Query_metamodelPackage.QSTOP:
-			return createQStop();
+		case Query_metamodelPackage.QABORTED_STEP:
+			return createQAbortedStep();
 		case Query_metamodelPackage.QPRESCRIPTION:
 			return createQPrescription();
 		case Query_metamodelPackage.QEXAM:
@@ -363,9 +363,9 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public QStop createQStop() {
-		QStopImpl qStop = new QStopImpl();
-		return qStop;
+	public QAbortedStep createQAbortedStep() {
+		QAbortedStepImpl qAbortedStep = new QAbortedStepImpl();
+		return qAbortedStep;
 	}
 
 	/**

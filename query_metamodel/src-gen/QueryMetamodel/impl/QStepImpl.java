@@ -2,18 +2,22 @@
  */
 package QueryMetamodel.impl;
 
+import QueryMetamodel.Pathway;
 import QueryMetamodel.QStep;
 import QueryMetamodel.Query_metamodelPackage;
 import QueryMetamodel.Step;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -27,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link QueryMetamodel.impl.QStepImpl#getStep <em>Step</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.QStepImpl#getPathway <em>Pathway</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,6 +46,16 @@ public class QStepImpl extends EMethodImpl implements QStep {
 	 * @ordered
 	 */
 	protected EList<Step> step;
+
+	/**
+	 * The cached value of the '{@link #getPathway() <em>Pathway</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPathway()
+	 * @generated
+	 * @ordered
+	 */
+	protected Pathway pathway;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,11 +93,63 @@ public class QStepImpl extends EMethodImpl implements QStep {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Pathway getPathway() {
+		return pathway;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPathway(Pathway newPathway, NotificationChain msgs) {
+		Pathway oldPathway = pathway;
+		pathway = newPathway;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Query_metamodelPackage.QSTEP__PATHWAY, oldPathway, newPathway);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPathway(Pathway newPathway) {
+		if (newPathway != pathway) {
+			NotificationChain msgs = null;
+			if (pathway != null)
+				msgs = ((InternalEObject) pathway).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.QSTEP__PATHWAY, null, msgs);
+			if (newPathway != null)
+				msgs = ((InternalEObject) newPathway).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Query_metamodelPackage.QSTEP__PATHWAY, null, msgs);
+			msgs = basicSetPathway(newPathway, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.QSTEP__PATHWAY, newPathway,
+					newPathway));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case Query_metamodelPackage.QSTEP__STEP:
 			return ((InternalEList<?>) getStep()).basicRemove(otherEnd, msgs);
+		case Query_metamodelPackage.QSTEP__PATHWAY:
+			return basicSetPathway(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -97,6 +164,8 @@ public class QStepImpl extends EMethodImpl implements QStep {
 		switch (featureID) {
 		case Query_metamodelPackage.QSTEP__STEP:
 			return getStep();
+		case Query_metamodelPackage.QSTEP__PATHWAY:
+			return getPathway();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,6 +183,9 @@ public class QStepImpl extends EMethodImpl implements QStep {
 			getStep().clear();
 			getStep().addAll((Collection<? extends Step>) newValue);
 			return;
+		case Query_metamodelPackage.QSTEP__PATHWAY:
+			setPathway((Pathway) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -129,6 +201,9 @@ public class QStepImpl extends EMethodImpl implements QStep {
 		case Query_metamodelPackage.QSTEP__STEP:
 			getStep().clear();
 			return;
+		case Query_metamodelPackage.QSTEP__PATHWAY:
+			setPathway((Pathway) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -143,6 +218,8 @@ public class QStepImpl extends EMethodImpl implements QStep {
 		switch (featureID) {
 		case Query_metamodelPackage.QSTEP__STEP:
 			return step != null && !step.isEmpty();
+		case Query_metamodelPackage.QSTEP__PATHWAY:
+			return pathway != null;
 		}
 		return super.eIsSet(featureID);
 	}
