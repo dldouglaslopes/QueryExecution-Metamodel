@@ -140,6 +140,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return createConductFromString(eDataType, initialValue);
 		case Query_metamodelPackage.CARE_PATHWAY:
 			return createCarePathwayFromString(eDataType, initialValue);
+		case Query_metamodelPackage.VERSION:
+			return createVersionFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -163,6 +165,8 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 			return convertConductToString(eDataType, instanceValue);
 		case Query_metamodelPackage.CARE_PATHWAY:
 			return convertCarePathwayToString(eDataType, instanceValue);
+		case Query_metamodelPackage.VERSION:
+			return convertVersionToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -575,6 +579,28 @@ public class Query_metamodelFactoryImpl extends EFactoryImpl implements Query_me
 	 * @generated
 	 */
 	public String convertCarePathwayToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Version createVersionFromString(EDataType eDataType, String initialValue) {
+		Version result = Version.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVersionToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

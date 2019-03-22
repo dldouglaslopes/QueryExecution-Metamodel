@@ -70,6 +70,48 @@
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/DPOC"/>
       <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//CarePathway/Curativo"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="query_metamodel.ecore#//Version">
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/None"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/FraturaExposta"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/PneumoniaInfluenza"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/Meningite"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/AmniorrexePrematura"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/ITUCistite"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/VerificaSEPSE"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/TratamentoSEPSE"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/TratamentoSIRS"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/ITUPielonefrite"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/NeutropeniaFebril"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/IVAS"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/Diarréia"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/Cefaléia"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/Lombalgia"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/DorTorácica"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/DorAbdominal"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/TonturaVertigem"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/IVASPediátrico"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/Otalgia"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/NáuseasVômitos"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/DiarreiaAgudaPediátrico"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/TrabalhoPartoPrematuro"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/DHEG"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/Dispepsia"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/TCEPediátrico"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/AminiorrexePrematura"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/DorArticularTendinopatia"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/FebreSemSinaisLocalização"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/InfecçãoPartesMoles"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/Asma"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/PneumoniaAdquiridaComunidade"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/UrticáriaPediátrico"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/EndometritePuerperal"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/HemorragiaPósParto"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/Posdatismo"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/HipertensãoArterialSistêmica"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/InsuficiênciaCardíaca"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/DPOC"/>
+      <genEnumLiterals ecoreEnumLiteral="query_metamodel.ecore#//Version/Curativo"/>
+    </genEnums>
     <genClasses ecoreClass="query_metamodel.ecore#//EAttribute">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EAttribute/sex"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference query_metamodel.ecore#//EAttribute/age"/>
@@ -104,6 +146,7 @@
     <genClasses ecoreClass="query_metamodel.ecore#//ACarePathway">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ACarePathway/conduct"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ACarePathway/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//ACarePathway/version"/>
     </genClasses>
     <genClasses ecoreClass="query_metamodel.ecore#//QStatus">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute query_metamodel.ecore#//QStatus/completed"/>

@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link QueryMetamodel.ACarePathway#getConduct <em>Conduct</em>}</li>
  *   <li>{@link QueryMetamodel.ACarePathway#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.ACarePathway#getVersion <em>Version</em>}</li>
  * </ul>
  *
  * @see QueryMetamodel.Query_metamodelPackage#getACarePathway()
@@ -79,5 +80,31 @@ public interface ACarePathway extends EObject {
 	 * @generated
 	 */
 	void setName(CarePathway value);
+
+	/**
+	 * Returns the value of the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Version</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Version</em>' attribute.
+	 * @see #setVersion(int)
+	 * @see QueryMetamodel.Query_metamodelPackage#getACarePathway_Version()
+	 * @model
+	 * @generated
+	 */
+	int getVersion();
+
+	/**
+	 * Sets the value of the '{@link QueryMetamodel.ACarePathway#getVersion <em>Version</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Version</em>' attribute.
+	 * @see #getVersion()
+	 * @generated
+	 */
+	void setVersion(int value);
 
 } // ACarePathway

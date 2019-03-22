@@ -435,13 +435,22 @@ public interface Query_metamodelPackage extends EPackage {
 	int ACARE_PATHWAY__NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Version</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACARE_PATHWAY__VERSION = 2;
+
+	/**
 	 * The number of structural features of the '<em>ACare Pathway</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACARE_PATHWAY_FEATURE_COUNT = 2;
+	int ACARE_PATHWAY_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>ACare Pathway</em>' class.
@@ -1805,6 +1814,16 @@ public interface Query_metamodelPackage extends EPackage {
 	int CARE_PATHWAY = 36;
 
 	/**
+	 * The meta object id for the '{@link QueryMetamodel.Version <em>Version</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see QueryMetamodel.Version
+	 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getVersion()
+	 * @generated
+	 */
+	int VERSION = 37;
+
+	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.EAttribute <em>EAttribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2092,6 +2111,17 @@ public interface Query_metamodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getACarePathway_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link QueryMetamodel.ACarePathway#getVersion <em>Version</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Version</em>'.
+	 * @see QueryMetamodel.ACarePathway#getVersion()
+	 * @see #getACarePathway()
+	 * @generated
+	 */
+	EAttribute getACarePathway_Version();
 
 	/**
 	 * Returns the meta object for class '{@link QueryMetamodel.QStatus <em>QStatus</em>}'.
@@ -3154,6 +3184,16 @@ public interface Query_metamodelPackage extends EPackage {
 	EEnum getCarePathway();
 
 	/**
+	 * Returns the meta object for enum '{@link QueryMetamodel.Version <em>Version</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Version</em>'.
+	 * @see QueryMetamodel.Version
+	 * @generated
+	 */
+	EEnum getVersion();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3407,6 +3447,14 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACARE_PATHWAY__NAME = eINSTANCE.getACarePathway_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ACARE_PATHWAY__VERSION = eINSTANCE.getACarePathway_Version();
 
 		/**
 		 * The meta object literal for the '{@link QueryMetamodel.impl.QStatusImpl <em>QStatus</em>}' class.
@@ -4257,6 +4305,16 @@ public interface Query_metamodelPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum CARE_PATHWAY = eINSTANCE.getCarePathway();
+
+		/**
+		 * The meta object literal for the '{@link QueryMetamodel.Version <em>Version</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see QueryMetamodel.Version
+		 * @see QueryMetamodel.impl.Query_metamodelPackageImpl#getVersion()
+		 * @generated
+		 */
+		EEnum VERSION = eINSTANCE.getVersion();
 
 	}
 

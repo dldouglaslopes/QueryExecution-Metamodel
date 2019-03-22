@@ -10,14 +10,14 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Care Pathway</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Version</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see QueryMetamodel.Query_metamodelPackage#getCarePathway()
+ * @see QueryMetamodel.Query_metamodelPackage#getVersion()
  * @model
  * @generated
  */
-public enum CarePathway implements Enumerator {
+public enum Version implements Enumerator {
 	/**
 	 * The '<em><b>None</b></em>' literal object.
 	 * <!-- begin-user-doc -->
@@ -36,7 +36,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FRATURA_EXPOSTA(1, "FraturaExposta", "Fratura Exposta"),
+	FRATURA_EXPOSTA(3, "FraturaExposta", "Fratura Exposta"),
 
 	/**
 	 * The '<em><b>Pneumonia Influenza</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PNEUMONIA_INFLUENZA(2, "PneumoniaInfluenza", "Pneumonia & Influenza"),
+	PNEUMONIA_INFLUENZA(12, "PneumoniaInfluenza", "Pneumonia & Influenza"),
 
 	/**
 	 * The '<em><b>Meningite</b></em>' literal object.
@@ -56,7 +56,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MENINGITE(3, "Meningite", "Meningite"),
+	MENINGITE(7, "Meningite", "Meningite"),
 
 	/**
 	 * The '<em><b>Amniorrexe Prematura</b></em>' literal object.
@@ -76,7 +76,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ITU_CISTITE(61, "ITUCistite", "ITU - Cistite"),
+	ITU_CISTITE(6, "ITUCistite", "ITU - Cistite"),
 
 	/**
 	 * The '<em><b>Verifica SEPSE</b></em>' literal object.
@@ -86,7 +86,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	VERIFICA_SEPSE(64, "VerificaSEPSE", "Verifica SEPSE"),
+	VERIFICA_SEPSE(2, "VerificaSEPSE", "Verifica SEPSE"),
 
 	/**
 	 * The '<em><b>Tratamento SEPSE</b></em>' literal object.
@@ -106,7 +106,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TRATAMENTO_SIRS(66, "TratamentoSIRS", "Tratamento de SIRS"),
+	TRATAMENTO_SIRS(8, "TratamentoSIRS", "Tratamento de SIRS"),
 
 	/**
 	 * The '<em><b>ITU Pielonefrite</b></em>' literal object.
@@ -116,7 +116,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ITU_PIELONEFRITE(81, "ITUPielonefrite", "ITU - Pielonefrite"),
+	ITU_PIELONEFRITE(9, "ITUPielonefrite", "ITU - Pielonefrite"),
 
 	/**
 	 * The '<em><b>Neutropenia Febril</b></em>' literal object.
@@ -126,7 +126,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NEUTROPENIA_FEBRIL(82, "NeutropeniaFebril", "Neutropenia Febril"),
+	NEUTROPENIA_FEBRIL(2, "NeutropeniaFebril", "Neutropenia Febril"),
 
 	/**
 	 * The '<em><b>IVAS</b></em>' literal object.
@@ -136,7 +136,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	IVAS(83, "IVAS", "IVAS"),
+	IVAS(19, "IVAS", "IVAS"),
 
 	/**
 	 * The '<em><b>Diarréia</b></em>' literal object.
@@ -146,7 +146,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DIARRÉIA(101, "Diarréia", "Diarr\u00e9ia"),
+	DIARRÉIA(4, "Diarréia", "Diarr\u00e9ia"),
 
 	/**
 	 * The '<em><b>Cefaléia</b></em>' literal object.
@@ -156,7 +156,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CEFALÉIA(121, "Cefaléia", "Cefal\u00e9ia"),
+	CEFALÉIA(9, "Cefaléia", "Cefal\u00e9ia"),
 
 	/**
 	 * The '<em><b>Lombalgia</b></em>' literal object.
@@ -166,7 +166,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LOMBALGIA(161, "Lombalgia", "Lombalgia"),
+	LOMBALGIA(18, "Lombalgia", "Lombalgia"),
 
 	/**
 	 * The '<em><b>Dor Torácica</b></em>' literal object.
@@ -176,7 +176,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DOR_TORÁCICA(181, "DorTorácica", "Dor Tor\u00e1cica"),
+	DOR_TORÁCICA(6, "DorTorácica", "Dor Tor\u00e1cica"),
 
 	/**
 	 * The '<em><b>Dor Abdominal</b></em>' literal object.
@@ -186,7 +186,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DOR_ABDOMINAL(201, "DorAbdominal", "Dor Abdominal"),
+	DOR_ABDOMINAL(22, "DorAbdominal", "Dor Abdominal"),
 
 	/**
 	 * The '<em><b>Tontura Vertigem</b></em>' literal object.
@@ -196,7 +196,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TONTURA_VERTIGEM(221, "TonturaVertigem", "Tontura e Vertigem"),
+	TONTURA_VERTIGEM(3, "TonturaVertigem", "Tontura e Vertigem"),
 
 	/**
 	 * The '<em><b>IVAS Pediátrico</b></em>' literal object.
@@ -206,7 +206,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	IVAS_PEDIÁTRICO(261, "IVASPediátrico", "IVAS Pedi\u00e1trico"),
+	IVAS_PEDIÁTRICO(7, "IVASPediátrico", "IVAS Pedi\u00e1trico"),
 
 	/**
 	 * The '<em><b>Otalgia</b></em>' literal object.
@@ -216,7 +216,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	OTALGIA(281, "Otalgia", "Otalgia"),
+	OTALGIA(4, "Otalgia", "Otalgia"),
 
 	/**
 	 * The '<em><b>Náuseas Vômitos</b></em>' literal object.
@@ -226,7 +226,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NÁUSEAS_VÔMITOS(282, "NáuseasVômitos", "N\u00e1useas e V\u00f4mitos"),
+	NÁUSEAS_VÔMITOS(2, "NáuseasVômitos", "N\u00e1useas e V\u00f4mitos"),
 
 	/**
 	 * The '<em><b>Diarreia Aguda Pediátrico</b></em>' literal object.
@@ -236,7 +236,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DIARREIA_AGUDA_PEDIÁTRICO(301, "DiarreiaAgudaPediátrico", "Diarreia aguda Pedi\u00e1trico"),
+	DIARREIA_AGUDA_PEDIÁTRICO(7, "DiarreiaAgudaPediátrico", "Diarreia aguda Pedi\u00e1trico"),
 
 	/**
 	 * The '<em><b>Trabalho Parto Prematuro</b></em>' literal object.
@@ -246,7 +246,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TRABALHO_PARTO_PREMATURO(321, "TrabalhoPartoPrematuro", "Trabalho de Parto Prematuro"),
+	TRABALHO_PARTO_PREMATURO(1, "TrabalhoPartoPrematuro", "Trabalho de Parto Prematuro"),
 
 	/**
 	 * The '<em><b>DHEG</b></em>' literal object.
@@ -256,7 +256,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DHEG(341, "DHEG", "DHEG"),
+	DHEG(1, "DHEG", "DHEG"),
 
 	/**
 	 * The '<em><b>Dispepsia</b></em>' literal object.
@@ -266,7 +266,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DISPEPSIA(361, "Dispepsia", "Dispepsia"),
+	DISPEPSIA(2, "Dispepsia", "Dispepsia"),
 
 	/**
 	 * The '<em><b>TCE Pediátrico</b></em>' literal object.
@@ -276,7 +276,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TCE_PEDIÁTRICO(362, "TCEPediátrico", "TCE Pedi\u00e1trico"),
+	TCE_PEDIÁTRICO(5, "TCEPediátrico", "TCE Pedi\u00e1trico"),
 
 	/**
 	 * The '<em><b>Aminiorrexe Prematura</b></em>' literal object.
@@ -286,7 +286,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	AMINIORREXE_PREMATURA(365, "AminiorrexePrematura", "Aminiorrexe Prematura"),
+	AMINIORREXE_PREMATURA(1, "AminiorrexePrematura", "Aminiorrexe Prematura"),
 
 	/**
 	 * The '<em><b>Dor Articular Tendinopatia</b></em>' literal object.
@@ -296,7 +296,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DOR_ARTICULAR_TENDINOPATIA(381, "DorArticularTendinopatia", "Dor Articular/Tendinopatia"),
+	DOR_ARTICULAR_TENDINOPATIA(2, "DorArticularTendinopatia", "Dor Articular/Tendinopatia"),
 
 	/**
 	 * The '<em><b>Febre Sem Sinais Localização</b></em>' literal object.
@@ -306,7 +306,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	FEBRE_SEM_SINAIS_LOCALIZAÇÃO(403, "FebreSemSinaisLocalização", "Febre Sem Sinais de Localiza\u00e7\u00e3o"),
+	FEBRE_SEM_SINAIS_LOCALIZAÇÃO(8, "FebreSemSinaisLocalização", "Febre Sem Sinais de Localiza\u00e7\u00e3o"),
 
 	/**
 	 * The '<em><b>Infecção Partes Moles</b></em>' literal object.
@@ -316,7 +316,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INFECÇÃO_PARTES_MOLES(424, "InfecçãoPartesMoles", "Infec\u00e7\u00e3o das Partes Moles"),
+	INFECÇÃO_PARTES_MOLES(9, "InfecçãoPartesMoles", "Infec\u00e7\u00e3o das Partes Moles"),
 
 	/**
 	 * The '<em><b>Asma</b></em>' literal object.
@@ -326,7 +326,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ASMA(441, "Asma", "Asma"),
+	ASMA(1, "Asma", "Asma"),
 
 	/**
 	 * The '<em><b>Pneumonia Adquirida Comunidade</b></em>' literal object.
@@ -336,7 +336,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PNEUMONIA_ADQUIRIDA_COMUNIDADE(461, "PneumoniaAdquiridaComunidade", "Pneumonia Adquirida na Comunidade"),
+	PNEUMONIA_ADQUIRIDA_COMUNIDADE(1, "PneumoniaAdquiridaComunidade", "Pneumonia Adquirida na Comunidade"),
 
 	/**
 	 * The '<em><b>Urticária Pediátrico</b></em>' literal object.
@@ -346,7 +346,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	URTICÁRIA_PEDIÁTRICO(462, "UrticáriaPediátrico", "Urtic\u00e1ria Pedi\u00e1trico"),
+	URTICÁRIA_PEDIÁTRICO(1, "UrticáriaPediátrico", "Urtic\u00e1ria Pedi\u00e1trico"),
 
 	/**
 	 * The '<em><b>Endometrite Puerperal</b></em>' literal object.
@@ -356,7 +356,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ENDOMETRITE_PUERPERAL(481, "EndometritePuerperal", "Endometrite Puerperal"),
+	ENDOMETRITE_PUERPERAL(1, "EndometritePuerperal", "Endometrite Puerperal"),
 
 	/**
 	 * The '<em><b>Hemorragia Pós Parto</b></em>' literal object.
@@ -366,7 +366,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	HEMORRAGIA_PÓS_PARTO(501, "HemorragiaPósParto", "Hemorragia P\u00f3s-Parto"),
+	HEMORRAGIA_PÓS_PARTO(1, "HemorragiaPósParto", "Hemorragia P\u00f3s-Parto"),
 
 	/**
 	 * The '<em><b>Posdatismo</b></em>' literal object.
@@ -376,7 +376,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	POSDATISMO(502, "Posdatismo", "Posdatismo"),
+	POSDATISMO(1, "Posdatismo", "Posdatismo"),
 
 	/**
 	 * The '<em><b>Hipertensão Arterial Sistêmica</b></em>' literal object.
@@ -386,7 +386,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	HIPERTENSÃO_ARTERIAL_SISTÊMICA(521, "HipertensãoArterialSistêmica", "Hipertens\u00e3o Arterial Sist\u00eamica"),
+	HIPERTENSÃO_ARTERIAL_SISTÊMICA(1, "HipertensãoArterialSistêmica", "Hipertens\u00e3o Arterial Sist\u00eamica"),
 
 	/**
 	 * The '<em><b>Insuficiência Cardíaca</b></em>' literal object.
@@ -396,7 +396,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSUFICIÊNCIA_CARDÍACA(522, "InsuficiênciaCardíaca", "Insufici\u00eancia Card\u00edaca"),
+	INSUFICIÊNCIA_CARDÍACA(1, "InsuficiênciaCardíaca", "Insufici\u00eancia Card\u00edaca"),
 
 	/**
 	 * The '<em><b>DPOC</b></em>' literal object.
@@ -406,7 +406,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DPOC(541, "DPOC", "DPOC"),
+	DPOC(1, "DPOC", "DPOC"),
 
 	/**
 	 * The '<em><b>Curativo</b></em>' literal object.
@@ -416,7 +416,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CURATIVO(561, "Curativo", "Curativo");
+	CURATIVO(2, "Curativo", "Curativo");
 
 	/**
 	 * The '<em><b>None</b></em>' literal value.
@@ -446,7 +446,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int FRATURA_EXPOSTA_VALUE = 1;
+	public static final int FRATURA_EXPOSTA_VALUE = 3;
 
 	/**
 	 * The '<em><b>Pneumonia Influenza</b></em>' literal value.
@@ -461,7 +461,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PNEUMONIA_INFLUENZA_VALUE = 2;
+	public static final int PNEUMONIA_INFLUENZA_VALUE = 12;
 
 	/**
 	 * The '<em><b>Meningite</b></em>' literal value.
@@ -476,7 +476,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int MENINGITE_VALUE = 3;
+	public static final int MENINGITE_VALUE = 7;
 
 	/**
 	 * The '<em><b>Amniorrexe Prematura</b></em>' literal value.
@@ -506,7 +506,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ITU_CISTITE_VALUE = 61;
+	public static final int ITU_CISTITE_VALUE = 6;
 
 	/**
 	 * The '<em><b>Verifica SEPSE</b></em>' literal value.
@@ -521,7 +521,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int VERIFICA_SEPSE_VALUE = 64;
+	public static final int VERIFICA_SEPSE_VALUE = 2;
 
 	/**
 	 * The '<em><b>Tratamento SEPSE</b></em>' literal value.
@@ -551,7 +551,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TRATAMENTO_SIRS_VALUE = 66;
+	public static final int TRATAMENTO_SIRS_VALUE = 8;
 
 	/**
 	 * The '<em><b>ITU Pielonefrite</b></em>' literal value.
@@ -566,7 +566,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ITU_PIELONEFRITE_VALUE = 81;
+	public static final int ITU_PIELONEFRITE_VALUE = 9;
 
 	/**
 	 * The '<em><b>Neutropenia Febril</b></em>' literal value.
@@ -581,7 +581,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NEUTROPENIA_FEBRIL_VALUE = 82;
+	public static final int NEUTROPENIA_FEBRIL_VALUE = 2;
 
 	/**
 	 * The '<em><b>IVAS</b></em>' literal value.
@@ -596,7 +596,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int IVAS_VALUE = 83;
+	public static final int IVAS_VALUE = 19;
 
 	/**
 	 * The '<em><b>Diarréia</b></em>' literal value.
@@ -611,7 +611,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DIARRÉIA_VALUE = 101;
+	public static final int DIARRÉIA_VALUE = 4;
 
 	/**
 	 * The '<em><b>Cefaléia</b></em>' literal value.
@@ -626,7 +626,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int CEFALÉIA_VALUE = 121;
+	public static final int CEFALÉIA_VALUE = 9;
 
 	/**
 	 * The '<em><b>Lombalgia</b></em>' literal value.
@@ -641,7 +641,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int LOMBALGIA_VALUE = 161;
+	public static final int LOMBALGIA_VALUE = 18;
 
 	/**
 	 * The '<em><b>Dor Torácica</b></em>' literal value.
@@ -656,7 +656,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DOR_TORÁCICA_VALUE = 181;
+	public static final int DOR_TORÁCICA_VALUE = 6;
 
 	/**
 	 * The '<em><b>Dor Abdominal</b></em>' literal value.
@@ -671,7 +671,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DOR_ABDOMINAL_VALUE = 201;
+	public static final int DOR_ABDOMINAL_VALUE = 22;
 
 	/**
 	 * The '<em><b>Tontura Vertigem</b></em>' literal value.
@@ -686,7 +686,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TONTURA_VERTIGEM_VALUE = 221;
+	public static final int TONTURA_VERTIGEM_VALUE = 3;
 
 	/**
 	 * The '<em><b>IVAS Pediátrico</b></em>' literal value.
@@ -701,7 +701,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int IVAS_PEDIÁTRICO_VALUE = 261;
+	public static final int IVAS_PEDIÁTRICO_VALUE = 7;
 
 	/**
 	 * The '<em><b>Otalgia</b></em>' literal value.
@@ -716,7 +716,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int OTALGIA_VALUE = 281;
+	public static final int OTALGIA_VALUE = 4;
 
 	/**
 	 * The '<em><b>Náuseas Vômitos</b></em>' literal value.
@@ -731,7 +731,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int NÁUSEAS_VÔMITOS_VALUE = 282;
+	public static final int NÁUSEAS_VÔMITOS_VALUE = 2;
 
 	/**
 	 * The '<em><b>Diarreia Aguda Pediátrico</b></em>' literal value.
@@ -746,7 +746,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DIARREIA_AGUDA_PEDIÁTRICO_VALUE = 301;
+	public static final int DIARREIA_AGUDA_PEDIÁTRICO_VALUE = 7;
 
 	/**
 	 * The '<em><b>Trabalho Parto Prematuro</b></em>' literal value.
@@ -761,7 +761,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TRABALHO_PARTO_PREMATURO_VALUE = 321;
+	public static final int TRABALHO_PARTO_PREMATURO_VALUE = 1;
 
 	/**
 	 * The '<em><b>DHEG</b></em>' literal value.
@@ -776,7 +776,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DHEG_VALUE = 341;
+	public static final int DHEG_VALUE = 1;
 
 	/**
 	 * The '<em><b>Dispepsia</b></em>' literal value.
@@ -791,7 +791,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DISPEPSIA_VALUE = 361;
+	public static final int DISPEPSIA_VALUE = 2;
 
 	/**
 	 * The '<em><b>TCE Pediátrico</b></em>' literal value.
@@ -806,7 +806,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int TCE_PEDIÁTRICO_VALUE = 362;
+	public static final int TCE_PEDIÁTRICO_VALUE = 5;
 
 	/**
 	 * The '<em><b>Aminiorrexe Prematura</b></em>' literal value.
@@ -821,7 +821,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int AMINIORREXE_PREMATURA_VALUE = 365;
+	public static final int AMINIORREXE_PREMATURA_VALUE = 1;
 
 	/**
 	 * The '<em><b>Dor Articular Tendinopatia</b></em>' literal value.
@@ -836,7 +836,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DOR_ARTICULAR_TENDINOPATIA_VALUE = 381;
+	public static final int DOR_ARTICULAR_TENDINOPATIA_VALUE = 2;
 
 	/**
 	 * The '<em><b>Febre Sem Sinais Localização</b></em>' literal value.
@@ -851,7 +851,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int FEBRE_SEM_SINAIS_LOCALIZAÇÃO_VALUE = 403;
+	public static final int FEBRE_SEM_SINAIS_LOCALIZAÇÃO_VALUE = 8;
 
 	/**
 	 * The '<em><b>Infecção Partes Moles</b></em>' literal value.
@@ -866,7 +866,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int INFECÇÃO_PARTES_MOLES_VALUE = 424;
+	public static final int INFECÇÃO_PARTES_MOLES_VALUE = 9;
 
 	/**
 	 * The '<em><b>Asma</b></em>' literal value.
@@ -881,7 +881,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ASMA_VALUE = 441;
+	public static final int ASMA_VALUE = 1;
 
 	/**
 	 * The '<em><b>Pneumonia Adquirida Comunidade</b></em>' literal value.
@@ -896,7 +896,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PNEUMONIA_ADQUIRIDA_COMUNIDADE_VALUE = 461;
+	public static final int PNEUMONIA_ADQUIRIDA_COMUNIDADE_VALUE = 1;
 
 	/**
 	 * The '<em><b>Urticária Pediátrico</b></em>' literal value.
@@ -911,7 +911,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int URTICÁRIA_PEDIÁTRICO_VALUE = 462;
+	public static final int URTICÁRIA_PEDIÁTRICO_VALUE = 1;
 
 	/**
 	 * The '<em><b>Endometrite Puerperal</b></em>' literal value.
@@ -926,7 +926,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int ENDOMETRITE_PUERPERAL_VALUE = 481;
+	public static final int ENDOMETRITE_PUERPERAL_VALUE = 1;
 
 	/**
 	 * The '<em><b>Hemorragia Pós Parto</b></em>' literal value.
@@ -941,7 +941,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int HEMORRAGIA_PÓS_PARTO_VALUE = 501;
+	public static final int HEMORRAGIA_PÓS_PARTO_VALUE = 1;
 
 	/**
 	 * The '<em><b>Posdatismo</b></em>' literal value.
@@ -956,7 +956,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int POSDATISMO_VALUE = 502;
+	public static final int POSDATISMO_VALUE = 1;
 
 	/**
 	 * The '<em><b>Hipertensão Arterial Sistêmica</b></em>' literal value.
@@ -971,7 +971,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int HIPERTENSÃO_ARTERIAL_SISTÊMICA_VALUE = 521;
+	public static final int HIPERTENSÃO_ARTERIAL_SISTÊMICA_VALUE = 1;
 
 	/**
 	 * The '<em><b>Insuficiência Cardíaca</b></em>' literal value.
@@ -986,7 +986,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int INSUFICIÊNCIA_CARDÍACA_VALUE = 522;
+	public static final int INSUFICIÊNCIA_CARDÍACA_VALUE = 1;
 
 	/**
 	 * The '<em><b>DPOC</b></em>' literal value.
@@ -1001,7 +1001,7 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DPOC_VALUE = 541;
+	public static final int DPOC_VALUE = 1;
 
 	/**
 	 * The '<em><b>Curativo</b></em>' literal value.
@@ -1016,42 +1016,41 @@ public enum CarePathway implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int CURATIVO_VALUE = 561;
+	public static final int CURATIVO_VALUE = 2;
 
 	/**
-	 * An array of all the '<em><b>Care Pathway</b></em>' enumerators.
+	 * An array of all the '<em><b>Version</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final CarePathway[] VALUES_ARRAY = new CarePathway[] { NONE, FRATURA_EXPOSTA, PNEUMONIA_INFLUENZA,
-			MENINGITE, AMNIORREXE_PREMATURA, ITU_CISTITE, VERIFICA_SEPSE, TRATAMENTO_SEPSE, TRATAMENTO_SIRS,
-			ITU_PIELONEFRITE, NEUTROPENIA_FEBRIL, IVAS, DIARRÉIA, CEFALÉIA, LOMBALGIA, DOR_TORÁCICA, DOR_ABDOMINAL,
-			TONTURA_VERTIGEM, IVAS_PEDIÁTRICO, OTALGIA, NÁUSEAS_VÔMITOS, DIARREIA_AGUDA_PEDIÁTRICO,
-			TRABALHO_PARTO_PREMATURO, DHEG, DISPEPSIA, TCE_PEDIÁTRICO, AMINIORREXE_PREMATURA,
-			DOR_ARTICULAR_TENDINOPATIA, FEBRE_SEM_SINAIS_LOCALIZAÇÃO, INFECÇÃO_PARTES_MOLES, ASMA,
-			PNEUMONIA_ADQUIRIDA_COMUNIDADE, URTICÁRIA_PEDIÁTRICO, ENDOMETRITE_PUERPERAL, HEMORRAGIA_PÓS_PARTO,
-			POSDATISMO, HIPERTENSÃO_ARTERIAL_SISTÊMICA, INSUFICIÊNCIA_CARDÍACA, DPOC, CURATIVO, };
+	private static final Version[] VALUES_ARRAY = new Version[] { NONE, FRATURA_EXPOSTA, PNEUMONIA_INFLUENZA, MENINGITE,
+			AMNIORREXE_PREMATURA, ITU_CISTITE, VERIFICA_SEPSE, TRATAMENTO_SEPSE, TRATAMENTO_SIRS, ITU_PIELONEFRITE,
+			NEUTROPENIA_FEBRIL, IVAS, DIARRÉIA, CEFALÉIA, LOMBALGIA, DOR_TORÁCICA, DOR_ABDOMINAL, TONTURA_VERTIGEM,
+			IVAS_PEDIÁTRICO, OTALGIA, NÁUSEAS_VÔMITOS, DIARREIA_AGUDA_PEDIÁTRICO, TRABALHO_PARTO_PREMATURO, DHEG,
+			DISPEPSIA, TCE_PEDIÁTRICO, AMINIORREXE_PREMATURA, DOR_ARTICULAR_TENDINOPATIA, FEBRE_SEM_SINAIS_LOCALIZAÇÃO,
+			INFECÇÃO_PARTES_MOLES, ASMA, PNEUMONIA_ADQUIRIDA_COMUNIDADE, URTICÁRIA_PEDIÁTRICO, ENDOMETRITE_PUERPERAL,
+			HEMORRAGIA_PÓS_PARTO, POSDATISMO, HIPERTENSÃO_ARTERIAL_SISTÊMICA, INSUFICIÊNCIA_CARDÍACA, DPOC, CURATIVO, };
 
 	/**
-	 * A public read-only list of all the '<em><b>Care Pathway</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Version</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<CarePathway> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<Version> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Care Pathway</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Version</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static CarePathway get(String literal) {
+	public static Version get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			CarePathway result = VALUES_ARRAY[i];
+			Version result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -1060,16 +1059,16 @@ public enum CarePathway implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Care Pathway</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Version</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static CarePathway getByName(String name) {
+	public static Version getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			CarePathway result = VALUES_ARRAY[i];
+			Version result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -1078,14 +1077,14 @@ public enum CarePathway implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Care Pathway</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Version</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static CarePathway get(int value) {
+	public static Version get(int value) {
 		switch (value) {
 		case NONE_VALUE:
 			return NONE;
@@ -1107,66 +1106,16 @@ public enum CarePathway implements Enumerator {
 			return TRATAMENTO_SIRS;
 		case ITU_PIELONEFRITE_VALUE:
 			return ITU_PIELONEFRITE;
-		case NEUTROPENIA_FEBRIL_VALUE:
-			return NEUTROPENIA_FEBRIL;
 		case IVAS_VALUE:
 			return IVAS;
-		case DIARRÉIA_VALUE:
-			return DIARRÉIA;
-		case CEFALÉIA_VALUE:
-			return CEFALÉIA;
 		case LOMBALGIA_VALUE:
 			return LOMBALGIA;
-		case DOR_TORÁCICA_VALUE:
-			return DOR_TORÁCICA;
 		case DOR_ABDOMINAL_VALUE:
 			return DOR_ABDOMINAL;
-		case TONTURA_VERTIGEM_VALUE:
-			return TONTURA_VERTIGEM;
-		case IVAS_PEDIÁTRICO_VALUE:
-			return IVAS_PEDIÁTRICO;
-		case OTALGIA_VALUE:
-			return OTALGIA;
-		case NÁUSEAS_VÔMITOS_VALUE:
-			return NÁUSEAS_VÔMITOS;
-		case DIARREIA_AGUDA_PEDIÁTRICO_VALUE:
-			return DIARREIA_AGUDA_PEDIÁTRICO;
 		case TRABALHO_PARTO_PREMATURO_VALUE:
 			return TRABALHO_PARTO_PREMATURO;
-		case DHEG_VALUE:
-			return DHEG;
-		case DISPEPSIA_VALUE:
-			return DISPEPSIA;
 		case TCE_PEDIÁTRICO_VALUE:
 			return TCE_PEDIÁTRICO;
-		case AMINIORREXE_PREMATURA_VALUE:
-			return AMINIORREXE_PREMATURA;
-		case DOR_ARTICULAR_TENDINOPATIA_VALUE:
-			return DOR_ARTICULAR_TENDINOPATIA;
-		case FEBRE_SEM_SINAIS_LOCALIZAÇÃO_VALUE:
-			return FEBRE_SEM_SINAIS_LOCALIZAÇÃO;
-		case INFECÇÃO_PARTES_MOLES_VALUE:
-			return INFECÇÃO_PARTES_MOLES;
-		case ASMA_VALUE:
-			return ASMA;
-		case PNEUMONIA_ADQUIRIDA_COMUNIDADE_VALUE:
-			return PNEUMONIA_ADQUIRIDA_COMUNIDADE;
-		case URTICÁRIA_PEDIÁTRICO_VALUE:
-			return URTICÁRIA_PEDIÁTRICO;
-		case ENDOMETRITE_PUERPERAL_VALUE:
-			return ENDOMETRITE_PUERPERAL;
-		case HEMORRAGIA_PÓS_PARTO_VALUE:
-			return HEMORRAGIA_PÓS_PARTO;
-		case POSDATISMO_VALUE:
-			return POSDATISMO;
-		case HIPERTENSÃO_ARTERIAL_SISTÊMICA_VALUE:
-			return HIPERTENSÃO_ARTERIAL_SISTÊMICA;
-		case INSUFICIÊNCIA_CARDÍACA_VALUE:
-			return INSUFICIÊNCIA_CARDÍACA;
-		case DPOC_VALUE:
-			return DPOC;
-		case CURATIVO_VALUE:
-			return CURATIVO;
 		}
 		return null;
 	}
@@ -1198,7 +1147,7 @@ public enum CarePathway implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private CarePathway(int value, String name, String literal) {
+	private Version(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -1242,4 +1191,4 @@ public enum CarePathway implements Enumerator {
 		return literal;
 	}
 
-} //CarePathway
+} //Version

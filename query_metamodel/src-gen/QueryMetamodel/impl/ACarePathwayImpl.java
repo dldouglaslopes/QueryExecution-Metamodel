@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link QueryMetamodel.impl.ACarePathwayImpl#getConduct <em>Conduct</em>}</li>
  *   <li>{@link QueryMetamodel.impl.ACarePathwayImpl#getName <em>Name</em>}</li>
+ *   <li>{@link QueryMetamodel.impl.ACarePathwayImpl#getVersion <em>Version</em>}</li>
  * </ul>
  *
  * @generated
@@ -68,6 +69,26 @@ public class ACarePathwayImpl extends MinimalEObjectImpl.Container implements AC
 	 * @ordered
 	 */
 	protected CarePathway name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int VERSION_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVersion()
+	 * @generated
+	 * @ordered
+	 */
+	protected int version = VERSION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -137,6 +158,28 @@ public class ACarePathwayImpl extends MinimalEObjectImpl.Container implements AC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getVersion() {
+		return version;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVersion(int newVersion) {
+		int oldVersion = version;
+		version = newVersion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Query_metamodelPackage.ACARE_PATHWAY__VERSION,
+					oldVersion, version));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -144,6 +187,8 @@ public class ACarePathwayImpl extends MinimalEObjectImpl.Container implements AC
 			return getConduct();
 		case Query_metamodelPackage.ACARE_PATHWAY__NAME:
 			return getName();
+		case Query_metamodelPackage.ACARE_PATHWAY__VERSION:
+			return getVersion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -161,6 +206,9 @@ public class ACarePathwayImpl extends MinimalEObjectImpl.Container implements AC
 			return;
 		case Query_metamodelPackage.ACARE_PATHWAY__NAME:
 			setName((CarePathway) newValue);
+			return;
+		case Query_metamodelPackage.ACARE_PATHWAY__VERSION:
+			setVersion((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -180,6 +228,9 @@ public class ACarePathwayImpl extends MinimalEObjectImpl.Container implements AC
 		case Query_metamodelPackage.ACARE_PATHWAY__NAME:
 			setName(NAME_EDEFAULT);
 			return;
+		case Query_metamodelPackage.ACARE_PATHWAY__VERSION:
+			setVersion(VERSION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -196,6 +247,8 @@ public class ACarePathwayImpl extends MinimalEObjectImpl.Container implements AC
 			return conduct != CONDUCT_EDEFAULT;
 		case Query_metamodelPackage.ACARE_PATHWAY__NAME:
 			return name != NAME_EDEFAULT;
+		case Query_metamodelPackage.ACARE_PATHWAY__VERSION:
+			return version != VERSION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -215,6 +268,8 @@ public class ACarePathwayImpl extends MinimalEObjectImpl.Container implements AC
 		result.append(conduct);
 		result.append(", name: ");
 		result.append(name);
+		result.append(", version: ");
+		result.append(version);
 		result.append(')');
 		return result.toString();
 	}

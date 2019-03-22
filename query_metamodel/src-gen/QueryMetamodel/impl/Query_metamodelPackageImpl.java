@@ -40,6 +40,7 @@ import QueryMetamodel.Query_metamodelFactory;
 import QueryMetamodel.Query_metamodelPackage;
 import QueryMetamodel.Question;
 import QueryMetamodel.Step;
+import QueryMetamodel.Version;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -314,6 +315,13 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * @generated
 	 */
 	private EEnum carePathwayEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum versionEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -619,6 +627,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 */
 	public EAttribute getACarePathway_Name() {
 		return (EAttribute) aCarePathwayEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getACarePathway_Version() {
+		return (EAttribute) aCarePathwayEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1517,6 +1534,15 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getVersion() {
+		return versionEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Query_metamodelFactory getQuery_metamodelFactory() {
 		return (Query_metamodelFactory) getEFactoryInstance();
 	}
@@ -1575,6 +1601,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		aCarePathwayEClass = createEClass(ACARE_PATHWAY);
 		createEAttribute(aCarePathwayEClass, ACARE_PATHWAY__CONDUCT);
 		createEAttribute(aCarePathwayEClass, ACARE_PATHWAY__NAME);
+		createEAttribute(aCarePathwayEClass, ACARE_PATHWAY__VERSION);
 
 		qStatusEClass = createEClass(QSTATUS);
 		createEAttribute(qStatusEClass, QSTATUS__COMPLETED);
@@ -1700,6 +1727,7 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		genderEEnum = createEEnum(GENDER);
 		conductEEnum = createEEnum(CONDUCT);
 		carePathwayEEnum = createEEnum(CARE_PATHWAY);
+		versionEEnum = createEEnum(VERSION);
 	}
 
 	/**
@@ -1809,6 +1837,8 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		initEAttribute(getACarePathway_Conduct(), this.getConduct(), "conduct", null, 0, 1, ACarePathway.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getACarePathway_Name(), this.getCarePathway(), "name", null, 0, 1, ACarePathway.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getACarePathway_Version(), ecorePackage.getEInt(), "version", null, 0, 1, ACarePathway.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(qStatusEClass, QStatus.class, "QStatus", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2098,6 +2128,48 @@ public class Query_metamodelPackageImpl extends EPackageImpl implements Query_me
 		addEEnumLiteral(carePathwayEEnum, CarePathway.INSUFICIÊNCIA_CARDÍACA);
 		addEEnumLiteral(carePathwayEEnum, CarePathway.DPOC);
 		addEEnumLiteral(carePathwayEEnum, CarePathway.CURATIVO);
+
+		initEEnum(versionEEnum, Version.class, "Version");
+		addEEnumLiteral(versionEEnum, Version.NONE);
+		addEEnumLiteral(versionEEnum, Version.FRATURA_EXPOSTA);
+		addEEnumLiteral(versionEEnum, Version.PNEUMONIA_INFLUENZA);
+		addEEnumLiteral(versionEEnum, Version.MENINGITE);
+		addEEnumLiteral(versionEEnum, Version.AMNIORREXE_PREMATURA);
+		addEEnumLiteral(versionEEnum, Version.ITU_CISTITE);
+		addEEnumLiteral(versionEEnum, Version.VERIFICA_SEPSE);
+		addEEnumLiteral(versionEEnum, Version.TRATAMENTO_SEPSE);
+		addEEnumLiteral(versionEEnum, Version.TRATAMENTO_SIRS);
+		addEEnumLiteral(versionEEnum, Version.ITU_PIELONEFRITE);
+		addEEnumLiteral(versionEEnum, Version.NEUTROPENIA_FEBRIL);
+		addEEnumLiteral(versionEEnum, Version.IVAS);
+		addEEnumLiteral(versionEEnum, Version.DIARRÉIA);
+		addEEnumLiteral(versionEEnum, Version.CEFALÉIA);
+		addEEnumLiteral(versionEEnum, Version.LOMBALGIA);
+		addEEnumLiteral(versionEEnum, Version.DOR_TORÁCICA);
+		addEEnumLiteral(versionEEnum, Version.DOR_ABDOMINAL);
+		addEEnumLiteral(versionEEnum, Version.TONTURA_VERTIGEM);
+		addEEnumLiteral(versionEEnum, Version.IVAS_PEDIÁTRICO);
+		addEEnumLiteral(versionEEnum, Version.OTALGIA);
+		addEEnumLiteral(versionEEnum, Version.NÁUSEAS_VÔMITOS);
+		addEEnumLiteral(versionEEnum, Version.DIARREIA_AGUDA_PEDIÁTRICO);
+		addEEnumLiteral(versionEEnum, Version.TRABALHO_PARTO_PREMATURO);
+		addEEnumLiteral(versionEEnum, Version.DHEG);
+		addEEnumLiteral(versionEEnum, Version.DISPEPSIA);
+		addEEnumLiteral(versionEEnum, Version.TCE_PEDIÁTRICO);
+		addEEnumLiteral(versionEEnum, Version.AMINIORREXE_PREMATURA);
+		addEEnumLiteral(versionEEnum, Version.DOR_ARTICULAR_TENDINOPATIA);
+		addEEnumLiteral(versionEEnum, Version.FEBRE_SEM_SINAIS_LOCALIZAÇÃO);
+		addEEnumLiteral(versionEEnum, Version.INFECÇÃO_PARTES_MOLES);
+		addEEnumLiteral(versionEEnum, Version.ASMA);
+		addEEnumLiteral(versionEEnum, Version.PNEUMONIA_ADQUIRIDA_COMUNIDADE);
+		addEEnumLiteral(versionEEnum, Version.URTICÁRIA_PEDIÁTRICO);
+		addEEnumLiteral(versionEEnum, Version.ENDOMETRITE_PUERPERAL);
+		addEEnumLiteral(versionEEnum, Version.HEMORRAGIA_PÓS_PARTO);
+		addEEnumLiteral(versionEEnum, Version.POSDATISMO);
+		addEEnumLiteral(versionEEnum, Version.HIPERTENSÃO_ARTERIAL_SISTÊMICA);
+		addEEnumLiteral(versionEEnum, Version.INSUFICIÊNCIA_CARDÍACA);
+		addEEnumLiteral(versionEEnum, Version.DPOC);
+		addEEnumLiteral(versionEEnum, Version.CURATIVO);
 
 		// Create resource
 		createResource(eNS_URI);

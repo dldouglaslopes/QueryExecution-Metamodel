@@ -61,6 +61,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ACarePathway">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="conduct" eType="#//Conduct"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//CarePathway"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QStatus" eSuperTypes="#//EMethod">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="completed" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -224,7 +225,7 @@
     <eLiterals name="ITUCistite" value="61" literal="ITU - Cistite"/>
     <eLiterals name="VerificaSEPSE" value="64" literal="Verifica SEPSE"/>
     <eLiterals name="TratamentoSEPSE" value="65" literal="Tratamento de SEPSE"/>
-    <eLiterals name="TratamentoSIRS" value="8" literal="Tratamento de SIRS"/>
+    <eLiterals name="TratamentoSIRS" value="66" literal="Tratamento de SIRS"/>
     <eLiterals name="ITUPielonefrite" value="81" literal="ITU - Pielonefrite"/>
     <eLiterals name="NeutropeniaFebril" value="82" literal="Neutropenia Febril"/>
     <eLiterals name="IVAS" value="83" literal="IVAS"/>
@@ -256,5 +257,47 @@
     <eLiterals name="InsuficiênciaCardíaca" value="522" literal="Insuficiência Cardíaca"/>
     <eLiterals name="DPOC" value="541"/>
     <eLiterals name="Curativo" value="561"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Version">
+    <eLiterals name="None"/>
+    <eLiterals name="FraturaExposta" value="3" literal="Fratura Exposta"/>
+    <eLiterals name="PneumoniaInfluenza" value="12" literal="Pneumonia &amp; Influenza"/>
+    <eLiterals name="Meningite" value="7"/>
+    <eLiterals name="AmniorrexePrematura" value="4" literal="Amniorrexe Prematura"/>
+    <eLiterals name="ITUCistite" value="6" literal="ITU - Cistite"/>
+    <eLiterals name="VerificaSEPSE" value="2" literal="Verifica SEPSE"/>
+    <eLiterals name="TratamentoSEPSE" value="65" literal="Tratamento de SEPSE"/>
+    <eLiterals name="TratamentoSIRS" value="8" literal="Tratamento de SIRS"/>
+    <eLiterals name="ITUPielonefrite" value="9" literal="ITU - Pielonefrite"/>
+    <eLiterals name="NeutropeniaFebril" value="2" literal="Neutropenia Febril"/>
+    <eLiterals name="IVAS" value="19" literal="IVAS"/>
+    <eLiterals name="Diarréia" value="4"/>
+    <eLiterals name="Cefaléia" value="9"/>
+    <eLiterals name="Lombalgia" value="18"/>
+    <eLiterals name="DorTorácica" value="6" literal="Dor Torácica"/>
+    <eLiterals name="DorAbdominal" value="22" literal="Dor Abdominal"/>
+    <eLiterals name="TonturaVertigem" value="3" literal="Tontura e Vertigem"/>
+    <eLiterals name="IVASPediátrico" value="7" literal="IVAS Pediátrico"/>
+    <eLiterals name="Otalgia" value="4"/>
+    <eLiterals name="NáuseasVômitos" value="2" literal="Náuseas e Vômitos"/>
+    <eLiterals name="DiarreiaAgudaPediátrico" value="7" literal="Diarreia aguda Pediátrico"/>
+    <eLiterals name="TrabalhoPartoPrematuro" value="1" literal="Trabalho de Parto Prematuro"/>
+    <eLiterals name="DHEG" value="1"/>
+    <eLiterals name="Dispepsia" value="2"/>
+    <eLiterals name="TCEPediátrico" value="5" literal="TCE Pediátrico"/>
+    <eLiterals name="AminiorrexePrematura" value="1" literal="Aminiorrexe Prematura"/>
+    <eLiterals name="DorArticularTendinopatia" value="2" literal="Dor Articular/Tendinopatia"/>
+    <eLiterals name="FebreSemSinaisLocalização" value="8" literal="Febre Sem Sinais de Localização"/>
+    <eLiterals name="InfecçãoPartesMoles" value="9" literal="Infecção das Partes Moles"/>
+    <eLiterals name="Asma" value="1"/>
+    <eLiterals name="PneumoniaAdquiridaComunidade" value="1" literal="Pneumonia Adquirida na Comunidade"/>
+    <eLiterals name="UrticáriaPediátrico" value="1" literal="Urticária Pediátrico"/>
+    <eLiterals name="EndometritePuerperal" value="1" literal="Endometrite Puerperal"/>
+    <eLiterals name="HemorragiaPósParto" value="1" literal="Hemorragia Pós-Parto"/>
+    <eLiterals name="Posdatismo" value="1"/>
+    <eLiterals name="HipertensãoArterialSistêmica" value="1" literal="Hipertensão Arterial Sistêmica"/>
+    <eLiterals name="InsuficiênciaCardíaca" value="1" literal="Insuficiência Cardíaca"/>
+    <eLiterals name="DPOC" value="1"/>
+    <eLiterals name="Curativo" value="2"/>
   </eClassifiers>
 </ecore:EPackage>
